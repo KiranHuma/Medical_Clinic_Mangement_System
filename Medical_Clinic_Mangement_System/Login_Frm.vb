@@ -1,4 +1,4 @@
-﻿Public Class Form1
+﻿Public Class Login_Frm
     Private Sub Panel4_Paint(sender As Object, e As PaintEventArgs)
 
     End Sub
@@ -8,6 +8,10 @@
     End Sub
 
     Private Sub selectUser_SelectedIndexChanged(sender As Object, e As EventArgs) Handles selectUser.SelectedIndexChanged
+
+    End Sub
+
+    Private Sub button2_Click(sender As Object, e As EventArgs) Handles button2.Click
 
     End Sub
 End Class

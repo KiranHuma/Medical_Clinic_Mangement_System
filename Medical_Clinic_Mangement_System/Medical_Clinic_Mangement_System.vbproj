@@ -169,17 +169,24 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.vb">
+    <Compile Include="dashboard_Frm.Designer.vb">
+      <DependentUpon>dashboard_Frm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dashboard_Frm.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <Compile Include="Login_Frm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login_Frm.Designer.vb">
+      <DependentUpon>Login_Frm.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -193,8 +200,11 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <EmbeddedResource Include="dashboard_Frm.resx">
+      <DependentUpon>dashboard_Frm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login_Frm.resx">
+      <DependentUpon>Login_Frm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\licenses.licx" />
     <EmbeddedResource Include="My Project\Resources.resx">
