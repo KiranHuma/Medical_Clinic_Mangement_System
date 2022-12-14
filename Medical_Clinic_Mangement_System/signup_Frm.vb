@@ -22,4 +22,10 @@
     Private Sub BunifuImageButton2_Click(sender As Object, e As EventArgs) Handles BunifuImageButton2.Click
         Me.Close()
     End Sub
+
+    Private Sub BunifuButton2_Click(sender As Object, e As EventArgs) Handles BunifuButton2.Click
+        BunifuShapes1.BorderColor = Color.Green
+        BunifuShapes2.BorderColor = Color.Green
+
+    End Sub
 End Class

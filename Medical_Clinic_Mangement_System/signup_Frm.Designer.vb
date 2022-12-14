@@ -40,20 +40,13 @@ Partial Class signup_Frm
         Dim StateProperties3 As Bunifu.UI.WinForms.BunifuTextBox.StateProperties = New Bunifu.UI.WinForms.BunifuTextBox.StateProperties()
         Dim StateProperties4 As Bunifu.UI.WinForms.BunifuTextBox.StateProperties = New Bunifu.UI.WinForms.BunifuTextBox.StateProperties()
         Dim BorderEdges2 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(signup_Frm))
         Dim BorderEdges1 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(signup_Frm))
         Me.BunifuElipse1 = New Bunifu.Framework.UI.BunifuElipse(Me.components)
         Me.Label1 = New System.Windows.Forms.Label()
         Me.header = New System.Windows.Forms.Panel()
-        Me.BunifuPictureBox1 = New Bunifu.UI.WinForms.BunifuPictureBox()
         Me.BunifuShapes1 = New Bunifu.UI.WinForms.BunifuShapes()
         Me.BunifuShapes2 = New Bunifu.UI.WinForms.BunifuShapes()
-        Me.BunifuPictureBox5 = New Bunifu.UI.WinForms.BunifuPictureBox()
-        Me.BunifuShapes6 = New Bunifu.UI.WinForms.BunifuShapes()
-        Me.BunifuPictureBox6 = New Bunifu.UI.WinForms.BunifuPictureBox()
-        Me.BunifuShapes7 = New Bunifu.UI.WinForms.BunifuShapes()
-        Me.BunifuPictureBox7 = New Bunifu.UI.WinForms.BunifuPictureBox()
-        Me.BunifuShapes8 = New Bunifu.UI.WinForms.BunifuShapes()
         Me.BunifuShapes3 = New Bunifu.UI.WinForms.BunifuShapes()
         Me.BunifuShapes4 = New Bunifu.UI.WinForms.BunifuShapes()
         Me.BunifuImageButton2 = New Bunifu.UI.WinForms.BunifuImageButton()
@@ -66,19 +59,21 @@ Partial Class signup_Frm
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.BunifuShapes5 = New Bunifu.UI.WinForms.BunifuShapes()
         Me.BunifuShapes9 = New Bunifu.UI.WinForms.BunifuShapes()
-        Me.BunifuPictureBox2 = New Bunifu.UI.WinForms.BunifuPictureBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.BunifuButton1 = New Bunifu.UI.WinForms.BunifuButton.BunifuButton()
         Me.BunifuButton2 = New Bunifu.UI.WinForms.BunifuButton.BunifuButton()
         Me.BunifuDragControl1 = New Bunifu.Framework.UI.BunifuDragControl(Me.components)
+        Me.BunifuLabel1 = New Bunifu.UI.WinForms.BunifuLabel()
+        Me.BunifuShapes6 = New Bunifu.UI.WinForms.BunifuShapes()
+        Me.BunifuLabel3 = New Bunifu.UI.WinForms.BunifuLabel()
+        Me.BunifuShapes7 = New Bunifu.UI.WinForms.BunifuShapes()
+        Me.BunifuLabel4 = New Bunifu.UI.WinForms.BunifuLabel()
+        Me.BunifuShapes8 = New Bunifu.UI.WinForms.BunifuShapes()
+        Me.BunifuLabel5 = New Bunifu.UI.WinForms.BunifuLabel()
+        Me.BunifuShapes5 = New Bunifu.UI.WinForms.BunifuShapes()
+        Me.BunifuLabel6 = New Bunifu.UI.WinForms.BunifuLabel()
         Me.header.SuspendLayout()
-        CType(Me.BunifuPictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.BunifuPictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.BunifuPictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.BunifuPictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.BunifuPictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'BunifuElipse1
@@ -109,22 +104,6 @@ Partial Class signup_Frm
         Me.header.Size = New System.Drawing.Size(937, 92)
         Me.header.TabIndex = 7
         '
-        'BunifuPictureBox1
-        '
-        Me.BunifuPictureBox1.AllowFocused = False
-        Me.BunifuPictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.BunifuPictureBox1.AutoSizeHeight = True
-        Me.BunifuPictureBox1.BorderRadius = 30
-        Me.BunifuPictureBox1.Image = CType(resources.GetObject("BunifuPictureBox1.Image"), System.Drawing.Image)
-        Me.BunifuPictureBox1.IsCircle = True
-        Me.BunifuPictureBox1.Location = New System.Drawing.Point(41, 136)
-        Me.BunifuPictureBox1.Name = "BunifuPictureBox1"
-        Me.BunifuPictureBox1.Size = New System.Drawing.Size(61, 61)
-        Me.BunifuPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.BunifuPictureBox1.TabIndex = 11
-        Me.BunifuPictureBox1.TabStop = False
-        Me.BunifuPictureBox1.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle
-        '
         'BunifuShapes1
         '
         Me.BunifuShapes1.Angle = 0!
@@ -133,7 +112,7 @@ Partial Class signup_Frm
         Me.BunifuShapes1.BorderThickness = 2
         Me.BunifuShapes1.FillColor = System.Drawing.Color.Transparent
         Me.BunifuShapes1.FillShape = True
-        Me.BunifuShapes1.Location = New System.Drawing.Point(41, 136)
+        Me.BunifuShapes1.Location = New System.Drawing.Point(30, 136)
         Me.BunifuShapes1.Name = "BunifuShapes1"
         Me.BunifuShapes1.Shape = Bunifu.UI.WinForms.BunifuShapes.Shapes.Circle
         Me.BunifuShapes1.Sides = 5
@@ -157,102 +136,6 @@ Partial Class signup_Frm
         Me.BunifuShapes2.TabIndex = 16
         Me.BunifuShapes2.Text = "BunifuShapes2"
         '
-        'BunifuPictureBox5
-        '
-        Me.BunifuPictureBox5.AllowFocused = False
-        Me.BunifuPictureBox5.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.BunifuPictureBox5.AutoSizeHeight = True
-        Me.BunifuPictureBox5.BorderRadius = 30
-        Me.BunifuPictureBox5.Image = CType(resources.GetObject("BunifuPictureBox5.Image"), System.Drawing.Image)
-        Me.BunifuPictureBox5.IsCircle = True
-        Me.BunifuPictureBox5.Location = New System.Drawing.Point(242, 136)
-        Me.BunifuPictureBox5.Name = "BunifuPictureBox5"
-        Me.BunifuPictureBox5.Size = New System.Drawing.Size(61, 61)
-        Me.BunifuPictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.BunifuPictureBox5.TabIndex = 20
-        Me.BunifuPictureBox5.TabStop = False
-        Me.BunifuPictureBox5.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle
-        '
-        'BunifuShapes6
-        '
-        Me.BunifuShapes6.Angle = 0!
-        Me.BunifuShapes6.BackColor = System.Drawing.Color.Transparent
-        Me.BunifuShapes6.BorderColor = System.Drawing.Color.Silver
-        Me.BunifuShapes6.BorderThickness = 2
-        Me.BunifuShapes6.FillColor = System.Drawing.Color.Transparent
-        Me.BunifuShapes6.FillShape = True
-        Me.BunifuShapes6.Location = New System.Drawing.Point(242, 136)
-        Me.BunifuShapes6.Name = "BunifuShapes6"
-        Me.BunifuShapes6.Shape = Bunifu.UI.WinForms.BunifuShapes.Shapes.Circle
-        Me.BunifuShapes6.Sides = 5
-        Me.BunifuShapes6.Size = New System.Drawing.Size(61, 61)
-        Me.BunifuShapes6.TabIndex = 21
-        Me.BunifuShapes6.Text = "BunifuShapes6"
-        '
-        'BunifuPictureBox6
-        '
-        Me.BunifuPictureBox6.AllowFocused = False
-        Me.BunifuPictureBox6.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.BunifuPictureBox6.AutoSizeHeight = True
-        Me.BunifuPictureBox6.BorderRadius = 30
-        Me.BunifuPictureBox6.Image = CType(resources.GetObject("BunifuPictureBox6.Image"), System.Drawing.Image)
-        Me.BunifuPictureBox6.IsCircle = True
-        Me.BunifuPictureBox6.Location = New System.Drawing.Point(453, 136)
-        Me.BunifuPictureBox6.Name = "BunifuPictureBox6"
-        Me.BunifuPictureBox6.Size = New System.Drawing.Size(61, 61)
-        Me.BunifuPictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.BunifuPictureBox6.TabIndex = 22
-        Me.BunifuPictureBox6.TabStop = False
-        Me.BunifuPictureBox6.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle
-        '
-        'BunifuShapes7
-        '
-        Me.BunifuShapes7.Angle = 0!
-        Me.BunifuShapes7.BackColor = System.Drawing.Color.Transparent
-        Me.BunifuShapes7.BorderColor = System.Drawing.Color.Silver
-        Me.BunifuShapes7.BorderThickness = 2
-        Me.BunifuShapes7.FillColor = System.Drawing.Color.Transparent
-        Me.BunifuShapes7.FillShape = True
-        Me.BunifuShapes7.Location = New System.Drawing.Point(453, 136)
-        Me.BunifuShapes7.Name = "BunifuShapes7"
-        Me.BunifuShapes7.Shape = Bunifu.UI.WinForms.BunifuShapes.Shapes.Circle
-        Me.BunifuShapes7.Sides = 5
-        Me.BunifuShapes7.Size = New System.Drawing.Size(61, 61)
-        Me.BunifuShapes7.TabIndex = 23
-        Me.BunifuShapes7.Text = "BunifuShapes7"
-        '
-        'BunifuPictureBox7
-        '
-        Me.BunifuPictureBox7.AllowFocused = False
-        Me.BunifuPictureBox7.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.BunifuPictureBox7.AutoSizeHeight = True
-        Me.BunifuPictureBox7.BorderRadius = 30
-        Me.BunifuPictureBox7.Image = CType(resources.GetObject("BunifuPictureBox7.Image"), System.Drawing.Image)
-        Me.BunifuPictureBox7.IsCircle = True
-        Me.BunifuPictureBox7.Location = New System.Drawing.Point(649, 136)
-        Me.BunifuPictureBox7.Name = "BunifuPictureBox7"
-        Me.BunifuPictureBox7.Size = New System.Drawing.Size(61, 61)
-        Me.BunifuPictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.BunifuPictureBox7.TabIndex = 24
-        Me.BunifuPictureBox7.TabStop = False
-        Me.BunifuPictureBox7.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle
-        '
-        'BunifuShapes8
-        '
-        Me.BunifuShapes8.Angle = 0!
-        Me.BunifuShapes8.BackColor = System.Drawing.Color.Transparent
-        Me.BunifuShapes8.BorderColor = System.Drawing.Color.Silver
-        Me.BunifuShapes8.BorderThickness = 2
-        Me.BunifuShapes8.FillColor = System.Drawing.Color.Transparent
-        Me.BunifuShapes8.FillShape = True
-        Me.BunifuShapes8.Location = New System.Drawing.Point(649, 136)
-        Me.BunifuShapes8.Name = "BunifuShapes8"
-        Me.BunifuShapes8.Shape = Bunifu.UI.WinForms.BunifuShapes.Shapes.Circle
-        Me.BunifuShapes8.Sides = 5
-        Me.BunifuShapes8.Size = New System.Drawing.Size(61, 61)
-        Me.BunifuShapes8.TabIndex = 25
-        Me.BunifuShapes8.Text = "BunifuShapes8"
-        '
         'BunifuShapes3
         '
         Me.BunifuShapes3.Angle = 0!
@@ -261,11 +144,11 @@ Partial Class signup_Frm
         Me.BunifuShapes3.BorderThickness = 2
         Me.BunifuShapes3.FillColor = System.Drawing.Color.Transparent
         Me.BunifuShapes3.FillShape = True
-        Me.BunifuShapes3.Location = New System.Drawing.Point(298, 119)
+        Me.BunifuShapes3.Location = New System.Drawing.Point(286, 119)
         Me.BunifuShapes3.Name = "BunifuShapes3"
         Me.BunifuShapes3.Shape = Bunifu.UI.WinForms.BunifuShapes.Shapes.Line
         Me.BunifuShapes3.Sides = 5
-        Me.BunifuShapes3.Size = New System.Drawing.Size(162, 92)
+        Me.BunifuShapes3.Size = New System.Drawing.Size(174, 92)
         Me.BunifuShapes3.TabIndex = 26
         Me.BunifuShapes3.Text = "BunifuShapes3"
         '
@@ -629,7 +512,7 @@ Partial Class signup_Frm
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(239, 117)
+        Me.Label3.Location = New System.Drawing.Point(241, 108)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(86, 16)
         Me.Label3.TabIndex = 33
@@ -662,22 +545,6 @@ Partial Class signup_Frm
         Me.Label6.TabIndex = 36
         Me.Label6.Text = "Phone Number"
         '
-        'BunifuShapes5
-        '
-        Me.BunifuShapes5.Angle = 0!
-        Me.BunifuShapes5.BackColor = System.Drawing.Color.Transparent
-        Me.BunifuShapes5.BorderColor = System.Drawing.Color.Silver
-        Me.BunifuShapes5.BorderThickness = 2
-        Me.BunifuShapes5.FillColor = System.Drawing.Color.Transparent
-        Me.BunifuShapes5.FillShape = True
-        Me.BunifuShapes5.Location = New System.Drawing.Point(848, 136)
-        Me.BunifuShapes5.Name = "BunifuShapes5"
-        Me.BunifuShapes5.Shape = Bunifu.UI.WinForms.BunifuShapes.Shapes.Circle
-        Me.BunifuShapes5.Sides = 5
-        Me.BunifuShapes5.Size = New System.Drawing.Size(61, 61)
-        Me.BunifuShapes5.TabIndex = 37
-        Me.BunifuShapes5.Text = "BunifuShapes5"
-        '
         'BunifuShapes9
         '
         Me.BunifuShapes9.Angle = 0!
@@ -694,22 +561,6 @@ Partial Class signup_Frm
         Me.BunifuShapes9.TabIndex = 38
         Me.BunifuShapes9.Text = "BunifuShapes9"
         '
-        'BunifuPictureBox2
-        '
-        Me.BunifuPictureBox2.AllowFocused = False
-        Me.BunifuPictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.BunifuPictureBox2.AutoSizeHeight = True
-        Me.BunifuPictureBox2.BorderRadius = 30
-        Me.BunifuPictureBox2.Image = CType(resources.GetObject("BunifuPictureBox2.Image"), System.Drawing.Image)
-        Me.BunifuPictureBox2.IsCircle = True
-        Me.BunifuPictureBox2.Location = New System.Drawing.Point(848, 136)
-        Me.BunifuPictureBox2.Name = "BunifuPictureBox2"
-        Me.BunifuPictureBox2.Size = New System.Drawing.Size(61, 61)
-        Me.BunifuPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.BunifuPictureBox2.TabIndex = 39
-        Me.BunifuPictureBox2.TabStop = False
-        Me.BunifuPictureBox2.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle
-        '
         'Label7
         '
         Me.Label7.AutoSize = True
@@ -723,7 +574,7 @@ Partial Class signup_Frm
         '
         Me.BunifuButton1.AllowAnimations = True
         Me.BunifuButton1.AllowMouseEffects = True
-        Me.BunifuButton1.AllowToggling = True
+        Me.BunifuButton1.AllowToggling = False
         Me.BunifuButton1.AnimationSpeed = 200
         Me.BunifuButton1.AutoGenerateColors = False
         Me.BunifuButton1.AutoRoundBorders = False
@@ -776,12 +627,12 @@ Partial Class signup_Frm
         Me.BunifuButton1.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(168, Byte), Integer), CType(CType(160, Byte), Integer), CType(CType(168, Byte), Integer))
         Me.BunifuButton1.OnDisabledState.IconLeftImage = Nothing
         Me.BunifuButton1.OnDisabledState.IconRightImage = Nothing
-        Me.BunifuButton1.onHoverState.BorderColor = System.Drawing.Color.DodgerBlue
+        Me.BunifuButton1.onHoverState.BorderColor = System.Drawing.Color.AliceBlue
         Me.BunifuButton1.onHoverState.BorderRadius = 1
         Me.BunifuButton1.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid
         Me.BunifuButton1.onHoverState.BorderThickness = 1
-        Me.BunifuButton1.onHoverState.FillColor = System.Drawing.Color.DodgerBlue
-        Me.BunifuButton1.onHoverState.ForeColor = System.Drawing.Color.White
+        Me.BunifuButton1.onHoverState.FillColor = System.Drawing.Color.AliceBlue
+        Me.BunifuButton1.onHoverState.ForeColor = System.Drawing.Color.DodgerBlue
         Me.BunifuButton1.onHoverState.IconLeftImage = Nothing
         Me.BunifuButton1.onHoverState.IconRightImage = Nothing
         Me.BunifuButton1.OnIdleState.BorderColor = System.Drawing.Color.White
@@ -792,11 +643,11 @@ Partial Class signup_Frm
         Me.BunifuButton1.OnIdleState.ForeColor = System.Drawing.Color.DodgerBlue
         Me.BunifuButton1.OnIdleState.IconLeftImage = Nothing
         Me.BunifuButton1.OnIdleState.IconRightImage = Nothing
-        Me.BunifuButton1.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(144, Byte), Integer))
+        Me.BunifuButton1.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(130, Byte), Integer), CType(CType(195, Byte), Integer), CType(CType(236, Byte), Integer))
         Me.BunifuButton1.OnPressedState.BorderRadius = 1
         Me.BunifuButton1.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid
         Me.BunifuButton1.OnPressedState.BorderThickness = 1
-        Me.BunifuButton1.OnPressedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(144, Byte), Integer))
+        Me.BunifuButton1.OnPressedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(130, Byte), Integer), CType(CType(195, Byte), Integer), CType(CType(236, Byte), Integer))
         Me.BunifuButton1.OnPressedState.ForeColor = System.Drawing.Color.White
         Me.BunifuButton1.OnPressedState.IconLeftImage = Nothing
         Me.BunifuButton1.OnPressedState.IconRightImage = Nothing
@@ -812,7 +663,7 @@ Partial Class signup_Frm
         '
         Me.BunifuButton2.AllowAnimations = True
         Me.BunifuButton2.AllowMouseEffects = True
-        Me.BunifuButton2.AllowToggling = True
+        Me.BunifuButton2.AllowToggling = False
         Me.BunifuButton2.AnimationSpeed = 200
         Me.BunifuButton2.AutoGenerateColors = False
         Me.BunifuButton2.AutoRoundBorders = False
@@ -865,12 +716,12 @@ Partial Class signup_Frm
         Me.BunifuButton2.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(168, Byte), Integer), CType(CType(160, Byte), Integer), CType(CType(168, Byte), Integer))
         Me.BunifuButton2.OnDisabledState.IconLeftImage = Nothing
         Me.BunifuButton2.OnDisabledState.IconRightImage = Nothing
-        Me.BunifuButton2.onHoverState.BorderColor = System.Drawing.Color.White
+        Me.BunifuButton2.onHoverState.BorderColor = System.Drawing.Color.AliceBlue
         Me.BunifuButton2.onHoverState.BorderRadius = 1
         Me.BunifuButton2.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid
         Me.BunifuButton2.onHoverState.BorderThickness = 1
-        Me.BunifuButton2.onHoverState.FillColor = System.Drawing.Color.White
-        Me.BunifuButton2.onHoverState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(105, Byte), Integer), CType(CType(181, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.BunifuButton2.onHoverState.FillColor = System.Drawing.Color.AliceBlue
+        Me.BunifuButton2.onHoverState.ForeColor = System.Drawing.Color.DodgerBlue
         Me.BunifuButton2.onHoverState.IconLeftImage = Nothing
         Me.BunifuButton2.onHoverState.IconRightImage = Nothing
         Me.BunifuButton2.OnIdleState.BorderColor = System.Drawing.Color.DodgerBlue
@@ -881,11 +732,11 @@ Partial Class signup_Frm
         Me.BunifuButton2.OnIdleState.ForeColor = System.Drawing.Color.White
         Me.BunifuButton2.OnIdleState.IconLeftImage = Nothing
         Me.BunifuButton2.OnIdleState.IconRightImage = CType(resources.GetObject("BunifuButton2.OnIdleState.IconRightImage"), System.Drawing.Image)
-        Me.BunifuButton2.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(144, Byte), Integer))
+        Me.BunifuButton2.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(130, Byte), Integer), CType(CType(195, Byte), Integer), CType(CType(236, Byte), Integer))
         Me.BunifuButton2.OnPressedState.BorderRadius = 1
         Me.BunifuButton2.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid
         Me.BunifuButton2.OnPressedState.BorderThickness = 1
-        Me.BunifuButton2.OnPressedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(144, Byte), Integer))
+        Me.BunifuButton2.OnPressedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(130, Byte), Integer), CType(CType(195, Byte), Integer), CType(CType(236, Byte), Integer))
         Me.BunifuButton2.OnPressedState.ForeColor = System.Drawing.Color.White
         Me.BunifuButton2.OnPressedState.IconLeftImage = Nothing
         Me.BunifuButton2.OnPressedState.IconRightImage = Nothing
@@ -904,17 +755,170 @@ Partial Class signup_Frm
         Me.BunifuDragControl1.TargetControl = Me.header
         Me.BunifuDragControl1.Vertical = True
         '
+        'BunifuLabel1
+        '
+        Me.BunifuLabel1.AllowParentOverrides = False
+        Me.BunifuLabel1.AutoEllipsis = False
+        Me.BunifuLabel1.CursorType = System.Windows.Forms.Cursors.Default
+        Me.BunifuLabel1.Font = New System.Drawing.Font("Trebuchet MS", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BunifuLabel1.Location = New System.Drawing.Point(50, 147)
+        Me.BunifuLabel1.Name = "BunifuLabel1"
+        Me.BunifuLabel1.Padding = New System.Windows.Forms.Padding(4, 0, 0, 0)
+        Me.BunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.BunifuLabel1.Size = New System.Drawing.Size(20, 35)
+        Me.BunifuLabel1.TabIndex = 43
+        Me.BunifuLabel1.Text = "1"
+        Me.BunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter
+        Me.BunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.[Default]
+        '
+        'BunifuShapes6
+        '
+        Me.BunifuShapes6.Angle = 0!
+        Me.BunifuShapes6.BackColor = System.Drawing.Color.Transparent
+        Me.BunifuShapes6.BorderColor = System.Drawing.Color.Silver
+        Me.BunifuShapes6.BorderThickness = 2
+        Me.BunifuShapes6.FillColor = System.Drawing.Color.Transparent
+        Me.BunifuShapes6.FillShape = True
+        Me.BunifuShapes6.Location = New System.Drawing.Point(234, 136)
+        Me.BunifuShapes6.Name = "BunifuShapes6"
+        Me.BunifuShapes6.Shape = Bunifu.UI.WinForms.BunifuShapes.Shapes.Circle
+        Me.BunifuShapes6.Sides = 5
+        Me.BunifuShapes6.Size = New System.Drawing.Size(61, 61)
+        Me.BunifuShapes6.TabIndex = 44
+        Me.BunifuShapes6.Text = "BunifuShapes6"
+        '
+        'BunifuLabel3
+        '
+        Me.BunifuLabel3.AllowParentOverrides = False
+        Me.BunifuLabel3.AutoEllipsis = False
+        Me.BunifuLabel3.CursorType = Nothing
+        Me.BunifuLabel3.Font = New System.Drawing.Font("Trebuchet MS", 16.2!, System.Drawing.FontStyle.Bold)
+        Me.BunifuLabel3.Location = New System.Drawing.Point(458, 147)
+        Me.BunifuLabel3.Name = "BunifuLabel3"
+        Me.BunifuLabel3.Padding = New System.Windows.Forms.Padding(4, 0, 0, 0)
+        Me.BunifuLabel3.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.BunifuLabel3.Size = New System.Drawing.Size(20, 35)
+        Me.BunifuLabel3.TabIndex = 47
+        Me.BunifuLabel3.Text = "3"
+        Me.BunifuLabel3.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter
+        Me.BunifuLabel3.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.[Default]
+        '
+        'BunifuShapes7
+        '
+        Me.BunifuShapes7.Angle = 0!
+        Me.BunifuShapes7.BackColor = System.Drawing.Color.Transparent
+        Me.BunifuShapes7.BorderColor = System.Drawing.Color.Silver
+        Me.BunifuShapes7.BorderThickness = 2
+        Me.BunifuShapes7.FillColor = System.Drawing.Color.Transparent
+        Me.BunifuShapes7.FillShape = True
+        Me.BunifuShapes7.Location = New System.Drawing.Point(438, 136)
+        Me.BunifuShapes7.Name = "BunifuShapes7"
+        Me.BunifuShapes7.Shape = Bunifu.UI.WinForms.BunifuShapes.Shapes.Circle
+        Me.BunifuShapes7.Sides = 5
+        Me.BunifuShapes7.Size = New System.Drawing.Size(61, 61)
+        Me.BunifuShapes7.TabIndex = 46
+        Me.BunifuShapes7.Text = "BunifuShapes7"
+        '
+        'BunifuLabel4
+        '
+        Me.BunifuLabel4.AllowParentOverrides = False
+        Me.BunifuLabel4.AutoEllipsis = False
+        Me.BunifuLabel4.CursorType = Nothing
+        Me.BunifuLabel4.Font = New System.Drawing.Font("Trebuchet MS", 16.2!, System.Drawing.FontStyle.Bold)
+        Me.BunifuLabel4.Location = New System.Drawing.Point(662, 147)
+        Me.BunifuLabel4.Margin = New System.Windows.Forms.Padding(50, 3, 3, 3)
+        Me.BunifuLabel4.Name = "BunifuLabel4"
+        Me.BunifuLabel4.Padding = New System.Windows.Forms.Padding(4, 0, 0, 0)
+        Me.BunifuLabel4.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.BunifuLabel4.Size = New System.Drawing.Size(20, 35)
+        Me.BunifuLabel4.TabIndex = 49
+        Me.BunifuLabel4.Text = "4"
+        Me.BunifuLabel4.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter
+        Me.BunifuLabel4.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.[Default]
+        '
+        'BunifuShapes8
+        '
+        Me.BunifuShapes8.Angle = 0!
+        Me.BunifuShapes8.BackColor = System.Drawing.Color.Transparent
+        Me.BunifuShapes8.BorderColor = System.Drawing.Color.Silver
+        Me.BunifuShapes8.BorderThickness = 2
+        Me.BunifuShapes8.FillColor = System.Drawing.Color.Transparent
+        Me.BunifuShapes8.FillShape = True
+        Me.BunifuShapes8.Location = New System.Drawing.Point(642, 136)
+        Me.BunifuShapes8.Name = "BunifuShapes8"
+        Me.BunifuShapes8.Shape = Bunifu.UI.WinForms.BunifuShapes.Shapes.Circle
+        Me.BunifuShapes8.Sides = 5
+        Me.BunifuShapes8.Size = New System.Drawing.Size(61, 61)
+        Me.BunifuShapes8.TabIndex = 48
+        Me.BunifuShapes8.Text = "BunifuShapes8"
+        '
+        'BunifuLabel5
+        '
+        Me.BunifuLabel5.AllowParentOverrides = False
+        Me.BunifuLabel5.AutoEllipsis = False
+        Me.BunifuLabel5.CursorType = Nothing
+        Me.BunifuLabel5.Font = New System.Drawing.Font("Trebuchet MS", 16.2!, System.Drawing.FontStyle.Bold)
+        Me.BunifuLabel5.Location = New System.Drawing.Point(866, 147)
+        Me.BunifuLabel5.Name = "BunifuLabel5"
+        Me.BunifuLabel5.Padding = New System.Windows.Forms.Padding(4, 0, 0, 0)
+        Me.BunifuLabel5.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.BunifuLabel5.Size = New System.Drawing.Size(20, 35)
+        Me.BunifuLabel5.TabIndex = 51
+        Me.BunifuLabel5.Text = "5"
+        Me.BunifuLabel5.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter
+        Me.BunifuLabel5.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.[Default]
+        '
+        'BunifuShapes5
+        '
+        Me.BunifuShapes5.Angle = 0!
+        Me.BunifuShapes5.BackColor = System.Drawing.Color.Transparent
+        Me.BunifuShapes5.BorderColor = System.Drawing.Color.Silver
+        Me.BunifuShapes5.BorderThickness = 2
+        Me.BunifuShapes5.FillColor = System.Drawing.Color.Transparent
+        Me.BunifuShapes5.FillShape = True
+        Me.BunifuShapes5.Location = New System.Drawing.Point(846, 136)
+        Me.BunifuShapes5.Name = "BunifuShapes5"
+        Me.BunifuShapes5.Shape = Bunifu.UI.WinForms.BunifuShapes.Shapes.Circle
+        Me.BunifuShapes5.Sides = 5
+        Me.BunifuShapes5.Size = New System.Drawing.Size(61, 61)
+        Me.BunifuShapes5.TabIndex = 50
+        Me.BunifuShapes5.Text = "BunifuShapes5"
+        '
+        'BunifuLabel6
+        '
+        Me.BunifuLabel6.AllowParentOverrides = False
+        Me.BunifuLabel6.AutoEllipsis = False
+        Me.BunifuLabel6.CursorType = Nothing
+        Me.BunifuLabel6.Font = New System.Drawing.Font("Trebuchet MS", 16.2!, System.Drawing.FontStyle.Bold)
+        Me.BunifuLabel6.Location = New System.Drawing.Point(254, 147)
+        Me.BunifuLabel6.Name = "BunifuLabel6"
+        Me.BunifuLabel6.Padding = New System.Windows.Forms.Padding(4, 0, 0, 0)
+        Me.BunifuLabel6.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.BunifuLabel6.Size = New System.Drawing.Size(20, 35)
+        Me.BunifuLabel6.TabIndex = 52
+        Me.BunifuLabel6.Text = "2"
+        Me.BunifuLabel6.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter
+        Me.BunifuLabel6.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.[Default]
+        '
         'signup_Frm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(937, 614)
+        Me.Controls.Add(Me.BunifuLabel6)
+        Me.Controls.Add(Me.BunifuLabel5)
+        Me.Controls.Add(Me.BunifuShapes5)
+        Me.Controls.Add(Me.BunifuLabel4)
+        Me.Controls.Add(Me.BunifuShapes8)
+        Me.Controls.Add(Me.BunifuLabel3)
+        Me.Controls.Add(Me.BunifuShapes7)
+        Me.Controls.Add(Me.BunifuShapes6)
+        Me.Controls.Add(Me.BunifuLabel1)
         Me.Controls.Add(Me.BunifuButton2)
         Me.Controls.Add(Me.BunifuButton1)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.BunifuPictureBox2)
-        Me.Controls.Add(Me.BunifuShapes5)
         Me.Controls.Add(Me.BunifuShapes9)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label4)
@@ -924,29 +928,17 @@ Partial Class signup_Frm
         Me.Controls.Add(Me.BunifuTextBox3)
         Me.Controls.Add(Me.BunifuTextBox2)
         Me.Controls.Add(Me.BunifuTextBox1)
-        Me.Controls.Add(Me.BunifuPictureBox7)
-        Me.Controls.Add(Me.BunifuShapes8)
-        Me.Controls.Add(Me.BunifuPictureBox6)
-        Me.Controls.Add(Me.BunifuShapes7)
-        Me.Controls.Add(Me.BunifuPictureBox5)
-        Me.Controls.Add(Me.BunifuShapes6)
-        Me.Controls.Add(Me.BunifuPictureBox1)
         Me.Controls.Add(Me.header)
-        Me.Controls.Add(Me.BunifuShapes1)
-        Me.Controls.Add(Me.BunifuShapes2)
         Me.Controls.Add(Me.BunifuShapes3)
         Me.Controls.Add(Me.BunifuShapes4)
+        Me.Controls.Add(Me.BunifuShapes1)
+        Me.Controls.Add(Me.BunifuShapes2)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "signup_Frm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "signup_Frm"
         Me.header.ResumeLayout(False)
         Me.header.PerformLayout()
-        CType(Me.BunifuPictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.BunifuPictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.BunifuPictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.BunifuPictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.BunifuPictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -955,13 +947,6 @@ Partial Class signup_Frm
     Friend WithEvents BunifuElipse1 As Bunifu.Framework.UI.BunifuElipse
     Friend WithEvents Label1 As Label
     Friend WithEvents header As Panel
-    Friend WithEvents BunifuPictureBox1 As Bunifu.UI.WinForms.BunifuPictureBox
-    Friend WithEvents BunifuPictureBox7 As Bunifu.UI.WinForms.BunifuPictureBox
-    Friend WithEvents BunifuShapes8 As Bunifu.UI.WinForms.BunifuShapes
-    Friend WithEvents BunifuPictureBox6 As Bunifu.UI.WinForms.BunifuPictureBox
-    Friend WithEvents BunifuShapes7 As Bunifu.UI.WinForms.BunifuShapes
-    Friend WithEvents BunifuPictureBox5 As Bunifu.UI.WinForms.BunifuPictureBox
-    Friend WithEvents BunifuShapes6 As Bunifu.UI.WinForms.BunifuShapes
     Friend WithEvents BunifuShapes1 As Bunifu.UI.WinForms.BunifuShapes
     Friend WithEvents BunifuShapes2 As Bunifu.UI.WinForms.BunifuShapes
     Friend WithEvents BunifuShapes3 As Bunifu.UI.WinForms.BunifuShapes
@@ -969,7 +954,6 @@ Partial Class signup_Frm
     Friend WithEvents BunifuTextBox1 As Bunifu.UI.WinForms.BunifuTextBox
     Friend WithEvents BunifuImageButton2 As Bunifu.UI.WinForms.BunifuImageButton
     Friend WithEvents BunifuTextBox2 As Bunifu.UI.WinForms.BunifuTextBox
-    Friend WithEvents BunifuShapes5 As Bunifu.UI.WinForms.BunifuShapes
     Friend WithEvents BunifuShapes9 As Bunifu.UI.WinForms.BunifuShapes
     Friend WithEvents Label6 As Label
     Friend WithEvents Label5 As Label
@@ -978,9 +962,17 @@ Partial Class signup_Frm
     Friend WithEvents Label2 As Label
     Friend WithEvents BunifuTextBox4 As Bunifu.UI.WinForms.BunifuTextBox
     Friend WithEvents BunifuTextBox3 As Bunifu.UI.WinForms.BunifuTextBox
-    Friend WithEvents BunifuPictureBox2 As Bunifu.UI.WinForms.BunifuPictureBox
     Friend WithEvents Label7 As Label
     Friend WithEvents BunifuButton2 As Bunifu.UI.WinForms.BunifuButton.BunifuButton
     Friend WithEvents BunifuButton1 As Bunifu.UI.WinForms.BunifuButton.BunifuButton
     Friend WithEvents BunifuDragControl1 As Bunifu.Framework.UI.BunifuDragControl
+    Friend WithEvents BunifuLabel5 As Bunifu.UI.WinForms.BunifuLabel
+    Friend WithEvents BunifuShapes5 As Bunifu.UI.WinForms.BunifuShapes
+    Friend WithEvents BunifuLabel4 As Bunifu.UI.WinForms.BunifuLabel
+    Friend WithEvents BunifuShapes8 As Bunifu.UI.WinForms.BunifuShapes
+    Friend WithEvents BunifuLabel3 As Bunifu.UI.WinForms.BunifuLabel
+    Friend WithEvents BunifuShapes7 As Bunifu.UI.WinForms.BunifuShapes
+    Friend WithEvents BunifuShapes6 As Bunifu.UI.WinForms.BunifuShapes
+    Friend WithEvents BunifuLabel1 As Bunifu.UI.WinForms.BunifuLabel
+    Friend WithEvents BunifuLabel6 As Bunifu.UI.WinForms.BunifuLabel
 End Class
