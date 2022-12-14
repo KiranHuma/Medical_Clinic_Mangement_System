@@ -23,15 +23,17 @@ Partial Class dashboard_Frm
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim BorderEdges1 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges()
         Dim BorderEdges2 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges()
         Dim BorderEdges3 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges()
         Dim BorderEdges4 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges()
         Dim Animation2 As Bunifu.UI.WinForms.BunifuAnimatorNS.Animation = New Bunifu.UI.WinForms.BunifuAnimatorNS.Animation()
         Dim Animation1 As Bunifu.UI.WinForms.BunifuAnimatorNS.Animation = New Bunifu.UI.WinForms.BunifuAnimatorNS.Animation()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(dashboard_Frm))
-        Dim BorderEdges1 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges()
         Me.BunifuElipse1 = New Bunifu.Framework.UI.BunifuElipse(Me.components)
         Me.sidemenu = New System.Windows.Forms.Panel()
+        Me.records_btn = New Bunifu.UI.WinForms.BunifuButton.BunifuButton()
+        Me.logo1 = New System.Windows.Forms.Label()
         Me.manInventory_btn = New Bunifu.UI.WinForms.BunifuButton.BunifuButton()
         Me.addinventory_btn = New Bunifu.UI.WinForms.BunifuButton.BunifuButton()
         Me.inventory_btn = New Bunifu.UI.WinForms.BunifuButton.BunifuButton()
@@ -44,8 +46,6 @@ Partial Class dashboard_Frm
         Me.logoAnimator = New Bunifu.UI.WinForms.BunifuTransition(Me.components)
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.PanelAnimator = New Bunifu.UI.WinForms.BunifuTransition(Me.components)
-        Me.logo1 = New System.Windows.Forms.Label()
-        Me.records_btn = New Bunifu.UI.WinForms.BunifuButton.BunifuButton()
         Me.sidemenu.SuspendLayout()
         CType(Me.logo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.header.SuspendLayout()
@@ -73,6 +73,111 @@ Partial Class dashboard_Frm
         Me.sidemenu.Name = "sidemenu"
         Me.sidemenu.Size = New System.Drawing.Size(360, 721)
         Me.sidemenu.TabIndex = 0
+        '
+        'records_btn
+        '
+        Me.records_btn.AllowAnimations = True
+        Me.records_btn.AllowMouseEffects = True
+        Me.records_btn.AllowToggling = False
+        Me.records_btn.AnimationSpeed = 200
+        Me.records_btn.AutoGenerateColors = False
+        Me.records_btn.AutoRoundBorders = False
+        Me.records_btn.AutoSizeLeftIcon = True
+        Me.records_btn.AutoSizeRightIcon = True
+        Me.records_btn.BackColor = System.Drawing.Color.Transparent
+        Me.records_btn.BackColor1 = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(89, Byte), Integer))
+        Me.records_btn.BackgroundImage = CType(resources.GetObject("records_btn.BackgroundImage"), System.Drawing.Image)
+        Me.records_btn.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid
+        Me.records_btn.ButtonText = "Records"
+        Me.records_btn.ButtonTextMarginLeft = 0
+        Me.records_btn.ColorContrastOnClick = 45
+        Me.records_btn.ColorContrastOnHover = 45
+        Me.records_btn.Cursor = System.Windows.Forms.Cursors.Default
+        BorderEdges1.BottomLeft = True
+        BorderEdges1.BottomRight = True
+        BorderEdges1.TopLeft = True
+        BorderEdges1.TopRight = True
+        Me.records_btn.CustomizableEdges = BorderEdges1
+        Me.PanelAnimator.SetDecoration(Me.records_btn, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.logoAnimator.SetDecoration(Me.records_btn, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.records_btn.DialogResult = System.Windows.Forms.DialogResult.None
+        Me.records_btn.DisabledBorderColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(94, Byte), Integer))
+        Me.records_btn.DisabledFillColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(94, Byte), Integer))
+        Me.records_btn.DisabledForecolor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(112, Byte), Integer))
+        Me.records_btn.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed
+        Me.records_btn.Font = New System.Drawing.Font("Sitka Banner", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.records_btn.ForeColor = System.Drawing.Color.White
+        Me.records_btn.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.records_btn.IconLeftCursor = System.Windows.Forms.Cursors.Default
+        Me.records_btn.IconLeftPadding = New System.Windows.Forms.Padding(19, 3, 3, 3)
+        Me.records_btn.IconMarginLeft = 11
+        Me.records_btn.IconPadding = -7
+        Me.records_btn.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.records_btn.IconRightCursor = System.Windows.Forms.Cursors.Default
+        Me.records_btn.IconRightPadding = New System.Windows.Forms.Padding(3, 3, 7, 3)
+        Me.records_btn.IconSize = 60
+        Me.records_btn.IdleBorderColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(89, Byte), Integer))
+        Me.records_btn.IdleBorderRadius = 1
+        Me.records_btn.IdleBorderThickness = 1
+        Me.records_btn.IdleFillColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(89, Byte), Integer))
+        Me.records_btn.IdleIconLeftImage = CType(resources.GetObject("records_btn.IdleIconLeftImage"), System.Drawing.Image)
+        Me.records_btn.IdleIconRightImage = Nothing
+        Me.records_btn.IndicateFocus = False
+        Me.records_btn.Location = New System.Drawing.Point(-9, 148)
+        Me.records_btn.Name = "records_btn"
+        Me.records_btn.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(94, Byte), Integer))
+        Me.records_btn.OnDisabledState.BorderRadius = 1
+        Me.records_btn.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid
+        Me.records_btn.OnDisabledState.BorderThickness = 1
+        Me.records_btn.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(94, Byte), Integer))
+        Me.records_btn.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(112, Byte), Integer))
+        Me.records_btn.OnDisabledState.IconLeftImage = Nothing
+        Me.records_btn.OnDisabledState.IconRightImage = Nothing
+        Me.records_btn.onHoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.records_btn.onHoverState.BorderRadius = 1
+        Me.records_btn.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid
+        Me.records_btn.onHoverState.BorderThickness = 1
+        Me.records_btn.onHoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.records_btn.onHoverState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(112, Byte), Integer))
+        Me.records_btn.onHoverState.IconLeftImage = Nothing
+        Me.records_btn.onHoverState.IconRightImage = Nothing
+        Me.records_btn.OnIdleState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(89, Byte), Integer))
+        Me.records_btn.OnIdleState.BorderRadius = 1
+        Me.records_btn.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid
+        Me.records_btn.OnIdleState.BorderThickness = 1
+        Me.records_btn.OnIdleState.FillColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(89, Byte), Integer))
+        Me.records_btn.OnIdleState.ForeColor = System.Drawing.Color.White
+        Me.records_btn.OnIdleState.IconLeftImage = CType(resources.GetObject("records_btn.OnIdleState.IconLeftImage"), System.Drawing.Image)
+        Me.records_btn.OnIdleState.IconRightImage = Nothing
+        Me.records_btn.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(94, Byte), Integer))
+        Me.records_btn.OnPressedState.BorderRadius = 1
+        Me.records_btn.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid
+        Me.records_btn.OnPressedState.BorderThickness = 1
+        Me.records_btn.OnPressedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(94, Byte), Integer))
+        Me.records_btn.OnPressedState.ForeColor = System.Drawing.Color.White
+        Me.records_btn.OnPressedState.IconLeftImage = Nothing
+        Me.records_btn.OnPressedState.IconRightImage = Nothing
+        Me.records_btn.Size = New System.Drawing.Size(365, 39)
+        Me.records_btn.TabIndex = 48
+        Me.records_btn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.records_btn.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center
+        Me.records_btn.TextMarginLeft = 0
+        Me.records_btn.TextPadding = New System.Windows.Forms.Padding(-16, 2, 0, 0)
+        Me.records_btn.UseDefaultRadiusAndThickness = True
+        '
+        'logo1
+        '
+        Me.logo1.AutoSize = True
+        Me.logo1.BackColor = System.Drawing.Color.Transparent
+        Me.logoAnimator.SetDecoration(Me.logo1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.PanelAnimator.SetDecoration(Me.logo1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.logo1.Font = New System.Drawing.Font("Sitka Text", 24.0!)
+        Me.logo1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(230, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(195, Byte), Integer))
+        Me.logo1.Location = New System.Drawing.Point(25, 78)
+        Me.logo1.Name = "logo1"
+        Me.logo1.Size = New System.Drawing.Size(311, 58)
+        Me.logo1.TabIndex = 47
+        Me.logo1.Text = "Atta Poly Clinic"
         '
         'manInventory_btn
         '
@@ -147,7 +252,7 @@ Partial Class dashboard_Frm
         Me.manInventory_btn.OnIdleState.BorderThickness = 1
         Me.manInventory_btn.OnIdleState.FillColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(89, Byte), Integer))
         Me.manInventory_btn.OnIdleState.ForeColor = System.Drawing.Color.White
-        Me.manInventory_btn.OnIdleState.IconLeftImage = CType(resources.GetObject("BunifuButton4.OnIdleState.IconLeftImage"), System.Drawing.Image)
+        Me.manInventory_btn.OnIdleState.IconLeftImage = CType(resources.GetObject("manInventory_btn.OnIdleState.IconLeftImage"), System.Drawing.Image)
         Me.manInventory_btn.OnIdleState.IconRightImage = Nothing
         Me.manInventory_btn.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(94, Byte), Integer))
         Me.manInventory_btn.OnPressedState.BorderRadius = 1
@@ -238,7 +343,7 @@ Partial Class dashboard_Frm
         Me.addinventory_btn.OnIdleState.BorderThickness = 1
         Me.addinventory_btn.OnIdleState.FillColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(89, Byte), Integer))
         Me.addinventory_btn.OnIdleState.ForeColor = System.Drawing.Color.White
-        Me.addinventory_btn.OnIdleState.IconLeftImage = CType(resources.GetObject("BunifuButton3.OnIdleState.IconLeftImage"), System.Drawing.Image)
+        Me.addinventory_btn.OnIdleState.IconLeftImage = CType(resources.GetObject("addinventory_btn.OnIdleState.IconLeftImage"), System.Drawing.Image)
         Me.addinventory_btn.OnIdleState.IconRightImage = Nothing
         Me.addinventory_btn.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(94, Byte), Integer))
         Me.addinventory_btn.OnPressedState.BorderRadius = 1
@@ -329,7 +434,7 @@ Partial Class dashboard_Frm
         Me.inventory_btn.OnIdleState.BorderThickness = 1
         Me.inventory_btn.OnIdleState.FillColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(89, Byte), Integer))
         Me.inventory_btn.OnIdleState.ForeColor = System.Drawing.Color.White
-        Me.inventory_btn.OnIdleState.IconLeftImage = CType(resources.GetObject("BunifuButton2.OnIdleState.IconLeftImage"), System.Drawing.Image)
+        Me.inventory_btn.OnIdleState.IconLeftImage = CType(resources.GetObject("inventory_btn.OnIdleState.IconLeftImage"), System.Drawing.Image)
         Me.inventory_btn.OnIdleState.IconRightImage = Nothing
         Me.inventory_btn.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(94, Byte), Integer))
         Me.inventory_btn.OnPressedState.BorderRadius = 1
@@ -520,111 +625,6 @@ Partial Class dashboard_Frm
         Animation1.TimeCoeff = 2.0!
         Animation1.TransparencyCoeff = 0!
         Me.PanelAnimator.DefaultAnimation = Animation1
-        '
-        'logo1
-        '
-        Me.logo1.AutoSize = True
-        Me.logo1.BackColor = System.Drawing.Color.Transparent
-        Me.logoAnimator.SetDecoration(Me.logo1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.PanelAnimator.SetDecoration(Me.logo1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.logo1.Font = New System.Drawing.Font("Sitka Text", 24.0!)
-        Me.logo1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(230, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(195, Byte), Integer))
-        Me.logo1.Location = New System.Drawing.Point(3, 78)
-        Me.logo1.Name = "logo1"
-        Me.logo1.Size = New System.Drawing.Size(311, 58)
-        Me.logo1.TabIndex = 47
-        Me.logo1.Text = "Atta Poly Clinic"
-        '
-        'records_btn
-        '
-        Me.records_btn.AllowAnimations = True
-        Me.records_btn.AllowMouseEffects = True
-        Me.records_btn.AllowToggling = False
-        Me.records_btn.AnimationSpeed = 200
-        Me.records_btn.AutoGenerateColors = False
-        Me.records_btn.AutoRoundBorders = False
-        Me.records_btn.AutoSizeLeftIcon = True
-        Me.records_btn.AutoSizeRightIcon = True
-        Me.records_btn.BackColor = System.Drawing.Color.Transparent
-        Me.records_btn.BackColor1 = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(89, Byte), Integer))
-        Me.records_btn.BackgroundImage = CType(resources.GetObject("records_btn.BackgroundImage"), System.Drawing.Image)
-        Me.records_btn.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid
-        Me.records_btn.ButtonText = "Records"
-        Me.records_btn.ButtonTextMarginLeft = 0
-        Me.records_btn.ColorContrastOnClick = 45
-        Me.records_btn.ColorContrastOnHover = 45
-        Me.records_btn.Cursor = System.Windows.Forms.Cursors.Default
-        BorderEdges1.BottomLeft = True
-        BorderEdges1.BottomRight = True
-        BorderEdges1.TopLeft = True
-        BorderEdges1.TopRight = True
-        Me.records_btn.CustomizableEdges = BorderEdges1
-        Me.PanelAnimator.SetDecoration(Me.records_btn, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.logoAnimator.SetDecoration(Me.records_btn, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.records_btn.DialogResult = System.Windows.Forms.DialogResult.None
-        Me.records_btn.DisabledBorderColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(94, Byte), Integer))
-        Me.records_btn.DisabledFillColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(94, Byte), Integer))
-        Me.records_btn.DisabledForecolor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(112, Byte), Integer))
-        Me.records_btn.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed
-        Me.records_btn.Font = New System.Drawing.Font("Sitka Banner", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.records_btn.ForeColor = System.Drawing.Color.White
-        Me.records_btn.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.records_btn.IconLeftCursor = System.Windows.Forms.Cursors.Default
-        Me.records_btn.IconLeftPadding = New System.Windows.Forms.Padding(19, 3, 3, 3)
-        Me.records_btn.IconMarginLeft = 11
-        Me.records_btn.IconPadding = -7
-        Me.records_btn.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.records_btn.IconRightCursor = System.Windows.Forms.Cursors.Default
-        Me.records_btn.IconRightPadding = New System.Windows.Forms.Padding(3, 3, 7, 3)
-        Me.records_btn.IconSize = 60
-        Me.records_btn.IdleBorderColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(89, Byte), Integer))
-        Me.records_btn.IdleBorderRadius = 1
-        Me.records_btn.IdleBorderThickness = 1
-        Me.records_btn.IdleFillColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(89, Byte), Integer))
-        Me.records_btn.IdleIconLeftImage = CType(resources.GetObject("records_btn.IdleIconLeftImage"), System.Drawing.Image)
-        Me.records_btn.IdleIconRightImage = Nothing
-        Me.records_btn.IndicateFocus = False
-        Me.records_btn.Location = New System.Drawing.Point(-9, 148)
-        Me.records_btn.Name = "records_btn"
-        Me.records_btn.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(94, Byte), Integer))
-        Me.records_btn.OnDisabledState.BorderRadius = 1
-        Me.records_btn.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid
-        Me.records_btn.OnDisabledState.BorderThickness = 1
-        Me.records_btn.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(94, Byte), Integer))
-        Me.records_btn.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(112, Byte), Integer))
-        Me.records_btn.OnDisabledState.IconLeftImage = Nothing
-        Me.records_btn.OnDisabledState.IconRightImage = Nothing
-        Me.records_btn.onHoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(80, Byte), Integer))
-        Me.records_btn.onHoverState.BorderRadius = 1
-        Me.records_btn.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid
-        Me.records_btn.onHoverState.BorderThickness = 1
-        Me.records_btn.onHoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(80, Byte), Integer))
-        Me.records_btn.onHoverState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(112, Byte), Integer))
-        Me.records_btn.onHoverState.IconLeftImage = Nothing
-        Me.records_btn.onHoverState.IconRightImage = Nothing
-        Me.records_btn.OnIdleState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(89, Byte), Integer))
-        Me.records_btn.OnIdleState.BorderRadius = 1
-        Me.records_btn.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid
-        Me.records_btn.OnIdleState.BorderThickness = 1
-        Me.records_btn.OnIdleState.FillColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(89, Byte), Integer))
-        Me.records_btn.OnIdleState.ForeColor = System.Drawing.Color.White
-        Me.records_btn.OnIdleState.IconLeftImage = CType(resources.GetObject("BunifuButton1.OnIdleState.IconLeftImage"), System.Drawing.Image)
-        Me.records_btn.OnIdleState.IconRightImage = Nothing
-        Me.records_btn.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(94, Byte), Integer))
-        Me.records_btn.OnPressedState.BorderRadius = 1
-        Me.records_btn.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid
-        Me.records_btn.OnPressedState.BorderThickness = 1
-        Me.records_btn.OnPressedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(94, Byte), Integer))
-        Me.records_btn.OnPressedState.ForeColor = System.Drawing.Color.White
-        Me.records_btn.OnPressedState.IconLeftImage = Nothing
-        Me.records_btn.OnPressedState.IconRightImage = Nothing
-        Me.records_btn.Size = New System.Drawing.Size(365, 39)
-        Me.records_btn.TabIndex = 48
-        Me.records_btn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.records_btn.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center
-        Me.records_btn.TextMarginLeft = 0
-        Me.records_btn.TextPadding = New System.Windows.Forms.Padding(-16, 2, 0, 0)
-        Me.records_btn.UseDefaultRadiusAndThickness = True
         '
         'dashboard_Frm
         '

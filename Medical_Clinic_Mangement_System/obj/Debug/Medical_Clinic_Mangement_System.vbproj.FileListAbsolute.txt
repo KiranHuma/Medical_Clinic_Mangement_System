@@ -77,3 +77,4 @@ D:\Vb projects\Medical_Clinic_Mangement_System\Medical_Clinic_Mangement_System\o
 D:\Vb projects\Medical_Clinic_Mangement_System\Medical_Clinic_Mangement_System\obj\Debug\Medical_Clinic_Mangement_System.pdb
 D:\Vb projects\Medical_Clinic_Mangement_System\Medical_Clinic_Mangement_System\obj\Debug\Medical_Clinic_Mangement_System.dashboard_Frm.resources
 D:\Vb projects\Medical_Clinic_Mangement_System\Medical_Clinic_Mangement_System\obj\Debug\Medical_Clinic_Mangement_System.Login_Frm.resources
+D:\Vb projects\Medical_Clinic_Mangement_System\Medical_Clinic_Mangement_System\obj\Debug\Medical_Clinic_Mangement_System.signup_Frm.resources
