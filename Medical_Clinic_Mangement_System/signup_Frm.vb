@@ -9,7 +9,8 @@
 
     Private Sub Next_signup_function()
         If (userNAme_Line.BorderColor = Color.Silver) Then
-            If (user_btxt.Text = String.Empty) Then
+            If Len(Trim(user_btxt.Text)) = 0 Then
+                user_btxt.Focus()
                 user_btxt.Visible = True
                 phoneNumber_btxt.Visible = False
                 email_btxt.Text = False
@@ -18,11 +19,13 @@
                 address_btxt.Text = False
 
             Else
+                usernam_Circle.BorderColor = Color.Green
                 userNAme_Line.BorderColor = Color.Green
             End If
 
         ElseIf (phoneNumber_Line.BorderColor = Color.Silver) Then
-            If (phoneNumber_btxt.Text = String.Empty) Then
+            If Len(Trim(phoneNumber_btxt.Text)) = 0 Then
+                phoneNumber_btxt.Focus()
                 user_btxt.Visible = False
                 phoneNumber_btxt.Visible = True
                 email_btxt.Visible = False
@@ -31,12 +34,14 @@
                 address_btxt.Visible = False
 
             Else
+                phone_Circle.BorderColor = Color.Green
                 phoneNumber_Line.BorderColor = Color.Green
             End If
 
 
         ElseIf (email_Circle.BorderColor = Color.Silver) Then
-            If (email_btxt.Text = String.Empty) Then
+            If Len(Trim(email_btxt.Text)) = 0 Then
+                email_btxt.Focus()
                 user_btxt.Visible = False
                 phoneNumber_btxt.Visible = False
                 email_btxt.Visible = True
@@ -50,7 +55,8 @@
             End If
 
         ElseIf (pwd_Line.BorderColor = Color.Silver) Then
-            If (pwd_btxt.Text = String.Empty) Then
+            If Len(Trim(pwdagain_btxt.Text)) = 0 Then
+                pwdagain_btxt.Focus()
                 user_btxt.Visible = False
                 phoneNumber_btxt.Visible = False
                 email_btxt.Visible = False
@@ -65,7 +71,8 @@
 
 
         ElseIf (address_Circle.BorderColor = Color.Silver) Then
-            If (address_btxt.Text = String.Empty) Then
+            If Len(Trim(address_btxt.Text)) = 0 Then
+                user_btxt.Focus()
                 user_btxt.Visible = False
                 phoneNumber_btxt.Visible = False
                 email_btxt.Visible = False
