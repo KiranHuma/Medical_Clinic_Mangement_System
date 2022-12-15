@@ -1,31 +1,101 @@
 ﻿Public Class signup_Frm
-    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles header.Paint
 
-    End Sub
 
-    Private Sub signup_Frm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
-
-    Private Sub BunifuButton1_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub BunifuTextBox2_TextChanged(sender As Object, e As EventArgs) Handles BunifuTextBox2.TextChanged
-
-    End Sub
-
-    Private Sub BunifuShapes9_ShapeChanged(sender As Object, e As Bunifu.UI.WinForms.BunifuShapes.ShapeChangedEventArgs) Handles BunifuShapes9.ShapeChanged
-
-    End Sub
 
     Private Sub BunifuImageButton2_Click(sender As Object, e As EventArgs) Handles BunifuImageButton2.Click
         Me.Close()
     End Sub
 
-    Private Sub BunifuButton2_Click(sender As Object, e As EventArgs) Handles BunifuButton2.Click
-        BunifuShapes1.BorderColor = Color.Green
-        BunifuShapes2.BorderColor = Color.Green
+
+    Private Sub Next_signup_function()
+        If (userNAme_Line.BorderColor = Color.Silver) Then
+            If (user_btxt.Text = String.Empty) Then
+                user_btxt.Visible = True
+                phoneNumber_btxt.Visible = False
+                email_btxt.Text = False
+                pwd_btxt.Text = False
+                pwdagain_btxt.Text = False
+                address_btxt.Text = False
+
+            Else
+                userNAme_Line.BorderColor = Color.Green
+            End If
+
+        ElseIf (phoneNumber_Line.BorderColor = Color.Silver) Then
+            If (phoneNumber_btxt.Text = String.Empty) Then
+                user_btxt.Visible = False
+                phoneNumber_btxt.Visible = True
+                email_btxt.Visible = False
+                pwd_btxt.Visible = False
+                pwdagain_btxt.Visible = False
+                address_btxt.Visible = False
+
+            Else
+                phoneNumber_Line.BorderColor = Color.Green
+            End If
+
+
+        ElseIf (email_Circle.BorderColor = Color.Silver) Then
+            If (email_btxt.Text = String.Empty) Then
+                user_btxt.Visible = False
+                phoneNumber_btxt.Visible = False
+                email_btxt.Visible = True
+                pwd_btxt.Visible = False
+                pwdagain_btxt.Visible = False
+                address_btxt.Visible = False
+
+            Else
+                email_Line.BorderColor = Color.Green
+                email_Circle.BorderColor = Color.Green
+            End If
+
+        ElseIf (pwd_Line.BorderColor = Color.Silver) Then
+            If (pwd_btxt.Text = String.Empty) Then
+                user_btxt.Visible = False
+                phoneNumber_btxt.Visible = False
+                email_btxt.Visible = False
+                pwd_btxt.Visible = True
+                pwdagain_btxt.Visible = True
+                address_btxt.Visible = False
+
+            Else
+                pwd_Line.BorderColor = Color.Green
+                pwd_Circle.BorderColor = Color.Green
+            End If
+
+
+        ElseIf (address_Circle.BorderColor = Color.Silver) Then
+            If (address_btxt.Text = String.Empty) Then
+                user_btxt.Visible = False
+                phoneNumber_btxt.Visible = False
+                email_btxt.Visible = False
+                pwd_btxt.Visible = False
+                pwdagain_btxt.Visible = False
+                address_btxt.Visible = True
+
+            Else
+
+                address_Circle.BorderColor = Color.Green
+                Next_btn.Text = "Finish"
+                If (Next_btn.Text = "Finish") Then
+
+                    msgBox_Frm.Show()
+
+                End If
+            End If
+
+            End If
+    End Sub
+
+    Private Sub Next_btn_Click(sender As Object, e As EventArgs) Handles Next_btn.Click
+        Next_signup_function()
+
+    End Sub
+    Private Sub BunifuButton1_Click(sender As Object, e As EventArgs)
+        msgBox_Frm.Show()
+
+
+
 
     End Sub
 End Class

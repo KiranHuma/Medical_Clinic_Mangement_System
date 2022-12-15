@@ -470,7 +470,7 @@ Partial Class dashboard_Frm
         Me.btnmenu.FadeWhenInactive = False
         Me.btnmenu.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Horizontal
         Me.btnmenu.Image = CType(resources.GetObject("btnmenu.Image"), System.Drawing.Image)
-        Me.btnmenu.ImageActive = Nothing
+        Me.btnmenu.ActiveImage = Nothing
         Me.btnmenu.ImageLocation = Nothing
         Me.btnmenu.ImageMargin = 20
         Me.btnmenu.ImageSize = New System.Drawing.Size(58, 35)
@@ -487,7 +487,7 @@ Partial Class dashboard_Frm
         Me.btnmenu.TabIndex = 1
         Me.btnmenu.ToolTipText = ""
         Me.btnmenu.WaitOnLoad = False
-        Me.btnmenu.Zoom = 20
+        Me.btnmenu.ImageMargin = 20
         Me.btnmenu.ZoomSpeed = 10
         '
         'logo
@@ -547,7 +547,7 @@ Partial Class dashboard_Frm
         Me.BunifuImageButton2.FadeWhenInactive = False
         Me.BunifuImageButton2.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal
         Me.BunifuImageButton2.Image = CType(resources.GetObject("BunifuImageButton2.Image"), System.Drawing.Image)
-        Me.BunifuImageButton2.ImageActive = Nothing
+        Me.BunifuImageButton2.ActiveImage = Nothing
         Me.BunifuImageButton2.ImageLocation = Nothing
         Me.BunifuImageButton2.ImageMargin = 20
         Me.BunifuImageButton2.ImageSize = New System.Drawing.Size(57, 47)
@@ -564,7 +564,7 @@ Partial Class dashboard_Frm
         Me.BunifuImageButton2.TabIndex = 3
         Me.BunifuImageButton2.ToolTipText = ""
         Me.BunifuImageButton2.WaitOnLoad = False
-        Me.BunifuImageButton2.Zoom = 20
+        Me.BunifuImageButton2.ImageMargin = 20
         Me.BunifuImageButton2.ZoomSpeed = 10
         '
         'BunifuDragControl1
@@ -597,6 +597,7 @@ Partial Class dashboard_Frm
         '
         'Panel2
         '
+        Me.Panel2.BackColor = System.Drawing.Color.White
         Me.PanelAnimator.SetDecoration(Me.Panel2, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.logoAnimator.SetDecoration(Me.Panel2, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Fill
