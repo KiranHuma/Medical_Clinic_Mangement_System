@@ -169,10 +169,22 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="addInvetory_Frm.Designer.vb">
+      <DependentUpon>addInvetory_Frm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="addInvetory_Frm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="dashboard_Frm.Designer.vb">
       <DependentUpon>dashboard_Frm.vb</DependentUpon>
     </Compile>
     <Compile Include="dashboard_Frm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="manage_Inventory_Frm.Designer.vb">
+      <DependentUpon>manage_Inventory_Frm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="manage_Inventory_Frm.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="msgBox_Frm.Designer.vb">
@@ -204,16 +216,34 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="patients_Frm.Designer.vb">
+      <DependentUpon>patients_Frm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="patients_Frm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="signup_Frm.Designer.vb">
       <DependentUpon>signup_Frm.vb</DependentUpon>
     </Compile>
     <Compile Include="signup_Frm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="user_Records_Frm.Designer.vb">
+      <DependentUpon>user_Records_Frm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="user_Records_Frm.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="addInvetory_Frm.resx">
+      <DependentUpon>addInvetory_Frm.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="dashboard_Frm.resx">
       <DependentUpon>dashboard_Frm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="manage_Inventory_Frm.resx">
+      <DependentUpon>manage_Inventory_Frm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="msgBox_Frm.resx">
       <DependentUpon>msgBox_Frm.vb</DependentUpon>
@@ -228,8 +258,14 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="patients_Frm.resx">
+      <DependentUpon>patients_Frm.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="signup_Frm.resx">
       <DependentUpon>signup_Frm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="user_Records_Frm.resx">
+      <DependentUpon>user_Records_Frm.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -250,6 +286,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\information.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\timetable_48px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

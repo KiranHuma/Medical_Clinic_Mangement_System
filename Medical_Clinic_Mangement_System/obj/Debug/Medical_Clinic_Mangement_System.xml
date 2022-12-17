@@ -32,5 +32,10 @@ Medical_Clinic_Mangement_System
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:Medical_Clinic_Mangement_System.My.Resources.Resources.timetable_48px">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 </members>
 </doc>
