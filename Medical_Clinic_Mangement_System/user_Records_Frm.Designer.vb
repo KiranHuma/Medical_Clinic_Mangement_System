@@ -89,7 +89,7 @@ Partial Class user_Records_Frm
         Me.BunifuImageButton2.FadeWhenInactive = False
         Me.BunifuImageButton2.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal
         Me.BunifuImageButton2.Image = CType(resources.GetObject("BunifuImageButton2.Image"), System.Drawing.Image)
-        Me.BunifuImageButton2.ImageActive = Nothing
+        Me.BunifuImageButton2.ActiveImage = Nothing
         Me.BunifuImageButton2.ImageLocation = Nothing
         Me.BunifuImageButton2.ImageMargin = 20
         Me.BunifuImageButton2.ImageSize = New System.Drawing.Size(57, 47)
@@ -106,7 +106,7 @@ Partial Class user_Records_Frm
         Me.BunifuImageButton2.TabIndex = 3
         Me.BunifuImageButton2.ToolTipText = ""
         Me.BunifuImageButton2.WaitOnLoad = False
-        Me.BunifuImageButton2.Zoom = 20
+        Me.BunifuImageButton2.ImageMargin = 20
         Me.BunifuImageButton2.ZoomSpeed = 10
         '
         'BunifuDatePicker1

@@ -12,7 +12,7 @@
             sidemenu.Visible = False
 
             sidemenu.Width = 260
-            records_btn.ForeColor = Color.White
+            usersRecords_Btn.ForeColor = Color.White
 
             addinventory_btn.ForeColor = Color.White
             manInventory_btn.ForeColor = Color.White
@@ -29,7 +29,7 @@
 
             sidemenu.Visible = False
 
-            records_btn.ForeColor = Color.FromArgb(28, 49, 80)
+            usersRecords_Btn.ForeColor = Color.FromArgb(28, 49, 80)
 
             addinventory_btn.ForeColor = Color.FromArgb(28, 49, 80)
             manInventory_btn.ForeColor = Color.FromArgb(28, 49, 80)
@@ -55,7 +55,7 @@
         Me.Close()
     End Sub
 
-    Private Sub records_btn_Click(sender As Object, e As EventArgs) Handles records_btn.Click
+    Private Sub records_btn_Click(sender As Object, e As EventArgs) Handles usersRecords_Btn.Click
         user_Records_Frm.Show()
         Me.Close()
     End Sub
@@ -82,7 +82,7 @@
 
     End Sub
 
-    Private Sub txtPass_TextChanged(sender As Object, e As EventArgs) Handles txtPass.TextChanged
+    Private Sub txtPass_TextChanged(sender As Object, e As EventArgs) Handles billby_txt.TextChanged
 
     End Sub
 
@@ -108,7 +108,7 @@
 
     End Sub
 
-    Private Sub BunifuButton4_Click(sender As Object, e As EventArgs) Handles BunifuButton4.Click
+    Private Sub BunifuButton4_Click(sender As Object, e As EventArgs) Handles clinictodaybtn_dshbrd.Click
         BunifuPages1.PageIndex = 1
     End Sub
 

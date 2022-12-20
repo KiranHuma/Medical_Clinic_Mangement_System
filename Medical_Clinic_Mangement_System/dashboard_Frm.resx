@@ -325,7 +325,7 @@
         AABJRU5ErkJggg==
 </value>
   </data>
-  <data name="txtPass.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="billby_txt.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAATwAAAAoCAYAAABjNUY/AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAABRSURBVHhe7cNBDQAwCASw+TfFOQM07EnapA8AAAAAAAAA
@@ -618,7 +618,7 @@
         YII=
 </value>
   </data>
-  <data name="records_btn.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="usersRecords_Btn.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAW0AAAAnCAYAAADEtRmcAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAC9SURBVHhe7dQxDcMwAABB83BB1Gxc7IERAK26B4BfuuGm
@@ -627,7 +627,7 @@
         tAFCTBsgxLQBQkwbIMS0AUJMGyDEtAFCxlz7fgoAnGWuff8AECZ20/pJeZMAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="records_btn.IdleIconLeftImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="usersRecords_Btn.IdleIconLeftImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABGdBTUEAALGPC/xhBQAACVBJREFUeF7t
         WutPW8kVT1/qh36oqkpVq6ofWlXqf9D2S1upD/XLVqoq9UNVtVKlKrvBvkBMCCE8YgcSh/gBIckGkuy9
@@ -788,7 +788,7 @@
   <data name="addinventory_btn.IdleIconLeftImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAIwAAACMCAYAAACuwEE+AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wgAADsIBFShKgAAAOINJREFUeF7tnQV8Fdfyx0/uTR/UnUIpULRI8VJoS2kpUoo7MVwLxSW4u7tDCRoS
+        wAAADsABataJCQAAOINJREFUeF7tnQV8Fdfyx0/uTR/UnUIpULRI8VJoS2kpUoo7MVwLxSW4u7tDCRoS
         AiQQiLviEMUhFCmSICHJvbt75j9zdjdc0iDte4/28d/5dHo26/fO9/5mzu7ZhRlmmGGGGWaYYYYZZphh
         hhlmmGGGGWaYYYYZZphhhhlmmGGGGWaYYYYZZphhhhlmmGGGGWaYYYYZZphhhhlmmGGGGWaYYYYZZphh
         hhlmmGGGGWaYYYYZZphhhhlmmGGGGfZcBqmODE47MH4a2yQHBikOdpDiaObJDmZI7mSClE52kEzrtKZl
@@ -1035,7 +1035,7 @@
   <data name="addinventory_btn.OnIdleState.IconLeftImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAIwAAACMCAYAAACuwEE+AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wgAADsIBFShKgAAAOINJREFUeF7tnQV8Fdfyx0/uTR/UnUIpULRI8VJoS2kpUoo7MVwLxSW4u7tDCRoS
+        wAAADsABataJCQAAOINJREFUeF7tnQV8Fdfyx0/uTR/UnUIpULRI8VJoS2kpUoo7MVwLxSW4u7tDCRoS
         AiQQiLviEMUhFCmSICHJvbt75j9zdjdc0iDte4/28d/5dHo26/fO9/5mzu7ZhRlmmGGGGWaYYYYZZphh
         hhlmmGGGGWaYYYYZZphhhhlmmGGGGWaYYYYZZphhhhlmmGGGGWaYYYYZZphhhhlmmGGGGWaYYYYZZphh
         hhlmmGGGGWaYYYYZZphhhhlmmGGGGfZcBqmODE47MH4a2yQHBikOdpDiaObJDmZI7mSClE52kEzrtKZl
@@ -2817,7 +2817,7 @@
         AAAAAAAAgIX1//1//z9AYiXsirdF8QAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="BunifuButton4.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="clinictodaybtn_dshbrd.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAJYAAAAnCAYAAADtl7EyAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAACRSURBVHhe7dKxAUBAAMBAk/zK7GcM/WMAFdJdcVXaLGOb
