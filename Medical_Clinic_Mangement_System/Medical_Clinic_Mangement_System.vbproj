@@ -196,6 +196,11 @@
     <Compile Include="dashboard_Frm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="mainClinicDbDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>mainClinicDbDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="manage_Inventory_Frm.Designer.vb">
       <DependentUpon>manage_Inventory_Frm.vb</DependentUpon>
     </Compile>
@@ -284,6 +289,17 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="mainClinicDbDataSet.xsc">
+      <DependentUpon>mainClinicDbDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="mainClinicDbDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>mainClinicDbDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="mainClinicDbDataSet.xss">
+      <DependentUpon>mainClinicDbDataSet.xsd</DependentUpon>
+    </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
