@@ -1,5 +1,9 @@
 ﻿
+Imports System.Data.OleDb
 Imports System.Data.SqlClient
+Imports System.Windows.Forms.VisualStyles.VisualStyleElement
+Imports TheArtOfDev.HtmlRenderer.Core
+
 Public Class addInvetory_Frm
     Private bitmap As Bitmap
     Dim rdr As SqlDataReader
@@ -39,7 +43,7 @@ Public Class addInvetory_Frm
             cmd.Connection = con
             con.Open()
             cmd.CommandText = "insert into add_invent_tbl([int_date],[in_product_name],[Qty_or_pcs],[packing],[in_prod_single_price],[in_prod_grand_price],[in_add_by],[in_total_quantity],[address])values
-                                                   ('" & in_date.Text & "','" & productName_txt.Text & "','" & qty_txt.Text & "','" & packing_txt.Text & "','" & singlePrice_txt.Text & "','" & grandTotal_txt.Text & "','" & added_by_txt.Text & "','" & quantity_txt.Text & "','" & address_txt.Text & "')"
+                                                   ('" & in_date.Value & "','" & productName_txt.Text & "','" & qty_txt.Text & "','" & packing_txt.Text & "','" & singlePrice_txt.Text & "','" & grandTotal_txt.Text & "','" & added_by_txt.Text & "','" & instock_txt.Text & "','" & address_txt.Text & "')"
             cmd.ExecuteNonQuery()
 
             welcomemsg.ForeColor = System.Drawing.Color.DarkGreen
@@ -124,9 +128,7 @@ Public Class addInvetory_Frm
         FillCombo_product_name()
     End Sub
 
-    Private Sub BunifuButton1_Click(sender As Object, e As EventArgs)
 
-    End Sub
 
     Private Sub productName_txt_SelectedIndexChanged(sender As Object, e As EventArgs) Handles productName_txt.SelectedIndexChanged
         FillCombo_product_packing()
@@ -181,9 +183,7 @@ Public Class addInvetory_Frm
         grand_total = pcs_qtyy * single_Pc_price
         grandTotal_txt.Text = CStr(grand_total)
     End Sub
-    Private Sub Button1_Click(sender As Object, e As EventArgs)
-        search_txt()
-    End Sub
+
 
 
 
@@ -217,9 +217,6 @@ Public Class addInvetory_Frm
 
 
 
-    Private Sub Button1_Click_1(sender As Object, e As EventArgs)
-        total_Inventory()
-    End Sub
 
 
 
@@ -229,5 +226,88 @@ Public Class addInvetory_Frm
 
     Private Sub packing_txt_SelectedIndexChanged(sender As Object, e As EventArgs) Handles packing_txt.SelectedIndexChanged
         total_Inventory()
+    End Sub
+
+
+
+
+
+    Private Sub get_inventory_CellMouseClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles get_inventory.CellMouseClick
+        Try
+
+            Me.In_Id.Text = get_inventory.CurrentRow.Cells(0).Value.ToString
+            Me.DateTimePicker1.Value = get_inventory.CurrentRow.Cells(1).Value.ToString
+            Me.productName_txt.Text = get_inventory.CurrentRow.Cells(2).Value.ToString
+            Me.qty_txt.Text = get_inventory.CurrentRow.Cells(3).Value.ToString
+            Me.packing_txt.Text = get_inventory.CurrentRow.Cells(4).Value.ToString
+
+            Me.singlePrice_txt.Text = get_inventory.CurrentRow.Cells(5).Value.ToString
+            Me.grandTotal_txt.Text = get_inventory.CurrentRow.Cells(6).Value.ToString
+            Me.added_by_txt.Text = get_inventory.CurrentRow.Cells(7).Value.ToString
+            Me.address_txt.Text = get_inventory.CurrentRow.Cells(9).Value.ToString
+
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "Failed:TextBox not found ", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Me.Dispose()
+        End Try
+    End Sub
+
+    Private Sub original_Price()
+        Try
+            con.ConnectionString = cs
+            cmd.Connection = con
+            con.Open()
+            cmd.CommandText = "UPDATE add_invent_tbl SET original_Single_Price= '" & singlePrice_txt.Text & "',grand_Total_with_orginal_price= '" & grandTotal_txt.Text & "' where inven_Id='" & In_Id.Text & "'"
+            cmd.ExecuteNonQuery()
+
+            welcomemsg.ForeColor = System.Drawing.Color.DarkGreen
+            welcomemsg.Text = "original price of'" & productName_txt.Text & "'  add successfully!"
+            con.Close()
+        Catch ex As Exception
+            MessageBox.Show("Data Not Updated" & ex.Message)
+            welcomemsg.ForeColor = System.Drawing.Color.Red
+            Me.Dispose()
+        End Try
+    End Sub
+
+    Private Sub BunifuButton1_Click(sender As Object, e As EventArgs)
+        original_Price()
+    End Sub
+
+    Private Sub addOriginalPrice_btn_Click(sender As Object, e As EventArgs) Handles addOriginalPrice_btn.Click
+        original_Price()
+    End Sub
+    Private Sub getData_Date()
+        Using connection As New SqlConnection(cs)
+            Try
+
+                Dim dfrom As Date = filter_DatePicker_To.Value
+                ''Dim dto As DateTime = DateTimePicker2.Value
+                connection.Open()
+                Dim da1 As New SqlDataAdapter("Select inven_Id as[ID],int_date,in_product_name as [Product Name],Qty_or_pcs as [Qty_or_Pcs],packing as [Packing],in_prod_single_price as [Single Product Price],in_prod_grand_price as [Grand Price],in_add_by as [Add by],in_total_quantity as [Total Stock],address as [Address],status as [Status] from add_invent_tbl where int_date = '" & DateTimePicker1.Value.Date & "'", connection)
+                Dim dt1 As New DataTable
+                da1.Fill(dt1)
+                source2.DataSource = dt1
+                get_inventory.DataSource = dt1
+                get_inventory.Refresh()
+            Catch ex As Exception
+                MessageBox.Show("Failed:Retrieving Data" & ex.Message)
+                Me.Dispose()
+            End Try
+        End Using
+
+
+    End Sub
+
+
+    Private Sub filter_DatePicker_To_ValueChanged(sender As Object, e As EventArgs) Handles filter_DatePicker_To.ValueChanged
+        'filter_DatePicker_To.Value = Label1.Text
+        Label11.Text = filter_DatePicker_To.Value
+        'filter_DatePicker_To.Value = Label1.Text
+
+    End Sub
+
+    Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
+        getData_Date()
     End Sub
 End Class

@@ -25,6 +25,7 @@ Partial Class addInvetory_Frm
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(addInvetory_Frm))
         Dim BorderEdges1 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges()
+        Dim BorderEdges2 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges()
         Dim StateProperties17 As Bunifu.UI.WinForms.BunifuTextBox.StateProperties = New Bunifu.UI.WinForms.BunifuTextBox.StateProperties()
         Dim StateProperties18 As Bunifu.UI.WinForms.BunifuTextBox.StateProperties = New Bunifu.UI.WinForms.BunifuTextBox.StateProperties()
         Dim StateProperties19 As Bunifu.UI.WinForms.BunifuTextBox.StateProperties = New Bunifu.UI.WinForms.BunifuTextBox.StateProperties()
@@ -57,6 +58,7 @@ Partial Class addInvetory_Frm
         Dim StateProperties3 As Bunifu.UI.WinForms.BunifuTextBox.StateProperties = New Bunifu.UI.WinForms.BunifuTextBox.StateProperties()
         Dim StateProperties4 As Bunifu.UI.WinForms.BunifuTextBox.StateProperties = New Bunifu.UI.WinForms.BunifuTextBox.StateProperties()
         Me.header = New System.Windows.Forms.Panel()
+        Me.addOriginalPrice_btn = New Bunifu.UI.WinForms.BunifuButton.BunifuButton()
         Me.BunifuButton5 = New Bunifu.UI.WinForms.BunifuButton.BunifuButton()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.BunifuImageButton2 = New Bunifu.UI.WinForms.BunifuImageButton()
@@ -72,7 +74,6 @@ Partial Class addInvetory_Frm
         Me.In_Id = New Bunifu.UI.WinForms.BunifuTextBox()
         Me.singlePrice_txt = New Bunifu.UI.WinForms.BunifuTextBox()
         Me.added_by_txt = New Bunifu.UI.WinForms.BunifuTextBox()
-        Me.in_date = New Bunifu.UI.WinForms.BunifuDatePicker()
         Me.grandTotal_txt = New Bunifu.UI.WinForms.BunifuTextBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.instock_txt = New System.Windows.Forms.Label()
@@ -84,6 +85,11 @@ Partial Class addInvetory_Frm
         Me.address_txt = New Bunifu.UI.WinForms.BunifuTextBox()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.welcomemsg = New System.Windows.Forms.Label()
+        Me.filter_DatePicker_To = New Bunifu.UI.WinForms.BunifuDatePicker()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.in_date = New Bunifu.UI.WinForms.BunifuDatePicker()
         Me.header.SuspendLayout()
         CType(Me.get_inventory, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -91,6 +97,7 @@ Partial Class addInvetory_Frm
         'header
         '
         Me.header.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(112, Byte), Integer))
+        Me.header.Controls.Add(Me.addOriginalPrice_btn)
         Me.header.Controls.Add(Me.BunifuButton5)
         Me.header.Controls.Add(Me.Label1)
         Me.header.Controls.Add(Me.BunifuImageButton2)
@@ -99,6 +106,95 @@ Partial Class addInvetory_Frm
         Me.header.Name = "header"
         Me.header.Size = New System.Drawing.Size(1389, 92)
         Me.header.TabIndex = 2
+        '
+        'addOriginalPrice_btn
+        '
+        Me.addOriginalPrice_btn.AllowAnimations = True
+        Me.addOriginalPrice_btn.AllowMouseEffects = True
+        Me.addOriginalPrice_btn.AllowToggling = False
+        Me.addOriginalPrice_btn.AnimationSpeed = 200
+        Me.addOriginalPrice_btn.AutoGenerateColors = False
+        Me.addOriginalPrice_btn.AutoRoundBorders = False
+        Me.addOriginalPrice_btn.AutoSizeLeftIcon = True
+        Me.addOriginalPrice_btn.AutoSizeRightIcon = True
+        Me.addOriginalPrice_btn.BackColor = System.Drawing.Color.Transparent
+        Me.addOriginalPrice_btn.BackColor1 = System.Drawing.Color.DodgerBlue
+        Me.addOriginalPrice_btn.BackgroundImage = CType(resources.GetObject("addOriginalPrice_btn.BackgroundImage"), System.Drawing.Image)
+        Me.addOriginalPrice_btn.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid
+        Me.addOriginalPrice_btn.ButtonText = "Add Original Price"
+        Me.addOriginalPrice_btn.ButtonTextMarginLeft = 0
+        Me.addOriginalPrice_btn.ColorContrastOnClick = 45
+        Me.addOriginalPrice_btn.ColorContrastOnHover = 45
+        Me.addOriginalPrice_btn.Cursor = System.Windows.Forms.Cursors.Default
+        BorderEdges1.BottomLeft = True
+        BorderEdges1.BottomRight = True
+        BorderEdges1.TopLeft = True
+        BorderEdges1.TopRight = True
+        Me.addOriginalPrice_btn.CustomizableEdges = BorderEdges1
+        Me.addOriginalPrice_btn.DialogResult = System.Windows.Forms.DialogResult.None
+        Me.addOriginalPrice_btn.DisabledBorderColor = System.Drawing.Color.FromArgb(CType(CType(191, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(191, Byte), Integer))
+        Me.addOriginalPrice_btn.DisabledFillColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.addOriginalPrice_btn.DisabledForecolor = System.Drawing.Color.FromArgb(CType(CType(168, Byte), Integer), CType(CType(160, Byte), Integer), CType(CType(168, Byte), Integer))
+        Me.addOriginalPrice_btn.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed
+        Me.addOriginalPrice_btn.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.addOriginalPrice_btn.ForeColor = System.Drawing.Color.White
+        Me.addOriginalPrice_btn.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.addOriginalPrice_btn.IconLeftCursor = System.Windows.Forms.Cursors.Default
+        Me.addOriginalPrice_btn.IconLeftPadding = New System.Windows.Forms.Padding(11, 3, 3, 3)
+        Me.addOriginalPrice_btn.IconMarginLeft = 11
+        Me.addOriginalPrice_btn.IconPadding = 10
+        Me.addOriginalPrice_btn.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.addOriginalPrice_btn.IconRightCursor = System.Windows.Forms.Cursors.Default
+        Me.addOriginalPrice_btn.IconRightPadding = New System.Windows.Forms.Padding(3, 3, 7, 3)
+        Me.addOriginalPrice_btn.IconSize = 25
+        Me.addOriginalPrice_btn.IdleBorderColor = System.Drawing.Color.DodgerBlue
+        Me.addOriginalPrice_btn.IdleBorderRadius = 1
+        Me.addOriginalPrice_btn.IdleBorderThickness = 1
+        Me.addOriginalPrice_btn.IdleFillColor = System.Drawing.Color.DodgerBlue
+        Me.addOriginalPrice_btn.IdleIconLeftImage = Nothing
+        Me.addOriginalPrice_btn.IdleIconRightImage = Nothing
+        Me.addOriginalPrice_btn.IndicateFocus = False
+        Me.addOriginalPrice_btn.Location = New System.Drawing.Point(690, 0)
+        Me.addOriginalPrice_btn.Name = "addOriginalPrice_btn"
+        Me.addOriginalPrice_btn.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(191, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(191, Byte), Integer))
+        Me.addOriginalPrice_btn.OnDisabledState.BorderRadius = 1
+        Me.addOriginalPrice_btn.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid
+        Me.addOriginalPrice_btn.OnDisabledState.BorderThickness = 1
+        Me.addOriginalPrice_btn.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.addOriginalPrice_btn.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(168, Byte), Integer), CType(CType(160, Byte), Integer), CType(CType(168, Byte), Integer))
+        Me.addOriginalPrice_btn.OnDisabledState.IconLeftImage = Nothing
+        Me.addOriginalPrice_btn.OnDisabledState.IconRightImage = Nothing
+        Me.addOriginalPrice_btn.onHoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(105, Byte), Integer), CType(CType(181, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.addOriginalPrice_btn.onHoverState.BorderRadius = 1
+        Me.addOriginalPrice_btn.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid
+        Me.addOriginalPrice_btn.onHoverState.BorderThickness = 1
+        Me.addOriginalPrice_btn.onHoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(105, Byte), Integer), CType(CType(181, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.addOriginalPrice_btn.onHoverState.ForeColor = System.Drawing.Color.White
+        Me.addOriginalPrice_btn.onHoverState.IconLeftImage = Nothing
+        Me.addOriginalPrice_btn.onHoverState.IconRightImage = Nothing
+        Me.addOriginalPrice_btn.OnIdleState.BorderColor = System.Drawing.Color.DodgerBlue
+        Me.addOriginalPrice_btn.OnIdleState.BorderRadius = 1
+        Me.addOriginalPrice_btn.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid
+        Me.addOriginalPrice_btn.OnIdleState.BorderThickness = 1
+        Me.addOriginalPrice_btn.OnIdleState.FillColor = System.Drawing.Color.DodgerBlue
+        Me.addOriginalPrice_btn.OnIdleState.ForeColor = System.Drawing.Color.White
+        Me.addOriginalPrice_btn.OnIdleState.IconLeftImage = Nothing
+        Me.addOriginalPrice_btn.OnIdleState.IconRightImage = Nothing
+        Me.addOriginalPrice_btn.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(144, Byte), Integer))
+        Me.addOriginalPrice_btn.OnPressedState.BorderRadius = 1
+        Me.addOriginalPrice_btn.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid
+        Me.addOriginalPrice_btn.OnPressedState.BorderThickness = 1
+        Me.addOriginalPrice_btn.OnPressedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(144, Byte), Integer))
+        Me.addOriginalPrice_btn.OnPressedState.ForeColor = System.Drawing.Color.White
+        Me.addOriginalPrice_btn.OnPressedState.IconLeftImage = Nothing
+        Me.addOriginalPrice_btn.OnPressedState.IconRightImage = Nothing
+        Me.addOriginalPrice_btn.Size = New System.Drawing.Size(150, 39)
+        Me.addOriginalPrice_btn.TabIndex = 152
+        Me.addOriginalPrice_btn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.addOriginalPrice_btn.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center
+        Me.addOriginalPrice_btn.TextMarginLeft = 0
+        Me.addOriginalPrice_btn.TextPadding = New System.Windows.Forms.Padding(0)
+        Me.addOriginalPrice_btn.UseDefaultRadiusAndThickness = True
         '
         'BunifuButton5
         '
@@ -119,11 +215,11 @@ Partial Class addInvetory_Frm
         Me.BunifuButton5.ColorContrastOnClick = 45
         Me.BunifuButton5.ColorContrastOnHover = 45
         Me.BunifuButton5.Cursor = System.Windows.Forms.Cursors.Default
-        BorderEdges1.BottomLeft = True
-        BorderEdges1.BottomRight = True
-        BorderEdges1.TopLeft = True
-        BorderEdges1.TopRight = True
-        Me.BunifuButton5.CustomizableEdges = BorderEdges1
+        BorderEdges2.BottomLeft = True
+        BorderEdges2.BottomRight = True
+        BorderEdges2.TopLeft = True
+        BorderEdges2.TopRight = True
+        Me.BunifuButton5.CustomizableEdges = BorderEdges2
         Me.BunifuButton5.DialogResult = System.Windows.Forms.DialogResult.None
         Me.BunifuButton5.DisabledBorderColor = System.Drawing.Color.FromArgb(CType(CType(191, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(191, Byte), Integer))
         Me.BunifuButton5.DisabledFillColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
@@ -147,7 +243,7 @@ Partial Class addInvetory_Frm
         Me.BunifuButton5.IdleIconLeftImage = Nothing
         Me.BunifuButton5.IdleIconRightImage = Nothing
         Me.BunifuButton5.IndicateFocus = False
-        Me.BunifuButton5.Location = New System.Drawing.Point(619, 0)
+        Me.BunifuButton5.Location = New System.Drawing.Point(549, 0)
         Me.BunifuButton5.Name = "BunifuButton5"
         Me.BunifuButton5.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(191, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(191, Byte), Integer))
         Me.BunifuButton5.OnDisabledState.BorderRadius = 1
@@ -246,7 +342,7 @@ Partial Class addInvetory_Frm
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Century Gothic", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(158, 192)
+        Me.Label2.Location = New System.Drawing.Point(140, 195)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(127, 19)
         Me.Label2.TabIndex = 13
@@ -256,7 +352,7 @@ Partial Class addInvetory_Frm
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Century Gothic", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(158, 251)
+        Me.Label3.Location = New System.Drawing.Point(140, 254)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(76, 19)
         Me.Label3.TabIndex = 14
@@ -266,7 +362,7 @@ Partial Class addInvetory_Frm
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Century Gothic", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(747, 136)
+        Me.Label5.Location = New System.Drawing.Point(750, 157)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(130, 19)
         Me.Label5.TabIndex = 16
@@ -276,7 +372,7 @@ Partial Class addInvetory_Frm
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Century Gothic", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(747, 252)
+        Me.Label6.Location = New System.Drawing.Point(750, 273)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(70, 19)
         Me.Label6.TabIndex = 17
@@ -297,7 +393,7 @@ Partial Class addInvetory_Frm
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Century Gothic", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(158, 133)
+        Me.Label7.Location = New System.Drawing.Point(140, 136)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(47, 19)
         Me.Label7.TabIndex = 111
@@ -306,7 +402,7 @@ Partial Class addInvetory_Frm
         'packing_txt
         '
         Me.packing_txt.FormattingEnabled = True
-        Me.packing_txt.Location = New System.Drawing.Point(305, 236)
+        Me.packing_txt.Location = New System.Drawing.Point(336, 244)
         Me.packing_txt.Name = "packing_txt"
         Me.packing_txt.Size = New System.Drawing.Size(316, 24)
         Me.packing_txt.TabIndex = 126
@@ -314,7 +410,7 @@ Partial Class addInvetory_Frm
         'productName_txt
         '
         Me.productName_txt.FormattingEnabled = True
-        Me.productName_txt.Location = New System.Drawing.Point(305, 182)
+        Me.productName_txt.Location = New System.Drawing.Point(336, 190)
         Me.productName_txt.Name = "productName_txt"
         Me.productName_txt.Size = New System.Drawing.Size(316, 24)
         Me.productName_txt.TabIndex = 127
@@ -421,7 +517,7 @@ Partial Class addInvetory_Frm
         Me.singlePrice_txt.IconRight = Nothing
         Me.singlePrice_txt.IconRightCursor = System.Windows.Forms.Cursors.IBeam
         Me.singlePrice_txt.Lines = New String() {"0"}
-        Me.singlePrice_txt.Location = New System.Drawing.Point(894, 112)
+        Me.singlePrice_txt.Location = New System.Drawing.Point(897, 133)
         Me.singlePrice_txt.MaxLength = 32767
         Me.singlePrice_txt.MinimumSize = New System.Drawing.Size(1, 1)
         Me.singlePrice_txt.Modified = False
@@ -495,7 +591,7 @@ Partial Class addInvetory_Frm
         Me.added_by_txt.IconRight = Nothing
         Me.added_by_txt.IconRightCursor = System.Windows.Forms.Cursors.IBeam
         Me.added_by_txt.Lines = New String(-1) {}
-        Me.added_by_txt.Location = New System.Drawing.Point(894, 228)
+        Me.added_by_txt.Location = New System.Drawing.Point(897, 249)
         Me.added_by_txt.MaxLength = 32767
         Me.added_by_txt.MinimumSize = New System.Drawing.Size(1, 1)
         Me.added_by_txt.Modified = False
@@ -542,30 +638,6 @@ Partial Class addInvetory_Frm
         Me.added_by_txt.UseSystemPasswordChar = False
         Me.added_by_txt.WordWrap = True
         '
-        'in_date
-        '
-        Me.in_date.BackColor = System.Drawing.Color.Transparent
-        Me.in_date.BorderRadius = 1
-        Me.in_date.Color = System.Drawing.Color.Silver
-        Me.in_date.DateBorderThickness = Bunifu.UI.WinForms.BunifuDatePicker.BorderThickness.Thin
-        Me.in_date.DateTextAlign = Bunifu.UI.WinForms.BunifuDatePicker.TextAlign.Left
-        Me.in_date.DisabledColor = System.Drawing.Color.Gray
-        Me.in_date.DisplayWeekNumbers = False
-        Me.in_date.DPHeight = 0
-        Me.in_date.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right
-        Me.in_date.FillDatePicker = False
-        Me.in_date.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.in_date.ForeColor = System.Drawing.Color.Black
-        Me.in_date.Icon = CType(resources.GetObject("in_date.Icon"), System.Drawing.Image)
-        Me.in_date.IconColor = System.Drawing.Color.Gray
-        Me.in_date.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right
-        Me.in_date.LeftTextMargin = 5
-        Me.in_date.Location = New System.Drawing.Point(305, 120)
-        Me.in_date.MinimumSize = New System.Drawing.Size(4, 32)
-        Me.in_date.Name = "in_date"
-        Me.in_date.Size = New System.Drawing.Size(316, 32)
-        Me.in_date.TabIndex = 22
-        '
         'grandTotal_txt
         '
         Me.grandTotal_txt.AcceptsReturn = False
@@ -593,7 +665,7 @@ Partial Class addInvetory_Frm
         Me.grandTotal_txt.IconRight = Nothing
         Me.grandTotal_txt.IconRightCursor = System.Windows.Forms.Cursors.IBeam
         Me.grandTotal_txt.Lines = New String(-1) {}
-        Me.grandTotal_txt.Location = New System.Drawing.Point(894, 170)
+        Me.grandTotal_txt.Location = New System.Drawing.Point(897, 191)
         Me.grandTotal_txt.MaxLength = 32767
         Me.grandTotal_txt.MinimumSize = New System.Drawing.Size(1, 1)
         Me.grandTotal_txt.Modified = False
@@ -644,7 +716,7 @@ Partial Class addInvetory_Frm
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Century Gothic", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(747, 194)
+        Me.Label8.Location = New System.Drawing.Point(750, 215)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(102, 19)
         Me.Label8.TabIndex = 128
@@ -656,7 +728,7 @@ Partial Class addInvetory_Frm
         Me.instock_txt.BackColor = System.Drawing.Color.Transparent
         Me.instock_txt.Font = New System.Drawing.Font("Century Gothic", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.instock_txt.ForeColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(112, Byte), Integer))
-        Me.instock_txt.Location = New System.Drawing.Point(455, 360)
+        Me.instock_txt.Location = New System.Drawing.Point(658, 307)
         Me.instock_txt.Name = "instock_txt"
         Me.instock_txt.Size = New System.Drawing.Size(25, 27)
         Me.instock_txt.TabIndex = 133
@@ -729,7 +801,7 @@ Partial Class addInvetory_Frm
         Me.qty_txt.IconRight = Nothing
         Me.qty_txt.IconRightCursor = System.Windows.Forms.Cursors.IBeam
         Me.qty_txt.Lines = New String(-1) {}
-        Me.qty_txt.Location = New System.Drawing.Point(305, 290)
+        Me.qty_txt.Location = New System.Drawing.Point(336, 298)
         Me.qty_txt.MaxLength = 32767
         Me.qty_txt.MinimumSize = New System.Drawing.Size(1, 1)
         Me.qty_txt.Modified = False
@@ -780,7 +852,7 @@ Partial Class addInvetory_Frm
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Century Gothic", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(158, 310)
+        Me.Label9.Location = New System.Drawing.Point(140, 313)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(71, 19)
         Me.Label9.TabIndex = 137
@@ -863,7 +935,7 @@ Partial Class addInvetory_Frm
         'quantity_txt
         '
         Me.quantity_txt.AutoSize = True
-        Me.quantity_txt.Location = New System.Drawing.Point(1048, 360)
+        Me.quantity_txt.Location = New System.Drawing.Point(1051, 381)
         Me.quantity_txt.Name = "quantity_txt"
         Me.quantity_txt.Size = New System.Drawing.Size(14, 16)
         Me.quantity_txt.TabIndex = 141
@@ -897,7 +969,7 @@ Partial Class addInvetory_Frm
         Me.address_txt.IconRight = Nothing
         Me.address_txt.IconRightCursor = System.Windows.Forms.Cursors.IBeam
         Me.address_txt.Lines = New String(-1) {}
-        Me.address_txt.Location = New System.Drawing.Point(894, 286)
+        Me.address_txt.Location = New System.Drawing.Point(897, 307)
         Me.address_txt.MaxLength = 32767
         Me.address_txt.MinimumSize = New System.Drawing.Size(1, 1)
         Me.address_txt.Modified = False
@@ -948,7 +1020,7 @@ Partial Class addInvetory_Frm
         '
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Century Gothic", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(747, 310)
+        Me.Label10.Location = New System.Drawing.Point(750, 331)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(76, 19)
         Me.Label10.TabIndex = 142
@@ -964,12 +1036,89 @@ Partial Class addInvetory_Frm
         Me.welcomemsg.Size = New System.Drawing.Size(0, 22)
         Me.welcomemsg.TabIndex = 144
         '
+        'filter_DatePicker_To
+        '
+        Me.filter_DatePicker_To.BackColor = System.Drawing.Color.Transparent
+        Me.filter_DatePicker_To.BorderRadius = 1
+        Me.filter_DatePicker_To.Color = System.Drawing.Color.Silver
+        Me.filter_DatePicker_To.DateBorderThickness = Bunifu.UI.WinForms.BunifuDatePicker.BorderThickness.Thin
+        Me.filter_DatePicker_To.DateTextAlign = Bunifu.UI.WinForms.BunifuDatePicker.TextAlign.Left
+        Me.filter_DatePicker_To.DisabledColor = System.Drawing.Color.Gray
+        Me.filter_DatePicker_To.DisplayWeekNumbers = False
+        Me.filter_DatePicker_To.DPHeight = 0
+        Me.filter_DatePicker_To.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right
+        Me.filter_DatePicker_To.FillDatePicker = False
+        Me.filter_DatePicker_To.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.filter_DatePicker_To.ForeColor = System.Drawing.Color.Black
+        Me.filter_DatePicker_To.Icon = CType(resources.GetObject("filter_DatePicker_To.Icon"), System.Drawing.Image)
+        Me.filter_DatePicker_To.IconColor = System.Drawing.Color.Gray
+        Me.filter_DatePicker_To.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right
+        Me.filter_DatePicker_To.LeftTextMargin = 5
+        Me.filter_DatePicker_To.Location = New System.Drawing.Point(13, 430)
+        Me.filter_DatePicker_To.MinimumSize = New System.Drawing.Size(4, 32)
+        Me.filter_DatePicker_To.Name = "filter_DatePicker_To"
+        Me.filter_DatePicker_To.Size = New System.Drawing.Size(290, 32)
+        Me.filter_DatePicker_To.TabIndex = 145
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Location = New System.Drawing.Point(395, 419)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(55, 16)
+        Me.Label11.TabIndex = 146
+        Me.Label11.Text = "Label11"
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(690, 412)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 147
+        Me.Button1.Text = "Button1"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'DateTimePicker1
+        '
+        Me.DateTimePicker1.Location = New System.Drawing.Point(398, 358)
+        Me.DateTimePicker1.Name = "DateTimePicker1"
+        Me.DateTimePicker1.Size = New System.Drawing.Size(241, 22)
+        Me.DateTimePicker1.TabIndex = 148
+        '
+        'in_date
+        '
+        Me.in_date.BackColor = System.Drawing.Color.Transparent
+        Me.in_date.BorderRadius = 1
+        Me.in_date.Color = System.Drawing.Color.Silver
+        Me.in_date.DateBorderThickness = Bunifu.UI.WinForms.BunifuDatePicker.BorderThickness.Thin
+        Me.in_date.DateTextAlign = Bunifu.UI.WinForms.BunifuDatePicker.TextAlign.Left
+        Me.in_date.DisabledColor = System.Drawing.Color.Gray
+        Me.in_date.DisplayWeekNumbers = False
+        Me.in_date.DPHeight = 0
+        Me.in_date.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right
+        Me.in_date.FillDatePicker = False
+        Me.in_date.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.in_date.ForeColor = System.Drawing.Color.Black
+        Me.in_date.Icon = CType(resources.GetObject("in_date.Icon"), System.Drawing.Image)
+        Me.in_date.IconColor = System.Drawing.Color.Gray
+        Me.in_date.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right
+        Me.in_date.LeftTextMargin = 5
+        Me.in_date.Location = New System.Drawing.Point(336, 128)
+        Me.in_date.MinimumSize = New System.Drawing.Size(4, 32)
+        Me.in_date.Name = "in_date"
+        Me.in_date.Size = New System.Drawing.Size(316, 32)
+        Me.in_date.TabIndex = 22
+        '
         'addInvetory_Frm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1389, 766)
+        Me.Controls.Add(Me.DateTimePicker1)
+        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.Label11)
+        Me.Controls.Add(Me.filter_DatePicker_To)
         Me.Controls.Add(Me.welcomemsg)
         Me.Controls.Add(Me.address_txt)
         Me.Controls.Add(Me.Label10)
@@ -1015,7 +1164,6 @@ Partial Class addInvetory_Frm
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label4 As Label
-    Friend WithEvents in_date As Bunifu.UI.WinForms.BunifuDatePicker
     Friend WithEvents In_Id As Bunifu.UI.WinForms.BunifuTextBox
     Friend WithEvents Label7 As Label
     Friend WithEvents singlePrice_txt As Bunifu.UI.WinForms.BunifuTextBox
@@ -1034,4 +1182,10 @@ Partial Class addInvetory_Frm
     Friend WithEvents Label10 As Label
     Private WithEvents welcomemsg As Label
     Friend WithEvents BunifuButton5 As Bunifu.UI.WinForms.BunifuButton.BunifuButton
+    Friend WithEvents addOriginalPrice_btn As Bunifu.UI.WinForms.BunifuButton.BunifuButton
+    Friend WithEvents filter_DatePicker_To As Bunifu.UI.WinForms.BunifuDatePicker
+    Friend WithEvents Label11 As Label
+    Friend WithEvents Button1 As Button
+    Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents in_date As Bunifu.UI.WinForms.BunifuDatePicker
 End Class
