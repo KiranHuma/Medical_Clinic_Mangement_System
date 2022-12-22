@@ -33,7 +33,9 @@ Public Class addInvetory_Frm
         End Try
     End Sub
     Private Sub BunifuImageButton2_Click(sender As Object, e As EventArgs) Handles BunifuImageButton2.Click
+
         dashboard_Frm.Show()
+
         Me.Close()
     End Sub
 
@@ -42,11 +44,11 @@ Public Class addInvetory_Frm
             con.ConnectionString = cs
             cmd.Connection = con
             con.Open()
-            cmd.CommandText = "insert into add_invent_tbl([int_date],[in_product_name],[Qty_or_pcs],[packing],[in_prod_single_price],[in_prod_grand_price],[in_add_by],[in_total_quantity],[address])values
-                                                   ('" & in_date.Value & "','" & productName_txt.Text & "','" & qty_txt.Text & "','" & packing_txt.Text & "','" & singlePrice_txt.Text & "','" & grandTotal_txt.Text & "','" & added_by_txt.Text & "','" & instock_txt.Text & "','" & address_txt.Text & "')"
+            cmd.CommandText = "insert into add_invent_tbl([int_date],[in_product_name],[Qty_or_pcs],[packing],[in_prod_single_price],[in_prod_grand_price],[in_add_by],[in_total_quantity],[status],[address])values
+                                                   ('" & Format(in_date.Value, "yyyy-MM-dd") & "','" & productName_txt.Text & "','" & qty_txt.Text & "','" & packing_txt.Text & "','" & singlePrice_txt.Text & "','" & grandTotal_txt.Text & "','" & added_by_txt.Text & "','" & instock_txt.Text & "','" & stockStatus_lbl.Text & "','" & address_txt.Text & "')"
             cmd.ExecuteNonQuery()
 
-            welcomemsg.ForeColor = System.Drawing.Color.DarkGreen
+            welcomemsg.ForeColor = System.Drawing.Color.Green
             welcomemsg.Text = "'" & productName_txt.Text & "' details saved successfully!"
             con.Close()
         Catch ex As Exception
@@ -55,7 +57,25 @@ Public Class addInvetory_Frm
         End Try
 
     End Sub
-    Private Sub getdata()
+    Private Sub insert_Admin()
+        Try
+            con.ConnectionString = cs
+            cmd.Connection = con
+            con.Open()
+            cmd.CommandText = "insert into add_invent_tbl([int_date],[in_product_name],[Qty_or_pcs],[packing],[in_prod_single_price],[in_prod_grand_price],[in_add_by],[in_total_quantity],[status],[address],[original_Single_Price],[grand_Total_with_orginal_price])values
+                                                   ('" & Format(in_date.Value, "yyyy-MM-dd") & "','" & productName_txt.Text & "','" & qty_txt.Text & "','" & packing_txt.Text & "','" & singlePrice_txt.Text & "','" & grandTotal_txt.Text & "','" & added_by_txt.Text & "','" & instock_txt.Text & "','" & stockStatus_lbl.Text & "','" & address_txt.Text & "','" & adminSingle_txt.Text & "','" & adminGrandtotal_txt.Text & "')"
+            cmd.ExecuteNonQuery()
+
+            welcomemsg.ForeColor = System.Drawing.Color.Green
+            welcomemsg.Text = "'" & productName_txt.Text & "' details saved successfully!"
+            con.Close()
+        Catch ex As Exception
+            MsgBox("Data Inserted Failed because " & ex.Message)
+            Me.Dispose()
+        End Try
+
+    End Sub
+    Public Sub getdata()
 
         Try
             Dim con As New SqlConnection(cs)
@@ -66,6 +86,23 @@ Public Class addInvetory_Frm
             source2.DataSource = dt
             get_inventory.DataSource = dt
             get_inventory.Refresh()
+
+        Catch ex As Exception
+            MessageBox.Show("Failed:Retrieving Data" & ex.Message)
+            Me.Dispose()
+        End Try
+    End Sub
+    Public Sub getdata_admin()
+
+        Try
+            Dim con As New SqlConnection(cs)
+            con.Open()
+            Dim da As New SqlDataAdapter("Select inven_Id as[ID],int_date as [Date],in_product_name as [Product Name],Qty_or_pcs as [Qty_or_Pcs],packing as [Packing],in_prod_single_price as [Single Product Price],in_prod_grand_price as [Grand Price],in_add_by as [Add by],in_total_quantity as [Total Stock],address as [Address],status as [Status], original_Single_Price as [Orginal Price],[grand_Total_with_orginal_price] as [Original Grand Price] from add_invent_tbl", con)
+            Dim dt As New DataTable
+            da.Fill(dt)
+            source2.DataSource = dt
+            admin_grid.DataSource = dt
+            admin_grid.Refresh()
         Catch ex As Exception
             MessageBox.Show("Failed:Retrieving Data" & ex.Message)
             Me.Dispose()
@@ -124,7 +161,13 @@ Public Class addInvetory_Frm
 
     Private Sub addInvetory_Frm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
+
+
+
         getdata()
+
+
+
         FillCombo_product_name()
     End Sub
 
@@ -132,22 +175,25 @@ Public Class addInvetory_Frm
 
     Private Sub productName_txt_SelectedIndexChanged(sender As Object, e As EventArgs) Handles productName_txt.SelectedIndexChanged
         FillCombo_product_packing()
-
+        '' welcomemsg.Text = ""
     End Sub
-    Private Sub add_New()
-        qty_txt.Text = ""
+    Private Sub clear_txt()
+        qty_txt.Text = 0
         singlePrice_txt.Text = 0
         grandTotal_txt.Text = ""
-        qty_txt.Text = ""
+
         address_txt.Text = ""
+        adminSingle_txt.Text = 0
+        adminGrandtotal_txt.Text = 0
         FillCombo_product_name()
         FillCombo_product_packing()
-        welcomemsg.Text = ""
+
     End Sub
     Private Sub BunifuButton5_Click(sender As Object, e As EventArgs) Handles BunifuButton5.Click
         insert()
         getdata()
-        add_New()
+
+        clear_txt()
     End Sub
     Private Sub search_txt()
 
@@ -169,27 +215,43 @@ Public Class addInvetory_Frm
             Me.Dispose()
         End Try
     End Sub
+    Private Sub search_txt_admin()
+
+        Dim str As String
+        Try
+            Dim conn As New System.Data.SqlClient.SqlConnection(cs)
+            conn.Open()
+            str = "Select  inven_Id as[ID],int_date as [Date],in_product_name as [Product Name],Qty_or_pcs as [Qty_or_Pcs],packing as [Packing],in_prod_single_price as [Single Product Price],in_prod_grand_price as [Grand Price],in_add_by as [Add by],in_total_quantity as [Total Stock],address as [Address],status as [Status],original_Single_Price as [Orginal Price],[grand_Total_with_orginal_price] as [Original Grand Price]  from add_invent_tbl where in_product_name like '" & txt_SearchInvenotry.Text & "%'"
+            cmd = New SqlCommand(str, conn)
+            da = New SqlDataAdapter(cmd)
+            ds = New DataSet
+            da.Fill(ds, "add_invent_tbl")
+            conn.Close()
+            admin_grid.DataSource = ds
+            admin_grid.DataMember = "add_invent_tbl"
+            admin_grid.Visible = True
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "Failed:Product Name Search", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Me.Dispose()
+        End Try
+    End Sub
     Private Sub txt_searchinvenotry_TextChanged(sender As Object, e As EventArgs) Handles txt_SearchInvenotry.TextChanged
         search_txt()
     End Sub
     Private Sub Grand_Total()
 
-
+        If qty_txt.Text = "" And singlePrice_txt.Text = "" Then
+            qty_txt.Text = 0
+            singlePrice_txt.Text = 0
+        End If
         Dim single_Pc_price As Double
         Dim pcs_qtyy As Double
-        Dim grand_total As Double
+        Dim grand_totaltxt As Double
         single_Pc_price = Convert.ToDouble(singlePrice_txt.Text)
         pcs_qtyy = Convert.ToDouble(qty_txt.Text)
-        grand_total = pcs_qtyy * single_Pc_price
-        grandTotal_txt.Text = CStr(grand_total)
-    End Sub
+        grand_totaltxt = pcs_qtyy * single_Pc_price
 
-
-
-
-
-    Private Sub singlePrice_txt_MouseEnter(sender As Object, e As EventArgs) Handles singlePrice_txt.MouseEnter
-
+        grandTotal_txt.Text = CStr(grand_totaltxt)
     End Sub
 
     Private Sub total_Inventory()
@@ -216,19 +278,196 @@ Public Class addInvetory_Frm
     End Sub
 
 
-
-
-
-
-    Private Sub singlePrice_txt_Leave(sender As Object, e As EventArgs) Handles singlePrice_txt.Leave
-        Grand_Total()
-    End Sub
-
     Private Sub packing_txt_SelectedIndexChanged(sender As Object, e As EventArgs) Handles packing_txt.SelectedIndexChanged
         total_Inventory()
     End Sub
 
+    Private Sub original_Price()
+        Try
+            con.ConnectionString = cs
+            cmd.Connection = con
+            con.Open()
+            cmd.CommandText = "UPDATE add_invent_tbl SET original_Single_Price= '" & adminSingle_txt.Text & "',grand_Total_with_orginal_price= '" & adminGrandtotal_txt.Text & "' where inven_Id='" & In_Id.Text & "'"
+            cmd.ExecuteNonQuery()
 
+            welcomemsg.ForeColor = System.Drawing.Color.DarkGreen
+            welcomemsg.Text = "original price of  '" & productName_txt.Text & "'  add successfully!"
+            con.Close()
+        Catch ex As Exception
+            MessageBox.Show("Data Not Updated" & ex.Message)
+            welcomemsg.ForeColor = System.Drawing.Color.Red
+            Me.Dispose()
+        End Try
+    End Sub
+
+    Private Sub addOriginalPrice_btn_Click(sender As Object, e As EventArgs) Handles addOriginalPrice_btn.Click
+
+        If Label13.Text = "not select" Then
+            MsgBox("Select Values from Gridview")
+        Else
+            BunifuPages1.PageIndex = 1
+            original_Price()
+            getdata_admin()
+        End If
+    End Sub
+    Private Sub getData_Date()
+        Using connection As New SqlConnection(cs)
+            Try
+
+                Dim dfrom As Date = filter_DatePicker_To.Value
+                ''Dim dto As DateTime = DateTimePicker2.Value
+                connection.Open()
+                Dim da1 As New SqlDataAdapter("Select inven_Id as[ID],int_date,in_product_name as [Product Name],Qty_or_pcs as [Qty_or_Pcs],packing as [Packing],in_prod_single_price as [Single Product Price],in_prod_grand_price as [Grand Price],in_add_by as [Add by],in_total_quantity as [Total Stock],address as [Address],status as [Status] from add_invent_tbl where int_date BETWEEN   '" & Format(filter_DatePicker_To.Value, "yyyy-MM-dd") & "' AND  '" & Format(user_from_datepicker.Value, "yyyy-MM-dd") & "'", connection)
+                Dim dt1 As New DataTable
+                da1.Fill(dt1)
+                source2.DataSource = dt1
+                get_inventory.DataSource = dt1
+                get_inventory.Refresh()
+            Catch ex As Exception
+                MessageBox.Show("Failed:Retrieving Data" & ex.Message)
+                Me.Dispose()
+            End Try
+        End Using
+
+
+    End Sub
+    Private Sub getData_Admin_Date()
+        Using connection As New SqlConnection(cs)
+            Try
+
+                Dim dfrom As Date = filter_DatePicker_To.Value
+                ''Dim dto As DateTime = DateTimePicker2.Value
+                connection.Open()
+                Dim da1 As New SqlDataAdapter("Select inven_Id as[ID],int_date,in_product_name as [Product Name],Qty_or_pcs as [Qty_or_Pcs],packing as [Packing],in_prod_single_price as [Single Product Price],in_prod_grand_price as [Grand Price],in_add_by as [Add by],in_total_quantity as [Total Stock],address as [Address],status as [Status],original_Single_Price as [Orginal Price],[grand_Total_with_orginal_price] as [Original Grand Price]  from add_invent_tbl where int_date BETWEEN '" & Format(admin_Date_Picker.Value, "yyyy-MM-dd") & "' AND   '" & Format(datePicker_to_txt.Value, "yyyy-MM-dd") & "'", connection)
+                Dim dt1 As New DataTable
+                da1.Fill(dt1)
+                source2.DataSource = dt1
+                admin_grid.DataSource = dt1
+                admin_grid.Refresh()
+            Catch ex As Exception
+                MessageBox.Show("Failed:Retrieving Data" & ex.Message)
+                Me.Dispose()
+            End Try
+        End Using
+
+
+    End Sub
+
+
+
+    Private Sub instock_status()
+
+        If instock_txt.Text = "0" Then
+
+            stockStatus_lbl.Text = "out of Stock"
+        Else
+            If instock_txt.Text > "0" Then
+                stockStatus_lbl.Text = "In Stock"
+            Else
+                stockStatus_lbl.Text = "fdf"
+            End If
+
+
+        End If
+    End Sub
+
+    Private Sub singlePrice_txt_TextChanged(sender As Object, e As EventArgs) Handles singlePrice_txt.TextChanged
+        instock_txt.Text = qty_txt.Text
+
+        instock_status()
+    End Sub
+    Private Sub DeleteSelecedRows()
+
+        Try
+                con.ConnectionString = cs
+                cmd.Connection = con
+                con.Open()
+            cmd.CommandText = "delete  from add_invent_tbl where inven_Id='" & In_Id.Text & "'"
+            cmd.ExecuteNonQuery()
+
+            welcomemsg.ForeColor = System.Drawing.Color.Green
+            welcomemsg.Text = " '" & productName_txt.Text & "' with '" & In_Id.Text & "'  ID delete successfully!"
+            con.Close()
+            Catch ex As Exception
+                MessageBox.Show("Data Not Updated" & ex.Message)
+                welcomemsg.ForeColor = System.Drawing.Color.Red
+                Me.Dispose()
+            End Try
+
+    End Sub
+    Private Sub delete_Btn_Click(sender As Object, e As EventArgs) Handles delete_Btn.Click
+
+        If Label13.Text = "not select" Then
+            MsgBox("Select Values from Gridview")
+        Else
+            BunifuPages1.PageIndex = 1
+            DeleteSelecedRows()
+            getdata_admin()
+
+            clear_txt()
+        End If
+
+    End Sub
+    Private Sub update_Records()
+        Try
+            con.ConnectionString = cs
+            cmd.Connection = con
+            con.Open()
+            cmd.CommandText = "UPDATE  add_invent_tbl  SET  int_date= '" & Format(in_date.Value, "yyyy-MM-dd") & "', in_product_name= '" & productName_txt.Text & "', Qty_or_pcs = '" & qty_txt.Text & "', packing = '" & packing_txt.Text & "' , in_prod_single_price = '" & singlePrice_txt.Text & "' , in_prod_grand_price = '" & grandTotal_txt.Text & "' , in_add_by = '" & added_by_txt.Text & "' , in_total_quantity = '" & instock_txt.Text & "' , status = '" & stockStatus_lbl.Text & "' , address = '" & address_txt.Text & "' , original_Single_Price = '" & adminSingle_txt.Text & "' , grand_Total_with_orginal_price = '" & adminGrandtotal_txt.Text & "'  where inven_Id = '" & In_Id.Text & "'"
+
+            cmd.ExecuteNonQuery()
+            welcomemsg.ForeColor = System.Drawing.Color.DarkGreen
+            welcomemsg.Text = "  '" & productName_txt.Text & "'  Update successfully!"
+            con.Close()
+        Catch ex As Exception
+            MessageBox.Show("Data Not Updated" & ex.Message)
+            welcomemsg.ForeColor = System.Drawing.Color.Red
+            Me.Dispose()
+        End Try
+    End Sub
+    Private Sub BunifuButton1_Click(sender As Object, e As EventArgs) Handles update_Btn.Click
+
+        If Label13.Text = "not select" Then
+            MsgBox("Select Values from Gridview")
+        Else
+            BunifuPages1.PageIndex = 1
+            update_Records()
+            getdata_admin()
+
+            clear_txt()
+        End If
+
+    End Sub
+    Private Sub Grand_Total1()
+
+        If qty_txt.Text = "" And adminSingle_txt.Text = "" Then
+            qty_txt.Text = 0
+            adminSingle_txt.Text = 0
+        End If
+        Dim admin_single_Pc_price As Double
+        Dim admin_Grand_Total As Double
+        Dim pcs_qtyy As Double
+        admin_single_Pc_price = Convert.ToDouble(adminSingle_txt.Text)
+        pcs_qtyy = Convert.ToDouble(qty_txt.Text)
+        admin_Grand_Total = pcs_qtyy * admin_single_Pc_price
+        adminGrandtotal_txt.Text = CStr(admin_Grand_Total)
+
+
+
+
+    End Sub
+    Private Sub adminSingle_txt_MouseLeave(sender As Object, e As EventArgs) Handles adminSingle_txt.MouseLeave
+
+    End Sub
+
+    Private Sub adminSingle_txt_TextChanged(sender As Object, e As EventArgs) Handles adminSingle_txt.TextChanged
+        instock_status()
+    End Sub
+
+    Private Sub show_admin_grid_Click(sender As Object, e As EventArgs) Handles show_admin_grid.Click
+        BunifuPages1.PageIndex = 1
+        getdata_admin()
+    End Sub
 
 
 
@@ -236,7 +475,7 @@ Public Class addInvetory_Frm
         Try
 
             Me.In_Id.Text = get_inventory.CurrentRow.Cells(0).Value.ToString
-            Me.DateTimePicker1.Value = get_inventory.CurrentRow.Cells(1).Value.ToString
+            Me.in_date.Value = get_inventory.CurrentRow.Cells(1).Value.ToString
             Me.productName_txt.Text = get_inventory.CurrentRow.Cells(2).Value.ToString
             Me.qty_txt.Text = get_inventory.CurrentRow.Cells(3).Value.ToString
             Me.packing_txt.Text = get_inventory.CurrentRow.Cells(4).Value.ToString
@@ -252,62 +491,57 @@ Public Class addInvetory_Frm
         End Try
     End Sub
 
-    Private Sub original_Price()
-        Try
-            con.ConnectionString = cs
-            cmd.Connection = con
-            con.Open()
-            cmd.CommandText = "UPDATE add_invent_tbl SET original_Single_Price= '" & singlePrice_txt.Text & "',grand_Total_with_orginal_price= '" & grandTotal_txt.Text & "' where inven_Id='" & In_Id.Text & "'"
-            cmd.ExecuteNonQuery()
 
-            welcomemsg.ForeColor = System.Drawing.Color.DarkGreen
-            welcomemsg.Text = "original price of'" & productName_txt.Text & "'  add successfully!"
-            con.Close()
+
+    Private Sub admin_grid_CellMouseClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles admin_grid.CellMouseClick
+        Try
+            Label13.Text = "click"
+            Me.In_Id.Text = admin_grid.CurrentRow.Cells(0).Value.ToString
+                Me.in_date.Value = admin_grid.CurrentRow.Cells(1).Value.ToString
+                Me.productName_txt.Text = admin_grid.CurrentRow.Cells(2).Value.ToString
+                Me.qty_txt.Text = admin_grid.CurrentRow.Cells(3).Value.ToString
+                Me.packing_txt.Text = admin_grid.CurrentRow.Cells(4).Value.ToString
+
+                Me.singlePrice_txt.Text = admin_grid.CurrentRow.Cells(5).Value.ToString
+                Me.grandTotal_txt.Text = admin_grid.CurrentRow.Cells(6).Value.ToString
+                Me.added_by_txt.Text = admin_grid.CurrentRow.Cells(7).Value.ToString
+                Me.instock_txt.Text = admin_grid.CurrentRow.Cells(8).Value.ToString
+                Me.address_txt.Text = admin_grid.CurrentRow.Cells(9).Value.ToString
+                Me.stockStatus_lbl.Text = admin_grid.CurrentRow.Cells(10).Value.ToString
+                Me.adminSingle_txt.Text = admin_grid.CurrentRow.Cells(11).Value.ToString
+                Me.adminGrandtotal_txt.Text = admin_grid.CurrentRow.Cells(12).Value.ToString
+
+
         Catch ex As Exception
-            MessageBox.Show("Data Not Updated" & ex.Message)
-            welcomemsg.ForeColor = System.Drawing.Color.Red
+            MessageBox.Show(ex.Message, "Failed:TextBox not found ", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Me.Dispose()
         End Try
     End Sub
 
-    Private Sub BunifuButton1_Click(sender As Object, e As EventArgs)
-        original_Price()
+    Private Sub admin__search_product_TextChanged(sender As Object, e As EventArgs) Handles admin__search_product.TextChanged
+        search_txt_admin()
     End Sub
 
-    Private Sub addOriginalPrice_btn_Click(sender As Object, e As EventArgs) Handles addOriginalPrice_btn.Click
-        original_Price()
-    End Sub
-    Private Sub getData_Date()
-        Using connection As New SqlConnection(cs)
-            Try
-
-                Dim dfrom As Date = filter_DatePicker_To.Value
-                ''Dim dto As DateTime = DateTimePicker2.Value
-                connection.Open()
-                Dim da1 As New SqlDataAdapter("Select inven_Id as[ID],int_date,in_product_name as [Product Name],Qty_or_pcs as [Qty_or_Pcs],packing as [Packing],in_prod_single_price as [Single Product Price],in_prod_grand_price as [Grand Price],in_add_by as [Add by],in_total_quantity as [Total Stock],address as [Address],status as [Status] from add_invent_tbl where int_date = '" & DateTimePicker1.Value.Date & "'", connection)
-                Dim dt1 As New DataTable
-                da1.Fill(dt1)
-                source2.DataSource = dt1
-                get_inventory.DataSource = dt1
-                get_inventory.Refresh()
-            Catch ex As Exception
-                MessageBox.Show("Failed:Retrieving Data" & ex.Message)
-                Me.Dispose()
-            End Try
-        End Using
-
-
+    Private Sub save_Btn_Click(sender As Object, e As EventArgs) Handles save_Btn.Click
+        insert_Admin()
+        BunifuPages1.PageIndex = 1
+        getdata_admin()
+        clear_txt()
     End Sub
 
-
-    Private Sub filter_DatePicker_To_ValueChanged(sender As Object, e As EventArgs) Handles filter_DatePicker_To.ValueChanged
-        'filter_DatePicker_To.Value = Label1.Text
-        Label11.Text = filter_DatePicker_To.Value
-        'filter_DatePicker_To.Value = Label1.Text
-
+    Private Sub singlePrice_txt_Validated(sender As Object, e As EventArgs) Handles singlePrice_txt.Validated
+        Grand_Total()
     End Sub
 
-    Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub adminSingle_txt_Validated(sender As Object, e As EventArgs) Handles adminSingle_txt.Validated
+        Grand_Total1()
+    End Sub
+
+    Private Sub user_from_datepicker_ValueChanged(sender As Object, e As EventArgs) Handles user_from_datepicker.ValueChanged
         getData_Date()
+    End Sub
+
+    Private Sub datePicker_to_txt_ValueChanged(sender As Object, e As EventArgs) Handles datePicker_to_txt.ValueChanged
+        getData_Admin_Date()
     End Sub
 End Class

@@ -1,5 +1,9 @@
 ﻿
 Imports System.Data.SqlClient
+Imports Bunifu.UI.WinForms
+Imports Bunifu.UI.WinForms.BunifuButton
+Imports Utilities
+
 Public Class Login_Frm
 
     Private cmd As New SqlCommand()
@@ -41,10 +45,10 @@ Public Class Login_Frm
                 'Me.Close()
 
                 addInvetory_Frm.added_by_txt.Text = Me.txtUsername.Text
+
                 dashboard_Frm.billby_txt.Text = Me.txtUsername.Text
                 dashboard_Frm.clinictodaybtn_dshbrd.Visible = False
-                dashboard_Frm.usersRecords_Btn.Visible = False
-                dashboard_Frm.manInventory_btn.Visible = False
+
 
 
                 dashboard_Frm.Show()
@@ -63,6 +67,23 @@ Public Class Login_Frm
                 addInvetory_Frm.added_by_txt.Text = Me.txtUsername.Text
                 dashboard_Frm.billby_txt.Text = Me.txtUsername.Text
                 dashboard_Frm.Label5.Text = Me.selectUser.Text
+                dashboard_Frm.usersRecords_Btn.Visible = True
+                dashboard_Frm.manInventory_btn.Visible = True
+                dashboard_Frm.clinictodaybtn_dshbrd.Visible = True
+
+                addInvetory_Frm.delete_Btn.Visible = True
+                addInvetory_Frm.update_Btn.Visible = True
+                addInvetory_Frm.addOriginalPrice_btn.Visible = True
+                addInvetory_Frm.adminSingle_txt.Visible = True
+                addInvetory_Frm.adminGrandtotal_txt.Visible = True
+                addInvetory_Frm.Label12.Visible = True
+                addInvetory_Frm.Label11.Visible = True
+                addInvetory_Frm.show_admin_grid.Visible = True
+                addInvetory_Frm.save_Btn.Visible = True
+                addInvetory_Frm.BunifuButton5.Visible = False
+
+
+
 
                 dashboard_Frm.Show()
                 Me.Close()
