@@ -160,14 +160,7 @@ Public Class addInvetory_Frm
     End Sub
 
     Private Sub addInvetory_Frm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-
-
-
         getdata()
-
-
-
         FillCombo_product_name()
     End Sub
 
@@ -189,10 +182,66 @@ Public Class addInvetory_Frm
         FillCombo_product_packing()
 
     End Sub
+
+    Private Sub update_Stock()
+        Try
+            con.ConnectionString = cs
+            cmd.Connection = con
+            con.Open()
+            cmd.CommandText = "UPDATE stock_tbl SET [stock_quantity]= '" & instock_txt.Text & "'  where [stock_name]='" & productName_txt.Text & "' And [stock_packing]='" & packing_txt.Text & "' "
+            cmd.ExecuteNonQuery()
+
+            welcomemsg.ForeColor = System.Drawing.Color.DarkGreen
+            welcomemsg.Text = "original price of  '" & productName_txt.Text & "'  add successfully!"
+            con.Close()
+        Catch ex As Exception
+            MessageBox.Show("Data Not Updated" & ex.Message)
+            welcomemsg.ForeColor = System.Drawing.Color.Red
+            Me.Dispose()
+        End Try
+    End Sub
+    Private Sub insertStock()
+        Try
+            con.ConnectionString = cs
+            cmd.Connection = con
+            con.Open()
+            cmd.CommandText = "insert into stock_tbl([stock_name],[stock_packing],[stock_quantity])values
+                                                   ('" & productName_txt.Text & "','" & packing_txt.Text & "','" & instock_txt.Text & "')"
+            cmd.ExecuteNonQuery()
+
+            welcomemsg.ForeColor = System.Drawing.Color.Green
+            welcomemsg.Text = "'" & productName_txt.Text & "' details saved successfully!"
+            con.Close()
+        Catch ex As Exception
+            MsgBox("Data Inserted Failed because " & ex.Message)
+            Me.Dispose()
+        End Try
+    End Sub
+    Public Sub stockchck()
+        Dim cmd As New SqlCommand()
+        Dim str As String
+        Dim com As SqlCommand
+        Dim con As New SqlConnection(cs)
+        con.Open()
+        str = "select count(*)from [stock_tbl] where [stock_name]='" & productName_txt.Text & "' And [stock_packing]='" & packing_txt.Text & "' "
+        com = New SqlCommand(str, con)
+        Dim count As Integer = Convert.ToInt32(com.ExecuteScalar())
+        con.Close()
+        If count > 0 Then
+            update_stock()
+
+
+
+        Else
+            insertStock()
+
+        End If
+    End Sub
     Private Sub BunifuButton5_Click(sender As Object, e As EventArgs) Handles BunifuButton5.Click
+        stockchck()
         insert()
         getdata()
-
+        stockchck()
         clear_txt()
     End Sub
     Private Sub search_txt()
@@ -280,6 +329,7 @@ Public Class addInvetory_Frm
 
     Private Sub packing_txt_SelectedIndexChanged(sender As Object, e As EventArgs) Handles packing_txt.SelectedIndexChanged
         total_Inventory()
+        ''
     End Sub
 
     Private Sub original_Price()
@@ -370,11 +420,22 @@ Public Class addInvetory_Frm
 
         End If
     End Sub
+    Private Sub add_to_inventory()
+        Dim qtyData As Double
+        Dim totalStock As Double
+        Dim grandStock As Double
+        qtyData = Convert.ToDouble(qty_txt.Text)
+        totalStock = Convert.ToDouble(instock_txt.Text)
+        grandStock = qtyData + totalStock
 
+        instock_txt.Text = CStr(grandStock)
+    End Sub
     Private Sub singlePrice_txt_TextChanged(sender As Object, e As EventArgs) Handles singlePrice_txt.TextChanged
-        instock_txt.Text = qty_txt.Text
 
-        instock_status()
+
+        ''instock_txt.Text = qty_txt.Text + instock_txt.Text
+
+
     End Sub
     Private Sub DeleteSelecedRows()
 
@@ -523,14 +584,18 @@ Public Class addInvetory_Frm
     End Sub
 
     Private Sub save_Btn_Click(sender As Object, e As EventArgs) Handles save_Btn.Click
+        stockchck()
         insert_Admin()
         BunifuPages1.PageIndex = 1
+
         getdata_admin()
+
         clear_txt()
     End Sub
 
     Private Sub singlePrice_txt_Validated(sender As Object, e As EventArgs) Handles singlePrice_txt.Validated
         Grand_Total()
+
     End Sub
 
     Private Sub adminSingle_txt_Validated(sender As Object, e As EventArgs) Handles adminSingle_txt.Validated
@@ -543,5 +608,22 @@ Public Class addInvetory_Frm
 
     Private Sub datePicker_to_txt_ValueChanged(sender As Object, e As EventArgs) Handles datePicker_to_txt.ValueChanged
         getData_Admin_Date()
+    End Sub
+
+
+
+    Private Sub singlePrice_txt_MouseClick(sender As Object, e As MouseEventArgs) Handles singlePrice_txt.MouseClick
+        add_to_inventory()
+
+        instock_status()
+        '' add_to_inventory()
+    End Sub
+
+    Private Sub qty_txt_TextChanged(sender As Object, e As EventArgs) Handles qty_txt.TextChanged
+
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs)
+
     End Sub
 End Class

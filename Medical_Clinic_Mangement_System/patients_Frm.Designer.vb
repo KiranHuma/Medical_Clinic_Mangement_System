@@ -27,6 +27,10 @@ Partial Class patients_Frm
         Dim BorderEdges2 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(patients_Frm))
         Dim Animation1 As Utilities.BunifuPages.BunifuAnimatorNS.Animation = New Utilities.BunifuPages.BunifuAnimatorNS.Animation()
+        Dim StateProperties1 As Bunifu.UI.WinForms.BunifuTextBox.StateProperties = New Bunifu.UI.WinForms.BunifuTextBox.StateProperties()
+        Dim StateProperties2 As Bunifu.UI.WinForms.BunifuTextBox.StateProperties = New Bunifu.UI.WinForms.BunifuTextBox.StateProperties()
+        Dim StateProperties3 As Bunifu.UI.WinForms.BunifuTextBox.StateProperties = New Bunifu.UI.WinForms.BunifuTextBox.StateProperties()
+        Dim StateProperties4 As Bunifu.UI.WinForms.BunifuTextBox.StateProperties = New Bunifu.UI.WinForms.BunifuTextBox.StateProperties()
         Dim StateProperties5 As Bunifu.UI.WinForms.BunifuTextBox.StateProperties = New Bunifu.UI.WinForms.BunifuTextBox.StateProperties()
         Dim StateProperties6 As Bunifu.UI.WinForms.BunifuTextBox.StateProperties = New Bunifu.UI.WinForms.BunifuTextBox.StateProperties()
         Dim StateProperties7 As Bunifu.UI.WinForms.BunifuTextBox.StateProperties = New Bunifu.UI.WinForms.BunifuTextBox.StateProperties()
@@ -39,10 +43,6 @@ Partial Class patients_Frm
         Dim StateProperties14 As Bunifu.UI.WinForms.BunifuTextBox.StateProperties = New Bunifu.UI.WinForms.BunifuTextBox.StateProperties()
         Dim StateProperties15 As Bunifu.UI.WinForms.BunifuTextBox.StateProperties = New Bunifu.UI.WinForms.BunifuTextBox.StateProperties()
         Dim StateProperties16 As Bunifu.UI.WinForms.BunifuTextBox.StateProperties = New Bunifu.UI.WinForms.BunifuTextBox.StateProperties()
-        Dim StateProperties1 As Bunifu.UI.WinForms.BunifuTextBox.StateProperties = New Bunifu.UI.WinForms.BunifuTextBox.StateProperties()
-        Dim StateProperties2 As Bunifu.UI.WinForms.BunifuTextBox.StateProperties = New Bunifu.UI.WinForms.BunifuTextBox.StateProperties()
-        Dim StateProperties3 As Bunifu.UI.WinForms.BunifuTextBox.StateProperties = New Bunifu.UI.WinForms.BunifuTextBox.StateProperties()
-        Dim StateProperties4 As Bunifu.UI.WinForms.BunifuTextBox.StateProperties = New Bunifu.UI.WinForms.BunifuTextBox.StateProperties()
         Me.BunifuElipse1 = New Bunifu.Framework.UI.BunifuElipse(Me.components)
         Me.header = New System.Windows.Forms.Panel()
         Me.BunifuButton2 = New Bunifu.UI.WinForms.BunifuButton.BunifuButton()
@@ -53,6 +53,8 @@ Partial Class patients_Frm
         Me.BunifuPages1 = New Bunifu.UI.WinForms.BunifuPages()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.In_Id = New Bunifu.UI.WinForms.BunifuTextBox()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.welcomemsg = New System.Windows.Forms.Label()
         Me.adminGrandtotal_txt = New Bunifu.UI.WinForms.BunifuTextBox()
         Me.Label11 = New System.Windows.Forms.Label()
@@ -66,8 +68,6 @@ Partial Class patients_Frm
         Me.in_date = New Bunifu.UI.WinForms.BunifuDatePicker()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.In_Id = New Bunifu.UI.WinForms.BunifuTextBox()
-        Me.Label4 = New System.Windows.Forms.Label()
         Me.header.SuspendLayout()
         Me.BunifuPanel1.SuspendLayout()
         Me.BunifuPages1.SuspendLayout()
@@ -406,6 +406,92 @@ Partial Class patients_Frm
         Me.TabPage2.Text = "TabPage2"
         Me.TabPage2.UseVisualStyleBackColor = True
         '
+        'In_Id
+        '
+        Me.In_Id.AcceptsReturn = False
+        Me.In_Id.AcceptsTab = False
+        Me.In_Id.AnimationSpeed = 200
+        Me.In_Id.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None
+        Me.In_Id.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None
+        Me.In_Id.BackColor = System.Drawing.Color.White
+        Me.In_Id.BackgroundImage = CType(resources.GetObject("In_Id.BackgroundImage"), System.Drawing.Image)
+        Me.In_Id.BorderColorActive = System.Drawing.Color.DodgerBlue
+        Me.In_Id.BorderColorDisabled = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.In_Id.BorderColorHover = System.Drawing.Color.FromArgb(CType(CType(105, Byte), Integer), CType(CType(181, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.In_Id.BorderColorIdle = System.Drawing.Color.Silver
+        Me.In_Id.BorderRadius = 1
+        Me.In_Id.BorderThickness = 1
+        Me.In_Id.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal
+        Me.In_Id.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.In_Id.DefaultFont = New System.Drawing.Font("Segoe UI", 9.25!)
+        Me.In_Id.DefaultText = ""
+        Me.In_Id.FillColor = System.Drawing.Color.White
+        Me.In_Id.HideSelection = True
+        Me.In_Id.IconLeft = Nothing
+        Me.In_Id.IconLeftCursor = System.Windows.Forms.Cursors.IBeam
+        Me.In_Id.IconPadding = 3
+        Me.In_Id.IconRight = Nothing
+        Me.In_Id.IconRightCursor = System.Windows.Forms.Cursors.IBeam
+        Me.In_Id.Lines = New String(-1) {}
+        Me.In_Id.Location = New System.Drawing.Point(644, 57)
+        Me.In_Id.MaxLength = 32767
+        Me.In_Id.MinimumSize = New System.Drawing.Size(1, 1)
+        Me.In_Id.Modified = False
+        Me.In_Id.Multiline = False
+        Me.In_Id.Name = "In_Id"
+        StateProperties1.BorderColor = System.Drawing.Color.LightSeaGreen
+        StateProperties1.FillColor = System.Drawing.Color.Empty
+        StateProperties1.ForeColor = System.Drawing.Color.Empty
+        StateProperties1.PlaceholderForeColor = System.Drawing.Color.Empty
+        Me.In_Id.OnActiveState = StateProperties1
+        StateProperties2.BorderColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
+        StateProperties2.FillColor = System.Drawing.Color.FromArgb(CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer))
+        StateProperties2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
+        StateProperties2.PlaceholderForeColor = System.Drawing.Color.DarkGray
+        Me.In_Id.OnDisabledState = StateProperties2
+        StateProperties3.BorderColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        StateProperties3.FillColor = System.Drawing.Color.Empty
+        StateProperties3.ForeColor = System.Drawing.Color.Empty
+        StateProperties3.PlaceholderForeColor = System.Drawing.Color.Empty
+        Me.In_Id.OnHoverState = StateProperties3
+        StateProperties4.BorderColor = System.Drawing.Color.Silver
+        StateProperties4.FillColor = System.Drawing.Color.White
+        StateProperties4.ForeColor = System.Drawing.Color.Empty
+        StateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty
+        Me.In_Id.OnIdleState = StateProperties4
+        Me.In_Id.Padding = New System.Windows.Forms.Padding(3)
+        Me.In_Id.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.In_Id.PlaceholderForeColor = System.Drawing.Color.Silver
+        Me.In_Id.PlaceholderText = "ID"
+        Me.In_Id.ReadOnly = False
+        Me.In_Id.ScrollBars = System.Windows.Forms.ScrollBars.None
+        Me.In_Id.SelectedText = ""
+        Me.In_Id.SelectionLength = 0
+        Me.In_Id.SelectionStart = 0
+        Me.In_Id.ShortcutsEnabled = True
+        Me.In_Id.Size = New System.Drawing.Size(66, 40)
+        Me.In_Id.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Material
+        Me.In_Id.TabIndex = 165
+        Me.In_Id.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.In_Id.TextMarginBottom = 0
+        Me.In_Id.TextMarginLeft = 3
+        Me.In_Id.TextMarginTop = 0
+        Me.In_Id.TextPlaceholder = "ID"
+        Me.In_Id.UseSystemPasswordChar = False
+        Me.In_Id.Visible = False
+        Me.In_Id.WordWrap = True
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Century Gothic", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(663, 23)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(26, 19)
+        Me.Label4.TabIndex = 164
+        Me.Label4.Text = "ID"
+        Me.Label4.Visible = False
+        '
         'welcomemsg
         '
         Me.welcomemsg.AutoSize = True
@@ -740,93 +826,7 @@ Partial Class patients_Frm
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(127, 19)
         Me.Label2.TabIndex = 151
-        Me.Label2.Text = "Product Name"
-        '
-        'In_Id
-        '
-        Me.In_Id.AcceptsReturn = False
-        Me.In_Id.AcceptsTab = False
-        Me.In_Id.AnimationSpeed = 200
-        Me.In_Id.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None
-        Me.In_Id.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None
-        Me.In_Id.BackColor = System.Drawing.Color.White
-        Me.In_Id.BackgroundImage = CType(resources.GetObject("In_Id.BackgroundImage"), System.Drawing.Image)
-        Me.In_Id.BorderColorActive = System.Drawing.Color.DodgerBlue
-        Me.In_Id.BorderColorDisabled = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
-        Me.In_Id.BorderColorHover = System.Drawing.Color.FromArgb(CType(CType(105, Byte), Integer), CType(CType(181, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.In_Id.BorderColorIdle = System.Drawing.Color.Silver
-        Me.In_Id.BorderRadius = 1
-        Me.In_Id.BorderThickness = 1
-        Me.In_Id.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal
-        Me.In_Id.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.In_Id.DefaultFont = New System.Drawing.Font("Segoe UI", 9.25!)
-        Me.In_Id.DefaultText = ""
-        Me.In_Id.FillColor = System.Drawing.Color.White
-        Me.In_Id.HideSelection = True
-        Me.In_Id.IconLeft = Nothing
-        Me.In_Id.IconLeftCursor = System.Windows.Forms.Cursors.IBeam
-        Me.In_Id.IconPadding = 3
-        Me.In_Id.IconRight = Nothing
-        Me.In_Id.IconRightCursor = System.Windows.Forms.Cursors.IBeam
-        Me.In_Id.Lines = New String(-1) {}
-        Me.In_Id.Location = New System.Drawing.Point(644, 57)
-        Me.In_Id.MaxLength = 32767
-        Me.In_Id.MinimumSize = New System.Drawing.Size(1, 1)
-        Me.In_Id.Modified = False
-        Me.In_Id.Multiline = False
-        Me.In_Id.Name = "In_Id"
-        StateProperties1.BorderColor = System.Drawing.Color.LightSeaGreen
-        StateProperties1.FillColor = System.Drawing.Color.Empty
-        StateProperties1.ForeColor = System.Drawing.Color.Empty
-        StateProperties1.PlaceholderForeColor = System.Drawing.Color.Empty
-        Me.In_Id.OnActiveState = StateProperties1
-        StateProperties2.BorderColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
-        StateProperties2.FillColor = System.Drawing.Color.FromArgb(CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer))
-        StateProperties2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
-        StateProperties2.PlaceholderForeColor = System.Drawing.Color.DarkGray
-        Me.In_Id.OnDisabledState = StateProperties2
-        StateProperties3.BorderColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        StateProperties3.FillColor = System.Drawing.Color.Empty
-        StateProperties3.ForeColor = System.Drawing.Color.Empty
-        StateProperties3.PlaceholderForeColor = System.Drawing.Color.Empty
-        Me.In_Id.OnHoverState = StateProperties3
-        StateProperties4.BorderColor = System.Drawing.Color.Silver
-        StateProperties4.FillColor = System.Drawing.Color.White
-        StateProperties4.ForeColor = System.Drawing.Color.Empty
-        StateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty
-        Me.In_Id.OnIdleState = StateProperties4
-        Me.In_Id.Padding = New System.Windows.Forms.Padding(3)
-        Me.In_Id.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.In_Id.PlaceholderForeColor = System.Drawing.Color.Silver
-        Me.In_Id.PlaceholderText = "ID"
-        Me.In_Id.ReadOnly = False
-        Me.In_Id.ScrollBars = System.Windows.Forms.ScrollBars.None
-        Me.In_Id.SelectedText = ""
-        Me.In_Id.SelectionLength = 0
-        Me.In_Id.SelectionStart = 0
-        Me.In_Id.ShortcutsEnabled = True
-        Me.In_Id.Size = New System.Drawing.Size(66, 40)
-        Me.In_Id.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Material
-        Me.In_Id.TabIndex = 165
-        Me.In_Id.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.In_Id.TextMarginBottom = 0
-        Me.In_Id.TextMarginLeft = 3
-        Me.In_Id.TextMarginTop = 0
-        Me.In_Id.TextPlaceholder = "ID"
-        Me.In_Id.UseSystemPasswordChar = False
-        Me.In_Id.Visible = False
-        Me.In_Id.WordWrap = True
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Century Gothic", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(663, 23)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(26, 19)
-        Me.Label4.TabIndex = 164
-        Me.Label4.Text = "ID"
-        Me.Label4.Visible = False
+        Me.Label2.Text = "Patients Name"
         '
         'patients_Frm
         '

@@ -81,7 +81,8 @@ Public Class Login_Frm
                 addInvetory_Frm.show_admin_grid.Visible = True
                 addInvetory_Frm.save_Btn.Visible = True
                 addInvetory_Frm.BunifuButton5.Visible = False
-
+                addInvetory_Frm.in_date.Visible = False
+                addInvetory_Frm.Label7.Visible = False
 
 
 
