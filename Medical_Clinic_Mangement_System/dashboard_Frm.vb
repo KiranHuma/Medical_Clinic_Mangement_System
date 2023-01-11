@@ -1,4 +1,5 @@
 ﻿
+Imports System.Collections.ObjectModel
 Imports System.Data.OleDb
 Imports System.Data.SqlClient
 Imports System.Windows.Forms.VisualStyles.VisualStyleElement
@@ -35,7 +36,7 @@ Public Class dashboard_Frm
             cmd.Connection = con
             con.Open()
             cmd.CommandText = "insert into sell_tbl([sell_date],[patient_Name],[product_list],[patient_Status],[price],[profit_price],[sell_total_quantity],[sell_by])values
-            ('" & Format(datePicker_Sell.Value, "yyyy-MM-dd") & "','" & patientName_txt.Text & "','" & product_Name_txt.Text & "','" & product_List_Txt.Text & "','" & patient_Status_Txt.Text & "','" & sell_Price_Txt.Text & "','" & profit_Price_Txt.Text & "','" & billby_txt.Text & "')"
+            ('" & Format(datePicker_Sell.Value, "yyyy-MM-dd") & "','" & patientName_txt.Text & "','" & product_List_Txt.Text & "','" & patient_Status_Txt.Text & "','" & grand_Single_Pc.Text & "','" & profit_Grand_Total.Text & "','" & sell_Qty_Txt.Text & "','" & billby_txt.Text & "')"
             cmd.ExecuteNonQuery()
             welcomemsg.ForeColor = System.Drawing.Color.Green
             welcomemsg.Text = "'" & patientName_txt.Text & "' details saved successfully!"
@@ -99,7 +100,7 @@ Public Class dashboard_Frm
     Private Sub BunifuButton6_Click(sender As Object, e As EventArgs) Handles BunifuButton6.Click
         BunifuPages1.PageIndex = 2
     End Sub
-    Private Sub Grand_Total_bill()
+    Private Sub Grand_Sell_bill()
 
         'single piece quantity and price
         Dim single_Pc_price As Double
@@ -129,25 +130,205 @@ Public Class dashboard_Frm
         num5 = single_totalquntity3 + single_totalquntity4
         sell_Qty_Txt.Text = CStr(num5)
 
+
+
+        ''profit price calculation
+
+        Dim sellePrice1 As Double
+        Dim purchasePrice2 As Double
+        Dim GrandpurchasePrice2 As Double
+        Dim num6 As Double
+        Dim num7 As Double
+        sellePrice1 = Convert.ToDouble(sell_Price_Txt.Text)
+        purchasePrice2 = Convert.ToDouble(profit_Price_Txt.Text)
+        GrandpurchasePrice2 = Convert.ToDouble(profit_Grand_Total.Text)
+
+        num6 = (sellePrice1 - purchasePrice2) * single_totalquntity3
+        num7 = GrandpurchasePrice2 + num6
+
+        profit_Grand_Total.Text = CStr(num7)
     End Sub
-    Private Sub BunifuButton3_Click(sender As Object, e As EventArgs) Handles Check_Out_Btn.Click
-        insert()
-    End Sub
-    Private Sub qty_txt_MouseClick(sender As Object, e As MouseEventArgs) Handles qty_txt.MouseClick
+    Private Sub total_Inventory()
+
+
+
+        Using connection As New SqlConnection(cs)
+                Try
+
+                Dim command As New SqlCommand("SELECT stock_name,stock_packing,stock_quantity FROM stock_tbl where  stock_name ='" & product_Name_txt.Text & "' AND  stock_packing ='" & packing_txt.Text & "'", connection)
+                connection.Open()
+                    cmd.Parameters.Clear()
+                    Dim read As SqlDataReader = command.ExecuteReader()
+
+                    Do While read.Read()
+                        Label32.Text = (read("stock_quantity").ToString())
+                        ''profit_Price_Txt.Text = (read("original_Single_Price").ToString())
+                    Loop
+                    read.Close()
+
+                Catch ex As Exception
+
+                    MessageBox.Show(ex.Message)
+                    Me.Dispose()
+                End Try
+            End Using
+
 
     End Sub
-    Private Sub single_pc_to_MouseClick(sender As Object, e As MouseEventArgs)
-        Grand_Total_bill()
+    Private Sub original_price()
+        Using connection As New SqlConnection(cs)
+            Try
+
+                Dim command As New SqlCommand("SELECT original_Single_Price,in_product_name,packing,in_prod_single_price FROM add_invent_tbl where  in_product_name ='" & product_Name_txt.Text & "' AND  packing ='" & packing_txt.Text & "' AND in_prod_single_price ='" & sell_Price_Txt.Text & "'", connection)
+                connection.Open()
+                cmd.Parameters.Clear()
+                Dim read As SqlDataReader = command.ExecuteReader()
+
+                Do While read.Read()
+                    profit_Price_Txt.Text = (read("original_Single_Price").ToString())
+                    ''profit_Price_Txt.Text = (read("original_Single_Price").ToString())
+                Loop
+                read.Close()
+
+            Catch ex As Exception
+
+                MessageBox.Show(ex.Message)
+                Me.Dispose()
+            End Try
+        End Using
+    End Sub
+    Private Sub FillCombo_product_name()
+        Try
+            Dim conn As New System.Data.SqlClient.SqlConnection(cs)
+            Dim strSQL As String = "SELECT distinct in_product_name FROM add_invent_tbl"
+            Dim da As New System.Data.SqlClient.SqlDataAdapter(strSQL, conn)
+            Dim ds As New DataSet
+            da.Fill(ds, "add_invent_tbl")
+            With Me.product_Name_txt
+                .DataSource = ds.Tables("add_invent_tbl")
+                .DisplayMember = "in_product_name"
+                .ValueMember = "in_product_name"
+                .SelectedIndex = -1
+                .AutoCompleteMode = AutoCompleteMode.SuggestAppend
+                .AutoCompleteSource = AutoCompleteSource.ListItems
+            End With
+        Catch ex As Exception
+            MessageBox.Show("Failed:Retrieving and Populating ProductID " & ex.Message)
+            Me.Dispose()
+        End Try
+    End Sub
+    Private Sub FillCombo_product_packing()
+        Try
+            Dim conn As New System.Data.SqlClient.SqlConnection(cs)
+            Dim strSQL As String = "SELECT distinct packing FROM add_invent_tbl where in_product_name='" & product_Name_txt.Text & "'"
+            Dim da As New System.Data.SqlClient.SqlDataAdapter(strSQL, conn)
+            Dim ds As New DataSet
+            da.Fill(ds, "add_invent_tbl")
+            With Me.packing_txt
+                .DataSource = ds.Tables("add_invent_tbl")
+
+                .DisplayMember = "packing"
+                .ValueMember = "packing"
+                .SelectedIndex = -1
+                .AutoCompleteMode = AutoCompleteMode.SuggestAppend
+                .AutoCompleteSource = AutoCompleteSource.ListItems
+            End With
+
+
+        Catch ex As Exception
+            MessageBox.Show("Failed:Retrieving and Populating ProductID " & ex.Message)
+            Me.Dispose()
+        End Try
+
+    End Sub
+    Private Sub FillCombo_product_price()
+        Try
+            Dim conn As New System.Data.SqlClient.SqlConnection(cs)
+            Dim strSQL As String = "SELECT distinct in_prod_single_price FROM add_invent_tbl  where in_product_name='" & product_Name_txt.Text & "' AND   packing='" & packing_txt.Text & "'"
+            Dim da As New System.Data.SqlClient.SqlDataAdapter(strSQL, conn)
+            Dim ds As New DataSet
+            da.Fill(ds, "add_invent_tbl")
+            With Me.sell_Price_Txt
+                .DataSource = ds.Tables("add_invent_tbl")
+
+                .DisplayMember = "in_prod_single_price"
+                .ValueMember = "in_prod_single_price"
+                .SelectedIndex = -1
+                .AutoCompleteMode = AutoCompleteMode.SuggestAppend
+                .AutoCompleteSource = AutoCompleteSource.ListItems
+            End With
+
+
+        Catch ex As Exception
+            MessageBox.Show("Failed:Retrieving and Populating ProductID " & ex.Message)
+            Me.Dispose()
+        End Try
+
+    End Sub
+
+    Private Sub BunifuButton3_Click(sender As Object, e As EventArgs) Handles Check_Out_Btn.Click
+        insert()
+        get_Selling_Data()
+    End Sub
+    Private Sub grand_Single_Pc_MouseClick(sender As Object, e As MouseEventArgs) Handles grand_Single_Pc.MouseClick
+        original_price()
+        total_Inventory()
+        Grand_Sell_bill()
         list_products()
+    End Sub
+    Private Sub get_Selling_Data()
+        Try
+            Dim con As New SqlConnection(cs)
+            con.Open()
+            Dim da As New SqlDataAdapter("Select sell_Id as[ID],[sell_date] as [Date],[patient_Name] as [Patient Name],[product_list] as [Product List],[patient_Status] as [Patient Status],[price] as [Sell Price],[profit_price] as [Profit Price],[sell_total_quantity] as [Total Quantity],[sell_by] as [Sell By] from sell_tbl", con)
+            Dim dt As New DataTable
+            da.Fill(dt)
+            source2.DataSource = dt
+            sell_grid.DataSource = dt
+            sell_grid.Refresh()
+
+        Catch ex As Exception
+            MessageBox.Show("Failed:Retrieving Data" & ex.Message)
+            Me.Dispose()
+        End Try
+    End Sub
+
+
+    Private Sub product_Name_txt_SelectedIndexChanged(sender As Object, e As EventArgs) Handles product_Name_txt.SelectedIndexChanged
+        FillCombo_product_packing()
+    End Sub
+
+    Private Sub packing_txt_SelectedIndexChanged(sender As Object, e As EventArgs) Handles packing_txt.SelectedIndexChanged
+
+        FillCombo_product_price()
+        total_Inventory()
+    End Sub
+
+
+
+    Private Sub BunifuButton3_Click_1(sender As Object, e As EventArgs) Handles BunifuButton3.Click
+        BunifuPages1.PageIndex = 3
+    End Sub
+
+    Private Sub TabPage4_Click(sender As Object, e As EventArgs) Handles TabPage4.Click
+
+    End Sub
+
+    Private Sub dashboard_Frm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        FillCombo_product_name()
+
+    End Sub
+
+    Private Sub sell_Price_Txt_SelectedIndexChanged(sender As Object, e As EventArgs) Handles sell_Price_Txt.SelectedIndexChanged
+
+
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Grand_Total_bill()
+        total_Inventory()
+
     End Sub
 
-    Private Sub grand_Single_Pc_MouseClick(sender As Object, e As MouseEventArgs) Handles grand_Single_Pc.MouseClick
-        Grand_Total_bill()
-        list_products()
-    End Sub
+
 
 End Class
