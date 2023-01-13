@@ -1,11 +1,24 @@
 ﻿
 Imports System.Collections.ObjectModel
+Imports System.ComponentModel
 Imports System.Data.OleDb
 Imports System.Data.SqlClient
+Imports System.Drawing.Printing
+Imports System.IO
 Imports System.Windows.Forms.VisualStyles.VisualStyleElement
+Imports HtmlRenderer
+Imports iTextSharp.text
+Imports iTextSharp.text.pdf
 Imports TheArtOfDev.HtmlRenderer.Core
 Public Class dashboard_Frm
-    Private bitmap As Bitmap
+
+
+
+
+    Dim str As String
+    Dim com As SqlCommand
+
+
     Dim rdr As SqlDataReader
     Dim provider As String
     Dim dataFile As String
@@ -50,7 +63,7 @@ Public Class dashboard_Frm
         Me.Close()
     End Sub
     Private Sub list_products()
-        product_List_Txt.Text &= "Product Name" & ":" & product_Name_txt.Text & "," & "Packing " & ":" & packing_txt.Text & "," & "Quantity " & ":" & qty_txt.Text & "," & "Sell Price" & ":" + single_pc_to.Text & vbNewLine
+        product_List_Txt.Text &= "Product Name" & ":" & " " & " " & product_Name_txt.Text & "," & " " & " " & "Packing " & ":" & " " & " " & packing_txt.Text & "," & " " & " " & "Quantity " & ":" & " " & " " & qty_txt.Text & "," & " " & " " & "Sell Price" & ":" + " " & " " & single_pc_to.Text & vbNewLine
     End Sub
     Private Sub btnmenu_Click(sender As Object, e As EventArgs) Handles btnmenu.Click
         If (sidemenu.Width = 70) Then
@@ -84,8 +97,8 @@ Public Class dashboard_Frm
         Me.Close()
     End Sub
     Private Sub manInventory_btn_Click(sender As Object, e As EventArgs) Handles manInventory_btn.Click
-        manage_Inventory_Frm.Show()
-        Me.Close()
+        BunifuPages1.PageIndex = 4
+        get_total_stock_Data()
     End Sub
     Private Sub BunifuButton1_Click(sender As Object, e As EventArgs) Handles BunifuButton1.Click
         patients_Frm.Show()
@@ -147,31 +160,43 @@ Public Class dashboard_Frm
         num7 = GrandpurchasePrice2 + num6
 
         profit_Grand_Total.Text = CStr(num7)
+
+
+        'stock after selling
+        Dim stockSell As Double
+        Dim totalStock As Double
+        Dim remaingStock As Double
+        stockSell = Convert.ToDouble(qty_txt.Text)
+        totalStock = Convert.ToDouble(stock_get_label.Text)
+        remaingStock = totalStock - stockSell
+        stock_get_label.Text = CStr(remaingStock)
+
+
     End Sub
     Private Sub total_Inventory()
 
 
 
         Using connection As New SqlConnection(cs)
-                Try
+            Try
 
-                Dim command As New SqlCommand("SELECT stock_name,stock_packing,stock_quantity FROM stock_tbl where  stock_name ='" & product_Name_txt.Text & "' AND  stock_packing ='" & packing_txt.Text & "'", connection)
+                Dim command As New SqlCommand("SELECT stock_name,stock_packing,stock_quantity FROM stock_tbl where  stock_name ='" & product_Name_txt.Text & "' AND  stock_packing ='" & packing_txt.Text & "' ", connection)
                 connection.Open()
-                    cmd.Parameters.Clear()
-                    Dim read As SqlDataReader = command.ExecuteReader()
+                cmd.Parameters.Clear()
+                Dim read As SqlDataReader = command.ExecuteReader()
 
-                    Do While read.Read()
-                        Label32.Text = (read("stock_quantity").ToString())
-                        ''profit_Price_Txt.Text = (read("original_Single_Price").ToString())
-                    Loop
-                    read.Close()
+                Do While read.Read()
+                    stock_get_label.Text = (read("stock_quantity").ToString())
+                    ''profit_Price_Txt.Text = (read("original_Single_Price").ToString())
+                Loop
+                read.Close()
 
-                Catch ex As Exception
+            Catch ex As Exception
 
-                    MessageBox.Show(ex.Message)
-                    Me.Dispose()
-                End Try
-            End Using
+                MessageBox.Show(ex.Message)
+                Me.Dispose()
+            End Try
+        End Using
 
 
     End Sub
@@ -265,22 +290,43 @@ Public Class dashboard_Frm
         End Try
 
     End Sub
+    Private Sub update_stock_after_sell()
+        Try
+            con.ConnectionString = cs
+            cmd.Connection = con
+            con.Open()
+            cmd.CommandText = "UPDATE stock_tbl SET [stock_quantity]= '" & stock_get_label.Text & "'  where [stock_name]='" & product_Name_txt.Text & "' And [stock_packing]='" & packing_txt.Text & "' "
+            cmd.ExecuteNonQuery()
 
+            ''welcomemsg.ForeColor = System.Drawing.Color.DarkGreen
+            ''welcomemsg.Text = "update stock of  '" & product_Name_txt.Text & "'  add successfully!"
+            con.Close()
+        Catch ex As Exception
+            MessageBox.Show("Stock Not Updated" & ex.Message)
+            welcomemsg.ForeColor = System.Drawing.Color.Red
+            Me.Dispose()
+        End Try
+    End Sub
     Private Sub BunifuButton3_Click(sender As Object, e As EventArgs) Handles Check_Out_Btn.Click
         insert()
         get_Selling_Data()
     End Sub
     Private Sub grand_Single_Pc_MouseClick(sender As Object, e As MouseEventArgs) Handles grand_Single_Pc.MouseClick
-        original_price()
         total_Inventory()
-        Grand_Sell_bill()
-        list_products()
+        If stock_get_label.Text <= 0 Or qty_txt.Text > stock_get_label.Text Then
+            MessageBox.Show("Out of Stock or less quantity")
+        Else
+            original_price()
+            Grand_Sell_bill()
+            list_products()
+            update_stock_after_sell()
+        End If
     End Sub
-    Private Sub get_Selling_Data()
+    Public Sub get_Selling_Data()
         Try
             Dim con As New SqlConnection(cs)
             con.Open()
-            Dim da As New SqlDataAdapter("Select sell_Id as[ID],[sell_date] as [Date],[patient_Name] as [Patient Name],[product_list] as [Product List],[patient_Status] as [Patient Status],[price] as [Sell Price],[profit_price] as [Profit Price],[sell_total_quantity] as [Total Quantity],[sell_by] as [Sell By] from sell_tbl", con)
+            Dim da As New SqlDataAdapter("Select sell_Id as[ID],[sell_date] as [Date],[patient_Name] as [Patient Name],[product_list] as [Product List],[patient_Status] as [Patient Status],[price] as [Sell Price],[profit_price] as [Profit Price],[sell_total_quantity] as [Total Quantity],[sell_by] as [Sell By] from sell_tbl ORDER BY sell_Id DESC", con)
             Dim dt As New DataTable
             da.Fill(dt)
             source2.DataSource = dt
@@ -300,14 +346,19 @@ Public Class dashboard_Frm
 
     Private Sub packing_txt_SelectedIndexChanged(sender As Object, e As EventArgs) Handles packing_txt.SelectedIndexChanged
 
+
         FillCombo_product_price()
         total_Inventory()
+
+
+
     End Sub
 
 
 
     Private Sub BunifuButton3_Click_1(sender As Object, e As EventArgs) Handles BunifuButton3.Click
         BunifuPages1.PageIndex = 3
+        get_Selling_Data()
     End Sub
 
     Private Sub TabPage4_Click(sender As Object, e As EventArgs) Handles TabPage4.Click
@@ -316,19 +367,302 @@ Public Class dashboard_Frm
 
     Private Sub dashboard_Frm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         FillCombo_product_name()
-
-    End Sub
-
-    Private Sub sell_Price_Txt_SelectedIndexChanged(sender As Object, e As EventArgs) Handles sell_Price_Txt.SelectedIndexChanged
-
-
-    End Sub
-
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        total_Inventory()
-
+        get_Selling_Data()
+        get_total_stock_Data()
+        will_out_of_stock()
     End Sub
 
 
 
+    Public Sub getData_Selling_Date()
+        Using connection1 As New SqlConnection(cs)
+            Try
+
+
+                connection1.Open()
+                Dim da2 As New SqlDataAdapter("Select sell_Id,sell_date,[patient_Name] as [Patient Name],[product_list] as [Product List],[patient_Status] as [Patient_Status],[price] as [Price],[profit_price] as [Profit],[sell_total_quantity] as [Total Medicine Sale],[sell_by] as [Sell By] from [sell_tbl] where sell_date BETWEEN '" & Format(admin_Sell_Date_Picker.Value, "yyyy-MM-dd") & "' AND   '" & Format(sell_datePicker_to_txt.Value, "yyyy-MM-dd") & "' ORDER BY [sell_Id] DESC", connection1)
+                Dim dt2 As New DataTable
+                da2.Fill(dt2)
+                source2.DataSource = dt2
+                sell_grid.DataSource = dt2
+                sell_grid.Refresh()
+                connection1.Close()
+            Catch ex As Exception
+                MessageBox.Show("Failed:Retrieving Data" & ex.Message)
+                Me.Dispose()
+            End Try
+        End Using
+
+
+    End Sub
+    Private Sub search_txt_selling_admin()
+
+        Dim str As String
+        Try
+            Dim conn As New System.Data.SqlClient.SqlConnection(cs)
+            conn.Open()
+            str = "Select [sell_Id] as[ID],[sell_date],[patient_Name] as [Patient Name],[product_list] as [Product List],[patient_Status] as [Patient_Status],[price] as [Price],[profit_price] as [Profit],[sell_total_quantity] as [Total Medicine Sale],[sell_by] as [Sell By] from sell_tbl where patient_Name like '" & admin_search_product.Text & "%' 
+             OR product_list like '" & admin_search_product.Text & "%'  OR  patient_Status like '" & admin_search_product.Text & "%' ORDER BY sell_Id DESC"
+
+            cmd = New SqlCommand(str, conn)
+            da = New SqlDataAdapter(cmd)
+            ds = New DataSet
+            da.Fill(ds, "sell_tbl")
+            conn.Close()
+            sell_grid.DataSource = ds
+            sell_grid.DataMember = "sell_tbl"
+            sell_grid.Visible = True
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "Failed:Product Name Search", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Me.Dispose()
+        End Try
+    End Sub
+    Private Sub datePicker_to_txt_ValueChanged(sender As Object, e As EventArgs) Handles sell_datePicker_to_txt.ValueChanged
+        getData_Selling_Date()
+    End Sub
+
+    Private Sub admin_search_product_TextChanged(sender As Object, e As EventArgs) Handles admin_search_product.TextChanged
+        If admin_search_product.Text IsNot "" And admin_search_product.Text.Length > 0 Then
+            search_txt_selling_admin()
+        Else
+            get_Selling_Data()
+        End If
+    End Sub
+
+    Private Sub admin_search_product_Validating(sender As Object, e As CancelEventArgs) Handles admin_search_product.Validating
+
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs)
+
+
+
+    End Sub
+
+    Private Sub sell_grid_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles sell_grid.CellContentClick
+
+    End Sub
+    Private Sub send_data_to_update_del()
+        Id_for_edit_lbl.Text = "edit"
+        check_items_Frm.check_product_List_Txt.Text = sell_grid.CurrentRow.Cells(3).Value.ToString
+
+        check_items_Frm.Id_for_edit_lbl.Text = sell_grid.CurrentRow.Cells(0).Value.ToString
+        check_items_Frm.datePicker_Sell.Text = sell_grid.CurrentRow.Cells(1).Value.ToString
+        check_items_Frm.patientName_txt.Text = sell_grid.CurrentRow.Cells(2).Value.ToString
+        check_items_Frm.product_List_Txt.Text = sell_grid.CurrentRow.Cells(3).Value.ToString
+        check_items_Frm.patient_Status_Txt.Text = sell_grid.CurrentRow.Cells(4).Value.ToString
+        check_items_Frm.grand_Single_Pc.Text = sell_grid.CurrentRow.Cells(5).Value.ToString
+        check_items_Frm.profit_Grand_Total.Text = sell_grid.CurrentRow.Cells(6).Value.ToString
+        check_items_Frm.sell_Qty_Txt.Text = sell_grid.CurrentRow.Cells(7).Value.ToString
+        check_items_Frm.billby_txt.Text = sell_grid.CurrentRow.Cells(8).Value.ToString
+    End Sub
+
+
+
+    Private Sub sell_grid_MouseDoubleClick(sender As Object, e As MouseEventArgs) Handles sell_grid.MouseDoubleClick
+        If (String.IsNullOrEmpty(Id_for_edit_lbl.Text)) Then
+            MsgBox("Select the row from grid")
+        Else
+
+            check_items_Frm.BunifuPages1.PageIndex = 1
+            send_data_to_update_del()
+            check_items_Frm.Show()
+            ''inventory_edit()
+            ''clear()
+
+        End If
+    End Sub
+
+    Private Sub sell_grid_MouseClick(sender As Object, e As MouseEventArgs) Handles sell_grid.MouseClick
+
+        send_data_to_update_del()
+
+    End Sub
+
+    Private Sub TabPage5_Click(sender As Object, e As EventArgs) Handles TabPage5.Click
+
+    End Sub
+
+    Private Sub Label33_Click(sender As Object, e As EventArgs)
+
+    End Sub
+    Public Sub get_getting_out_of_stock_Data()
+        Try
+            Dim con As New SqlConnection(cs)
+            con.Open()
+            Dim da As New SqlDataAdapter("Select [stock_id] as [ID],[stock_name] as [Product Name],[stock_packing] as [Packing],[stock_quantity] as [Quantity],[threshold_value] as [Limit] from stock_tbl where stock_quantity <= threshold_value ORDER BY stock_id DESC ", con)
+            Dim dt As New DataTable
+            da.Fill(dt)
+            source2.DataSource = dt
+            check_Stock_Grid.DataSource = dt
+            check_Stock_Grid.Refresh()
+
+        Catch ex As Exception
+            MessageBox.Show("Failed:Retrieving Data" & ex.Message)
+            Me.Dispose()
+        End Try
+    End Sub
+    Public Sub get_total_stock_Data()
+        Try
+            Dim con As New SqlConnection(cs)
+            con.Open()
+            Dim da As New SqlDataAdapter("Select [stock_id] as [ID],[stock_name] as [Product Name],[stock_packing] as [Packing],[stock_quantity] as [Quantity],[threshold_value] as [Limit] from stock_tbl  ORDER BY stock_id DESC ", con)
+            Dim dt As New DataTable
+            da.Fill(dt)
+            source2.DataSource = dt
+            check_Stock_Grid.DataSource = dt
+            check_Stock_Grid.Refresh()
+
+        Catch ex As Exception
+            MessageBox.Show("Failed:Retrieving Data" & ex.Message)
+            Me.Dispose()
+        End Try
+    End Sub
+    Public Sub will_out_of_stock()
+
+
+        Using connection As New SqlConnection(cs)
+            Try
+
+                Dim command As New SqlCommand("Select count(*) as thres_value from stock_tbl where stock_quantity <= threshold_value", connection)
+                connection.Open()
+                cmd.Parameters.Clear()
+                Dim read As SqlDataReader = command.ExecuteReader()
+
+                Do While read.Read()
+                    threshold_msg_lbl.Text = (read("thres_value").ToString())
+                    ''profit_Price_Txt.Text = (read("original_Single_Price").ToString())
+                Loop
+                read.Close()
+                If threshold_msg_lbl.Text > 0 Then
+                    Label35.Visible = True
+                    Label35.Text = "Medicine need to ReStock"
+
+                    threshold_msg_lbl.Visible = True
+                End If
+            Catch ex As Exception
+
+                MessageBox.Show(ex.Message)
+                Me.Dispose()
+            End Try
+        End Using
+    End Sub
+    Private Sub BunifuRadioButton2_CheckedChanged2(sender As Object, e As Bunifu.UI.WinForms.BunifuRadioButton.CheckedChangedEventArgs)
+
+    End Sub
+
+    Private Sub BunifuButton4_Click_1(sender As Object, e As EventArgs) Handles BunifuButton4.Click
+
+        BunifuPages1.PageIndex = 4
+        get_total_stock_Data()
+    End Sub
+
+
+
+    Private Sub BunifuRadioButton1_CheckedChanged2(sender As Object, e As Bunifu.UI.WinForms.BunifuRadioButton.CheckedChangedEventArgs)
+
+    End Sub
+
+    Private Sub RadioButton1_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton1.CheckedChanged
+        get_getting_out_of_stock_Data()
+    End Sub
+
+    Private Sub RadioButton2_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton2.CheckedChanged
+        get_total_stock_Data()
+    End Sub
+
+    Private Sub check_Stock_Grid_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles check_Stock_Grid.CellContentClick
+
+    End Sub
+    Public Sub stock_mange()
+        Label33.Text = "edit"
+        manage_Inventory_Frm.Stock_Id.Text = check_Stock_Grid.CurrentRow.Cells(0).Value.ToString
+        manage_Inventory_Frm.product_Name_txt.Text = check_Stock_Grid.CurrentRow.Cells(1).Value.ToString
+        manage_Inventory_Frm.packing_txt.Text = check_Stock_Grid.CurrentRow.Cells(2).Value.ToString
+        manage_Inventory_Frm.stockqty_txt.Text = check_Stock_Grid.CurrentRow.Cells(3).Value.ToString
+        manage_Inventory_Frm.stockthreshold_txt.Text = check_Stock_Grid.CurrentRow.Cells(4).Value.ToString
+    End Sub
+
+    Private Sub check_Stock_Grid_CellMouseClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles check_Stock_Grid.CellMouseClick
+
+        stock_mange()
+    End Sub
+
+    Private Sub check_Stock_Grid_CellMouseDoubleClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles check_Stock_Grid.CellMouseDoubleClick
+        If (String.IsNullOrEmpty(Label33.Text)) Then
+            MsgBox("Select the row from grid")
+        Else
+
+
+            stock_mange()
+            manage_Inventory_Frm.Show()
+            ''inventory_edit()
+            ''clear()
+
+        End If
+    End Sub
+
+    Private Sub BunifuButton2_Click(sender As Object, e As EventArgs) Handles BunifuButton2.Click
+
+        If sell_grid.Rows.Count > 0 Then
+            Dim save As SaveFileDialog = New SaveFileDialog()
+            save.Filter = "PDF (*.pdf)|*.pdf"
+            save.FileName = "Result.pdf"
+            Dim ErrorMessage As Boolean = False
+
+            If save.ShowDialog() = DialogResult.OK Then
+
+                If File.Exists(save.FileName) Then
+
+                    Try
+                        File.Delete(save.FileName)
+                    Catch ex As Exception
+                        ErrorMessage = True
+                        MessageBox.Show("Unable to wride data in disk" & ex.Message)
+                    End Try
+                End If
+
+                If Not ErrorMessage Then
+
+                    Try
+                        Dim pTable As PdfPTable = New PdfPTable(sell_grid.Columns.Count)
+                        pTable.DefaultCell.Padding = 2
+                        pTable.WidthPercentage = 100
+                        pTable.HorizontalAlignment = Element.ALIGN_LEFT
+
+                        For Each col As DataGridViewColumn In sell_grid.Columns
+                            Dim pCell As PdfPCell = New PdfPCell(New Phrase(col.HeaderText))
+                            pTable.AddCell(pCell)
+                        Next
+
+                        For Each viewRow As DataGridViewRow In sell_grid.Rows
+
+                            For Each dcell As DataGridViewCell In viewRow.Cells
+                                pTable.AddCell(dcell.Value.ToString())
+                            Next
+                        Next
+
+                        Using fileStream As FileStream = New FileStream(save.FileName, FileMode.Create)
+                            Dim document As Document = New Document(PageSize.A4, 8.0F, 16.0F, 16.0F, 8.0F)
+                            PdfWriter.GetInstance(document, fileStream)
+                            document.Open()
+                            document.Add(pTable)
+                            document.Close()
+                            fileStream.Close()
+                        End Using
+
+                        MessageBox.Show("Data Export Successfully", "info")
+                    Catch ex As Exception
+                        MessageBox.Show("Error while exporting Data" & ex.Message)
+                    End Try
+                End If
+            End If
+        Else
+            MessageBox.Show("No Record Found", "Info")
+        End If
+    End Sub
+
+    Private Sub PrintDocument1_PrintPage(sender As Object, e As PrintPageEventArgs) Handles PrintDocument1.PrintPage
+
+    End Sub
 End Class

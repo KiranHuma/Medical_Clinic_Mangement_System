@@ -83,3 +83,7 @@ D:\Vb projects\Medical_Clinic_Mangement_System\Medical_Clinic_Mangement_System\o
 D:\Vb projects\Medical_Clinic_Mangement_System\Medical_Clinic_Mangement_System\obj\Debug\Medical_Clinic_Mangement_System.exe
 D:\Vb projects\Medical_Clinic_Mangement_System\Medical_Clinic_Mangement_System\obj\Debug\Medical_Clinic_Mangement_System.xml
 D:\Vb projects\Medical_Clinic_Mangement_System\Medical_Clinic_Mangement_System\obj\Debug\Medical_Clinic_Mangement_System.pdb
+D:\Vb projects\Medical_Clinic_Mangement_System\Medical_Clinic_Mangement_System\obj\Debug\Medical_Clinic_Mangement_System.check_items_Frm.resources
+D:\Vb projects\Medical_Clinic_Mangement_System\Medical_Clinic_Mangement_System\bin\Debug\BouncyCastle.Crypto.dll
+D:\Vb projects\Medical_Clinic_Mangement_System\Medical_Clinic_Mangement_System\bin\Debug\itextsharp.dll
+D:\Vb projects\Medical_Clinic_Mangement_System\Medical_Clinic_Mangement_System\bin\Debug\itextsharp.xml
