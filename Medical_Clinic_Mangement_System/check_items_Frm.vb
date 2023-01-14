@@ -121,4 +121,16 @@ Public Class check_items_Frm
             clear()
         End If
     End Sub
+
+    Private Sub grand_Single_Pc_KeyPress(sender As Object, e As KeyPressEventArgs) Handles grand_Single_Pc.KeyPress
+        If Not Char.IsNumber(e.KeyChar) AndAlso Not Char.IsControl(e.KeyChar) Then e.KeyChar = ""
+    End Sub
+
+    Private Sub profit_Grand_Total_KeyPress(sender As Object, e As KeyPressEventArgs) Handles profit_Grand_Total.KeyPress
+        If Not Char.IsNumber(e.KeyChar) AndAlso Not Char.IsControl(e.KeyChar) Then e.KeyChar = ""
+    End Sub
+
+    Private Sub sell_Qty_Txt_KeyPress(sender As Object, e As KeyPressEventArgs) Handles sell_Qty_Txt.KeyPress
+        If Not Char.IsNumber(e.KeyChar) AndAlso Not Char.IsControl(e.KeyChar) Then e.KeyChar = ""
+    End Sub
 End Class

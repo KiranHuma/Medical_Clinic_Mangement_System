@@ -194,7 +194,7 @@ Public Class addInvetory_Frm
             con.ConnectionString = cs
             cmd.Connection = con
             con.Open()
-            cmd.CommandText = "UPDATE stock_tbl SET [stock_quantity]= '" & instock_txt.Text & "'  where [stock_name]='" & productName_txt.Text & "' And [stock_packing]='" & packing_txt.Text & "' "
+            cmd.CommandText = "UPDATE stock_tbl SET [stock_quantity]= '" & instock_txt.Text & "'  where [stock_name]='" & productName_txt.Text & "' And [sell_price]='" & singlePrice_txt.Text & "' And [stock_packing]='" & packing_txt.Text & "' "
             cmd.ExecuteNonQuery()
 
             welcomemsg.ForeColor = System.Drawing.Color.DarkGreen
@@ -211,8 +211,8 @@ Public Class addInvetory_Frm
             con.ConnectionString = cs
             cmd.Connection = con
             con.Open()
-            cmd.CommandText = "insert into stock_tbl([stock_name],[stock_packing],[stock_quantity],[threshold_value])values
-                                                   ('" & productName_txt.Text & "','" & packing_txt.Text & "','" & instock_txt.Text & "','" & threshold_txt.Text & "')"
+            cmd.CommandText = "insert into stock_tbl([stock_name],[stock_packing],[stock_quantity],[threshold_value],[sell_price])values
+                                                   ('" & productName_txt.Text & "','" & packing_txt.Text & "','" & instock_txt.Text & "','" & threshold_txt.Text & "' ,'" & singlePrice_txt.Text & "')"
             cmd.ExecuteNonQuery()
 
             welcomemsg.ForeColor = System.Drawing.Color.Green
@@ -229,7 +229,7 @@ Public Class addInvetory_Frm
         Dim com As SqlCommand
         Dim con As New SqlConnection(cs)
         con.Open()
-        str = "select count(*)from [stock_tbl] where [stock_name]='" & productName_txt.Text & "' And [stock_packing]='" & packing_txt.Text & "' "
+        str = "select count(*)from [stock_tbl] where [stock_name]='" & productName_txt.Text & "' And [stock_packing]='" & packing_txt.Text & "' And [sell_price]='" & singlePrice_txt.Text & "' "
         com = New SqlCommand(str, con)
         Dim count As Integer = Convert.ToInt32(com.ExecuteScalar())
         con.Close()
@@ -314,7 +314,7 @@ Public Class addInvetory_Frm
         Using connection As New SqlConnection(cs)
             Try
 
-                Dim command As New SqlCommand("SELECT stock_quantity AS stockitems FROM stock_tbl where  stock_name ='" & productName_txt.Text & "' AND  stock_packing ='" & packing_txt.Text & "'", connection)
+                Dim command As New SqlCommand("SELECT stock_quantity AS stockitems FROM stock_tbl where  stock_name ='" & productName_txt.Text & "' AND  stock_packing ='" & packing_txt.Text & "' AND sell_price='" & singlePrice_txt.Text & "'", connection)
                 connection.Open()
                 cmd.Parameters.Clear()
                 Dim read As SqlDataReader = command.ExecuteReader()
@@ -325,6 +325,8 @@ Public Class addInvetory_Frm
                 Loop
                 read.Close()
 
+
+                AddHandler singlePrice_txt.TextChanged, AddressOf singlePrice_txt_TextChanged
             Catch ex As Exception
 
                 MessageBox.Show(ex.Message)
@@ -437,8 +439,9 @@ Public Class addInvetory_Frm
 
         instock_txt.Text = CStr(grandStock)
     End Sub
-    Private Sub singlePrice_txt_TextChanged(sender As Object, e As EventArgs) Handles singlePrice_txt.TextChanged
-
+    Private Sub singlePrice_txt_TextChanged(sender As Object, e As EventArgs)
+        total_Inventory()
+        add_to_inventory()
 
         ''instock_txt.Text = qty_txt.Text + instock_txt.Text
 
@@ -493,6 +496,7 @@ Public Class addInvetory_Frm
             Me.Dispose()
         End Try
     End Sub
+
     Private Sub BunifuButton1_Click(sender As Object, e As EventArgs) Handles update_Btn.Click
 
         If Label13.Text = "not select" Then
@@ -602,11 +606,11 @@ Public Class addInvetory_Frm
 
     Private Sub singlePrice_txt_Validated(sender As Object, e As EventArgs) Handles singlePrice_txt.Validated
         Grand_Total()
-        add_to_inventory()
+
     End Sub
 
     Private Sub adminSingle_txt_Validated(sender As Object, e As EventArgs) Handles adminSingle_txt.Validated
-        add_to_inventory()
+
         instock_status()
         Grand_Total1()
     End Sub
@@ -625,9 +629,6 @@ Public Class addInvetory_Frm
 
     End Sub
 
-    Private Sub qty_txt_TextChanged(sender As Object, e As EventArgs) Handles qty_txt.TextChanged
-
-    End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs)
 
@@ -652,5 +653,35 @@ Public Class addInvetory_Frm
 
     Private Sub get_inventory_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles get_inventory.CellContentClick
 
+    End Sub
+
+    Private Sub adminGrandtotal_txt_TextChanged(sender As Object, e As EventArgs) Handles adminGrandtotal_txt.TextChanged
+
+    End Sub
+
+    Private Sub qty_txt_TextChanged(sender As Object, e As EventArgs) Handles qty_txt.TextChanged
+
+        instock_txt.Text = qty_txt.Text
+
+    End Sub
+
+    Private Sub qty_txt_KeyPress(sender As Object, e As KeyPressEventArgs) Handles qty_txt.KeyPress
+        If Not Char.IsNumber(e.KeyChar) AndAlso Not Char.IsControl(e.KeyChar) Then e.KeyChar = ""
+    End Sub
+
+    Private Sub adminSingle_txt_KeyPress(sender As Object, e As KeyPressEventArgs) Handles adminSingle_txt.KeyPress
+        If Not Char.IsNumber(e.KeyChar) AndAlso Not Char.IsControl(e.KeyChar) Then e.KeyChar = ""
+    End Sub
+
+    Private Sub adminGrandtotal_txt_KeyPress(sender As Object, e As KeyPressEventArgs) Handles adminGrandtotal_txt.KeyPress
+        If Not Char.IsNumber(e.KeyChar) AndAlso Not Char.IsControl(e.KeyChar) Then e.KeyChar = ""
+    End Sub
+
+    Private Sub singlePrice_txt_KeyPress(sender As Object, e As KeyPressEventArgs) Handles singlePrice_txt.KeyPress
+        If Not Char.IsNumber(e.KeyChar) AndAlso Not Char.IsControl(e.KeyChar) Then e.KeyChar = ""
+    End Sub
+
+    Private Sub threshold_txt_KeyPress(sender As Object, e As KeyPressEventArgs) Handles threshold_txt.KeyPress
+        If Not Char.IsNumber(e.KeyChar) AndAlso Not Char.IsControl(e.KeyChar) Then e.KeyChar = ""
     End Sub
 End Class

@@ -23,23 +23,27 @@ Partial Class manage_Inventory_Frm
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim StateProperties5 As Bunifu.UI.WinForms.BunifuTextBox.StateProperties = New Bunifu.UI.WinForms.BunifuTextBox.StateProperties()
+        Dim StateProperties6 As Bunifu.UI.WinForms.BunifuTextBox.StateProperties = New Bunifu.UI.WinForms.BunifuTextBox.StateProperties()
+        Dim StateProperties7 As Bunifu.UI.WinForms.BunifuTextBox.StateProperties = New Bunifu.UI.WinForms.BunifuTextBox.StateProperties()
+        Dim StateProperties8 As Bunifu.UI.WinForms.BunifuTextBox.StateProperties = New Bunifu.UI.WinForms.BunifuTextBox.StateProperties()
+        Dim StateProperties9 As Bunifu.UI.WinForms.BunifuTextBox.StateProperties = New Bunifu.UI.WinForms.BunifuTextBox.StateProperties()
+        Dim StateProperties10 As Bunifu.UI.WinForms.BunifuTextBox.StateProperties = New Bunifu.UI.WinForms.BunifuTextBox.StateProperties()
+        Dim StateProperties11 As Bunifu.UI.WinForms.BunifuTextBox.StateProperties = New Bunifu.UI.WinForms.BunifuTextBox.StateProperties()
+        Dim StateProperties12 As Bunifu.UI.WinForms.BunifuTextBox.StateProperties = New Bunifu.UI.WinForms.BunifuTextBox.StateProperties()
         Dim StateProperties13 As Bunifu.UI.WinForms.BunifuTextBox.StateProperties = New Bunifu.UI.WinForms.BunifuTextBox.StateProperties()
         Dim StateProperties14 As Bunifu.UI.WinForms.BunifuTextBox.StateProperties = New Bunifu.UI.WinForms.BunifuTextBox.StateProperties()
         Dim StateProperties15 As Bunifu.UI.WinForms.BunifuTextBox.StateProperties = New Bunifu.UI.WinForms.BunifuTextBox.StateProperties()
         Dim StateProperties16 As Bunifu.UI.WinForms.BunifuTextBox.StateProperties = New Bunifu.UI.WinForms.BunifuTextBox.StateProperties()
-        Dim StateProperties17 As Bunifu.UI.WinForms.BunifuTextBox.StateProperties = New Bunifu.UI.WinForms.BunifuTextBox.StateProperties()
-        Dim StateProperties18 As Bunifu.UI.WinForms.BunifuTextBox.StateProperties = New Bunifu.UI.WinForms.BunifuTextBox.StateProperties()
-        Dim StateProperties19 As Bunifu.UI.WinForms.BunifuTextBox.StateProperties = New Bunifu.UI.WinForms.BunifuTextBox.StateProperties()
-        Dim StateProperties20 As Bunifu.UI.WinForms.BunifuTextBox.StateProperties = New Bunifu.UI.WinForms.BunifuTextBox.StateProperties()
-        Dim StateProperties21 As Bunifu.UI.WinForms.BunifuTextBox.StateProperties = New Bunifu.UI.WinForms.BunifuTextBox.StateProperties()
-        Dim StateProperties22 As Bunifu.UI.WinForms.BunifuTextBox.StateProperties = New Bunifu.UI.WinForms.BunifuTextBox.StateProperties()
-        Dim StateProperties23 As Bunifu.UI.WinForms.BunifuTextBox.StateProperties = New Bunifu.UI.WinForms.BunifuTextBox.StateProperties()
-        Dim StateProperties24 As Bunifu.UI.WinForms.BunifuTextBox.StateProperties = New Bunifu.UI.WinForms.BunifuTextBox.StateProperties()
-        Dim BorderEdges7 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges()
-        Dim BorderEdges8 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges()
-        Dim BorderEdges6 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges()
+        Dim BorderEdges3 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges()
+        Dim BorderEdges4 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges()
+        Dim BorderEdges2 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges()
+        Dim BorderEdges1 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(manage_Inventory_Frm))
-        Dim BorderEdges5 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges()
+        Dim StateProperties1 As Bunifu.UI.WinForms.BunifuTextBox.StateProperties = New Bunifu.UI.WinForms.BunifuTextBox.StateProperties()
+        Dim StateProperties2 As Bunifu.UI.WinForms.BunifuTextBox.StateProperties = New Bunifu.UI.WinForms.BunifuTextBox.StateProperties()
+        Dim StateProperties3 As Bunifu.UI.WinForms.BunifuTextBox.StateProperties = New Bunifu.UI.WinForms.BunifuTextBox.StateProperties()
+        Dim StateProperties4 As Bunifu.UI.WinForms.BunifuTextBox.StateProperties = New Bunifu.UI.WinForms.BunifuTextBox.StateProperties()
         Me.BunifuElipse1 = New Bunifu.Framework.UI.BunifuElipse(Me.components)
         Me.header = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -61,6 +65,8 @@ Partial Class manage_Inventory_Frm
         Me.BunifuDragControl1 = New Bunifu.Framework.UI.BunifuDragControl(Me.components)
         Me.BunifuButton1 = New Bunifu.UI.WinForms.BunifuButton.BunifuButton()
         Me.BunifuButton2 = New Bunifu.UI.WinForms.BunifuButton.BunifuButton()
+        Me.stock_sell_price = New Bunifu.UI.WinForms.BunifuTextBox()
+        Me.Label5 = New System.Windows.Forms.Label()
         Me.header.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -155,32 +161,32 @@ Partial Class manage_Inventory_Frm
         Me.stockthreshold_txt.IconRight = Nothing
         Me.stockthreshold_txt.IconRightCursor = System.Windows.Forms.Cursors.IBeam
         Me.stockthreshold_txt.Lines = New String() {"0"}
-        Me.stockthreshold_txt.Location = New System.Drawing.Point(288, 410)
+        Me.stockthreshold_txt.Location = New System.Drawing.Point(288, 464)
         Me.stockthreshold_txt.MaxLength = 32767
         Me.stockthreshold_txt.MinimumSize = New System.Drawing.Size(1, 1)
         Me.stockthreshold_txt.Modified = False
         Me.stockthreshold_txt.Multiline = False
         Me.stockthreshold_txt.Name = "stockthreshold_txt"
-        StateProperties13.BorderColor = System.Drawing.Color.LightSeaGreen
-        StateProperties13.FillColor = System.Drawing.Color.Empty
-        StateProperties13.ForeColor = System.Drawing.Color.Empty
-        StateProperties13.PlaceholderForeColor = System.Drawing.Color.Empty
-        Me.stockthreshold_txt.OnActiveState = StateProperties13
-        StateProperties14.BorderColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
-        StateProperties14.FillColor = System.Drawing.Color.FromArgb(CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer))
-        StateProperties14.ForeColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
-        StateProperties14.PlaceholderForeColor = System.Drawing.Color.DarkGray
-        Me.stockthreshold_txt.OnDisabledState = StateProperties14
-        StateProperties15.BorderColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        StateProperties15.FillColor = System.Drawing.Color.Empty
-        StateProperties15.ForeColor = System.Drawing.Color.Empty
-        StateProperties15.PlaceholderForeColor = System.Drawing.Color.Empty
-        Me.stockthreshold_txt.OnHoverState = StateProperties15
-        StateProperties16.BorderColor = System.Drawing.Color.Silver
-        StateProperties16.FillColor = System.Drawing.Color.White
-        StateProperties16.ForeColor = System.Drawing.Color.Empty
-        StateProperties16.PlaceholderForeColor = System.Drawing.Color.Empty
-        Me.stockthreshold_txt.OnIdleState = StateProperties16
+        StateProperties5.BorderColor = System.Drawing.Color.LightSeaGreen
+        StateProperties5.FillColor = System.Drawing.Color.Empty
+        StateProperties5.ForeColor = System.Drawing.Color.Empty
+        StateProperties5.PlaceholderForeColor = System.Drawing.Color.Empty
+        Me.stockthreshold_txt.OnActiveState = StateProperties5
+        StateProperties6.BorderColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
+        StateProperties6.FillColor = System.Drawing.Color.FromArgb(CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer))
+        StateProperties6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
+        StateProperties6.PlaceholderForeColor = System.Drawing.Color.DarkGray
+        Me.stockthreshold_txt.OnDisabledState = StateProperties6
+        StateProperties7.BorderColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        StateProperties7.FillColor = System.Drawing.Color.Empty
+        StateProperties7.ForeColor = System.Drawing.Color.Empty
+        StateProperties7.PlaceholderForeColor = System.Drawing.Color.Empty
+        Me.stockthreshold_txt.OnHoverState = StateProperties7
+        StateProperties8.BorderColor = System.Drawing.Color.Silver
+        StateProperties8.FillColor = System.Drawing.Color.White
+        StateProperties8.ForeColor = System.Drawing.Color.Empty
+        StateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty
+        Me.stockthreshold_txt.OnIdleState = StateProperties8
         Me.stockthreshold_txt.Padding = New System.Windows.Forms.Padding(3)
         Me.stockthreshold_txt.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.stockthreshold_txt.PlaceholderForeColor = System.Drawing.Color.Silver
@@ -206,7 +212,7 @@ Partial Class manage_Inventory_Frm
         '
         Me.Label16.AutoSize = True
         Me.Label16.Font = New System.Drawing.Font("Century Gothic", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label16.Location = New System.Drawing.Point(121, 431)
+        Me.Label16.Location = New System.Drawing.Point(121, 485)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(139, 19)
         Me.Label16.TabIndex = 167
@@ -245,26 +251,26 @@ Partial Class manage_Inventory_Frm
         Me.stockqty_txt.Modified = False
         Me.stockqty_txt.Multiline = False
         Me.stockqty_txt.Name = "stockqty_txt"
-        StateProperties17.BorderColor = System.Drawing.Color.LightSeaGreen
-        StateProperties17.FillColor = System.Drawing.Color.Empty
-        StateProperties17.ForeColor = System.Drawing.Color.Empty
-        StateProperties17.PlaceholderForeColor = System.Drawing.Color.Empty
-        Me.stockqty_txt.OnActiveState = StateProperties17
-        StateProperties18.BorderColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
-        StateProperties18.FillColor = System.Drawing.Color.FromArgb(CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer))
-        StateProperties18.ForeColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
-        StateProperties18.PlaceholderForeColor = System.Drawing.Color.DarkGray
-        Me.stockqty_txt.OnDisabledState = StateProperties18
-        StateProperties19.BorderColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        StateProperties19.FillColor = System.Drawing.Color.Empty
-        StateProperties19.ForeColor = System.Drawing.Color.Empty
-        StateProperties19.PlaceholderForeColor = System.Drawing.Color.Empty
-        Me.stockqty_txt.OnHoverState = StateProperties19
-        StateProperties20.BorderColor = System.Drawing.Color.Silver
-        StateProperties20.FillColor = System.Drawing.Color.White
-        StateProperties20.ForeColor = System.Drawing.Color.Empty
-        StateProperties20.PlaceholderForeColor = System.Drawing.Color.Empty
-        Me.stockqty_txt.OnIdleState = StateProperties20
+        StateProperties9.BorderColor = System.Drawing.Color.LightSeaGreen
+        StateProperties9.FillColor = System.Drawing.Color.Empty
+        StateProperties9.ForeColor = System.Drawing.Color.Empty
+        StateProperties9.PlaceholderForeColor = System.Drawing.Color.Empty
+        Me.stockqty_txt.OnActiveState = StateProperties9
+        StateProperties10.BorderColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
+        StateProperties10.FillColor = System.Drawing.Color.FromArgb(CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer))
+        StateProperties10.ForeColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
+        StateProperties10.PlaceholderForeColor = System.Drawing.Color.DarkGray
+        Me.stockqty_txt.OnDisabledState = StateProperties10
+        StateProperties11.BorderColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        StateProperties11.FillColor = System.Drawing.Color.Empty
+        StateProperties11.ForeColor = System.Drawing.Color.Empty
+        StateProperties11.PlaceholderForeColor = System.Drawing.Color.Empty
+        Me.stockqty_txt.OnHoverState = StateProperties11
+        StateProperties12.BorderColor = System.Drawing.Color.Silver
+        StateProperties12.FillColor = System.Drawing.Color.White
+        StateProperties12.ForeColor = System.Drawing.Color.Empty
+        StateProperties12.PlaceholderForeColor = System.Drawing.Color.Empty
+        Me.stockqty_txt.OnIdleState = StateProperties12
         Me.stockqty_txt.Padding = New System.Windows.Forms.Padding(3)
         Me.stockqty_txt.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.stockqty_txt.PlaceholderForeColor = System.Drawing.Color.Silver
@@ -347,26 +353,26 @@ Partial Class manage_Inventory_Frm
         Me.Stock_Id.Modified = False
         Me.Stock_Id.Multiline = False
         Me.Stock_Id.Name = "Stock_Id"
-        StateProperties21.BorderColor = System.Drawing.Color.LightSeaGreen
-        StateProperties21.FillColor = System.Drawing.Color.Empty
-        StateProperties21.ForeColor = System.Drawing.Color.Empty
-        StateProperties21.PlaceholderForeColor = System.Drawing.Color.Empty
-        Me.Stock_Id.OnActiveState = StateProperties21
-        StateProperties22.BorderColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
-        StateProperties22.FillColor = System.Drawing.Color.FromArgb(CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer))
-        StateProperties22.ForeColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
-        StateProperties22.PlaceholderForeColor = System.Drawing.Color.DarkGray
-        Me.Stock_Id.OnDisabledState = StateProperties22
-        StateProperties23.BorderColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        StateProperties23.FillColor = System.Drawing.Color.Empty
-        StateProperties23.ForeColor = System.Drawing.Color.Empty
-        StateProperties23.PlaceholderForeColor = System.Drawing.Color.Empty
-        Me.Stock_Id.OnHoverState = StateProperties23
-        StateProperties24.BorderColor = System.Drawing.Color.Silver
-        StateProperties24.FillColor = System.Drawing.Color.White
-        StateProperties24.ForeColor = System.Drawing.Color.Empty
-        StateProperties24.PlaceholderForeColor = System.Drawing.Color.Empty
-        Me.Stock_Id.OnIdleState = StateProperties24
+        StateProperties13.BorderColor = System.Drawing.Color.LightSeaGreen
+        StateProperties13.FillColor = System.Drawing.Color.Empty
+        StateProperties13.ForeColor = System.Drawing.Color.Empty
+        StateProperties13.PlaceholderForeColor = System.Drawing.Color.Empty
+        Me.Stock_Id.OnActiveState = StateProperties13
+        StateProperties14.BorderColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
+        StateProperties14.FillColor = System.Drawing.Color.FromArgb(CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer))
+        StateProperties14.ForeColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
+        StateProperties14.PlaceholderForeColor = System.Drawing.Color.DarkGray
+        Me.Stock_Id.OnDisabledState = StateProperties14
+        StateProperties15.BorderColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        StateProperties15.FillColor = System.Drawing.Color.Empty
+        StateProperties15.ForeColor = System.Drawing.Color.Empty
+        StateProperties15.PlaceholderForeColor = System.Drawing.Color.Empty
+        Me.Stock_Id.OnHoverState = StateProperties15
+        StateProperties16.BorderColor = System.Drawing.Color.Silver
+        StateProperties16.FillColor = System.Drawing.Color.White
+        StateProperties16.ForeColor = System.Drawing.Color.Empty
+        StateProperties16.PlaceholderForeColor = System.Drawing.Color.Empty
+        Me.Stock_Id.OnIdleState = StateProperties16
         Me.Stock_Id.Padding = New System.Windows.Forms.Padding(3)
         Me.Stock_Id.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.Stock_Id.PlaceholderForeColor = System.Drawing.Color.Silver
@@ -437,11 +443,11 @@ Partial Class manage_Inventory_Frm
         Me.delete_Btn.ColorContrastOnClick = 45
         Me.delete_Btn.ColorContrastOnHover = 45
         Me.delete_Btn.Cursor = System.Windows.Forms.Cursors.Default
-        BorderEdges7.BottomLeft = True
-        BorderEdges7.BottomRight = True
-        BorderEdges7.TopLeft = True
-        BorderEdges7.TopRight = True
-        Me.delete_Btn.CustomizableEdges = BorderEdges7
+        BorderEdges3.BottomLeft = True
+        BorderEdges3.BottomRight = True
+        BorderEdges3.TopLeft = True
+        BorderEdges3.TopRight = True
+        Me.delete_Btn.CustomizableEdges = BorderEdges3
         Me.delete_Btn.DialogResult = System.Windows.Forms.DialogResult.None
         Me.delete_Btn.DisabledBorderColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.delete_Btn.DisabledFillColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
@@ -465,7 +471,7 @@ Partial Class manage_Inventory_Frm
         Me.delete_Btn.IdleIconLeftImage = Nothing
         Me.delete_Btn.IdleIconRightImage = Nothing
         Me.delete_Btn.IndicateFocus = False
-        Me.delete_Btn.Location = New System.Drawing.Point(288, 476)
+        Me.delete_Btn.Location = New System.Drawing.Point(288, 530)
         Me.delete_Btn.Name = "delete_Btn"
         Me.delete_Btn.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.delete_Btn.OnDisabledState.BorderRadius = 1
@@ -526,11 +532,11 @@ Partial Class manage_Inventory_Frm
         Me.update_Btn.ColorContrastOnClick = 45
         Me.update_Btn.ColorContrastOnHover = 45
         Me.update_Btn.Cursor = System.Windows.Forms.Cursors.Default
-        BorderEdges8.BottomLeft = True
-        BorderEdges8.BottomRight = True
-        BorderEdges8.TopLeft = True
-        BorderEdges8.TopRight = True
-        Me.update_Btn.CustomizableEdges = BorderEdges8
+        BorderEdges4.BottomLeft = True
+        BorderEdges4.BottomRight = True
+        BorderEdges4.TopLeft = True
+        BorderEdges4.TopRight = True
+        Me.update_Btn.CustomizableEdges = BorderEdges4
         Me.update_Btn.DialogResult = System.Windows.Forms.DialogResult.None
         Me.update_Btn.DisabledBorderColor = System.Drawing.Color.PaleVioletRed
         Me.update_Btn.DisabledFillColor = System.Drawing.Color.PaleVioletRed
@@ -554,7 +560,7 @@ Partial Class manage_Inventory_Frm
         Me.update_Btn.IdleIconLeftImage = Nothing
         Me.update_Btn.IdleIconRightImage = Nothing
         Me.update_Btn.IndicateFocus = False
-        Me.update_Btn.Location = New System.Drawing.Point(454, 476)
+        Me.update_Btn.Location = New System.Drawing.Point(454, 530)
         Me.update_Btn.Name = "update_Btn"
         Me.update_Btn.OnDisabledState.BorderColor = System.Drawing.Color.PaleVioletRed
         Me.update_Btn.OnDisabledState.BorderRadius = 1
@@ -642,11 +648,11 @@ Partial Class manage_Inventory_Frm
         Me.BunifuButton1.ColorContrastOnClick = 45
         Me.BunifuButton1.ColorContrastOnHover = 45
         Me.BunifuButton1.Cursor = System.Windows.Forms.Cursors.Default
-        BorderEdges6.BottomLeft = True
-        BorderEdges6.BottomRight = True
-        BorderEdges6.TopLeft = True
-        BorderEdges6.TopRight = True
-        Me.BunifuButton1.CustomizableEdges = BorderEdges6
+        BorderEdges2.BottomLeft = True
+        BorderEdges2.BottomRight = True
+        BorderEdges2.TopLeft = True
+        BorderEdges2.TopRight = True
+        Me.BunifuButton1.CustomizableEdges = BorderEdges2
         Me.BunifuButton1.DialogResult = System.Windows.Forms.DialogResult.None
         Me.BunifuButton1.DisabledBorderColor = System.Drawing.Color.FromArgb(CType(CType(191, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(191, Byte), Integer))
         Me.BunifuButton1.DisabledFillColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
@@ -731,11 +737,11 @@ Partial Class manage_Inventory_Frm
         Me.BunifuButton2.ColorContrastOnClick = 45
         Me.BunifuButton2.ColorContrastOnHover = 45
         Me.BunifuButton2.Cursor = System.Windows.Forms.Cursors.Default
-        BorderEdges5.BottomLeft = True
-        BorderEdges5.BottomRight = True
-        BorderEdges5.TopLeft = True
-        BorderEdges5.TopRight = True
-        Me.BunifuButton2.CustomizableEdges = BorderEdges5
+        BorderEdges1.BottomLeft = True
+        BorderEdges1.BottomRight = True
+        BorderEdges1.TopLeft = True
+        BorderEdges1.TopRight = True
+        Me.BunifuButton2.CustomizableEdges = BorderEdges1
         Me.BunifuButton2.DialogResult = System.Windows.Forms.DialogResult.None
         Me.BunifuButton2.DisabledBorderColor = System.Drawing.Color.FromArgb(CType(CType(191, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(191, Byte), Integer))
         Me.BunifuButton2.DisabledFillColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
@@ -801,11 +807,97 @@ Partial Class manage_Inventory_Frm
         Me.BunifuButton2.TextPadding = New System.Windows.Forms.Padding(0)
         Me.BunifuButton2.UseDefaultRadiusAndThickness = True
         '
+        'stock_sell_price
+        '
+        Me.stock_sell_price.AcceptsReturn = False
+        Me.stock_sell_price.AcceptsTab = False
+        Me.stock_sell_price.AnimationSpeed = 200
+        Me.stock_sell_price.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None
+        Me.stock_sell_price.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None
+        Me.stock_sell_price.BackColor = System.Drawing.Color.White
+        Me.stock_sell_price.BackgroundImage = CType(resources.GetObject("stock_sell_price.BackgroundImage"), System.Drawing.Image)
+        Me.stock_sell_price.BorderColorActive = System.Drawing.Color.DodgerBlue
+        Me.stock_sell_price.BorderColorDisabled = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.stock_sell_price.BorderColorHover = System.Drawing.Color.FromArgb(CType(CType(105, Byte), Integer), CType(CType(181, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.stock_sell_price.BorderColorIdle = System.Drawing.Color.Silver
+        Me.stock_sell_price.BorderRadius = 1
+        Me.stock_sell_price.BorderThickness = 1
+        Me.stock_sell_price.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal
+        Me.stock_sell_price.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.stock_sell_price.DefaultFont = New System.Drawing.Font("Segoe UI", 9.25!)
+        Me.stock_sell_price.DefaultText = "0"
+        Me.stock_sell_price.FillColor = System.Drawing.Color.White
+        Me.stock_sell_price.HideSelection = True
+        Me.stock_sell_price.IconLeft = Nothing
+        Me.stock_sell_price.IconLeftCursor = System.Windows.Forms.Cursors.IBeam
+        Me.stock_sell_price.IconPadding = 3
+        Me.stock_sell_price.IconRight = Nothing
+        Me.stock_sell_price.IconRightCursor = System.Windows.Forms.Cursors.IBeam
+        Me.stock_sell_price.Lines = New String() {"0"}
+        Me.stock_sell_price.Location = New System.Drawing.Point(288, 408)
+        Me.stock_sell_price.MaxLength = 32767
+        Me.stock_sell_price.MinimumSize = New System.Drawing.Size(1, 1)
+        Me.stock_sell_price.Modified = False
+        Me.stock_sell_price.Multiline = False
+        Me.stock_sell_price.Name = "stock_sell_price"
+        StateProperties1.BorderColor = System.Drawing.Color.LightSeaGreen
+        StateProperties1.FillColor = System.Drawing.Color.Empty
+        StateProperties1.ForeColor = System.Drawing.Color.Empty
+        StateProperties1.PlaceholderForeColor = System.Drawing.Color.Empty
+        Me.stock_sell_price.OnActiveState = StateProperties1
+        StateProperties2.BorderColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
+        StateProperties2.FillColor = System.Drawing.Color.FromArgb(CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer))
+        StateProperties2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
+        StateProperties2.PlaceholderForeColor = System.Drawing.Color.DarkGray
+        Me.stock_sell_price.OnDisabledState = StateProperties2
+        StateProperties3.BorderColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        StateProperties3.FillColor = System.Drawing.Color.Empty
+        StateProperties3.ForeColor = System.Drawing.Color.Empty
+        StateProperties3.PlaceholderForeColor = System.Drawing.Color.Empty
+        Me.stock_sell_price.OnHoverState = StateProperties3
+        StateProperties4.BorderColor = System.Drawing.Color.Silver
+        StateProperties4.FillColor = System.Drawing.Color.White
+        StateProperties4.ForeColor = System.Drawing.Color.Empty
+        StateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty
+        Me.stock_sell_price.OnIdleState = StateProperties4
+        Me.stock_sell_price.Padding = New System.Windows.Forms.Padding(3)
+        Me.stock_sell_price.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.stock_sell_price.PlaceholderForeColor = System.Drawing.Color.Silver
+        Me.stock_sell_price.PlaceholderText = "Qty"
+        Me.stock_sell_price.ReadOnly = False
+        Me.stock_sell_price.ScrollBars = System.Windows.Forms.ScrollBars.None
+        Me.stock_sell_price.SelectedText = ""
+        Me.stock_sell_price.SelectionLength = 0
+        Me.stock_sell_price.SelectionStart = 1
+        Me.stock_sell_price.ShortcutsEnabled = True
+        Me.stock_sell_price.Size = New System.Drawing.Size(316, 40)
+        Me.stock_sell_price.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Material
+        Me.stock_sell_price.TabIndex = 176
+        Me.stock_sell_price.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.stock_sell_price.TextMarginBottom = 0
+        Me.stock_sell_price.TextMarginLeft = 3
+        Me.stock_sell_price.TextMarginTop = 0
+        Me.stock_sell_price.TextPlaceholder = "Qty"
+        Me.stock_sell_price.UseSystemPasswordChar = False
+        Me.stock_sell_price.WordWrap = True
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Century Gothic", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(189, 429)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(83, 19)
+        Me.Label5.TabIndex = 175
+        Me.Label5.Text = "Sell Price"
+        '
         'manage_Inventory_Frm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(846, 612)
+        Me.Controls.Add(Me.stock_sell_price)
+        Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.BunifuButton2)
         Me.Controls.Add(Me.BunifuButton1)
         Me.Controls.Add(Me.welcomemsg)
@@ -855,4 +947,6 @@ Partial Class manage_Inventory_Frm
     Friend WithEvents BunifuDragControl1 As Bunifu.Framework.UI.BunifuDragControl
     Friend WithEvents BunifuButton2 As Bunifu.UI.WinForms.BunifuButton.BunifuButton
     Friend WithEvents BunifuButton1 As Bunifu.UI.WinForms.BunifuButton.BunifuButton
+    Friend WithEvents stock_sell_price As Bunifu.UI.WinForms.BunifuTextBox
+    Friend WithEvents Label5 As Label
 End Class

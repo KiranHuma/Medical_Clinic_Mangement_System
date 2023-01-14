@@ -55,7 +55,6 @@ Partial Class dashboard_Frm
         Dim StateProperties18 As Bunifu.UI.WinForms.BunifuTextBox.StateProperties = New Bunifu.UI.WinForms.BunifuTextBox.StateProperties()
         Dim StateProperties19 As Bunifu.UI.WinForms.BunifuTextBox.StateProperties = New Bunifu.UI.WinForms.BunifuTextBox.StateProperties()
         Dim StateProperties20 As Bunifu.UI.WinForms.BunifuTextBox.StateProperties = New Bunifu.UI.WinForms.BunifuTextBox.StateProperties()
-        Dim BorderEdges1 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges()
         Dim StateProperties21 As Bunifu.UI.WinForms.BunifuTextBox.StateProperties = New Bunifu.UI.WinForms.BunifuTextBox.StateProperties()
         Dim StateProperties22 As Bunifu.UI.WinForms.BunifuTextBox.StateProperties = New Bunifu.UI.WinForms.BunifuTextBox.StateProperties()
         Dim StateProperties23 As Bunifu.UI.WinForms.BunifuTextBox.StateProperties = New Bunifu.UI.WinForms.BunifuTextBox.StateProperties()
@@ -64,6 +63,7 @@ Partial Class dashboard_Frm
         Dim StateProperties26 As Bunifu.UI.WinForms.BunifuTextBox.StateProperties = New Bunifu.UI.WinForms.BunifuTextBox.StateProperties()
         Dim StateProperties27 As Bunifu.UI.WinForms.BunifuTextBox.StateProperties = New Bunifu.UI.WinForms.BunifuTextBox.StateProperties()
         Dim StateProperties28 As Bunifu.UI.WinForms.BunifuTextBox.StateProperties = New Bunifu.UI.WinForms.BunifuTextBox.StateProperties()
+        Dim BorderEdges1 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges()
         Dim StateProperties29 As Bunifu.UI.WinForms.BunifuTextBox.StateProperties = New Bunifu.UI.WinForms.BunifuTextBox.StateProperties()
         Dim StateProperties30 As Bunifu.UI.WinForms.BunifuTextBox.StateProperties = New Bunifu.UI.WinForms.BunifuTextBox.StateProperties()
         Dim StateProperties31 As Bunifu.UI.WinForms.BunifuTextBox.StateProperties = New Bunifu.UI.WinForms.BunifuTextBox.StateProperties()
@@ -131,36 +131,44 @@ Partial Class dashboard_Frm
         Me.BunifuPages1 = New Bunifu.UI.WinForms.BunifuPages()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.BunifuPanel1 = New Bunifu.UI.WinForms.BunifuPanel()
-        Me.Label32 = New System.Windows.Forms.Label()
+        Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.patient_over_all_status_lbl = New System.Windows.Forms.Label()
+        Me.profit_Price_Txt = New Bunifu.UI.WinForms.BunifuTextBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label29 = New System.Windows.Forms.Label()
+        Me.profit_Grand_Total = New Bunifu.UI.WinForms.BunifuTextBox()
+        Me.stockcheck_lbl = New System.Windows.Forms.Label()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.qty_txt = New Bunifu.UI.WinForms.BunifuTextBox()
+        Me.Label19 = New System.Windows.Forms.Label()
+        Me.single_pc_to = New Bunifu.UI.WinForms.BunifuTextBox()
+        Me.total_Quantity_Txt = New System.Windows.Forms.Label()
+        Me.sell_Qty_Txt = New Bunifu.UI.WinForms.BunifuTextBox()
+        Me.Label30 = New System.Windows.Forms.Label()
+        Me.cause_lbl = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.admit_tag_lbl = New System.Windows.Forms.Label()
+        Me.billby_txt = New Bunifu.UI.WinForms.BunifuTextBox()
+        Me.service_tag_lbl = New System.Windows.Forms.Label()
+        Me.serCharge_tag_lbl = New System.Windows.Forms.Label()
+        Me.grand_Single_Pc = New Bunifu.UI.WinForms.BunifuTextBox()
+        Me.Label17 = New System.Windows.Forms.Label()
+        Me.sellPrice_tag_lbl = New System.Windows.Forms.Label()
         Me.sell_Price_Txt = New System.Windows.Forms.ComboBox()
         Me.stock_get_label = New System.Windows.Forms.Label()
         Me.patient_Status_Txt = New System.Windows.Forms.ComboBox()
-        Me.single_pc_to = New Bunifu.UI.WinForms.BunifuTextBox()
-        Me.Label30 = New System.Windows.Forms.Label()
-        Me.profit_Grand_Total = New Bunifu.UI.WinForms.BunifuTextBox()
-        Me.Label29 = New System.Windows.Forms.Label()
-        Me.grand_Single_Pc = New Bunifu.UI.WinForms.BunifuTextBox()
-        Me.Label19 = New System.Windows.Forms.Label()
-        Me.qty_txt = New Bunifu.UI.WinForms.BunifuTextBox()
         Me.welcomemsg = New System.Windows.Forms.Label()
-        Me.profit_Price_Txt = New Bunifu.UI.WinForms.BunifuTextBox()
-        Me.Label4 = New System.Windows.Forms.Label()
         Me.Label20 = New System.Windows.Forms.Label()
         Me.Check_Out_Btn = New Bunifu.UI.WinForms.BunifuButton.BunifuButton()
-        Me.sell_Qty_Txt = New Bunifu.UI.WinForms.BunifuTextBox()
-        Me.total_Quantity_Txt = New System.Windows.Forms.Label()
         Me.product_List_Txt = New Bunifu.UI.WinForms.BunifuTextBox()
         Me.patientName_txt = New Bunifu.UI.WinForms.BunifuTextBox()
         Me.Label18 = New System.Windows.Forms.Label()
-        Me.Label17 = New System.Windows.Forms.Label()
         Me.product_Name_txt = New System.Windows.Forms.ComboBox()
         Me.packing_txt = New System.Windows.Forms.ComboBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.datePicker_Sell = New Bunifu.UI.WinForms.BunifuDatePicker()
-        Me.billby_txt = New Bunifu.UI.WinForms.BunifuTextBox()
-        Me.Label6 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
+        Me.productName_tag_lbl = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.BunifuPanel2 = New Bunifu.UI.WinForms.BunifuPanel()
@@ -215,6 +223,8 @@ Partial Class dashboard_Frm
         Me.BunifuPages1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.BunifuPanel1.SuspendLayout()
+        Me.Panel3.SuspendLayout()
+        Me.Panel1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
         Me.BunifuPanel2.SuspendLayout()
         Me.BunifuCards4.SuspendLayout()
@@ -280,8 +290,8 @@ Partial Class dashboard_Frm
         BorderEdges3.TopLeft = True
         BorderEdges3.TopRight = True
         Me.BunifuButton1.CustomizableEdges = BorderEdges3
-        Me.PanelAnimator.SetDecoration(Me.BunifuButton1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.logoAnimator.SetDecoration(Me.BunifuButton1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.PanelAnimator.SetDecoration(Me.BunifuButton1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.BunifuButton1.DialogResult = System.Windows.Forms.DialogResult.None
         Me.BunifuButton1.DisabledBorderColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(94, Byte), Integer))
         Me.BunifuButton1.DisabledFillColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(94, Byte), Integer))
@@ -374,8 +384,8 @@ Partial Class dashboard_Frm
         BorderEdges4.TopLeft = True
         BorderEdges4.TopRight = True
         Me.usersRecords_Btn.CustomizableEdges = BorderEdges4
-        Me.PanelAnimator.SetDecoration(Me.usersRecords_Btn, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.logoAnimator.SetDecoration(Me.usersRecords_Btn, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.PanelAnimator.SetDecoration(Me.usersRecords_Btn, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.usersRecords_Btn.DialogResult = System.Windows.Forms.DialogResult.None
         Me.usersRecords_Btn.DisabledBorderColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(94, Byte), Integer))
         Me.usersRecords_Btn.DisabledFillColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(94, Byte), Integer))
@@ -476,7 +486,7 @@ Partial Class dashboard_Frm
         Me.manInventory_btn.BackColor1 = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(89, Byte), Integer))
         Me.manInventory_btn.BackgroundImage = CType(resources.GetObject("manInventory_btn.BackgroundImage"), System.Drawing.Image)
         Me.manInventory_btn.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid
-        Me.manInventory_btn.ButtonText = "Manage Inventory"
+        Me.manInventory_btn.ButtonText = "Manage Stock"
         Me.manInventory_btn.ButtonTextMarginLeft = 0
         Me.manInventory_btn.ColorContrastOnClick = 45
         Me.manInventory_btn.ColorContrastOnHover = 45
@@ -486,8 +496,8 @@ Partial Class dashboard_Frm
         BorderEdges5.TopLeft = True
         BorderEdges5.TopRight = True
         Me.manInventory_btn.CustomizableEdges = BorderEdges5
-        Me.PanelAnimator.SetDecoration(Me.manInventory_btn, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.logoAnimator.SetDecoration(Me.manInventory_btn, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.PanelAnimator.SetDecoration(Me.manInventory_btn, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.manInventory_btn.DialogResult = System.Windows.Forms.DialogResult.None
         Me.manInventory_btn.DisabledBorderColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(94, Byte), Integer))
         Me.manInventory_btn.DisabledFillColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(94, Byte), Integer))
@@ -550,12 +560,11 @@ Partial Class dashboard_Frm
         Me.manInventory_btn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         Me.manInventory_btn.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center
         Me.manInventory_btn.TextMarginLeft = 0
-        Me.manInventory_btn.TextPadding = New System.Windows.Forms.Padding(20, 2, 0, 0)
+        Me.manInventory_btn.TextPadding = New System.Windows.Forms.Padding(2, 2, 0, 0)
         Me.BunifuToolTip1.SetToolTip(Me.manInventory_btn, "")
         Me.BunifuToolTip1.SetToolTipIcon(Me.manInventory_btn, Nothing)
         Me.BunifuToolTip1.SetToolTipTitle(Me.manInventory_btn, "")
         Me.manInventory_btn.UseDefaultRadiusAndThickness = True
-        Me.manInventory_btn.Visible = False
         '
         'addinventory_btn
         '
@@ -581,8 +590,8 @@ Partial Class dashboard_Frm
         BorderEdges6.TopLeft = True
         BorderEdges6.TopRight = True
         Me.addinventory_btn.CustomizableEdges = BorderEdges6
-        Me.PanelAnimator.SetDecoration(Me.addinventory_btn, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.logoAnimator.SetDecoration(Me.addinventory_btn, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.PanelAnimator.SetDecoration(Me.addinventory_btn, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.addinventory_btn.DialogResult = System.Windows.Forms.DialogResult.None
         Me.addinventory_btn.DisabledBorderColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(94, Byte), Integer))
         Me.addinventory_btn.DisabledFillColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(94, Byte), Integer))
@@ -754,11 +763,12 @@ Partial Class dashboard_Frm
         Me.logoAnimator.SetDecoration(Me.Label35, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.Label35.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label35.ForeColor = System.Drawing.Color.Red
-        Me.Label35.Location = New System.Drawing.Point(284, 47)
+        Me.Label35.Location = New System.Drawing.Point(661, 58)
         Me.Label35.Name = "Label35"
         Me.Label35.Size = New System.Drawing.Size(101, 23)
         Me.Label35.TabIndex = 156
         Me.Label35.Text = "Threshold"
+        Me.Label35.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.BunifuToolTip1.SetToolTip(Me.Label35, "")
         Me.BunifuToolTip1.SetToolTipIcon(Me.Label35, Nothing)
         Me.BunifuToolTip1.SetToolTipTitle(Me.Label35, "")
@@ -771,11 +781,12 @@ Partial Class dashboard_Frm
         Me.logoAnimator.SetDecoration(Me.threshold_msg_lbl, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.threshold_msg_lbl.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.threshold_msg_lbl.ForeColor = System.Drawing.Color.Red
-        Me.threshold_msg_lbl.Location = New System.Drawing.Point(284, 20)
+        Me.threshold_msg_lbl.Location = New System.Drawing.Point(626, 58)
         Me.threshold_msg_lbl.Name = "threshold_msg_lbl"
-        Me.threshold_msg_lbl.Size = New System.Drawing.Size(101, 23)
+        Me.threshold_msg_lbl.Size = New System.Drawing.Size(21, 23)
         Me.threshold_msg_lbl.TabIndex = 155
-        Me.threshold_msg_lbl.Text = "Threshold"
+        Me.threshold_msg_lbl.Text = "0"
+        Me.threshold_msg_lbl.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.BunifuToolTip1.SetToolTip(Me.threshold_msg_lbl, "")
         Me.BunifuToolTip1.SetToolTipIcon(Me.threshold_msg_lbl, Nothing)
         Me.BunifuToolTip1.SetToolTipTitle(Me.threshold_msg_lbl, "")
@@ -805,8 +816,8 @@ Partial Class dashboard_Frm
         BorderEdges7.TopLeft = True
         BorderEdges7.TopRight = True
         Me.BunifuButton4.CustomizableEdges = BorderEdges7
-        Me.PanelAnimator.SetDecoration(Me.BunifuButton4, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.logoAnimator.SetDecoration(Me.BunifuButton4, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.PanelAnimator.SetDecoration(Me.BunifuButton4, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.BunifuButton4.DialogResult = System.Windows.Forms.DialogResult.None
         Me.BunifuButton4.DisabledBorderColor = System.Drawing.Color.FromArgb(CType(CType(191, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(191, Byte), Integer))
         Me.BunifuButton4.DisabledFillColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
@@ -914,8 +925,8 @@ Partial Class dashboard_Frm
         BorderEdges8.TopLeft = True
         BorderEdges8.TopRight = True
         Me.BunifuButton3.CustomizableEdges = BorderEdges8
-        Me.PanelAnimator.SetDecoration(Me.BunifuButton3, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.logoAnimator.SetDecoration(Me.BunifuButton3, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.PanelAnimator.SetDecoration(Me.BunifuButton3, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.BunifuButton3.DialogResult = System.Windows.Forms.DialogResult.None
         Me.BunifuButton3.DisabledBorderColor = System.Drawing.Color.FromArgb(CType(CType(191, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(191, Byte), Integer))
         Me.BunifuButton3.DisabledFillColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
@@ -1008,8 +1019,8 @@ Partial Class dashboard_Frm
         BorderEdges9.TopLeft = True
         BorderEdges9.TopRight = True
         Me.clinictodaybtn_dshbrd.CustomizableEdges = BorderEdges9
-        Me.PanelAnimator.SetDecoration(Me.clinictodaybtn_dshbrd, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.logoAnimator.SetDecoration(Me.clinictodaybtn_dshbrd, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.PanelAnimator.SetDecoration(Me.clinictodaybtn_dshbrd, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.clinictodaybtn_dshbrd.DialogResult = System.Windows.Forms.DialogResult.None
         Me.clinictodaybtn_dshbrd.DisabledBorderColor = System.Drawing.Color.FromArgb(CType(CType(191, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(191, Byte), Integer))
         Me.clinictodaybtn_dshbrd.DisabledFillColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
@@ -1103,8 +1114,8 @@ Partial Class dashboard_Frm
         BorderEdges10.TopLeft = True
         BorderEdges10.TopRight = True
         Me.BunifuButton5.CustomizableEdges = BorderEdges10
-        Me.PanelAnimator.SetDecoration(Me.BunifuButton5, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.logoAnimator.SetDecoration(Me.BunifuButton5, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.PanelAnimator.SetDecoration(Me.BunifuButton5, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.BunifuButton5.DialogResult = System.Windows.Forms.DialogResult.None
         Me.BunifuButton5.DisabledBorderColor = System.Drawing.Color.FromArgb(CType(CType(191, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(191, Byte), Integer))
         Me.BunifuButton5.DisabledFillColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
@@ -1197,8 +1208,8 @@ Partial Class dashboard_Frm
         BorderEdges11.TopLeft = True
         BorderEdges11.TopRight = True
         Me.BunifuButton6.CustomizableEdges = BorderEdges11
-        Me.PanelAnimator.SetDecoration(Me.BunifuButton6, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.logoAnimator.SetDecoration(Me.BunifuButton6, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.PanelAnimator.SetDecoration(Me.BunifuButton6, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.BunifuButton6.DialogResult = System.Windows.Forms.DialogResult.None
         Me.BunifuButton6.DisabledBorderColor = System.Drawing.Color.FromArgb(CType(CType(191, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(191, Byte), Integer))
         Me.BunifuButton6.DisabledFillColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
@@ -1398,17 +1409,17 @@ Partial Class dashboard_Frm
         Me.BunifuPages1.Location = New System.Drawing.Point(0, 0)
         Me.BunifuPages1.Multiline = True
         Me.BunifuPages1.Name = "BunifuPages1"
-        Me.BunifuPages1.Page = Me.TabPage5
-        Me.BunifuPages1.PageIndex = 4
-        Me.BunifuPages1.PageName = "TabPage5"
-        Me.BunifuPages1.PageTitle = "Going to Out Stock"
+        Me.BunifuPages1.Page = Me.TabPage1
+        Me.BunifuPages1.PageIndex = 0
+        Me.BunifuPages1.PageName = "TabPage1"
+        Me.BunifuPages1.PageTitle = "Sell"
         Me.BunifuPages1.SelectedIndex = 0
         Me.BunifuPages1.Size = New System.Drawing.Size(1029, 781)
         Me.BunifuPages1.TabIndex = 127
         Me.BunifuToolTip1.SetToolTip(Me.BunifuPages1, "")
         Me.BunifuToolTip1.SetToolTipIcon(Me.BunifuPages1, Nothing)
         Me.BunifuToolTip1.SetToolTipTitle(Me.BunifuPages1, "")
-        Animation3.AnimateOnlyDifferences = False
+        Animation3.AnimateOnlyDifferences = True
         Animation3.BlindCoeff = CType(resources.GetObject("Animation3.BlindCoeff"), System.Drawing.PointF)
         Animation3.LeafCoeff = 0!
         Animation3.MaxTime = 1.0!
@@ -1416,7 +1427,7 @@ Partial Class dashboard_Frm
         Animation3.MosaicCoeff = CType(resources.GetObject("Animation3.MosaicCoeff"), System.Drawing.PointF)
         Animation3.MosaicShift = CType(resources.GetObject("Animation3.MosaicShift"), System.Drawing.PointF)
         Animation3.MosaicSize = 0
-        Animation3.Padding = New System.Windows.Forms.Padding(0)
+        Animation3.Padding = New System.Windows.Forms.Padding(0, 0, 0, 0)
         Animation3.RotateCoeff = 0!
         Animation3.RotateLimit = 0!
         Animation3.ScaleCoeff = CType(resources.GetObject("Animation3.ScaleCoeff"), System.Drawing.PointF)
@@ -1424,7 +1435,7 @@ Partial Class dashboard_Frm
         Animation3.TimeCoeff = 0!
         Animation3.TransparencyCoeff = 0!
         Me.BunifuPages1.Transition = Animation3
-        Me.BunifuPages1.TransitionType = Utilities.BunifuPages.BunifuAnimatorNS.AnimationType.Custom
+        Me.BunifuPages1.TransitionType = Utilities.BunifuPages.BunifuAnimatorNS.AnimationType.HorizBlind
         '
         'TabPage1
         '
@@ -1450,36 +1461,32 @@ Partial Class dashboard_Frm
         Me.BunifuPanel1.BorderColor = System.Drawing.Color.Transparent
         Me.BunifuPanel1.BorderRadius = 3
         Me.BunifuPanel1.BorderThickness = 1
-        Me.BunifuPanel1.Controls.Add(Me.Label32)
+        Me.BunifuPanel1.Controls.Add(Me.Panel3)
+        Me.BunifuPanel1.Controls.Add(Me.Panel1)
+        Me.BunifuPanel1.Controls.Add(Me.cause_lbl)
+        Me.BunifuPanel1.Controls.Add(Me.Label6)
+        Me.BunifuPanel1.Controls.Add(Me.admit_tag_lbl)
+        Me.BunifuPanel1.Controls.Add(Me.billby_txt)
+        Me.BunifuPanel1.Controls.Add(Me.service_tag_lbl)
+        Me.BunifuPanel1.Controls.Add(Me.serCharge_tag_lbl)
+        Me.BunifuPanel1.Controls.Add(Me.grand_Single_Pc)
+        Me.BunifuPanel1.Controls.Add(Me.Label17)
+        Me.BunifuPanel1.Controls.Add(Me.sellPrice_tag_lbl)
         Me.BunifuPanel1.Controls.Add(Me.sell_Price_Txt)
         Me.BunifuPanel1.Controls.Add(Me.stock_get_label)
         Me.BunifuPanel1.Controls.Add(Me.patient_Status_Txt)
-        Me.BunifuPanel1.Controls.Add(Me.single_pc_to)
-        Me.BunifuPanel1.Controls.Add(Me.Label30)
-        Me.BunifuPanel1.Controls.Add(Me.profit_Grand_Total)
-        Me.BunifuPanel1.Controls.Add(Me.Label29)
-        Me.BunifuPanel1.Controls.Add(Me.grand_Single_Pc)
-        Me.BunifuPanel1.Controls.Add(Me.Label19)
-        Me.BunifuPanel1.Controls.Add(Me.qty_txt)
         Me.BunifuPanel1.Controls.Add(Me.welcomemsg)
-        Me.BunifuPanel1.Controls.Add(Me.profit_Price_Txt)
-        Me.BunifuPanel1.Controls.Add(Me.Label4)
         Me.BunifuPanel1.Controls.Add(Me.Label20)
         Me.BunifuPanel1.Controls.Add(Me.Check_Out_Btn)
-        Me.BunifuPanel1.Controls.Add(Me.sell_Qty_Txt)
-        Me.BunifuPanel1.Controls.Add(Me.total_Quantity_Txt)
         Me.BunifuPanel1.Controls.Add(Me.product_List_Txt)
         Me.BunifuPanel1.Controls.Add(Me.patientName_txt)
         Me.BunifuPanel1.Controls.Add(Me.Label18)
-        Me.BunifuPanel1.Controls.Add(Me.Label17)
         Me.BunifuPanel1.Controls.Add(Me.product_Name_txt)
         Me.BunifuPanel1.Controls.Add(Me.packing_txt)
         Me.BunifuPanel1.Controls.Add(Me.Label8)
         Me.BunifuPanel1.Controls.Add(Me.datePicker_Sell)
-        Me.BunifuPanel1.Controls.Add(Me.billby_txt)
-        Me.BunifuPanel1.Controls.Add(Me.Label6)
         Me.BunifuPanel1.Controls.Add(Me.Label7)
-        Me.BunifuPanel1.Controls.Add(Me.Label2)
+        Me.BunifuPanel1.Controls.Add(Me.productName_tag_lbl)
         Me.BunifuPanel1.Controls.Add(Me.Label3)
         Me.PanelAnimator.SetDecoration(Me.BunifuPanel1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.logoAnimator.SetDecoration(Me.BunifuPanel1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
@@ -1493,157 +1500,149 @@ Partial Class dashboard_Frm
         Me.BunifuToolTip1.SetToolTipIcon(Me.BunifuPanel1, Nothing)
         Me.BunifuToolTip1.SetToolTipTitle(Me.BunifuPanel1, "")
         '
-        'Label32
+        'Panel3
         '
-        Me.Label32.AutoSize = True
-        Me.PanelAnimator.SetDecoration(Me.Label32, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.logoAnimator.SetDecoration(Me.Label32, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.Label32.Font = New System.Drawing.Font("Century Gothic", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label32.Location = New System.Drawing.Point(8, 375)
-        Me.Label32.Name = "Label32"
-        Me.Label32.Size = New System.Drawing.Size(83, 19)
-        Me.Label32.TabIndex = 155
-        Me.Label32.Text = "Sell Price"
-        Me.BunifuToolTip1.SetToolTip(Me.Label32, "")
-        Me.BunifuToolTip1.SetToolTipIcon(Me.Label32, Nothing)
-        Me.BunifuToolTip1.SetToolTipTitle(Me.Label32, "")
+        Me.Panel3.Controls.Add(Me.patient_over_all_status_lbl)
+        Me.Panel3.Controls.Add(Me.profit_Price_Txt)
+        Me.Panel3.Controls.Add(Me.Label4)
+        Me.Panel3.Controls.Add(Me.Label29)
+        Me.Panel3.Controls.Add(Me.profit_Grand_Total)
+        Me.Panel3.Controls.Add(Me.stockcheck_lbl)
+        Me.logoAnimator.SetDecoration(Me.Panel3, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.PanelAnimator.SetDecoration(Me.Panel3, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.Panel3.Location = New System.Drawing.Point(926, 666)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(17, 19)
+        Me.Panel3.TabIndex = 165
+        Me.BunifuToolTip1.SetToolTip(Me.Panel3, "")
+        Me.BunifuToolTip1.SetToolTipIcon(Me.Panel3, Nothing)
+        Me.BunifuToolTip1.SetToolTipTitle(Me.Panel3, "")
+        Me.Panel3.Visible = False
         '
-        'sell_Price_Txt
+        'patient_over_all_status_lbl
         '
-        Me.sell_Price_Txt.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
-        Me.logoAnimator.SetDecoration(Me.sell_Price_Txt, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.PanelAnimator.SetDecoration(Me.sell_Price_Txt, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.sell_Price_Txt.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.sell_Price_Txt.FormattingEnabled = True
-        Me.sell_Price_Txt.Location = New System.Drawing.Point(196, 375)
-        Me.sell_Price_Txt.Name = "sell_Price_Txt"
-        Me.sell_Price_Txt.Size = New System.Drawing.Size(316, 24)
-        Me.sell_Price_Txt.TabIndex = 153
-        Me.BunifuToolTip1.SetToolTip(Me.sell_Price_Txt, "")
-        Me.BunifuToolTip1.SetToolTipIcon(Me.sell_Price_Txt, Nothing)
-        Me.BunifuToolTip1.SetToolTipTitle(Me.sell_Price_Txt, "")
+        Me.patient_over_all_status_lbl.AutoSize = True
+        Me.PanelAnimator.SetDecoration(Me.patient_over_all_status_lbl, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.logoAnimator.SetDecoration(Me.patient_over_all_status_lbl, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.patient_over_all_status_lbl.Font = New System.Drawing.Font("Century Gothic", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.patient_over_all_status_lbl.Location = New System.Drawing.Point(233, 32)
+        Me.patient_over_all_status_lbl.Name = "patient_over_all_status_lbl"
+        Me.patient_over_all_status_lbl.Size = New System.Drawing.Size(93, 34)
+        Me.patient_over_all_status_lbl.TabIndex = 166
+        Me.patient_over_all_status_lbl.Text = "status"
+        Me.BunifuToolTip1.SetToolTip(Me.patient_over_all_status_lbl, "")
+        Me.BunifuToolTip1.SetToolTipIcon(Me.patient_over_all_status_lbl, Nothing)
+        Me.BunifuToolTip1.SetToolTipTitle(Me.patient_over_all_status_lbl, "")
         '
-        'stock_get_label
+        'profit_Price_Txt
         '
-        Me.stock_get_label.AutoSize = True
-        Me.PanelAnimator.SetDecoration(Me.stock_get_label, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.logoAnimator.SetDecoration(Me.stock_get_label, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.stock_get_label.Location = New System.Drawing.Point(785, 433)
-        Me.stock_get_label.Name = "stock_get_label"
-        Me.stock_get_label.Size = New System.Drawing.Size(14, 16)
-        Me.stock_get_label.TabIndex = 152
-        Me.stock_get_label.Text = "0"
-        Me.BunifuToolTip1.SetToolTip(Me.stock_get_label, "")
-        Me.BunifuToolTip1.SetToolTipIcon(Me.stock_get_label, Nothing)
-        Me.BunifuToolTip1.SetToolTipTitle(Me.stock_get_label, "")
-        '
-        'patient_Status_Txt
-        '
-        Me.logoAnimator.SetDecoration(Me.patient_Status_Txt, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.PanelAnimator.SetDecoration(Me.patient_Status_Txt, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.patient_Status_Txt.FormattingEnabled = True
-        Me.patient_Status_Txt.Items.AddRange(New Object() {"Customer", "Check Up", "Admit"})
-        Me.patient_Status_Txt.Location = New System.Drawing.Point(196, 185)
-        Me.patient_Status_Txt.Name = "patient_Status_Txt"
-        Me.patient_Status_Txt.Size = New System.Drawing.Size(316, 24)
-        Me.patient_Status_Txt.TabIndex = 151
-        Me.BunifuToolTip1.SetToolTip(Me.patient_Status_Txt, "")
-        Me.BunifuToolTip1.SetToolTipIcon(Me.patient_Status_Txt, Nothing)
-        Me.BunifuToolTip1.SetToolTipTitle(Me.patient_Status_Txt, "")
-        '
-        'single_pc_to
-        '
-        Me.single_pc_to.AcceptsReturn = False
-        Me.single_pc_to.AcceptsTab = False
-        Me.single_pc_to.AnimationSpeed = 200
-        Me.single_pc_to.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None
-        Me.single_pc_to.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None
-        Me.single_pc_to.BackColor = System.Drawing.Color.White
-        Me.single_pc_to.BackgroundImage = CType(resources.GetObject("single_pc_to.BackgroundImage"), System.Drawing.Image)
-        Me.single_pc_to.BorderColorActive = System.Drawing.Color.DodgerBlue
-        Me.single_pc_to.BorderColorDisabled = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
-        Me.single_pc_to.BorderColorHover = System.Drawing.Color.FromArgb(CType(CType(105, Byte), Integer), CType(CType(181, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.single_pc_to.BorderColorIdle = System.Drawing.Color.Silver
-        Me.single_pc_to.BorderRadius = 1
-        Me.single_pc_to.BorderThickness = 1
-        Me.single_pc_to.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal
-        Me.single_pc_to.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.PanelAnimator.SetDecoration(Me.single_pc_to, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.logoAnimator.SetDecoration(Me.single_pc_to, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.single_pc_to.DefaultFont = New System.Drawing.Font("Segoe UI", 9.25!)
-        Me.single_pc_to.DefaultText = "0"
-        Me.single_pc_to.FillColor = System.Drawing.Color.White
-        Me.single_pc_to.HideSelection = True
-        Me.single_pc_to.IconLeft = Nothing
-        Me.single_pc_to.IconLeftCursor = System.Windows.Forms.Cursors.IBeam
-        Me.single_pc_to.IconPadding = 3
-        Me.single_pc_to.IconRight = Nothing
-        Me.single_pc_to.IconRightCursor = System.Windows.Forms.Cursors.IBeam
-        Me.single_pc_to.Lines = New String() {"0"}
-        Me.single_pc_to.Location = New System.Drawing.Point(196, 470)
-        Me.single_pc_to.MaxLength = 32767
-        Me.single_pc_to.MinimumSize = New System.Drawing.Size(1, 1)
-        Me.single_pc_to.Modified = False
-        Me.single_pc_to.Multiline = False
-        Me.single_pc_to.Name = "single_pc_to"
+        Me.profit_Price_Txt.AcceptsReturn = False
+        Me.profit_Price_Txt.AcceptsTab = False
+        Me.profit_Price_Txt.AnimationSpeed = 200
+        Me.profit_Price_Txt.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None
+        Me.profit_Price_Txt.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None
+        Me.profit_Price_Txt.BackColor = System.Drawing.Color.White
+        Me.profit_Price_Txt.BackgroundImage = CType(resources.GetObject("profit_Price_Txt.BackgroundImage"), System.Drawing.Image)
+        Me.profit_Price_Txt.BorderColorActive = System.Drawing.Color.DodgerBlue
+        Me.profit_Price_Txt.BorderColorDisabled = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.profit_Price_Txt.BorderColorHover = System.Drawing.Color.FromArgb(CType(CType(105, Byte), Integer), CType(CType(181, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.profit_Price_Txt.BorderColorIdle = System.Drawing.Color.Silver
+        Me.profit_Price_Txt.BorderRadius = 1
+        Me.profit_Price_Txt.BorderThickness = 1
+        Me.profit_Price_Txt.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal
+        Me.profit_Price_Txt.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.PanelAnimator.SetDecoration(Me.profit_Price_Txt, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.logoAnimator.SetDecoration(Me.profit_Price_Txt, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.profit_Price_Txt.DefaultFont = New System.Drawing.Font("Segoe UI", 9.25!)
+        Me.profit_Price_Txt.DefaultText = "0"
+        Me.profit_Price_Txt.FillColor = System.Drawing.Color.White
+        Me.profit_Price_Txt.HideSelection = True
+        Me.profit_Price_Txt.IconLeft = Nothing
+        Me.profit_Price_Txt.IconLeftCursor = System.Windows.Forms.Cursors.IBeam
+        Me.profit_Price_Txt.IconPadding = 3
+        Me.profit_Price_Txt.IconRight = Nothing
+        Me.profit_Price_Txt.IconRightCursor = System.Windows.Forms.Cursors.IBeam
+        Me.profit_Price_Txt.Lines = New String() {"0"}
+        Me.profit_Price_Txt.Location = New System.Drawing.Point(145, 95)
+        Me.profit_Price_Txt.MaxLength = 32767
+        Me.profit_Price_Txt.MinimumSize = New System.Drawing.Size(1, 1)
+        Me.profit_Price_Txt.Modified = False
+        Me.profit_Price_Txt.Multiline = False
+        Me.profit_Price_Txt.Name = "profit_Price_Txt"
         StateProperties1.BorderColor = System.Drawing.Color.LightSeaGreen
         StateProperties1.FillColor = System.Drawing.Color.Empty
         StateProperties1.ForeColor = System.Drawing.Color.Empty
         StateProperties1.PlaceholderForeColor = System.Drawing.Color.Empty
-        Me.single_pc_to.OnActiveState = StateProperties1
+        Me.profit_Price_Txt.OnActiveState = StateProperties1
         StateProperties2.BorderColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
         StateProperties2.FillColor = System.Drawing.Color.FromArgb(CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer))
         StateProperties2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
         StateProperties2.PlaceholderForeColor = System.Drawing.Color.DarkGray
-        Me.single_pc_to.OnDisabledState = StateProperties2
+        Me.profit_Price_Txt.OnDisabledState = StateProperties2
         StateProperties3.BorderColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         StateProperties3.FillColor = System.Drawing.Color.Empty
         StateProperties3.ForeColor = System.Drawing.Color.Empty
         StateProperties3.PlaceholderForeColor = System.Drawing.Color.Empty
-        Me.single_pc_to.OnHoverState = StateProperties3
+        Me.profit_Price_Txt.OnHoverState = StateProperties3
         StateProperties4.BorderColor = System.Drawing.Color.Silver
         StateProperties4.FillColor = System.Drawing.Color.White
         StateProperties4.ForeColor = System.Drawing.Color.Empty
         StateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty
-        Me.single_pc_to.OnIdleState = StateProperties4
-        Me.single_pc_to.Padding = New System.Windows.Forms.Padding(3)
-        Me.single_pc_to.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.single_pc_to.PlaceholderForeColor = System.Drawing.Color.Silver
-        Me.single_pc_to.PlaceholderText = "Enter Price"
-        Me.single_pc_to.ReadOnly = True
-        Me.single_pc_to.ScrollBars = System.Windows.Forms.ScrollBars.None
-        Me.single_pc_to.SelectedText = ""
-        Me.single_pc_to.SelectionLength = 0
-        Me.single_pc_to.SelectionStart = 1
-        Me.single_pc_to.ShortcutsEnabled = True
-        Me.single_pc_to.Size = New System.Drawing.Size(316, 40)
-        Me.single_pc_to.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Material
-        Me.single_pc_to.TabIndex = 150
-        Me.single_pc_to.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.single_pc_to.TextMarginBottom = 0
-        Me.single_pc_to.TextMarginLeft = 3
-        Me.single_pc_to.TextMarginTop = 0
-        Me.single_pc_to.TextPlaceholder = "Enter Price"
-        Me.BunifuToolTip1.SetToolTip(Me.single_pc_to, "")
-        Me.BunifuToolTip1.SetToolTipIcon(Me.single_pc_to, Nothing)
-        Me.BunifuToolTip1.SetToolTipTitle(Me.single_pc_to, "")
-        Me.single_pc_to.UseSystemPasswordChar = False
-        Me.single_pc_to.WordWrap = True
+        Me.profit_Price_Txt.OnIdleState = StateProperties4
+        Me.profit_Price_Txt.Padding = New System.Windows.Forms.Padding(3)
+        Me.profit_Price_Txt.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.profit_Price_Txt.PlaceholderForeColor = System.Drawing.Color.Silver
+        Me.profit_Price_Txt.PlaceholderText = "Enter Price"
+        Me.profit_Price_Txt.ReadOnly = False
+        Me.profit_Price_Txt.ScrollBars = System.Windows.Forms.ScrollBars.None
+        Me.profit_Price_Txt.SelectedText = ""
+        Me.profit_Price_Txt.SelectionLength = 0
+        Me.profit_Price_Txt.SelectionStart = 1
+        Me.profit_Price_Txt.ShortcutsEnabled = True
+        Me.profit_Price_Txt.Size = New System.Drawing.Size(205, 40)
+        Me.profit_Price_Txt.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Material
+        Me.profit_Price_Txt.TabIndex = 139
+        Me.profit_Price_Txt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.profit_Price_Txt.TextMarginBottom = 0
+        Me.profit_Price_Txt.TextMarginLeft = 3
+        Me.profit_Price_Txt.TextMarginTop = 0
+        Me.profit_Price_Txt.TextPlaceholder = "Enter Price"
+        Me.BunifuToolTip1.SetToolTip(Me.profit_Price_Txt, "")
+        Me.BunifuToolTip1.SetToolTipIcon(Me.profit_Price_Txt, Nothing)
+        Me.BunifuToolTip1.SetToolTipTitle(Me.profit_Price_Txt, "")
+        Me.profit_Price_Txt.UseSystemPasswordChar = False
+        Me.profit_Price_Txt.WordWrap = True
         '
-        'Label30
+        'Label4
         '
-        Me.Label30.AutoSize = True
-        Me.PanelAnimator.SetDecoration(Me.Label30, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.logoAnimator.SetDecoration(Me.Label30, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.Label30.Font = New System.Drawing.Font("Century Gothic", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label30.Location = New System.Drawing.Point(8, 491)
-        Me.Label30.Name = "Label30"
-        Me.Label30.Size = New System.Drawing.Size(176, 19)
-        Me.Label30.TabIndex = 149
-        Me.Label30.Text = "Single Product Price "
-        Me.BunifuToolTip1.SetToolTip(Me.Label30, "")
-        Me.BunifuToolTip1.SetToolTipIcon(Me.Label30, Nothing)
-        Me.BunifuToolTip1.SetToolTipTitle(Me.Label30, "")
+        Me.Label4.AutoSize = True
+        Me.PanelAnimator.SetDecoration(Me.Label4, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.logoAnimator.SetDecoration(Me.Label4, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.Label4.Font = New System.Drawing.Font("Century Gothic", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(8, 116)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(131, 19)
+        Me.Label4.TabIndex = 138
+        Me.Label4.Text = "Purchase Price"
+        Me.BunifuToolTip1.SetToolTip(Me.Label4, "")
+        Me.BunifuToolTip1.SetToolTipIcon(Me.Label4, Nothing)
+        Me.BunifuToolTip1.SetToolTipTitle(Me.Label4, "")
+        Me.Label4.Visible = False
+        '
+        'Label29
+        '
+        Me.Label29.AutoSize = True
+        Me.PanelAnimator.SetDecoration(Me.Label29, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.logoAnimator.SetDecoration(Me.Label29, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.Label29.Font = New System.Drawing.Font("Century Gothic", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label29.Location = New System.Drawing.Point(32, 202)
+        Me.Label29.Name = "Label29"
+        Me.Label29.Size = New System.Drawing.Size(94, 19)
+        Me.Label29.TabIndex = 147
+        Me.Label29.Text = "Profit Price"
+        Me.BunifuToolTip1.SetToolTip(Me.Label29, "")
+        Me.BunifuToolTip1.SetToolTipIcon(Me.Label29, Nothing)
+        Me.BunifuToolTip1.SetToolTipTitle(Me.Label29, "")
         '
         'profit_Grand_Total
         '
@@ -1674,7 +1673,7 @@ Partial Class dashboard_Frm
         Me.profit_Grand_Total.IconRight = Nothing
         Me.profit_Grand_Total.IconRightCursor = System.Windows.Forms.Cursors.IBeam
         Me.profit_Grand_Total.Lines = New String() {"0"}
-        Me.profit_Grand_Total.Location = New System.Drawing.Point(694, 629)
+        Me.profit_Grand_Total.Location = New System.Drawing.Point(132, 176)
         Me.profit_Grand_Total.MaxLength = 32767
         Me.profit_Grand_Total.MinimumSize = New System.Drawing.Size(1, 1)
         Me.profit_Grand_Total.Modified = False
@@ -1710,7 +1709,7 @@ Partial Class dashboard_Frm
         Me.profit_Grand_Total.SelectionLength = 0
         Me.profit_Grand_Total.SelectionStart = 1
         Me.profit_Grand_Total.ShortcutsEnabled = True
-        Me.profit_Grand_Total.Size = New System.Drawing.Size(316, 40)
+        Me.profit_Grand_Total.Size = New System.Drawing.Size(218, 40)
         Me.profit_Grand_Total.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Material
         Me.profit_Grand_Total.TabIndex = 148
         Me.profit_Grand_Total.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -1722,118 +1721,41 @@ Partial Class dashboard_Frm
         Me.BunifuToolTip1.SetToolTipIcon(Me.profit_Grand_Total, Nothing)
         Me.BunifuToolTip1.SetToolTipTitle(Me.profit_Grand_Total, "")
         Me.profit_Grand_Total.UseSystemPasswordChar = False
-        Me.profit_Grand_Total.Visible = False
         Me.profit_Grand_Total.WordWrap = True
         '
-        'Label29
+        'stockcheck_lbl
         '
-        Me.Label29.AutoSize = True
-        Me.PanelAnimator.SetDecoration(Me.Label29, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.logoAnimator.SetDecoration(Me.Label29, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.Label29.Font = New System.Drawing.Font("Century Gothic", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label29.Location = New System.Drawing.Point(534, 650)
-        Me.Label29.Name = "Label29"
-        Me.Label29.Size = New System.Drawing.Size(94, 19)
-        Me.Label29.TabIndex = 147
-        Me.Label29.Text = "Profit Price"
-        Me.BunifuToolTip1.SetToolTip(Me.Label29, "")
-        Me.BunifuToolTip1.SetToolTipIcon(Me.Label29, Nothing)
-        Me.BunifuToolTip1.SetToolTipTitle(Me.Label29, "")
-        Me.Label29.Visible = False
+        Me.stockcheck_lbl.AutoSize = True
+        Me.PanelAnimator.SetDecoration(Me.stockcheck_lbl, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.logoAnimator.SetDecoration(Me.stockcheck_lbl, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.stockcheck_lbl.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.stockcheck_lbl.Location = New System.Drawing.Point(102, 12)
+        Me.stockcheck_lbl.Name = "stockcheck_lbl"
+        Me.stockcheck_lbl.Size = New System.Drawing.Size(14, 16)
+        Me.stockcheck_lbl.TabIndex = 156
+        Me.stockcheck_lbl.Text = "0"
+        Me.BunifuToolTip1.SetToolTip(Me.stockcheck_lbl, "")
+        Me.BunifuToolTip1.SetToolTipIcon(Me.stockcheck_lbl, Nothing)
+        Me.BunifuToolTip1.SetToolTipTitle(Me.stockcheck_lbl, "")
+        Me.stockcheck_lbl.Visible = False
         '
-        'grand_Single_Pc
+        'Panel1
         '
-        Me.grand_Single_Pc.AcceptsReturn = False
-        Me.grand_Single_Pc.AcceptsTab = False
-        Me.grand_Single_Pc.AnimationSpeed = 200
-        Me.grand_Single_Pc.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None
-        Me.grand_Single_Pc.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None
-        Me.grand_Single_Pc.BackColor = System.Drawing.Color.White
-        Me.grand_Single_Pc.BackgroundImage = CType(resources.GetObject("grand_Single_Pc.BackgroundImage"), System.Drawing.Image)
-        Me.grand_Single_Pc.BorderColorActive = System.Drawing.Color.DodgerBlue
-        Me.grand_Single_Pc.BorderColorDisabled = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
-        Me.grand_Single_Pc.BorderColorHover = System.Drawing.Color.FromArgb(CType(CType(105, Byte), Integer), CType(CType(181, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.grand_Single_Pc.BorderColorIdle = System.Drawing.Color.Silver
-        Me.grand_Single_Pc.BorderRadius = 1
-        Me.grand_Single_Pc.BorderThickness = 1
-        Me.grand_Single_Pc.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal
-        Me.grand_Single_Pc.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.PanelAnimator.SetDecoration(Me.grand_Single_Pc, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.logoAnimator.SetDecoration(Me.grand_Single_Pc, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.grand_Single_Pc.DefaultFont = New System.Drawing.Font("Segoe UI", 9.25!)
-        Me.grand_Single_Pc.DefaultText = "0"
-        Me.grand_Single_Pc.FillColor = System.Drawing.Color.White
-        Me.grand_Single_Pc.HideSelection = True
-        Me.grand_Single_Pc.IconLeft = Nothing
-        Me.grand_Single_Pc.IconLeftCursor = System.Windows.Forms.Cursors.IBeam
-        Me.grand_Single_Pc.IconPadding = 3
-        Me.grand_Single_Pc.IconRight = Nothing
-        Me.grand_Single_Pc.IconRightCursor = System.Windows.Forms.Cursors.IBeam
-        Me.grand_Single_Pc.Lines = New String() {"0"}
-        Me.grand_Single_Pc.Location = New System.Drawing.Point(196, 644)
-        Me.grand_Single_Pc.MaxLength = 32767
-        Me.grand_Single_Pc.MinimumSize = New System.Drawing.Size(1, 1)
-        Me.grand_Single_Pc.Modified = False
-        Me.grand_Single_Pc.Multiline = False
-        Me.grand_Single_Pc.Name = "grand_Single_Pc"
-        StateProperties9.BorderColor = System.Drawing.Color.LightSeaGreen
-        StateProperties9.FillColor = System.Drawing.Color.Empty
-        StateProperties9.ForeColor = System.Drawing.Color.Empty
-        StateProperties9.PlaceholderForeColor = System.Drawing.Color.Empty
-        Me.grand_Single_Pc.OnActiveState = StateProperties9
-        StateProperties10.BorderColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
-        StateProperties10.FillColor = System.Drawing.Color.FromArgb(CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer))
-        StateProperties10.ForeColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
-        StateProperties10.PlaceholderForeColor = System.Drawing.Color.DarkGray
-        Me.grand_Single_Pc.OnDisabledState = StateProperties10
-        StateProperties11.BorderColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        StateProperties11.FillColor = System.Drawing.Color.Empty
-        StateProperties11.ForeColor = System.Drawing.Color.Empty
-        StateProperties11.PlaceholderForeColor = System.Drawing.Color.Empty
-        Me.grand_Single_Pc.OnHoverState = StateProperties11
-        StateProperties12.BorderColor = System.Drawing.Color.Silver
-        StateProperties12.FillColor = System.Drawing.Color.White
-        StateProperties12.ForeColor = System.Drawing.Color.Empty
-        StateProperties12.PlaceholderForeColor = System.Drawing.Color.Empty
-        Me.grand_Single_Pc.OnIdleState = StateProperties12
-        Me.grand_Single_Pc.Padding = New System.Windows.Forms.Padding(3)
-        Me.grand_Single_Pc.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.grand_Single_Pc.PlaceholderForeColor = System.Drawing.Color.Silver
-        Me.grand_Single_Pc.PlaceholderText = "Enter Grand Single PC"
-        Me.grand_Single_Pc.ReadOnly = True
-        Me.grand_Single_Pc.ScrollBars = System.Windows.Forms.ScrollBars.None
-        Me.grand_Single_Pc.SelectedText = ""
-        Me.grand_Single_Pc.SelectionLength = 0
-        Me.grand_Single_Pc.SelectionStart = 1
-        Me.grand_Single_Pc.ShortcutsEnabled = True
-        Me.grand_Single_Pc.Size = New System.Drawing.Size(316, 40)
-        Me.grand_Single_Pc.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Material
-        Me.grand_Single_Pc.TabIndex = 144
-        Me.grand_Single_Pc.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.grand_Single_Pc.TextMarginBottom = 0
-        Me.grand_Single_Pc.TextMarginLeft = 3
-        Me.grand_Single_Pc.TextMarginTop = 0
-        Me.grand_Single_Pc.TextPlaceholder = "Enter Grand Single PC"
-        Me.BunifuToolTip1.SetToolTip(Me.grand_Single_Pc, "")
-        Me.BunifuToolTip1.SetToolTipIcon(Me.grand_Single_Pc, Nothing)
-        Me.BunifuToolTip1.SetToolTipTitle(Me.grand_Single_Pc, "")
-        Me.grand_Single_Pc.UseSystemPasswordChar = False
-        Me.grand_Single_Pc.WordWrap = True
-        '
-        'Label19
-        '
-        Me.Label19.AutoSize = True
-        Me.PanelAnimator.SetDecoration(Me.Label19, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.logoAnimator.SetDecoration(Me.Label19, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.Label19.Font = New System.Drawing.Font("Century Gothic", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label19.Location = New System.Drawing.Point(8, 433)
-        Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(76, 19)
-        Me.Label19.TabIndex = 142
-        Me.Label19.Text = "Quantity"
-        Me.BunifuToolTip1.SetToolTip(Me.Label19, "")
-        Me.BunifuToolTip1.SetToolTipIcon(Me.Label19, Nothing)
-        Me.BunifuToolTip1.SetToolTipTitle(Me.Label19, "")
+        Me.Panel1.Controls.Add(Me.qty_txt)
+        Me.Panel1.Controls.Add(Me.Label19)
+        Me.Panel1.Controls.Add(Me.single_pc_to)
+        Me.Panel1.Controls.Add(Me.total_Quantity_Txt)
+        Me.Panel1.Controls.Add(Me.sell_Qty_Txt)
+        Me.Panel1.Controls.Add(Me.Label30)
+        Me.logoAnimator.SetDecoration(Me.Panel1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.PanelAnimator.SetDecoration(Me.Panel1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.Panel1.Location = New System.Drawing.Point(12, 430)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(478, 228)
+        Me.Panel1.TabIndex = 164
+        Me.BunifuToolTip1.SetToolTip(Me.Panel1, "")
+        Me.BunifuToolTip1.SetToolTipIcon(Me.Panel1, Nothing)
+        Me.BunifuToolTip1.SetToolTipTitle(Me.Panel1, "")
         '
         'qty_txt
         '
@@ -1864,32 +1786,32 @@ Partial Class dashboard_Frm
         Me.qty_txt.IconRight = Nothing
         Me.qty_txt.IconRightCursor = System.Windows.Forms.Cursors.IBeam
         Me.qty_txt.Lines = New String() {"0"}
-        Me.qty_txt.Location = New System.Drawing.Point(196, 412)
+        Me.qty_txt.Location = New System.Drawing.Point(205, 12)
         Me.qty_txt.MaxLength = 32767
         Me.qty_txt.MinimumSize = New System.Drawing.Size(1, 1)
         Me.qty_txt.Modified = False
         Me.qty_txt.Multiline = False
         Me.qty_txt.Name = "qty_txt"
-        StateProperties13.BorderColor = System.Drawing.Color.LightSeaGreen
-        StateProperties13.FillColor = System.Drawing.Color.Empty
-        StateProperties13.ForeColor = System.Drawing.Color.Empty
-        StateProperties13.PlaceholderForeColor = System.Drawing.Color.Empty
-        Me.qty_txt.OnActiveState = StateProperties13
-        StateProperties14.BorderColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
-        StateProperties14.FillColor = System.Drawing.Color.FromArgb(CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer))
-        StateProperties14.ForeColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
-        StateProperties14.PlaceholderForeColor = System.Drawing.Color.DarkGray
-        Me.qty_txt.OnDisabledState = StateProperties14
-        StateProperties15.BorderColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        StateProperties15.FillColor = System.Drawing.Color.Empty
-        StateProperties15.ForeColor = System.Drawing.Color.Empty
-        StateProperties15.PlaceholderForeColor = System.Drawing.Color.Empty
-        Me.qty_txt.OnHoverState = StateProperties15
-        StateProperties16.BorderColor = System.Drawing.Color.Silver
-        StateProperties16.FillColor = System.Drawing.Color.White
-        StateProperties16.ForeColor = System.Drawing.Color.Empty
-        StateProperties16.PlaceholderForeColor = System.Drawing.Color.Empty
-        Me.qty_txt.OnIdleState = StateProperties16
+        StateProperties9.BorderColor = System.Drawing.Color.LightSeaGreen
+        StateProperties9.FillColor = System.Drawing.Color.Empty
+        StateProperties9.ForeColor = System.Drawing.Color.Empty
+        StateProperties9.PlaceholderForeColor = System.Drawing.Color.Empty
+        Me.qty_txt.OnActiveState = StateProperties9
+        StateProperties10.BorderColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
+        StateProperties10.FillColor = System.Drawing.Color.FromArgb(CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer))
+        StateProperties10.ForeColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
+        StateProperties10.PlaceholderForeColor = System.Drawing.Color.DarkGray
+        Me.qty_txt.OnDisabledState = StateProperties10
+        StateProperties11.BorderColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        StateProperties11.FillColor = System.Drawing.Color.Empty
+        StateProperties11.ForeColor = System.Drawing.Color.Empty
+        StateProperties11.PlaceholderForeColor = System.Drawing.Color.Empty
+        Me.qty_txt.OnHoverState = StateProperties11
+        StateProperties12.BorderColor = System.Drawing.Color.Silver
+        StateProperties12.FillColor = System.Drawing.Color.White
+        StateProperties12.ForeColor = System.Drawing.Color.Empty
+        StateProperties12.PlaceholderForeColor = System.Drawing.Color.Empty
+        Me.qty_txt.OnIdleState = StateProperties12
         Me.qty_txt.Padding = New System.Windows.Forms.Padding(3)
         Me.qty_txt.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.qty_txt.PlaceholderForeColor = System.Drawing.Color.Silver
@@ -1900,7 +1822,7 @@ Partial Class dashboard_Frm
         Me.qty_txt.SelectionLength = 0
         Me.qty_txt.SelectionStart = 1
         Me.qty_txt.ShortcutsEnabled = True
-        Me.qty_txt.Size = New System.Drawing.Size(316, 40)
+        Me.qty_txt.Size = New System.Drawing.Size(248, 40)
         Me.qty_txt.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Material
         Me.qty_txt.TabIndex = 141
         Me.qty_txt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -1914,114 +1836,532 @@ Partial Class dashboard_Frm
         Me.qty_txt.UseSystemPasswordChar = False
         Me.qty_txt.WordWrap = True
         '
+        'Label19
+        '
+        Me.Label19.AutoSize = True
+        Me.PanelAnimator.SetDecoration(Me.Label19, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.logoAnimator.SetDecoration(Me.Label19, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.Label19.Font = New System.Drawing.Font("Century Gothic", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label19.Location = New System.Drawing.Point(11, 33)
+        Me.Label19.Name = "Label19"
+        Me.Label19.Size = New System.Drawing.Size(76, 19)
+        Me.Label19.TabIndex = 142
+        Me.Label19.Text = "Quantity"
+        Me.BunifuToolTip1.SetToolTip(Me.Label19, "")
+        Me.BunifuToolTip1.SetToolTipIcon(Me.Label19, Nothing)
+        Me.BunifuToolTip1.SetToolTipTitle(Me.Label19, "")
+        '
+        'single_pc_to
+        '
+        Me.single_pc_to.AcceptsReturn = False
+        Me.single_pc_to.AcceptsTab = False
+        Me.single_pc_to.AnimationSpeed = 200
+        Me.single_pc_to.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None
+        Me.single_pc_to.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None
+        Me.single_pc_to.BackColor = System.Drawing.Color.White
+        Me.single_pc_to.BackgroundImage = CType(resources.GetObject("single_pc_to.BackgroundImage"), System.Drawing.Image)
+        Me.single_pc_to.BorderColorActive = System.Drawing.Color.DodgerBlue
+        Me.single_pc_to.BorderColorDisabled = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.single_pc_to.BorderColorHover = System.Drawing.Color.FromArgb(CType(CType(105, Byte), Integer), CType(CType(181, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.single_pc_to.BorderColorIdle = System.Drawing.Color.Silver
+        Me.single_pc_to.BorderRadius = 1
+        Me.single_pc_to.BorderThickness = 1
+        Me.single_pc_to.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal
+        Me.single_pc_to.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.PanelAnimator.SetDecoration(Me.single_pc_to, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.logoAnimator.SetDecoration(Me.single_pc_to, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.single_pc_to.DefaultFont = New System.Drawing.Font("Segoe UI", 9.25!)
+        Me.single_pc_to.DefaultText = "0"
+        Me.single_pc_to.FillColor = System.Drawing.Color.White
+        Me.single_pc_to.HideSelection = True
+        Me.single_pc_to.IconLeft = Nothing
+        Me.single_pc_to.IconLeftCursor = System.Windows.Forms.Cursors.IBeam
+        Me.single_pc_to.IconPadding = 3
+        Me.single_pc_to.IconRight = Nothing
+        Me.single_pc_to.IconRightCursor = System.Windows.Forms.Cursors.IBeam
+        Me.single_pc_to.Lines = New String() {"0"}
+        Me.single_pc_to.Location = New System.Drawing.Point(205, 78)
+        Me.single_pc_to.MaxLength = 32767
+        Me.single_pc_to.MinimumSize = New System.Drawing.Size(1, 1)
+        Me.single_pc_to.Modified = False
+        Me.single_pc_to.Multiline = False
+        Me.single_pc_to.Name = "single_pc_to"
+        StateProperties13.BorderColor = System.Drawing.Color.LightSeaGreen
+        StateProperties13.FillColor = System.Drawing.Color.Empty
+        StateProperties13.ForeColor = System.Drawing.Color.Empty
+        StateProperties13.PlaceholderForeColor = System.Drawing.Color.Empty
+        Me.single_pc_to.OnActiveState = StateProperties13
+        StateProperties14.BorderColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
+        StateProperties14.FillColor = System.Drawing.Color.FromArgb(CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer))
+        StateProperties14.ForeColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
+        StateProperties14.PlaceholderForeColor = System.Drawing.Color.DarkGray
+        Me.single_pc_to.OnDisabledState = StateProperties14
+        StateProperties15.BorderColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        StateProperties15.FillColor = System.Drawing.Color.Empty
+        StateProperties15.ForeColor = System.Drawing.Color.Empty
+        StateProperties15.PlaceholderForeColor = System.Drawing.Color.Empty
+        Me.single_pc_to.OnHoverState = StateProperties15
+        StateProperties16.BorderColor = System.Drawing.Color.Silver
+        StateProperties16.FillColor = System.Drawing.Color.White
+        StateProperties16.ForeColor = System.Drawing.Color.Empty
+        StateProperties16.PlaceholderForeColor = System.Drawing.Color.Empty
+        Me.single_pc_to.OnIdleState = StateProperties16
+        Me.single_pc_to.Padding = New System.Windows.Forms.Padding(3)
+        Me.single_pc_to.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.single_pc_to.PlaceholderForeColor = System.Drawing.Color.Silver
+        Me.single_pc_to.PlaceholderText = "Enter Price"
+        Me.single_pc_to.ReadOnly = True
+        Me.single_pc_to.ScrollBars = System.Windows.Forms.ScrollBars.None
+        Me.single_pc_to.SelectedText = ""
+        Me.single_pc_to.SelectionLength = 0
+        Me.single_pc_to.SelectionStart = 1
+        Me.single_pc_to.ShortcutsEnabled = True
+        Me.single_pc_to.Size = New System.Drawing.Size(248, 40)
+        Me.single_pc_to.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Material
+        Me.single_pc_to.TabIndex = 150
+        Me.single_pc_to.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.single_pc_to.TextMarginBottom = 0
+        Me.single_pc_to.TextMarginLeft = 3
+        Me.single_pc_to.TextMarginTop = 0
+        Me.single_pc_to.TextPlaceholder = "Enter Price"
+        Me.BunifuToolTip1.SetToolTip(Me.single_pc_to, "")
+        Me.BunifuToolTip1.SetToolTipIcon(Me.single_pc_to, Nothing)
+        Me.BunifuToolTip1.SetToolTipTitle(Me.single_pc_to, "")
+        Me.single_pc_to.UseSystemPasswordChar = False
+        Me.single_pc_to.WordWrap = True
+        '
+        'total_Quantity_Txt
+        '
+        Me.total_Quantity_Txt.AutoSize = True
+        Me.PanelAnimator.SetDecoration(Me.total_Quantity_Txt, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.logoAnimator.SetDecoration(Me.total_Quantity_Txt, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.total_Quantity_Txt.Font = New System.Drawing.Font("Century Gothic", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.total_Quantity_Txt.Location = New System.Drawing.Point(11, 165)
+        Me.total_Quantity_Txt.Name = "total_Quantity_Txt"
+        Me.total_Quantity_Txt.Size = New System.Drawing.Size(118, 19)
+        Me.total_Quantity_Txt.TabIndex = 132
+        Me.total_Quantity_Txt.Text = "Total Quantity"
+        Me.BunifuToolTip1.SetToolTip(Me.total_Quantity_Txt, "")
+        Me.BunifuToolTip1.SetToolTipIcon(Me.total_Quantity_Txt, Nothing)
+        Me.BunifuToolTip1.SetToolTipTitle(Me.total_Quantity_Txt, "")
+        '
+        'sell_Qty_Txt
+        '
+        Me.sell_Qty_Txt.AcceptsReturn = False
+        Me.sell_Qty_Txt.AcceptsTab = False
+        Me.sell_Qty_Txt.AnimationSpeed = 200
+        Me.sell_Qty_Txt.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None
+        Me.sell_Qty_Txt.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None
+        Me.sell_Qty_Txt.BackColor = System.Drawing.Color.White
+        Me.sell_Qty_Txt.BackgroundImage = CType(resources.GetObject("sell_Qty_Txt.BackgroundImage"), System.Drawing.Image)
+        Me.sell_Qty_Txt.BorderColorActive = System.Drawing.Color.DodgerBlue
+        Me.sell_Qty_Txt.BorderColorDisabled = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.sell_Qty_Txt.BorderColorHover = System.Drawing.Color.FromArgb(CType(CType(105, Byte), Integer), CType(CType(181, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.sell_Qty_Txt.BorderColorIdle = System.Drawing.Color.Silver
+        Me.sell_Qty_Txt.BorderRadius = 1
+        Me.sell_Qty_Txt.BorderThickness = 1
+        Me.sell_Qty_Txt.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal
+        Me.sell_Qty_Txt.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.PanelAnimator.SetDecoration(Me.sell_Qty_Txt, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.logoAnimator.SetDecoration(Me.sell_Qty_Txt, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.sell_Qty_Txt.DefaultFont = New System.Drawing.Font("Segoe UI", 9.25!)
+        Me.sell_Qty_Txt.DefaultText = "0"
+        Me.sell_Qty_Txt.FillColor = System.Drawing.Color.White
+        Me.sell_Qty_Txt.HideSelection = True
+        Me.sell_Qty_Txt.IconLeft = Nothing
+        Me.sell_Qty_Txt.IconLeftCursor = System.Windows.Forms.Cursors.IBeam
+        Me.sell_Qty_Txt.IconPadding = 3
+        Me.sell_Qty_Txt.IconRight = Nothing
+        Me.sell_Qty_Txt.IconRightCursor = System.Windows.Forms.Cursors.IBeam
+        Me.sell_Qty_Txt.Lines = New String() {"0"}
+        Me.sell_Qty_Txt.Location = New System.Drawing.Point(205, 144)
+        Me.sell_Qty_Txt.MaxLength = 32767
+        Me.sell_Qty_Txt.MinimumSize = New System.Drawing.Size(1, 1)
+        Me.sell_Qty_Txt.Modified = False
+        Me.sell_Qty_Txt.Multiline = False
+        Me.sell_Qty_Txt.Name = "sell_Qty_Txt"
+        StateProperties17.BorderColor = System.Drawing.Color.LightSeaGreen
+        StateProperties17.FillColor = System.Drawing.Color.Empty
+        StateProperties17.ForeColor = System.Drawing.Color.Empty
+        StateProperties17.PlaceholderForeColor = System.Drawing.Color.Empty
+        Me.sell_Qty_Txt.OnActiveState = StateProperties17
+        StateProperties18.BorderColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
+        StateProperties18.FillColor = System.Drawing.Color.FromArgb(CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer))
+        StateProperties18.ForeColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
+        StateProperties18.PlaceholderForeColor = System.Drawing.Color.DarkGray
+        Me.sell_Qty_Txt.OnDisabledState = StateProperties18
+        StateProperties19.BorderColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        StateProperties19.FillColor = System.Drawing.Color.Empty
+        StateProperties19.ForeColor = System.Drawing.Color.Empty
+        StateProperties19.PlaceholderForeColor = System.Drawing.Color.Empty
+        Me.sell_Qty_Txt.OnHoverState = StateProperties19
+        StateProperties20.BorderColor = System.Drawing.Color.Silver
+        StateProperties20.FillColor = System.Drawing.Color.White
+        StateProperties20.ForeColor = System.Drawing.Color.Empty
+        StateProperties20.PlaceholderForeColor = System.Drawing.Color.Empty
+        Me.sell_Qty_Txt.OnIdleState = StateProperties20
+        Me.sell_Qty_Txt.Padding = New System.Windows.Forms.Padding(3)
+        Me.sell_Qty_Txt.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.sell_Qty_Txt.PlaceholderForeColor = System.Drawing.Color.Silver
+        Me.sell_Qty_Txt.PlaceholderText = "Enter Quantity"
+        Me.sell_Qty_Txt.ReadOnly = True
+        Me.sell_Qty_Txt.ScrollBars = System.Windows.Forms.ScrollBars.None
+        Me.sell_Qty_Txt.SelectedText = ""
+        Me.sell_Qty_Txt.SelectionLength = 0
+        Me.sell_Qty_Txt.SelectionStart = 1
+        Me.sell_Qty_Txt.ShortcutsEnabled = True
+        Me.sell_Qty_Txt.Size = New System.Drawing.Size(248, 40)
+        Me.sell_Qty_Txt.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Material
+        Me.sell_Qty_Txt.TabIndex = 133
+        Me.sell_Qty_Txt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.sell_Qty_Txt.TextMarginBottom = 0
+        Me.sell_Qty_Txt.TextMarginLeft = 3
+        Me.sell_Qty_Txt.TextMarginTop = 0
+        Me.sell_Qty_Txt.TextPlaceholder = "Enter Quantity"
+        Me.BunifuToolTip1.SetToolTip(Me.sell_Qty_Txt, "")
+        Me.BunifuToolTip1.SetToolTipIcon(Me.sell_Qty_Txt, Nothing)
+        Me.BunifuToolTip1.SetToolTipTitle(Me.sell_Qty_Txt, "")
+        Me.sell_Qty_Txt.UseSystemPasswordChar = False
+        Me.sell_Qty_Txt.WordWrap = True
+        '
+        'Label30
+        '
+        Me.Label30.AutoSize = True
+        Me.PanelAnimator.SetDecoration(Me.Label30, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.logoAnimator.SetDecoration(Me.Label30, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.Label30.Font = New System.Drawing.Font("Century Gothic", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label30.Location = New System.Drawing.Point(11, 101)
+        Me.Label30.Name = "Label30"
+        Me.Label30.Size = New System.Drawing.Size(176, 19)
+        Me.Label30.TabIndex = 149
+        Me.Label30.Text = "Single Product Price "
+        Me.BunifuToolTip1.SetToolTip(Me.Label30, "")
+        Me.BunifuToolTip1.SetToolTipIcon(Me.Label30, Nothing)
+        Me.BunifuToolTip1.SetToolTipTitle(Me.Label30, "")
+        '
+        'cause_lbl
+        '
+        Me.cause_lbl.AutoSize = True
+        Me.PanelAnimator.SetDecoration(Me.cause_lbl, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.logoAnimator.SetDecoration(Me.cause_lbl, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.cause_lbl.Font = New System.Drawing.Font("Century Gothic", 10.2!, System.Drawing.FontStyle.Bold)
+        Me.cause_lbl.Location = New System.Drawing.Point(11, 276)
+        Me.cause_lbl.Name = "cause_lbl"
+        Me.cause_lbl.Size = New System.Drawing.Size(62, 19)
+        Me.cause_lbl.TabIndex = 162
+        Me.cause_lbl.Text = "Cause"
+        Me.BunifuToolTip1.SetToolTip(Me.cause_lbl, "")
+        Me.BunifuToolTip1.SetToolTipIcon(Me.cause_lbl, Nothing)
+        Me.BunifuToolTip1.SetToolTipTitle(Me.cause_lbl, "")
+        Me.cause_lbl.Visible = False
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.PanelAnimator.SetDecoration(Me.Label6, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.logoAnimator.SetDecoration(Me.Label6, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.Label6.Font = New System.Drawing.Font("Century Gothic", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(573, 333)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(56, 19)
+        Me.Label6.TabIndex = 116
+        Me.Label6.Text = "Bill By"
+        Me.BunifuToolTip1.SetToolTip(Me.Label6, "")
+        Me.BunifuToolTip1.SetToolTipIcon(Me.Label6, Nothing)
+        Me.BunifuToolTip1.SetToolTipTitle(Me.Label6, "")
+        '
+        'admit_tag_lbl
+        '
+        Me.admit_tag_lbl.AutoSize = True
+        Me.PanelAnimator.SetDecoration(Me.admit_tag_lbl, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.logoAnimator.SetDecoration(Me.admit_tag_lbl, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.admit_tag_lbl.Font = New System.Drawing.Font("Century Gothic", 10.2!, System.Drawing.FontStyle.Bold)
+        Me.admit_tag_lbl.Location = New System.Drawing.Point(11, 383)
+        Me.admit_tag_lbl.Name = "admit_tag_lbl"
+        Me.admit_tag_lbl.Size = New System.Drawing.Size(100, 19)
+        Me.admit_tag_lbl.TabIndex = 161
+        Me.admit_tag_lbl.Text = "Admit Fees"
+        Me.BunifuToolTip1.SetToolTip(Me.admit_tag_lbl, "")
+        Me.BunifuToolTip1.SetToolTipIcon(Me.admit_tag_lbl, Nothing)
+        Me.BunifuToolTip1.SetToolTipTitle(Me.admit_tag_lbl, "")
+        Me.admit_tag_lbl.Visible = False
+        '
+        'billby_txt
+        '
+        Me.billby_txt.AcceptsReturn = False
+        Me.billby_txt.AcceptsTab = False
+        Me.billby_txt.AnimationSpeed = 200
+        Me.billby_txt.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None
+        Me.billby_txt.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None
+        Me.billby_txt.BackColor = System.Drawing.Color.White
+        Me.billby_txt.BackgroundImage = CType(resources.GetObject("billby_txt.BackgroundImage"), System.Drawing.Image)
+        Me.billby_txt.BorderColorActive = System.Drawing.Color.DodgerBlue
+        Me.billby_txt.BorderColorDisabled = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.billby_txt.BorderColorHover = System.Drawing.Color.FromArgb(CType(CType(105, Byte), Integer), CType(CType(181, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.billby_txt.BorderColorIdle = System.Drawing.Color.Silver
+        Me.billby_txt.BorderRadius = 1
+        Me.billby_txt.BorderThickness = 1
+        Me.billby_txt.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal
+        Me.billby_txt.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.PanelAnimator.SetDecoration(Me.billby_txt, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.logoAnimator.SetDecoration(Me.billby_txt, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.billby_txt.DefaultFont = New System.Drawing.Font("Segoe UI", 9.25!)
+        Me.billby_txt.DefaultText = ""
+        Me.billby_txt.FillColor = System.Drawing.Color.White
+        Me.billby_txt.HideSelection = True
+        Me.billby_txt.IconLeft = Nothing
+        Me.billby_txt.IconLeftCursor = System.Windows.Forms.Cursors.IBeam
+        Me.billby_txt.IconPadding = 3
+        Me.billby_txt.IconRight = Nothing
+        Me.billby_txt.IconRightCursor = System.Windows.Forms.Cursors.IBeam
+        Me.billby_txt.Lines = New String(-1) {}
+        Me.billby_txt.Location = New System.Drawing.Point(702, 312)
+        Me.billby_txt.MaxLength = 32767
+        Me.billby_txt.MinimumSize = New System.Drawing.Size(1, 1)
+        Me.billby_txt.Modified = False
+        Me.billby_txt.Multiline = False
+        Me.billby_txt.Name = "billby_txt"
+        StateProperties21.BorderColor = System.Drawing.Color.LightSeaGreen
+        StateProperties21.FillColor = System.Drawing.Color.Empty
+        StateProperties21.ForeColor = System.Drawing.Color.Empty
+        StateProperties21.PlaceholderForeColor = System.Drawing.Color.Empty
+        Me.billby_txt.OnActiveState = StateProperties21
+        StateProperties22.BorderColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
+        StateProperties22.FillColor = System.Drawing.Color.FromArgb(CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer))
+        StateProperties22.ForeColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
+        StateProperties22.PlaceholderForeColor = System.Drawing.Color.DarkGray
+        Me.billby_txt.OnDisabledState = StateProperties22
+        StateProperties23.BorderColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        StateProperties23.FillColor = System.Drawing.Color.Empty
+        StateProperties23.ForeColor = System.Drawing.Color.Empty
+        StateProperties23.PlaceholderForeColor = System.Drawing.Color.Empty
+        Me.billby_txt.OnHoverState = StateProperties23
+        StateProperties24.BorderColor = System.Drawing.Color.Silver
+        StateProperties24.FillColor = System.Drawing.Color.White
+        StateProperties24.ForeColor = System.Drawing.Color.Empty
+        StateProperties24.PlaceholderForeColor = System.Drawing.Color.Empty
+        Me.billby_txt.OnIdleState = StateProperties24
+        Me.billby_txt.Padding = New System.Windows.Forms.Padding(3)
+        Me.billby_txt.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.billby_txt.PlaceholderForeColor = System.Drawing.Color.Silver
+        Me.billby_txt.PlaceholderText = "Enter your Name"
+        Me.billby_txt.ReadOnly = False
+        Me.billby_txt.ScrollBars = System.Windows.Forms.ScrollBars.None
+        Me.billby_txt.SelectedText = ""
+        Me.billby_txt.SelectionLength = 0
+        Me.billby_txt.SelectionStart = 0
+        Me.billby_txt.ShortcutsEnabled = True
+        Me.billby_txt.Size = New System.Drawing.Size(248, 40)
+        Me.billby_txt.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Material
+        Me.billby_txt.TabIndex = 121
+        Me.billby_txt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.billby_txt.TextMarginBottom = 0
+        Me.billby_txt.TextMarginLeft = 3
+        Me.billby_txt.TextMarginTop = 0
+        Me.billby_txt.TextPlaceholder = "Enter your Name"
+        Me.BunifuToolTip1.SetToolTip(Me.billby_txt, "")
+        Me.BunifuToolTip1.SetToolTipIcon(Me.billby_txt, Nothing)
+        Me.BunifuToolTip1.SetToolTipTitle(Me.billby_txt, "")
+        Me.billby_txt.UseSystemPasswordChar = False
+        Me.billby_txt.WordWrap = True
+        '
+        'service_tag_lbl
+        '
+        Me.service_tag_lbl.AutoSize = True
+        Me.PanelAnimator.SetDecoration(Me.service_tag_lbl, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.logoAnimator.SetDecoration(Me.service_tag_lbl, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.service_tag_lbl.Font = New System.Drawing.Font("Century Gothic", 10.2!, System.Drawing.FontStyle.Bold)
+        Me.service_tag_lbl.Location = New System.Drawing.Point(11, 276)
+        Me.service_tag_lbl.Name = "service_tag_lbl"
+        Me.service_tag_lbl.Size = New System.Drawing.Size(134, 19)
+        Me.service_tag_lbl.TabIndex = 160
+        Me.service_tag_lbl.Text = "Services Name"
+        Me.BunifuToolTip1.SetToolTip(Me.service_tag_lbl, "")
+        Me.BunifuToolTip1.SetToolTipIcon(Me.service_tag_lbl, Nothing)
+        Me.BunifuToolTip1.SetToolTipTitle(Me.service_tag_lbl, "")
+        Me.service_tag_lbl.Visible = False
+        '
+        'serCharge_tag_lbl
+        '
+        Me.serCharge_tag_lbl.AutoSize = True
+        Me.PanelAnimator.SetDecoration(Me.serCharge_tag_lbl, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.logoAnimator.SetDecoration(Me.serCharge_tag_lbl, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.serCharge_tag_lbl.Font = New System.Drawing.Font("Century Gothic", 10.2!, System.Drawing.FontStyle.Bold)
+        Me.serCharge_tag_lbl.Location = New System.Drawing.Point(11, 383)
+        Me.serCharge_tag_lbl.Name = "serCharge_tag_lbl"
+        Me.serCharge_tag_lbl.Size = New System.Drawing.Size(157, 19)
+        Me.serCharge_tag_lbl.TabIndex = 159
+        Me.serCharge_tag_lbl.Text = "Services Charges "
+        Me.BunifuToolTip1.SetToolTip(Me.serCharge_tag_lbl, "")
+        Me.BunifuToolTip1.SetToolTipIcon(Me.serCharge_tag_lbl, Nothing)
+        Me.BunifuToolTip1.SetToolTipTitle(Me.serCharge_tag_lbl, "")
+        Me.serCharge_tag_lbl.Visible = False
+        '
+        'grand_Single_Pc
+        '
+        Me.grand_Single_Pc.AcceptsReturn = False
+        Me.grand_Single_Pc.AcceptsTab = False
+        Me.grand_Single_Pc.AnimationSpeed = 200
+        Me.grand_Single_Pc.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None
+        Me.grand_Single_Pc.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None
+        Me.grand_Single_Pc.BackColor = System.Drawing.Color.White
+        Me.grand_Single_Pc.BackgroundImage = CType(resources.GetObject("grand_Single_Pc.BackgroundImage"), System.Drawing.Image)
+        Me.grand_Single_Pc.BorderColorActive = System.Drawing.Color.DodgerBlue
+        Me.grand_Single_Pc.BorderColorDisabled = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.grand_Single_Pc.BorderColorHover = System.Drawing.Color.FromArgb(CType(CType(105, Byte), Integer), CType(CType(181, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.grand_Single_Pc.BorderColorIdle = System.Drawing.Color.Silver
+        Me.grand_Single_Pc.BorderRadius = 1
+        Me.grand_Single_Pc.BorderThickness = 1
+        Me.grand_Single_Pc.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal
+        Me.grand_Single_Pc.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.PanelAnimator.SetDecoration(Me.grand_Single_Pc, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.logoAnimator.SetDecoration(Me.grand_Single_Pc, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.grand_Single_Pc.DefaultFont = New System.Drawing.Font("Segoe UI", 9.25!)
+        Me.grand_Single_Pc.DefaultText = "0"
+        Me.grand_Single_Pc.FillColor = System.Drawing.Color.White
+        Me.grand_Single_Pc.HideSelection = True
+        Me.grand_Single_Pc.IconLeft = Nothing
+        Me.grand_Single_Pc.IconLeftCursor = System.Windows.Forms.Cursors.IBeam
+        Me.grand_Single_Pc.IconPadding = 3
+        Me.grand_Single_Pc.IconRight = Nothing
+        Me.grand_Single_Pc.IconRightCursor = System.Windows.Forms.Cursors.IBeam
+        Me.grand_Single_Pc.Lines = New String() {"0"}
+        Me.grand_Single_Pc.Location = New System.Drawing.Point(702, 364)
+        Me.grand_Single_Pc.MaxLength = 32767
+        Me.grand_Single_Pc.MinimumSize = New System.Drawing.Size(1, 1)
+        Me.grand_Single_Pc.Modified = False
+        Me.grand_Single_Pc.Multiline = False
+        Me.grand_Single_Pc.Name = "grand_Single_Pc"
+        StateProperties25.BorderColor = System.Drawing.Color.LightSeaGreen
+        StateProperties25.FillColor = System.Drawing.Color.Empty
+        StateProperties25.ForeColor = System.Drawing.Color.Empty
+        StateProperties25.PlaceholderForeColor = System.Drawing.Color.Empty
+        Me.grand_Single_Pc.OnActiveState = StateProperties25
+        StateProperties26.BorderColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
+        StateProperties26.FillColor = System.Drawing.Color.FromArgb(CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer))
+        StateProperties26.ForeColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
+        StateProperties26.PlaceholderForeColor = System.Drawing.Color.DarkGray
+        Me.grand_Single_Pc.OnDisabledState = StateProperties26
+        StateProperties27.BorderColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        StateProperties27.FillColor = System.Drawing.Color.Empty
+        StateProperties27.ForeColor = System.Drawing.Color.Empty
+        StateProperties27.PlaceholderForeColor = System.Drawing.Color.Empty
+        Me.grand_Single_Pc.OnHoverState = StateProperties27
+        StateProperties28.BorderColor = System.Drawing.Color.Silver
+        StateProperties28.FillColor = System.Drawing.Color.White
+        StateProperties28.ForeColor = System.Drawing.Color.Empty
+        StateProperties28.PlaceholderForeColor = System.Drawing.Color.Empty
+        Me.grand_Single_Pc.OnIdleState = StateProperties28
+        Me.grand_Single_Pc.Padding = New System.Windows.Forms.Padding(3)
+        Me.grand_Single_Pc.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.grand_Single_Pc.PlaceholderForeColor = System.Drawing.Color.Silver
+        Me.grand_Single_Pc.PlaceholderText = "Enter Grand Single PC"
+        Me.grand_Single_Pc.ReadOnly = True
+        Me.grand_Single_Pc.ScrollBars = System.Windows.Forms.ScrollBars.None
+        Me.grand_Single_Pc.SelectedText = ""
+        Me.grand_Single_Pc.SelectionLength = 0
+        Me.grand_Single_Pc.SelectionStart = 1
+        Me.grand_Single_Pc.ShortcutsEnabled = True
+        Me.grand_Single_Pc.Size = New System.Drawing.Size(248, 40)
+        Me.grand_Single_Pc.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Material
+        Me.grand_Single_Pc.TabIndex = 144
+        Me.grand_Single_Pc.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.grand_Single_Pc.TextMarginBottom = 0
+        Me.grand_Single_Pc.TextMarginLeft = 3
+        Me.grand_Single_Pc.TextMarginTop = 0
+        Me.grand_Single_Pc.TextPlaceholder = "Enter Grand Single PC"
+        Me.BunifuToolTip1.SetToolTip(Me.grand_Single_Pc, "")
+        Me.BunifuToolTip1.SetToolTipIcon(Me.grand_Single_Pc, Nothing)
+        Me.BunifuToolTip1.SetToolTipTitle(Me.grand_Single_Pc, "")
+        Me.grand_Single_Pc.UseSystemPasswordChar = False
+        Me.grand_Single_Pc.WordWrap = True
+        '
+        'Label17
+        '
+        Me.Label17.AutoSize = True
+        Me.PanelAnimator.SetDecoration(Me.Label17, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.logoAnimator.SetDecoration(Me.Label17, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.Label17.Font = New System.Drawing.Font("Century Gothic", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label17.Location = New System.Drawing.Point(573, 385)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(102, 19)
+        Me.Label17.TabIndex = 127
+        Me.Label17.Text = "Grand Total"
+        Me.BunifuToolTip1.SetToolTip(Me.Label17, "")
+        Me.BunifuToolTip1.SetToolTipIcon(Me.Label17, Nothing)
+        Me.BunifuToolTip1.SetToolTipTitle(Me.Label17, "")
+        '
+        'sellPrice_tag_lbl
+        '
+        Me.sellPrice_tag_lbl.AutoSize = True
+        Me.PanelAnimator.SetDecoration(Me.sellPrice_tag_lbl, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.logoAnimator.SetDecoration(Me.sellPrice_tag_lbl, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.sellPrice_tag_lbl.Font = New System.Drawing.Font("Century Gothic", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.sellPrice_tag_lbl.Location = New System.Drawing.Point(11, 383)
+        Me.sellPrice_tag_lbl.Name = "sellPrice_tag_lbl"
+        Me.sellPrice_tag_lbl.Size = New System.Drawing.Size(83, 19)
+        Me.sellPrice_tag_lbl.TabIndex = 155
+        Me.sellPrice_tag_lbl.Text = "Sell Price"
+        Me.BunifuToolTip1.SetToolTip(Me.sellPrice_tag_lbl, "")
+        Me.BunifuToolTip1.SetToolTipIcon(Me.sellPrice_tag_lbl, Nothing)
+        Me.BunifuToolTip1.SetToolTipTitle(Me.sellPrice_tag_lbl, "")
+        '
+        'sell_Price_Txt
+        '
+        Me.sell_Price_Txt.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
+        Me.logoAnimator.SetDecoration(Me.sell_Price_Txt, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.PanelAnimator.SetDecoration(Me.sell_Price_Txt, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.sell_Price_Txt.FormattingEnabled = True
+        Me.sell_Price_Txt.Location = New System.Drawing.Point(196, 375)
+        Me.sell_Price_Txt.Name = "sell_Price_Txt"
+        Me.sell_Price_Txt.Size = New System.Drawing.Size(248, 24)
+        Me.sell_Price_Txt.TabIndex = 153
+        Me.BunifuToolTip1.SetToolTip(Me.sell_Price_Txt, "")
+        Me.BunifuToolTip1.SetToolTipIcon(Me.sell_Price_Txt, Nothing)
+        Me.BunifuToolTip1.SetToolTipTitle(Me.sell_Price_Txt, "")
+        '
+        'stock_get_label
+        '
+        Me.stock_get_label.AutoSize = True
+        Me.PanelAnimator.SetDecoration(Me.stock_get_label, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.logoAnimator.SetDecoration(Me.stock_get_label, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.stock_get_label.Font = New System.Drawing.Font("Century Gothic", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.stock_get_label.Location = New System.Drawing.Point(690, 543)
+        Me.stock_get_label.Name = "stock_get_label"
+        Me.stock_get_label.Size = New System.Drawing.Size(31, 34)
+        Me.stock_get_label.TabIndex = 152
+        Me.stock_get_label.Text = "0"
+        Me.BunifuToolTip1.SetToolTip(Me.stock_get_label, "")
+        Me.BunifuToolTip1.SetToolTipIcon(Me.stock_get_label, Nothing)
+        Me.BunifuToolTip1.SetToolTipTitle(Me.stock_get_label, "")
+        '
+        'patient_Status_Txt
+        '
+        Me.logoAnimator.SetDecoration(Me.patient_Status_Txt, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.PanelAnimator.SetDecoration(Me.patient_Status_Txt, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.patient_Status_Txt.FormattingEnabled = True
+        Me.patient_Status_Txt.Items.AddRange(New Object() {"Customer", "CheckUp", "Admit"})
+        Me.patient_Status_Txt.Location = New System.Drawing.Point(196, 185)
+        Me.patient_Status_Txt.Name = "patient_Status_Txt"
+        Me.patient_Status_Txt.Size = New System.Drawing.Size(248, 24)
+        Me.patient_Status_Txt.TabIndex = 151
+        Me.BunifuToolTip1.SetToolTip(Me.patient_Status_Txt, "")
+        Me.BunifuToolTip1.SetToolTipIcon(Me.patient_Status_Txt, Nothing)
+        Me.BunifuToolTip1.SetToolTipTitle(Me.patient_Status_Txt, "")
+        '
         'welcomemsg
         '
         Me.welcomemsg.AutoSize = True
         Me.PanelAnimator.SetDecoration(Me.welcomemsg, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.logoAnimator.SetDecoration(Me.welcomemsg, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.welcomemsg.Location = New System.Drawing.Point(36, 713)
+        Me.welcomemsg.Font = New System.Drawing.Font("Century Gothic", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.welcomemsg.Location = New System.Drawing.Point(73, 701)
         Me.welcomemsg.Name = "welcomemsg"
-        Me.welcomemsg.Size = New System.Drawing.Size(0, 16)
+        Me.welcomemsg.Size = New System.Drawing.Size(0, 27)
         Me.welcomemsg.TabIndex = 140
         Me.BunifuToolTip1.SetToolTip(Me.welcomemsg, "")
         Me.BunifuToolTip1.SetToolTipIcon(Me.welcomemsg, Nothing)
         Me.BunifuToolTip1.SetToolTipTitle(Me.welcomemsg, "")
-        '
-        'profit_Price_Txt
-        '
-        Me.profit_Price_Txt.AcceptsReturn = False
-        Me.profit_Price_Txt.AcceptsTab = False
-        Me.profit_Price_Txt.AnimationSpeed = 200
-        Me.profit_Price_Txt.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None
-        Me.profit_Price_Txt.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None
-        Me.profit_Price_Txt.BackColor = System.Drawing.Color.White
-        Me.profit_Price_Txt.BackgroundImage = CType(resources.GetObject("profit_Price_Txt.BackgroundImage"), System.Drawing.Image)
-        Me.profit_Price_Txt.BorderColorActive = System.Drawing.Color.DodgerBlue
-        Me.profit_Price_Txt.BorderColorDisabled = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
-        Me.profit_Price_Txt.BorderColorHover = System.Drawing.Color.FromArgb(CType(CType(105, Byte), Integer), CType(CType(181, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.profit_Price_Txt.BorderColorIdle = System.Drawing.Color.Silver
-        Me.profit_Price_Txt.BorderRadius = 1
-        Me.profit_Price_Txt.BorderThickness = 1
-        Me.profit_Price_Txt.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal
-        Me.profit_Price_Txt.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.PanelAnimator.SetDecoration(Me.profit_Price_Txt, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.logoAnimator.SetDecoration(Me.profit_Price_Txt, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.profit_Price_Txt.DefaultFont = New System.Drawing.Font("Segoe UI", 9.25!)
-        Me.profit_Price_Txt.DefaultText = "0"
-        Me.profit_Price_Txt.FillColor = System.Drawing.Color.White
-        Me.profit_Price_Txt.HideSelection = True
-        Me.profit_Price_Txt.IconLeft = Nothing
-        Me.profit_Price_Txt.IconLeftCursor = System.Windows.Forms.Cursors.IBeam
-        Me.profit_Price_Txt.IconPadding = 3
-        Me.profit_Price_Txt.IconRight = Nothing
-        Me.profit_Price_Txt.IconRightCursor = System.Windows.Forms.Cursors.IBeam
-        Me.profit_Price_Txt.Lines = New String() {"0"}
-        Me.profit_Price_Txt.Location = New System.Drawing.Point(694, 583)
-        Me.profit_Price_Txt.MaxLength = 32767
-        Me.profit_Price_Txt.MinimumSize = New System.Drawing.Size(1, 1)
-        Me.profit_Price_Txt.Modified = False
-        Me.profit_Price_Txt.Multiline = False
-        Me.profit_Price_Txt.Name = "profit_Price_Txt"
-        StateProperties17.BorderColor = System.Drawing.Color.LightSeaGreen
-        StateProperties17.FillColor = System.Drawing.Color.Empty
-        StateProperties17.ForeColor = System.Drawing.Color.Empty
-        StateProperties17.PlaceholderForeColor = System.Drawing.Color.Empty
-        Me.profit_Price_Txt.OnActiveState = StateProperties17
-        StateProperties18.BorderColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
-        StateProperties18.FillColor = System.Drawing.Color.FromArgb(CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer))
-        StateProperties18.ForeColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
-        StateProperties18.PlaceholderForeColor = System.Drawing.Color.DarkGray
-        Me.profit_Price_Txt.OnDisabledState = StateProperties18
-        StateProperties19.BorderColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        StateProperties19.FillColor = System.Drawing.Color.Empty
-        StateProperties19.ForeColor = System.Drawing.Color.Empty
-        StateProperties19.PlaceholderForeColor = System.Drawing.Color.Empty
-        Me.profit_Price_Txt.OnHoverState = StateProperties19
-        StateProperties20.BorderColor = System.Drawing.Color.Silver
-        StateProperties20.FillColor = System.Drawing.Color.White
-        StateProperties20.ForeColor = System.Drawing.Color.Empty
-        StateProperties20.PlaceholderForeColor = System.Drawing.Color.Empty
-        Me.profit_Price_Txt.OnIdleState = StateProperties20
-        Me.profit_Price_Txt.Padding = New System.Windows.Forms.Padding(3)
-        Me.profit_Price_Txt.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.profit_Price_Txt.PlaceholderForeColor = System.Drawing.Color.Silver
-        Me.profit_Price_Txt.PlaceholderText = "Enter Price"
-        Me.profit_Price_Txt.ReadOnly = False
-        Me.profit_Price_Txt.ScrollBars = System.Windows.Forms.ScrollBars.None
-        Me.profit_Price_Txt.SelectedText = ""
-        Me.profit_Price_Txt.SelectionLength = 0
-        Me.profit_Price_Txt.SelectionStart = 1
-        Me.profit_Price_Txt.ShortcutsEnabled = True
-        Me.profit_Price_Txt.Size = New System.Drawing.Size(316, 40)
-        Me.profit_Price_Txt.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Material
-        Me.profit_Price_Txt.TabIndex = 139
-        Me.profit_Price_Txt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.profit_Price_Txt.TextMarginBottom = 0
-        Me.profit_Price_Txt.TextMarginLeft = 3
-        Me.profit_Price_Txt.TextMarginTop = 0
-        Me.profit_Price_Txt.TextPlaceholder = "Enter Price"
-        Me.BunifuToolTip1.SetToolTip(Me.profit_Price_Txt, "")
-        Me.BunifuToolTip1.SetToolTipIcon(Me.profit_Price_Txt, Nothing)
-        Me.BunifuToolTip1.SetToolTipTitle(Me.profit_Price_Txt, "")
-        Me.profit_Price_Txt.UseSystemPasswordChar = False
-        Me.profit_Price_Txt.Visible = False
-        Me.profit_Price_Txt.WordWrap = True
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.PanelAnimator.SetDecoration(Me.Label4, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.logoAnimator.SetDecoration(Me.Label4, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.Label4.Font = New System.Drawing.Font("Century Gothic", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(534, 604)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(131, 19)
-        Me.Label4.TabIndex = 138
-        Me.Label4.Text = "Purchase Price"
-        Me.BunifuToolTip1.SetToolTip(Me.Label4, "")
-        Me.BunifuToolTip1.SetToolTipIcon(Me.Label4, Nothing)
-        Me.BunifuToolTip1.SetToolTipTitle(Me.Label4, "")
-        Me.Label4.Visible = False
         '
         'Label20
         '
@@ -2029,7 +2369,7 @@ Partial Class dashboard_Frm
         Me.PanelAnimator.SetDecoration(Me.Label20, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.logoAnimator.SetDecoration(Me.Label20, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.Label20.Font = New System.Drawing.Font("Century Gothic", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label20.Location = New System.Drawing.Point(8, 190)
+        Me.Label20.Location = New System.Drawing.Point(11, 190)
         Me.Label20.Name = "Label20"
         Me.Label20.Size = New System.Drawing.Size(114, 19)
         Me.Label20.TabIndex = 135
@@ -2062,8 +2402,8 @@ Partial Class dashboard_Frm
         BorderEdges1.TopLeft = True
         BorderEdges1.TopRight = True
         Me.Check_Out_Btn.CustomizableEdges = BorderEdges1
-        Me.PanelAnimator.SetDecoration(Me.Check_Out_Btn, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.logoAnimator.SetDecoration(Me.Check_Out_Btn, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.PanelAnimator.SetDecoration(Me.Check_Out_Btn, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.Check_Out_Btn.DialogResult = System.Windows.Forms.DialogResult.None
         Me.Check_Out_Btn.DisabledBorderColor = System.Drawing.Color.FromArgb(CType(CType(191, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(191, Byte), Integer))
         Me.Check_Out_Btn.DisabledFillColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
@@ -2087,7 +2427,7 @@ Partial Class dashboard_Frm
         Me.Check_Out_Btn.IdleIconLeftImage = Nothing
         Me.Check_Out_Btn.IdleIconRightImage = Nothing
         Me.Check_Out_Btn.IndicateFocus = False
-        Me.Check_Out_Btn.Location = New System.Drawing.Point(825, 337)
+        Me.Check_Out_Btn.Location = New System.Drawing.Point(838, 444)
         Me.Check_Out_Btn.Name = "Check_Out_Btn"
         Me.Check_Out_Btn.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(191, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(191, Byte), Integer))
         Me.Check_Out_Btn.OnDisabledState.BorderRadius = 1
@@ -2132,100 +2472,6 @@ Partial Class dashboard_Frm
         Me.BunifuToolTip1.SetToolTipTitle(Me.Check_Out_Btn, "")
         Me.Check_Out_Btn.UseDefaultRadiusAndThickness = True
         '
-        'sell_Qty_Txt
-        '
-        Me.sell_Qty_Txt.AcceptsReturn = False
-        Me.sell_Qty_Txt.AcceptsTab = False
-        Me.sell_Qty_Txt.AnimationSpeed = 200
-        Me.sell_Qty_Txt.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None
-        Me.sell_Qty_Txt.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None
-        Me.sell_Qty_Txt.BackColor = System.Drawing.Color.White
-        Me.sell_Qty_Txt.BackgroundImage = CType(resources.GetObject("sell_Qty_Txt.BackgroundImage"), System.Drawing.Image)
-        Me.sell_Qty_Txt.BorderColorActive = System.Drawing.Color.DodgerBlue
-        Me.sell_Qty_Txt.BorderColorDisabled = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
-        Me.sell_Qty_Txt.BorderColorHover = System.Drawing.Color.FromArgb(CType(CType(105, Byte), Integer), CType(CType(181, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.sell_Qty_Txt.BorderColorIdle = System.Drawing.Color.Silver
-        Me.sell_Qty_Txt.BorderRadius = 1
-        Me.sell_Qty_Txt.BorderThickness = 1
-        Me.sell_Qty_Txt.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal
-        Me.sell_Qty_Txt.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.PanelAnimator.SetDecoration(Me.sell_Qty_Txt, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.logoAnimator.SetDecoration(Me.sell_Qty_Txt, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.sell_Qty_Txt.DefaultFont = New System.Drawing.Font("Segoe UI", 9.25!)
-        Me.sell_Qty_Txt.DefaultText = "0"
-        Me.sell_Qty_Txt.FillColor = System.Drawing.Color.White
-        Me.sell_Qty_Txt.HideSelection = True
-        Me.sell_Qty_Txt.IconLeft = Nothing
-        Me.sell_Qty_Txt.IconLeftCursor = System.Windows.Forms.Cursors.IBeam
-        Me.sell_Qty_Txt.IconPadding = 3
-        Me.sell_Qty_Txt.IconRight = Nothing
-        Me.sell_Qty_Txt.IconRightCursor = System.Windows.Forms.Cursors.IBeam
-        Me.sell_Qty_Txt.Lines = New String() {"0"}
-        Me.sell_Qty_Txt.Location = New System.Drawing.Point(196, 586)
-        Me.sell_Qty_Txt.MaxLength = 32767
-        Me.sell_Qty_Txt.MinimumSize = New System.Drawing.Size(1, 1)
-        Me.sell_Qty_Txt.Modified = False
-        Me.sell_Qty_Txt.Multiline = False
-        Me.sell_Qty_Txt.Name = "sell_Qty_Txt"
-        StateProperties21.BorderColor = System.Drawing.Color.LightSeaGreen
-        StateProperties21.FillColor = System.Drawing.Color.Empty
-        StateProperties21.ForeColor = System.Drawing.Color.Empty
-        StateProperties21.PlaceholderForeColor = System.Drawing.Color.Empty
-        Me.sell_Qty_Txt.OnActiveState = StateProperties21
-        StateProperties22.BorderColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
-        StateProperties22.FillColor = System.Drawing.Color.FromArgb(CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer))
-        StateProperties22.ForeColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
-        StateProperties22.PlaceholderForeColor = System.Drawing.Color.DarkGray
-        Me.sell_Qty_Txt.OnDisabledState = StateProperties22
-        StateProperties23.BorderColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        StateProperties23.FillColor = System.Drawing.Color.Empty
-        StateProperties23.ForeColor = System.Drawing.Color.Empty
-        StateProperties23.PlaceholderForeColor = System.Drawing.Color.Empty
-        Me.sell_Qty_Txt.OnHoverState = StateProperties23
-        StateProperties24.BorderColor = System.Drawing.Color.Silver
-        StateProperties24.FillColor = System.Drawing.Color.White
-        StateProperties24.ForeColor = System.Drawing.Color.Empty
-        StateProperties24.PlaceholderForeColor = System.Drawing.Color.Empty
-        Me.sell_Qty_Txt.OnIdleState = StateProperties24
-        Me.sell_Qty_Txt.Padding = New System.Windows.Forms.Padding(3)
-        Me.sell_Qty_Txt.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.sell_Qty_Txt.PlaceholderForeColor = System.Drawing.Color.Silver
-        Me.sell_Qty_Txt.PlaceholderText = "Enter Quantity"
-        Me.sell_Qty_Txt.ReadOnly = True
-        Me.sell_Qty_Txt.ScrollBars = System.Windows.Forms.ScrollBars.None
-        Me.sell_Qty_Txt.SelectedText = ""
-        Me.sell_Qty_Txt.SelectionLength = 0
-        Me.sell_Qty_Txt.SelectionStart = 1
-        Me.sell_Qty_Txt.ShortcutsEnabled = True
-        Me.sell_Qty_Txt.Size = New System.Drawing.Size(316, 40)
-        Me.sell_Qty_Txt.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Material
-        Me.sell_Qty_Txt.TabIndex = 133
-        Me.sell_Qty_Txt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.sell_Qty_Txt.TextMarginBottom = 0
-        Me.sell_Qty_Txt.TextMarginLeft = 3
-        Me.sell_Qty_Txt.TextMarginTop = 0
-        Me.sell_Qty_Txt.TextPlaceholder = "Enter Quantity"
-        Me.BunifuToolTip1.SetToolTip(Me.sell_Qty_Txt, "")
-        Me.BunifuToolTip1.SetToolTipIcon(Me.sell_Qty_Txt, Nothing)
-        Me.BunifuToolTip1.SetToolTipTitle(Me.sell_Qty_Txt, "")
-        Me.sell_Qty_Txt.UseSystemPasswordChar = False
-        Me.sell_Qty_Txt.WordWrap = True
-        '
-        'total_Quantity_Txt
-        '
-        Me.total_Quantity_Txt.AutoSize = True
-        Me.PanelAnimator.SetDecoration(Me.total_Quantity_Txt, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.logoAnimator.SetDecoration(Me.total_Quantity_Txt, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.total_Quantity_Txt.Font = New System.Drawing.Font("Century Gothic", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.total_Quantity_Txt.Location = New System.Drawing.Point(8, 607)
-        Me.total_Quantity_Txt.Name = "total_Quantity_Txt"
-        Me.total_Quantity_Txt.Size = New System.Drawing.Size(118, 19)
-        Me.total_Quantity_Txt.TabIndex = 132
-        Me.total_Quantity_Txt.Text = "Total Quantity"
-        Me.BunifuToolTip1.SetToolTip(Me.total_Quantity_Txt, "")
-        Me.BunifuToolTip1.SetToolTipIcon(Me.total_Quantity_Txt, Nothing)
-        Me.BunifuToolTip1.SetToolTipTitle(Me.total_Quantity_Txt, "")
-        '
         'product_List_Txt
         '
         Me.product_List_Txt.AcceptsReturn = False
@@ -2255,37 +2501,37 @@ Partial Class dashboard_Frm
         Me.product_List_Txt.IconRight = Nothing
         Me.product_List_Txt.IconRightCursor = System.Windows.Forms.Cursors.IBeam
         Me.product_List_Txt.Lines = New String(-1) {}
-        Me.product_List_Txt.Location = New System.Drawing.Point(537, 152)
+        Me.product_List_Txt.Location = New System.Drawing.Point(476, 143)
         Me.product_List_Txt.MaxLength = 32767
         Me.product_List_Txt.MinimumSize = New System.Drawing.Size(1, 1)
         Me.product_List_Txt.Modified = False
         Me.product_List_Txt.Multiline = True
         Me.product_List_Txt.Name = "product_List_Txt"
-        StateProperties25.BorderColor = System.Drawing.Color.LightSeaGreen
-        StateProperties25.FillColor = System.Drawing.Color.Empty
-        StateProperties25.ForeColor = System.Drawing.Color.Empty
-        StateProperties25.PlaceholderForeColor = System.Drawing.Color.Empty
-        Me.product_List_Txt.OnActiveState = StateProperties25
-        StateProperties26.BorderColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
-        StateProperties26.FillColor = System.Drawing.Color.FromArgb(CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer))
-        StateProperties26.ForeColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
-        StateProperties26.PlaceholderForeColor = System.Drawing.Color.DarkGray
-        Me.product_List_Txt.OnDisabledState = StateProperties26
-        StateProperties27.BorderColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        StateProperties27.FillColor = System.Drawing.Color.Empty
-        StateProperties27.ForeColor = System.Drawing.Color.Empty
-        StateProperties27.PlaceholderForeColor = System.Drawing.Color.Empty
-        Me.product_List_Txt.OnHoverState = StateProperties27
-        StateProperties28.BorderColor = System.Drawing.Color.Silver
-        StateProperties28.FillColor = System.Drawing.Color.White
-        StateProperties28.ForeColor = System.Drawing.Color.Empty
-        StateProperties28.PlaceholderForeColor = System.Drawing.Color.Empty
-        Me.product_List_Txt.OnIdleState = StateProperties28
+        StateProperties29.BorderColor = System.Drawing.Color.LightSeaGreen
+        StateProperties29.FillColor = System.Drawing.Color.Empty
+        StateProperties29.ForeColor = System.Drawing.Color.Empty
+        StateProperties29.PlaceholderForeColor = System.Drawing.Color.Empty
+        Me.product_List_Txt.OnActiveState = StateProperties29
+        StateProperties30.BorderColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
+        StateProperties30.FillColor = System.Drawing.Color.FromArgb(CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer))
+        StateProperties30.ForeColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
+        StateProperties30.PlaceholderForeColor = System.Drawing.Color.DarkGray
+        Me.product_List_Txt.OnDisabledState = StateProperties30
+        StateProperties31.BorderColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        StateProperties31.FillColor = System.Drawing.Color.Empty
+        StateProperties31.ForeColor = System.Drawing.Color.Empty
+        StateProperties31.PlaceholderForeColor = System.Drawing.Color.Empty
+        Me.product_List_Txt.OnHoverState = StateProperties31
+        StateProperties32.BorderColor = System.Drawing.Color.Silver
+        StateProperties32.FillColor = System.Drawing.Color.White
+        StateProperties32.ForeColor = System.Drawing.Color.Empty
+        StateProperties32.PlaceholderForeColor = System.Drawing.Color.Empty
+        Me.product_List_Txt.OnIdleState = StateProperties32
         Me.product_List_Txt.Padding = New System.Windows.Forms.Padding(3)
         Me.product_List_Txt.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.product_List_Txt.PlaceholderForeColor = System.Drawing.Color.Silver
         Me.product_List_Txt.PlaceholderText = "Enter Patient Items"
-        Me.product_List_Txt.ReadOnly = False
+        Me.product_List_Txt.ReadOnly = True
         Me.product_List_Txt.ScrollBars = System.Windows.Forms.ScrollBars.None
         Me.product_List_Txt.SelectedText = ""
         Me.product_List_Txt.SelectionLength = 0
@@ -2340,26 +2586,26 @@ Partial Class dashboard_Frm
         Me.patientName_txt.Modified = False
         Me.patientName_txt.Multiline = False
         Me.patientName_txt.Name = "patientName_txt"
-        StateProperties29.BorderColor = System.Drawing.Color.LightSeaGreen
-        StateProperties29.FillColor = System.Drawing.Color.Empty
-        StateProperties29.ForeColor = System.Drawing.Color.Empty
-        StateProperties29.PlaceholderForeColor = System.Drawing.Color.Empty
-        Me.patientName_txt.OnActiveState = StateProperties29
-        StateProperties30.BorderColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
-        StateProperties30.FillColor = System.Drawing.Color.FromArgb(CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer))
-        StateProperties30.ForeColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
-        StateProperties30.PlaceholderForeColor = System.Drawing.Color.DarkGray
-        Me.patientName_txt.OnDisabledState = StateProperties30
-        StateProperties31.BorderColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        StateProperties31.FillColor = System.Drawing.Color.Empty
-        StateProperties31.ForeColor = System.Drawing.Color.Empty
-        StateProperties31.PlaceholderForeColor = System.Drawing.Color.Empty
-        Me.patientName_txt.OnHoverState = StateProperties31
-        StateProperties32.BorderColor = System.Drawing.Color.Silver
-        StateProperties32.FillColor = System.Drawing.Color.White
-        StateProperties32.ForeColor = System.Drawing.Color.Empty
-        StateProperties32.PlaceholderForeColor = System.Drawing.Color.Empty
-        Me.patientName_txt.OnIdleState = StateProperties32
+        StateProperties33.BorderColor = System.Drawing.Color.LightSeaGreen
+        StateProperties33.FillColor = System.Drawing.Color.Empty
+        StateProperties33.ForeColor = System.Drawing.Color.Empty
+        StateProperties33.PlaceholderForeColor = System.Drawing.Color.Empty
+        Me.patientName_txt.OnActiveState = StateProperties33
+        StateProperties34.BorderColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
+        StateProperties34.FillColor = System.Drawing.Color.FromArgb(CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer))
+        StateProperties34.ForeColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
+        StateProperties34.PlaceholderForeColor = System.Drawing.Color.DarkGray
+        Me.patientName_txt.OnDisabledState = StateProperties34
+        StateProperties35.BorderColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        StateProperties35.FillColor = System.Drawing.Color.Empty
+        StateProperties35.ForeColor = System.Drawing.Color.Empty
+        StateProperties35.PlaceholderForeColor = System.Drawing.Color.Empty
+        Me.patientName_txt.OnHoverState = StateProperties35
+        StateProperties36.BorderColor = System.Drawing.Color.Silver
+        StateProperties36.FillColor = System.Drawing.Color.White
+        StateProperties36.ForeColor = System.Drawing.Color.Empty
+        StateProperties36.PlaceholderForeColor = System.Drawing.Color.Empty
+        Me.patientName_txt.OnIdleState = StateProperties36
         Me.patientName_txt.Padding = New System.Windows.Forms.Padding(3)
         Me.patientName_txt.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.patientName_txt.PlaceholderForeColor = System.Drawing.Color.Silver
@@ -2370,7 +2616,7 @@ Partial Class dashboard_Frm
         Me.patientName_txt.SelectionLength = 0
         Me.patientName_txt.SelectionStart = 0
         Me.patientName_txt.ShortcutsEnabled = True
-        Me.patientName_txt.Size = New System.Drawing.Size(316, 40)
+        Me.patientName_txt.Size = New System.Drawing.Size(248, 40)
         Me.patientName_txt.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Material
         Me.patientName_txt.TabIndex = 130
         Me.patientName_txt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -2390,7 +2636,7 @@ Partial Class dashboard_Frm
         Me.PanelAnimator.SetDecoration(Me.Label18, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.logoAnimator.SetDecoration(Me.Label18, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.Label18.Font = New System.Drawing.Font("Century Gothic", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label18.Location = New System.Drawing.Point(8, 233)
+        Me.Label18.Location = New System.Drawing.Point(11, 233)
         Me.Label18.Name = "Label18"
         Me.Label18.Size = New System.Drawing.Size(119, 19)
         Me.Label18.TabIndex = 129
@@ -2399,31 +2645,15 @@ Partial Class dashboard_Frm
         Me.BunifuToolTip1.SetToolTipIcon(Me.Label18, Nothing)
         Me.BunifuToolTip1.SetToolTipTitle(Me.Label18, "")
         '
-        'Label17
-        '
-        Me.Label17.AutoSize = True
-        Me.PanelAnimator.SetDecoration(Me.Label17, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.logoAnimator.SetDecoration(Me.Label17, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.Label17.Font = New System.Drawing.Font("Century Gothic", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label17.Location = New System.Drawing.Point(8, 665)
-        Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(102, 19)
-        Me.Label17.TabIndex = 127
-        Me.Label17.Text = "Grand Total"
-        Me.BunifuToolTip1.SetToolTip(Me.Label17, "")
-        Me.BunifuToolTip1.SetToolTipIcon(Me.Label17, Nothing)
-        Me.BunifuToolTip1.SetToolTipTitle(Me.Label17, "")
-        '
         'product_Name_txt
         '
         Me.product_Name_txt.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.logoAnimator.SetDecoration(Me.product_Name_txt, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.PanelAnimator.SetDecoration(Me.product_Name_txt, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.product_Name_txt.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.product_Name_txt.FormattingEnabled = True
         Me.product_Name_txt.Location = New System.Drawing.Point(196, 270)
         Me.product_Name_txt.Name = "product_Name_txt"
-        Me.product_Name_txt.Size = New System.Drawing.Size(316, 24)
+        Me.product_Name_txt.Size = New System.Drawing.Size(248, 24)
         Me.product_Name_txt.TabIndex = 126
         Me.BunifuToolTip1.SetToolTip(Me.product_Name_txt, "")
         Me.BunifuToolTip1.SetToolTipIcon(Me.product_Name_txt, Nothing)
@@ -2434,11 +2664,10 @@ Partial Class dashboard_Frm
         Me.packing_txt.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.logoAnimator.SetDecoration(Me.packing_txt, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.PanelAnimator.SetDecoration(Me.packing_txt, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.packing_txt.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.packing_txt.FormattingEnabled = True
         Me.packing_txt.Location = New System.Drawing.Point(196, 312)
         Me.packing_txt.Name = "packing_txt"
-        Me.packing_txt.Size = New System.Drawing.Size(316, 24)
+        Me.packing_txt.Size = New System.Drawing.Size(248, 24)
         Me.packing_txt.TabIndex = 125
         Me.BunifuToolTip1.SetToolTip(Me.packing_txt, "")
         Me.BunifuToolTip1.SetToolTipIcon(Me.packing_txt, Nothing)
@@ -2485,105 +2714,11 @@ Partial Class dashboard_Frm
         Me.datePicker_Sell.Location = New System.Drawing.Point(196, 143)
         Me.datePicker_Sell.MinimumSize = New System.Drawing.Size(4, 32)
         Me.datePicker_Sell.Name = "datePicker_Sell"
-        Me.datePicker_Sell.Size = New System.Drawing.Size(316, 32)
+        Me.datePicker_Sell.Size = New System.Drawing.Size(248, 32)
         Me.datePicker_Sell.TabIndex = 119
         Me.BunifuToolTip1.SetToolTip(Me.datePicker_Sell, "")
         Me.BunifuToolTip1.SetToolTipIcon(Me.datePicker_Sell, Nothing)
         Me.BunifuToolTip1.SetToolTipTitle(Me.datePicker_Sell, "")
-        '
-        'billby_txt
-        '
-        Me.billby_txt.AcceptsReturn = False
-        Me.billby_txt.AcceptsTab = False
-        Me.billby_txt.AnimationSpeed = 200
-        Me.billby_txt.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None
-        Me.billby_txt.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None
-        Me.billby_txt.BackColor = System.Drawing.Color.White
-        Me.billby_txt.BackgroundImage = CType(resources.GetObject("billby_txt.BackgroundImage"), System.Drawing.Image)
-        Me.billby_txt.BorderColorActive = System.Drawing.Color.DodgerBlue
-        Me.billby_txt.BorderColorDisabled = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
-        Me.billby_txt.BorderColorHover = System.Drawing.Color.FromArgb(CType(CType(105, Byte), Integer), CType(CType(181, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.billby_txt.BorderColorIdle = System.Drawing.Color.Silver
-        Me.billby_txt.BorderRadius = 1
-        Me.billby_txt.BorderThickness = 1
-        Me.billby_txt.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal
-        Me.billby_txt.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.PanelAnimator.SetDecoration(Me.billby_txt, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.logoAnimator.SetDecoration(Me.billby_txt, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.billby_txt.DefaultFont = New System.Drawing.Font("Segoe UI", 9.25!)
-        Me.billby_txt.DefaultText = ""
-        Me.billby_txt.FillColor = System.Drawing.Color.White
-        Me.billby_txt.HideSelection = True
-        Me.billby_txt.IconLeft = Nothing
-        Me.billby_txt.IconLeftCursor = System.Windows.Forms.Cursors.IBeam
-        Me.billby_txt.IconPadding = 3
-        Me.billby_txt.IconRight = Nothing
-        Me.billby_txt.IconRightCursor = System.Windows.Forms.Cursors.IBeam
-        Me.billby_txt.Lines = New String(-1) {}
-        Me.billby_txt.Location = New System.Drawing.Point(196, 528)
-        Me.billby_txt.MaxLength = 32767
-        Me.billby_txt.MinimumSize = New System.Drawing.Size(1, 1)
-        Me.billby_txt.Modified = False
-        Me.billby_txt.Multiline = False
-        Me.billby_txt.Name = "billby_txt"
-        StateProperties33.BorderColor = System.Drawing.Color.LightSeaGreen
-        StateProperties33.FillColor = System.Drawing.Color.Empty
-        StateProperties33.ForeColor = System.Drawing.Color.Empty
-        StateProperties33.PlaceholderForeColor = System.Drawing.Color.Empty
-        Me.billby_txt.OnActiveState = StateProperties33
-        StateProperties34.BorderColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
-        StateProperties34.FillColor = System.Drawing.Color.FromArgb(CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer))
-        StateProperties34.ForeColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
-        StateProperties34.PlaceholderForeColor = System.Drawing.Color.DarkGray
-        Me.billby_txt.OnDisabledState = StateProperties34
-        StateProperties35.BorderColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        StateProperties35.FillColor = System.Drawing.Color.Empty
-        StateProperties35.ForeColor = System.Drawing.Color.Empty
-        StateProperties35.PlaceholderForeColor = System.Drawing.Color.Empty
-        Me.billby_txt.OnHoverState = StateProperties35
-        StateProperties36.BorderColor = System.Drawing.Color.Silver
-        StateProperties36.FillColor = System.Drawing.Color.White
-        StateProperties36.ForeColor = System.Drawing.Color.Empty
-        StateProperties36.PlaceholderForeColor = System.Drawing.Color.Empty
-        Me.billby_txt.OnIdleState = StateProperties36
-        Me.billby_txt.Padding = New System.Windows.Forms.Padding(3)
-        Me.billby_txt.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.billby_txt.PlaceholderForeColor = System.Drawing.Color.Silver
-        Me.billby_txt.PlaceholderText = "Enter your Name"
-        Me.billby_txt.ReadOnly = False
-        Me.billby_txt.ScrollBars = System.Windows.Forms.ScrollBars.None
-        Me.billby_txt.SelectedText = ""
-        Me.billby_txt.SelectionLength = 0
-        Me.billby_txt.SelectionStart = 0
-        Me.billby_txt.ShortcutsEnabled = True
-        Me.billby_txt.Size = New System.Drawing.Size(316, 40)
-        Me.billby_txt.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Material
-        Me.billby_txt.TabIndex = 121
-        Me.billby_txt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.billby_txt.TextMarginBottom = 0
-        Me.billby_txt.TextMarginLeft = 3
-        Me.billby_txt.TextMarginTop = 0
-        Me.billby_txt.TextPlaceholder = "Enter your Name"
-        Me.BunifuToolTip1.SetToolTip(Me.billby_txt, "")
-        Me.BunifuToolTip1.SetToolTipIcon(Me.billby_txt, Nothing)
-        Me.BunifuToolTip1.SetToolTipTitle(Me.billby_txt, "")
-        Me.billby_txt.UseSystemPasswordChar = False
-        Me.billby_txt.WordWrap = True
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.PanelAnimator.SetDecoration(Me.Label6, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.logoAnimator.SetDecoration(Me.Label6, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.Label6.Font = New System.Drawing.Font("Century Gothic", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(8, 549)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(56, 19)
-        Me.Label6.TabIndex = 116
-        Me.Label6.Text = "Bill By"
-        Me.BunifuToolTip1.SetToolTip(Me.Label6, "")
-        Me.BunifuToolTip1.SetToolTipIcon(Me.Label6, Nothing)
-        Me.BunifuToolTip1.SetToolTipTitle(Me.Label6, "")
         '
         'Label7
         '
@@ -2591,7 +2726,7 @@ Partial Class dashboard_Frm
         Me.PanelAnimator.SetDecoration(Me.Label7, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.logoAnimator.SetDecoration(Me.Label7, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.Label7.Font = New System.Drawing.Font("Century Gothic", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(8, 143)
+        Me.Label7.Location = New System.Drawing.Point(11, 156)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(47, 19)
         Me.Label7.TabIndex = 123
@@ -2600,20 +2735,20 @@ Partial Class dashboard_Frm
         Me.BunifuToolTip1.SetToolTipIcon(Me.Label7, Nothing)
         Me.BunifuToolTip1.SetToolTipTitle(Me.Label7, "")
         '
-        'Label2
+        'productName_tag_lbl
         '
-        Me.Label2.AutoSize = True
-        Me.PanelAnimator.SetDecoration(Me.Label2, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.logoAnimator.SetDecoration(Me.Label2, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.Label2.Font = New System.Drawing.Font("Century Gothic", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(8, 276)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(127, 19)
-        Me.Label2.TabIndex = 113
-        Me.Label2.Text = "Product Name"
-        Me.BunifuToolTip1.SetToolTip(Me.Label2, "")
-        Me.BunifuToolTip1.SetToolTipIcon(Me.Label2, Nothing)
-        Me.BunifuToolTip1.SetToolTipTitle(Me.Label2, "")
+        Me.productName_tag_lbl.AutoSize = True
+        Me.PanelAnimator.SetDecoration(Me.productName_tag_lbl, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.logoAnimator.SetDecoration(Me.productName_tag_lbl, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.productName_tag_lbl.Font = New System.Drawing.Font("Century Gothic", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.productName_tag_lbl.Location = New System.Drawing.Point(11, 276)
+        Me.productName_tag_lbl.Name = "productName_tag_lbl"
+        Me.productName_tag_lbl.Size = New System.Drawing.Size(132, 19)
+        Me.productName_tag_lbl.TabIndex = 113
+        Me.productName_tag_lbl.Text = "Product Name "
+        Me.BunifuToolTip1.SetToolTip(Me.productName_tag_lbl, "")
+        Me.BunifuToolTip1.SetToolTipIcon(Me.productName_tag_lbl, Nothing)
+        Me.BunifuToolTip1.SetToolTipTitle(Me.productName_tag_lbl, "")
         '
         'Label3
         '
@@ -2621,7 +2756,7 @@ Partial Class dashboard_Frm
         Me.PanelAnimator.SetDecoration(Me.Label3, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.logoAnimator.SetDecoration(Me.Label3, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.Label3.Font = New System.Drawing.Font("Century Gothic", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(8, 312)
+        Me.Label3.Location = New System.Drawing.Point(11, 317)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(76, 19)
         Me.Label3.TabIndex = 114
@@ -3468,8 +3603,8 @@ Partial Class dashboard_Frm
         BorderEdges2.TopLeft = True
         BorderEdges2.TopRight = True
         Me.BunifuButton2.CustomizableEdges = BorderEdges2
-        Me.PanelAnimator.SetDecoration(Me.BunifuButton2, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.logoAnimator.SetDecoration(Me.BunifuButton2, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.PanelAnimator.SetDecoration(Me.BunifuButton2, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.BunifuButton2.DialogResult = System.Windows.Forms.DialogResult.None
         Me.BunifuButton2.DisabledBorderColor = System.Drawing.Color.FromArgb(CType(CType(191, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(191, Byte), Integer))
         Me.BunifuButton2.DisabledFillColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
@@ -3757,8 +3892,8 @@ Partial Class dashboard_Frm
         'RadioButton2
         '
         Me.RadioButton2.AutoSize = True
-        Me.logoAnimator.SetDecoration(Me.RadioButton2, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.PanelAnimator.SetDecoration(Me.RadioButton2, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.logoAnimator.SetDecoration(Me.RadioButton2, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.RadioButton2.Location = New System.Drawing.Point(203, 51)
         Me.RadioButton2.Name = "RadioButton2"
         Me.RadioButton2.Size = New System.Drawing.Size(96, 20)
@@ -3773,8 +3908,8 @@ Partial Class dashboard_Frm
         'RadioButton1
         '
         Me.RadioButton1.AutoSize = True
-        Me.logoAnimator.SetDecoration(Me.RadioButton1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.PanelAnimator.SetDecoration(Me.RadioButton1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.logoAnimator.SetDecoration(Me.RadioButton1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.RadioButton1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.RadioButton1.Location = New System.Drawing.Point(38, 51)
         Me.RadioButton1.Name = "RadioButton1"
@@ -3801,6 +3936,7 @@ Partial Class dashboard_Frm
         DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.check_Stock_Grid.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle7
         Me.check_Stock_Grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.check_Stock_Grid.ContextMenuStrip = Me.ContextMenuStrip1
         Me.PanelAnimator.SetDecoration(Me.check_Stock_Grid, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.logoAnimator.SetDecoration(Me.check_Stock_Grid, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
@@ -3829,7 +3965,7 @@ Partial Class dashboard_Frm
         Me.check_Stock_Grid.TabIndex = 138
         Me.BunifuToolTip1.SetToolTip(Me.check_Stock_Grid, "You Can Delete and Update and see more details of the product")
         Me.BunifuToolTip1.SetToolTipIcon(Me.check_Stock_Grid, Nothing)
-        Me.BunifuToolTip1.SetToolTipTitle(Me.check_Stock_Grid, "Double Click to Manage Product")
+        Me.BunifuToolTip1.SetToolTipTitle(Me.check_Stock_Grid, "Right Click to Manage Stock")
         '
         'ContextMenuStrip1
         '
@@ -3839,12 +3975,14 @@ Partial Class dashboard_Frm
         Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ManageListToolStripMenuItem})
         Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
         Me.ContextMenuStrip1.Size = New System.Drawing.Size(159, 28)
+        Me.ContextMenuStrip1.TabStop = True
         Me.BunifuToolTip1.SetToolTip(Me.ContextMenuStrip1, "")
         Me.BunifuToolTip1.SetToolTipIcon(Me.ContextMenuStrip1, Nothing)
         Me.BunifuToolTip1.SetToolTipTitle(Me.ContextMenuStrip1, "")
         '
         'ManageListToolStripMenuItem
         '
+        Me.ManageListToolStripMenuItem.Enabled = False
         Me.ManageListToolStripMenuItem.Name = "ManageListToolStripMenuItem"
         Me.ManageListToolStripMenuItem.Size = New System.Drawing.Size(158, 24)
         Me.ManageListToolStripMenuItem.Text = "Manage List"
@@ -3933,6 +4071,10 @@ Partial Class dashboard_Frm
         Me.TabPage1.ResumeLayout(False)
         Me.BunifuPanel1.ResumeLayout(False)
         Me.BunifuPanel1.PerformLayout()
+        Me.Panel3.ResumeLayout(False)
+        Me.Panel3.PerformLayout()
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
         Me.TabPage2.ResumeLayout(False)
         Me.BunifuPanel2.ResumeLayout(False)
         Me.BunifuCards4.ResumeLayout(False)
@@ -4025,7 +4167,7 @@ Partial Class dashboard_Frm
     Friend WithEvents patientName_txt As Bunifu.UI.WinForms.BunifuTextBox
     Friend WithEvents product_Name_txt As ComboBox
     Friend WithEvents packing_txt As ComboBox
-    Friend WithEvents Label2 As Label
+    Friend WithEvents productName_tag_lbl As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents welcomemsg As Label
@@ -4047,7 +4189,7 @@ Partial Class dashboard_Frm
     Friend WithEvents stock_get_label As Label
     Friend WithEvents sell_Price_Txt As ComboBox
     Friend WithEvents profit_Price_Txt As Bunifu.UI.WinForms.BunifuTextBox
-    Friend WithEvents Label32 As Label
+    Friend WithEvents sellPrice_tag_lbl As Label
     Friend WithEvents ContextMenuStrip1 As ContextMenuStrip
     Friend WithEvents Id_for_edit_lbl As Label
     Friend WithEvents ManageListToolStripMenuItem As ToolStripMenuItem
@@ -4062,4 +4204,12 @@ Partial Class dashboard_Frm
     Friend WithEvents Label33 As Label
     Friend WithEvents BunifuButton2 As Bunifu.UI.WinForms.BunifuButton.BunifuButton
     Friend WithEvents PrintDocument1 As Printing.PrintDocument
+    Friend WithEvents stockcheck_lbl As Label
+    Friend WithEvents admit_tag_lbl As Label
+    Friend WithEvents service_tag_lbl As Label
+    Friend WithEvents serCharge_tag_lbl As Label
+    Friend WithEvents cause_lbl As Label
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents Panel3 As Panel
+    Friend WithEvents patient_over_all_status_lbl As Label
 End Class

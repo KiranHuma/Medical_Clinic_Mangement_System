@@ -75,7 +75,7 @@ Public Class manage_Inventory_Frm
             con.ConnectionString = cs
             cmd.Connection = con
             con.Open()
-            cmd.CommandText = "UPDATE  stock_tbl  SET  stock_name= '" & product_Name_txt.Text & "', stock_packing= '" & packing_txt.Text & "', stock_quantity = '" & stockqty_txt.Text & "', threshold_value = '" & stockthreshold_txt.Text & "'  where stock_id = '" & Stock_Id.Text & "'"
+            cmd.CommandText = "UPDATE  stock_tbl  SET  stock_name= '" & product_Name_txt.Text & "', stock_packing= '" & packing_txt.Text & "', stock_quantity = '" & stockqty_txt.Text & "', threshold_value = '" & stockthreshold_txt.Text & "',sell_price= '" & stock_sell_price.Text & "'  where stock_id = '" & Stock_Id.Text & "'"
 
             cmd.ExecuteNonQuery()
             welcomemsg.Visible = True
@@ -149,5 +149,17 @@ Public Class manage_Inventory_Frm
 
     Private Sub BunifuButton2_Click(sender As Object, e As EventArgs) Handles BunifuButton2.Click
         FillCombo_packing()
+    End Sub
+
+    Private Sub stockqty_txt_KeyPress(sender As Object, e As KeyPressEventArgs) Handles stockqty_txt.KeyPress
+        If Not Char.IsNumber(e.KeyChar) AndAlso Not Char.IsControl(e.KeyChar) Then e.KeyChar = ""
+    End Sub
+
+    Private Sub stock_sell_price_KeyPress(sender As Object, e As KeyPressEventArgs) Handles stock_sell_price.KeyPress
+        If Not Char.IsNumber(e.KeyChar) AndAlso Not Char.IsControl(e.KeyChar) Then e.KeyChar = ""
+    End Sub
+
+    Private Sub stockthreshold_txt_KeyPress(sender As Object, e As KeyPressEventArgs) Handles stockthreshold_txt.KeyPress
+        If Not Char.IsNumber(e.KeyChar) AndAlso Not Char.IsControl(e.KeyChar) Then e.KeyChar = ""
     End Sub
 End Class

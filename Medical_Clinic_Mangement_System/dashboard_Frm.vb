@@ -5,10 +5,12 @@ Imports System.Data.OleDb
 Imports System.Data.SqlClient
 Imports System.Drawing.Printing
 Imports System.IO
+Imports System.Reflection
 Imports System.Windows.Forms.VisualStyles.VisualStyleElement
 Imports HtmlRenderer
 Imports iTextSharp.text
 Imports iTextSharp.text.pdf
+Imports Org.BouncyCastle.Math.EC
 Imports TheArtOfDev.HtmlRenderer.Core
 Public Class dashboard_Frm
 
@@ -59,12 +61,26 @@ Public Class dashboard_Frm
             Me.Dispose()
         End Try
     End Sub
+    Private Sub insert_with_admit_label()
+        Try
+            con.ConnectionString = cs
+            cmd.Connection = con
+            con.Open()
+            cmd.CommandText = "insert into sell_tbl([sell_date],[patient_Name],[product_list],[patient_Status],[price],[profit_price],[sell_total_quantity],[sell_by])values
+            ('" & Format(datePicker_Sell.Value, "yyyy-MM-dd") & "','" & patientName_txt.Text & "','" & product_List_Txt.Text & "','" & patient_over_all_status_lbl.Text & "','" & grand_Single_Pc.Text & "','" & profit_Grand_Total.Text & "','" & sell_Qty_Txt.Text & "','" & billby_txt.Text & "')"
+            cmd.ExecuteNonQuery()
+            welcomemsg.ForeColor = System.Drawing.Color.Green
+            welcomemsg.Text = "'" & patientName_txt.Text & "' details saved successfully!"
+            con.Close()
+        Catch ex As Exception
+            MsgBox("Data Inserted Failed because " & ex.Message)
+            Me.Dispose()
+        End Try
+    End Sub
     Private Sub BunifuImageButton2_Click(sender As Object, e As EventArgs) Handles BunifuImageButton2.Click
         Me.Close()
     End Sub
-    Private Sub list_products()
-        product_List_Txt.Text &= "Product Name" & ":" & " " & " " & product_Name_txt.Text & "," & " " & " " & "Packing " & ":" & " " & " " & packing_txt.Text & "," & " " & " " & "Quantity " & ":" & " " & " " & qty_txt.Text & "," & " " & " " & "Sell Price" & ":" + " " & " " & single_pc_to.Text & vbNewLine
-    End Sub
+
     Private Sub btnmenu_Click(sender As Object, e As EventArgs) Handles btnmenu.Click
         If (sidemenu.Width = 70) Then
             sidemenu.Visible = False
@@ -90,8 +106,8 @@ Public Class dashboard_Frm
         addInvetory_Frm.ShowDialog()
     End Sub
     Private Sub records_btn_Click(sender As Object, e As EventArgs) Handles usersRecords_Btn.Click
-        user_Records_Frm.Show()
-        Me.Close()
+        user_Records_Frm.ShowDialog()
+
     End Sub
     Private Sub inventory_btn_Click(sender As Object, e As EventArgs)
         Me.Close()
@@ -101,8 +117,8 @@ Public Class dashboard_Frm
         get_total_stock_Data()
     End Sub
     Private Sub BunifuButton1_Click(sender As Object, e As EventArgs) Handles BunifuButton1.Click
-        patients_Frm.Show()
-        Me.Close()
+        BunifuPages1.PageIndex = 3
+        get_Selling_Data()
     End Sub
     Private Sub BunifuButton4_Click(sender As Object, e As EventArgs) Handles clinictodaybtn_dshbrd.Click
         BunifuPages1.PageIndex = 1
@@ -173,30 +189,75 @@ Public Class dashboard_Frm
 
 
     End Sub
-    Private Sub total_Inventory()
-
-
-
+    Private Sub Check_if_stock_exists()
         Using connection As New SqlConnection(cs)
             Try
 
-                Dim command As New SqlCommand("SELECT stock_name,stock_packing,stock_quantity FROM stock_tbl where  stock_name ='" & product_Name_txt.Text & "' AND  stock_packing ='" & packing_txt.Text & "' ", connection)
+                Dim command As New SqlCommand("Select count(1) as stockrecord from stock_tbl where stock_name ='" & product_Name_txt.Text & "' AND  stock_packing ='" & packing_txt.Text & "' AND sell_price='" & sell_Price_Txt.Text & "'", connection)
                 connection.Open()
                 cmd.Parameters.Clear()
                 Dim read As SqlDataReader = command.ExecuteReader()
 
                 Do While read.Read()
-                    stock_get_label.Text = (read("stock_quantity").ToString())
+                    stockcheck_lbl.Text = (read("stockrecord").ToString())
                     ''profit_Price_Txt.Text = (read("original_Single_Price").ToString())
                 Loop
                 read.Close()
 
             Catch ex As Exception
 
-                MessageBox.Show(ex.Message)
+                MessageBox.Show("Check_if_stock_exists", ex.Message)
                 Me.Dispose()
             End Try
         End Using
+
+
+
+    End Sub
+
+    Private Sub total_Inventory()
+        Check_if_stock_exists()
+        If stockcheck_lbl.Text > 0 Then
+            stockcheck_lbl.Visible = False
+            stock_get_label.ForeColor = System.Drawing.Color.Green
+
+            Using connection1 As New SqlConnection(cs)
+                Try
+                    ''SELECT column_name(s) From table_name Where EXISTS(SELECT column_name FROM table_name WHERE condition)
+                    Dim command1 As New SqlCommand("SELECT stock_name,stock_packing,stock_quantity FROM stock_tbl where  stock_name ='" & product_Name_txt.Text & "' AND  stock_packing ='" & packing_txt.Text & "' AND sell_price='" & sell_Price_Txt.Text & "' ", connection1)
+                    connection1.Open()
+                    cmd.Parameters.Clear()
+                    Dim read As SqlDataReader = command1.ExecuteReader()
+
+                    Do While read.Read()
+                        stock_get_label.Text = (read("stock_quantity").ToString())
+                        ''profit_Price_Txt.Text = (read("original_Single_Price").ToString())
+                    Loop
+                    read.Close()
+
+                Catch ex As Exception
+
+                    MessageBox.Show("Total Invenotry error", ex.Message)
+                    Me.Dispose()
+                End Try
+            End Using
+        Else
+            stockcheck_lbl.Visible = True
+            stockcheck_lbl.Text = "Record Not found"
+
+            stock_get_label.Text = 0
+            stock_get_label.ForeColor = System.Drawing.Color.Red
+        End If
+    End Sub
+    Private Sub clear()
+        patient_Status_Txt.Text = ""
+
+        product_Name_txt.Text = ""
+        packing_txt.Text = ""
+        sell_Price_Txt.Text = 0
+        qty_txt.Text = 0
+        single_pc_to.Text = 0
+
 
 
     End Sub
@@ -204,7 +265,7 @@ Public Class dashboard_Frm
         Using connection As New SqlConnection(cs)
             Try
 
-                Dim command As New SqlCommand("SELECT original_Single_Price,in_product_name,packing,in_prod_single_price FROM add_invent_tbl where  in_product_name ='" & product_Name_txt.Text & "' AND  packing ='" & packing_txt.Text & "' AND in_prod_single_price ='" & sell_Price_Txt.Text & "'", connection)
+                Dim command As New SqlCommand("SELECT Top 1 original_Single_Price FROM add_invent_tbl where  in_product_name ='" & product_Name_txt.Text & "' AND  packing ='" & packing_txt.Text & "' AND in_prod_single_price ='" & sell_Price_Txt.Text & "'", connection)
                 connection.Open()
                 cmd.Parameters.Clear()
                 Dim read As SqlDataReader = command.ExecuteReader()
@@ -217,7 +278,7 @@ Public Class dashboard_Frm
 
             Catch ex As Exception
 
-                MessageBox.Show(ex.Message)
+                MessageBox.Show("Original Price Error", ex.Message)
                 Me.Dispose()
             End Try
         End Using
@@ -234,8 +295,10 @@ Public Class dashboard_Frm
                 .DisplayMember = "in_product_name"
                 .ValueMember = "in_product_name"
                 .SelectedIndex = -1
+
                 .AutoCompleteMode = AutoCompleteMode.SuggestAppend
                 .AutoCompleteSource = AutoCompleteSource.ListItems
+                AddHandler packing_txt.SelectedIndexChanged, AddressOf packing_txt_SelectedIndexChanged
             End With
         Catch ex As Exception
             MessageBox.Show("Failed:Retrieving and Populating ProductID " & ex.Message)
@@ -295,7 +358,7 @@ Public Class dashboard_Frm
             con.ConnectionString = cs
             cmd.Connection = con
             con.Open()
-            cmd.CommandText = "UPDATE stock_tbl SET [stock_quantity]= '" & stock_get_label.Text & "'  where [stock_name]='" & product_Name_txt.Text & "' And [stock_packing]='" & packing_txt.Text & "' "
+            cmd.CommandText = "UPDATE stock_tbl SET [stock_quantity]= '" & stock_get_label.Text & "'  where [stock_name]='" & product_Name_txt.Text & "' And [stock_packing]='" & packing_txt.Text & "' And [sell_price]='" & sell_Price_Txt.Text & "'"
             cmd.ExecuteNonQuery()
 
             ''welcomemsg.ForeColor = System.Drawing.Color.DarkGreen
@@ -307,20 +370,134 @@ Public Class dashboard_Frm
             Me.Dispose()
         End Try
     End Sub
+    Private Sub check_out_clear()
+        welcomemsg.Text = ""
+        sell_Qty_Txt.Text = 0
+        grand_Single_Pc.Text = 0
+        patientName_txt.Text = ""
+        profit_Price_Txt.Text = 0
+        profit_Grand_Total.Text = 0
+    End Sub
+
     Private Sub BunifuButton3_Click(sender As Object, e As EventArgs) Handles Check_Out_Btn.Click
-        insert()
-        get_Selling_Data()
+        If product_List_Txt.Text.Contains("Admit Fees") Then
+            patient_over_all_status_lbl.Text = "Admit"
+            insert_with_admit_label()
+            get_Selling_Data()
+            product_List_Txt.Text = String.Empty
+            check_out_clear()
+            clear()
+        Else
+            insert()
+            get_Selling_Data()
+            product_List_Txt.Text = String.Empty
+            check_out_clear()
+            clear()
+        End If
+
+
+
+    End Sub
+    Private Sub list_products()
+
+        If patient_Status_Txt.Text = "Admit" Then
+            product_List_Txt.Text &= "Cause Name" & ":" & " " & " " & product_Name_txt.Text & "," & " " & " " & "Admit Fees" & ":" + " " & " " & sell_Price_Txt.Text & vbNewLine
+        ElseIf patient_Status_Txt.Text = "CheckUp" Then
+            product_List_Txt.Text &= "Service Name" & ":" & " " & " " & product_Name_txt.Text & "," & " " & " " & "Service Charges" & ":" + " " & " " & sell_Price_Txt.Text & vbNewLine
+        ElseIf patient_Status_Txt.Text = "Customer" Then
+            product_List_Txt.Text &= "Product Name" & ":" & " " & " " & product_Name_txt.Text & "," & " " & " " & "Packing " & ":" & " " & " " & packing_txt.Text & "," & " " & " " & "Quantity " & ":" & " " & " " & qty_txt.Text & "," & " " & " " & "Sell Price" & ":" + " " & " " & single_pc_to.Text & vbNewLine
+        End If
+    End Sub
+    Private Sub bill_cal_admit_chk()
+        Dim selladmit_ch1 As Double
+        Dim selladmit_ch2 As Double
+        Dim selladmit_ch3 As Double
+        Dim selladmit_ch4 As Double
+        Dim selladmit_ch5 As Double
+        selladmit_ch1 = Convert.ToDouble(sell_Price_Txt.Text)
+        selladmit_ch2 = Convert.ToDouble(grand_Single_Pc.Text)
+        selladmit_ch3 = selladmit_ch1 + selladmit_ch2
+        grand_Single_Pc.Text = CStr(selladmit_ch3)
+        selladmit_ch4 = Convert.ToDouble(profit_Grand_Total.Text)
+        selladmit_ch5 = selladmit_ch1 + selladmit_ch4
+        profit_Grand_Total.Text = CStr(selladmit_ch5)
+    End Sub
+    Private Sub admit_cust_checkup()
+        If patient_Status_Txt.Text = "Admit" Then
+
+            admit_tag_lbl.Visible = True
+            cause_lbl.Visible = True
+
+            productName_tag_lbl.Visible = False
+            sellPrice_tag_lbl.Visible = False
+            service_tag_lbl.Visible = False
+            serCharge_tag_lbl.Visible = False
+            Panel1.Visible = False
+            packing_txt.Visible = False
+            Label3.Visible = False
+            list_products()
+            stock_get_label.Text = 0
+            bill_cal_admit_chk()
+            stock_get_label.Visible = False
+            packing_txt.Text = ""
+            qty_txt.Text = 0
+            single_pc_to.Text = 0
+
+
+        ElseIf patient_Status_Txt.Text = "CheckUp" Then
+            admit_tag_lbl.Visible = False
+            cause_lbl.Visible = False
+            Panel1.Visible = False
+            productName_tag_lbl.Visible = False
+            sellPrice_tag_lbl.Visible = False
+            service_tag_lbl.Visible = True
+            serCharge_tag_lbl.Visible = True
+            packing_txt.Visible = False
+            Label3.Visible = False
+            list_products()
+            stock_get_label.Text = 0
+            stock_get_label.Visible = False
+            bill_cal_admit_chk()
+            qty_txt.Text = 0
+            single_pc_to.Text = 0
+
+
+        Else
+            If patient_Status_Txt.Text = "Customer" Then
+                admit_tag_lbl.Visible = False
+                cause_lbl.Visible = False
+                Panel1.Visible = True
+                productName_tag_lbl.Visible = True
+                sellPrice_tag_lbl.Visible = True
+                service_tag_lbl.Visible = False
+                serCharge_tag_lbl.Visible = False
+                packing_txt.Visible = True
+                stock_get_label.Visible = True
+                Label3.Visible = True
+
+
+
+
+                total_Inventory()
+
+                If stock_get_label.Text > 0 Or qty_txt.Text < stock_get_label.Text Then
+
+                    original_price()
+                    Grand_Sell_bill()
+                    list_products()
+                    update_stock_after_sell()
+                Else
+                    MessageBox.Show("Out of Stock or less quantity")
+                End If
+            Else
+                MsgBox("Error in Customer Checkup Admit")
+            End If
+        End If
+        '' clear()
     End Sub
     Private Sub grand_Single_Pc_MouseClick(sender As Object, e As MouseEventArgs) Handles grand_Single_Pc.MouseClick
-        total_Inventory()
-        If stock_get_label.Text <= 0 Or qty_txt.Text > stock_get_label.Text Then
-            MessageBox.Show("Out of Stock or less quantity")
-        Else
-            original_price()
-            Grand_Sell_bill()
-            list_products()
-            update_stock_after_sell()
-        End If
+        admit_cust_checkup()
+        '' clear()
     End Sub
     Public Sub get_Selling_Data()
         Try
@@ -338,17 +515,66 @@ Public Class dashboard_Frm
             Me.Dispose()
         End Try
     End Sub
+    Private Sub patient_Status_Txt_SelectedIndexChanged(sender As Object, e As EventArgs) Handles patient_Status_Txt.SelectedIndexChanged
+        If patient_Status_Txt.Text = "Admit" Then
 
+            admit_tag_lbl.Visible = True
+            cause_lbl.Visible = True
 
+            productName_tag_lbl.Visible = False
+            sellPrice_tag_lbl.Visible = False
+            service_tag_lbl.Visible = False
+            serCharge_tag_lbl.Visible = False
+            Panel1.Visible = False
+            packing_txt.Visible = False
+            Label3.Visible = False
+            product_Name_txt.DropDownStyle = ComboBoxStyle.Simple
+            sell_Price_Txt.DropDownStyle = ComboBoxStyle.Simple
+        ElseIf patient_Status_Txt.Text = "CheckUp" Then
+            admit_tag_lbl.Visible = False
+            cause_lbl.Visible = False
+
+            productName_tag_lbl.Visible = False
+            sellPrice_tag_lbl.Visible = False
+            service_tag_lbl.Visible = True
+            serCharge_tag_lbl.Visible = True
+            packing_txt.Visible = False
+            Label3.Visible = False
+            Panel1.Visible = False
+            product_Name_txt.DropDownStyle = ComboBoxStyle.Simple
+            sell_Price_Txt.DropDownStyle = ComboBoxStyle.Simple
+        ElseIf patient_Status_Txt.Text = "Customer" Then
+            admit_tag_lbl.Visible = False
+            cause_lbl.Visible = False
+
+            productName_tag_lbl.Visible = True
+            sellPrice_tag_lbl.Visible = True
+            service_tag_lbl.Visible = False
+            serCharge_tag_lbl.Visible = False
+            packing_txt.Visible = True
+            Label3.Visible = True
+            Panel1.Visible = True
+            product_Name_txt.DropDownStyle = ComboBoxStyle.DropDown
+            sell_Price_Txt.DropDownStyle = ComboBoxStyle.DropDown
+            FillCombo_product_name()
+        End If
+
+    End Sub
     Private Sub product_Name_txt_SelectedIndexChanged(sender As Object, e As EventArgs) Handles product_Name_txt.SelectedIndexChanged
+
+
+
         FillCombo_product_packing()
+
+
+
     End Sub
 
-    Private Sub packing_txt_SelectedIndexChanged(sender As Object, e As EventArgs) Handles packing_txt.SelectedIndexChanged
+    Private Sub packing_txt_SelectedIndexChanged(sender As Object, e As EventArgs)
 
 
         FillCombo_product_price()
-        total_Inventory()
+
 
 
 
@@ -366,7 +592,7 @@ Public Class dashboard_Frm
     End Sub
 
     Private Sub dashboard_Frm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        FillCombo_product_name()
+        ''FillCombo_product_name()
         get_Selling_Data()
         get_total_stock_Data()
         will_out_of_stock()
@@ -490,7 +716,7 @@ Public Class dashboard_Frm
         Try
             Dim con As New SqlConnection(cs)
             con.Open()
-            Dim da As New SqlDataAdapter("Select [stock_id] as [ID],[stock_name] as [Product Name],[stock_packing] as [Packing],[stock_quantity] as [Quantity],[threshold_value] as [Limit] from stock_tbl where stock_quantity <= threshold_value ORDER BY stock_id DESC ", con)
+            Dim da As New SqlDataAdapter("Select [stock_id] as [ID],[stock_name] as [Product Name],[stock_packing] as [Packing],[stock_quantity] as [Quantity],[threshold_value] as [Limit],sell_price as [Sell Price] from stock_tbl where stock_quantity <= threshold_value ORDER BY stock_id DESC ", con)
             Dim dt As New DataTable
             da.Fill(dt)
             source2.DataSource = dt
@@ -506,7 +732,7 @@ Public Class dashboard_Frm
         Try
             Dim con As New SqlConnection(cs)
             con.Open()
-            Dim da As New SqlDataAdapter("Select [stock_id] as [ID],[stock_name] as [Product Name],[stock_packing] as [Packing],[stock_quantity] as [Quantity],[threshold_value] as [Limit] from stock_tbl  ORDER BY stock_id DESC ", con)
+            Dim da As New SqlDataAdapter("Select [stock_id] as [ID],[stock_name] as [Product Name],[stock_packing] as [Packing],[stock_quantity] as [Quantity],[threshold_value] as [Limit],sell_price as [Sell Price] from stock_tbl  ORDER BY stock_id DESC ", con)
             Dim dt As New DataTable
             da.Fill(dt)
             source2.DataSource = dt
@@ -542,7 +768,7 @@ Public Class dashboard_Frm
                 End If
             Catch ex As Exception
 
-                MessageBox.Show(ex.Message)
+                MessageBox.Show("Will out of stock", ex.Message)
                 Me.Dispose()
             End Try
         End Using
@@ -581,6 +807,7 @@ Public Class dashboard_Frm
         manage_Inventory_Frm.packing_txt.Text = check_Stock_Grid.CurrentRow.Cells(2).Value.ToString
         manage_Inventory_Frm.stockqty_txt.Text = check_Stock_Grid.CurrentRow.Cells(3).Value.ToString
         manage_Inventory_Frm.stockthreshold_txt.Text = check_Stock_Grid.CurrentRow.Cells(4).Value.ToString
+        manage_Inventory_Frm.stock_sell_price.Text = check_Stock_Grid.CurrentRow.Cells(5).Value.ToString
     End Sub
 
     Private Sub check_Stock_Grid_CellMouseClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles check_Stock_Grid.CellMouseClick
@@ -589,17 +816,7 @@ Public Class dashboard_Frm
     End Sub
 
     Private Sub check_Stock_Grid_CellMouseDoubleClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles check_Stock_Grid.CellMouseDoubleClick
-        If (String.IsNullOrEmpty(Label33.Text)) Then
-            MsgBox("Select the row from grid")
-        Else
 
-
-            stock_mange()
-            manage_Inventory_Frm.Show()
-            ''inventory_edit()
-            ''clear()
-
-        End If
     End Sub
 
     Private Sub BunifuButton2_Click(sender As Object, e As EventArgs) Handles BunifuButton2.Click
@@ -665,4 +882,55 @@ Public Class dashboard_Frm
     Private Sub PrintDocument1_PrintPage(sender As Object, e As PrintPageEventArgs) Handles PrintDocument1.PrintPage
 
     End Sub
+
+    Private Sub ManageListToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ManageListToolStripMenuItem.Click
+        If (String.IsNullOrEmpty(Label33.Text)) Then
+            MsgBox("Select the row from grid")
+        Else
+
+
+            stock_mange()
+            manage_Inventory_Frm.Show()
+            ''inventory_edit()            ''clear()
+
+        End If
+    End Sub
+
+    Private Sub billby_txt_TextChanged(sender As Object, e As EventArgs) Handles billby_txt.TextChanged
+
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs)
+
+
+
+
+    End Sub
+
+    Private Sub grand_Single_Pc_TextChanged(sender As Object, e As EventArgs) Handles grand_Single_Pc.TextChanged
+
+    End Sub
+
+
+
+
+    Private Sub qty_txt_TextChanged(sender As Object, e As EventArgs) Handles qty_txt.TextChanged
+
+
+        total_Inventory()
+
+    End Sub
+
+    Private Sub patientName_txt_TextChanged(sender As Object, e As EventArgs) Handles patientName_txt.TextChanged
+
+    End Sub
+
+    Private Sub sell_Price_Txt_KeyPress(sender As Object, e As KeyPressEventArgs) Handles sell_Price_Txt.KeyPress
+        If Not Char.IsNumber(e.KeyChar) AndAlso Not Char.IsControl(e.KeyChar) Then e.KeyChar = ""
+    End Sub
+
+    Private Sub qty_txt_KeyPress(sender As Object, e As KeyPressEventArgs) Handles qty_txt.KeyPress
+        If Not Char.IsNumber(e.KeyChar) AndAlso Not Char.IsControl(e.KeyChar) Then e.KeyChar = ""
+    End Sub
+
 End Class

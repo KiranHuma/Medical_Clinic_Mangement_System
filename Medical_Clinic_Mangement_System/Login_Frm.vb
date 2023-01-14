@@ -83,7 +83,7 @@ Public Class Login_Frm
                 addInvetory_Frm.BunifuButton5.Visible = False
                 addInvetory_Frm.in_date.Visible = False
                 addInvetory_Frm.Label7.Visible = False
-
+                dashboard_Frm.ManageListToolStripMenuItem.Enabled = True
 
 
                 dashboard_Frm.Show()

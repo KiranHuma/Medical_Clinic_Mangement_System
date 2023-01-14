@@ -29,6 +29,8 @@ Partial Class check_items_Frm
         Dim StateProperties4 As Bunifu.UI.WinForms.BunifuTextBox.StateProperties = New Bunifu.UI.WinForms.BunifuTextBox.StateProperties()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(check_items_Frm))
         Dim Animation1 As Utilities.BunifuPages.BunifuAnimatorNS.Animation = New Utilities.BunifuPages.BunifuAnimatorNS.Animation()
+        Dim BorderEdges1 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges()
+        Dim BorderEdges2 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges()
         Dim StateProperties5 As Bunifu.UI.WinForms.BunifuTextBox.StateProperties = New Bunifu.UI.WinForms.BunifuTextBox.StateProperties()
         Dim StateProperties6 As Bunifu.UI.WinForms.BunifuTextBox.StateProperties = New Bunifu.UI.WinForms.BunifuTextBox.StateProperties()
         Dim StateProperties7 As Bunifu.UI.WinForms.BunifuTextBox.StateProperties = New Bunifu.UI.WinForms.BunifuTextBox.StateProperties()
@@ -53,8 +55,6 @@ Partial Class check_items_Frm
         Dim StateProperties26 As Bunifu.UI.WinForms.BunifuTextBox.StateProperties = New Bunifu.UI.WinForms.BunifuTextBox.StateProperties()
         Dim StateProperties27 As Bunifu.UI.WinForms.BunifuTextBox.StateProperties = New Bunifu.UI.WinForms.BunifuTextBox.StateProperties()
         Dim StateProperties28 As Bunifu.UI.WinForms.BunifuTextBox.StateProperties = New Bunifu.UI.WinForms.BunifuTextBox.StateProperties()
-        Dim BorderEdges1 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges()
-        Dim BorderEdges2 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges()
         Me.BunifuElipse1 = New Bunifu.Framework.UI.BunifuElipse(Me.components)
         Me.BunifuDragControl1 = New Bunifu.Framework.UI.BunifuDragControl(Me.components)
         Me.header = New System.Windows.Forms.Panel()
@@ -65,6 +65,10 @@ Partial Class check_items_Frm
         Me.BunifuPages1 = New Bunifu.UI.WinForms.BunifuPages()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.welcomemsg = New System.Windows.Forms.Label()
+        Me.delete_Btn = New Bunifu.UI.WinForms.BunifuButton.BunifuButton()
+        Me.update_Btn = New Bunifu.UI.WinForms.BunifuButton.BunifuButton()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.Label29 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.patient_Status_Txt = New System.Windows.Forms.ComboBox()
@@ -81,11 +85,7 @@ Partial Class check_items_Frm
         Me.datePicker_Sell = New Bunifu.UI.WinForms.BunifuDatePicker()
         Me.billby_txt = New Bunifu.UI.WinForms.BunifuTextBox()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.delete_Btn = New Bunifu.UI.WinForms.BunifuButton.BunifuButton()
-        Me.update_Btn = New Bunifu.UI.WinForms.BunifuButton.BunifuButton()
         Me.BunifuToolTip1 = New Bunifu.UI.WinForms.BunifuToolTip(Me.components)
-        Me.welcomemsg = New System.Windows.Forms.Label()
         Me.header.SuspendLayout()
         Me.BunifuPanel1.SuspendLayout()
         Me.BunifuPages1.SuspendLayout()
@@ -354,6 +354,216 @@ Partial Class check_items_Frm
         Me.BunifuToolTip1.SetToolTipIcon(Me.TabPage2, Nothing)
         Me.BunifuToolTip1.SetToolTipTitle(Me.TabPage2, "")
         Me.TabPage2.UseVisualStyleBackColor = True
+        '
+        'welcomemsg
+        '
+        Me.welcomemsg.AutoSize = True
+        Me.welcomemsg.Font = New System.Drawing.Font("Arial Narrow", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.welcomemsg.ForeColor = System.Drawing.Color.White
+        Me.welcomemsg.Location = New System.Drawing.Point(38, 464)
+        Me.welcomemsg.Name = "welcomemsg"
+        Me.welcomemsg.Size = New System.Drawing.Size(0, 22)
+        Me.welcomemsg.TabIndex = 172
+        Me.BunifuToolTip1.SetToolTip(Me.welcomemsg, "")
+        Me.BunifuToolTip1.SetToolTipIcon(Me.welcomemsg, Nothing)
+        Me.BunifuToolTip1.SetToolTipTitle(Me.welcomemsg, "")
+        '
+        'delete_Btn
+        '
+        Me.delete_Btn.AllowAnimations = True
+        Me.delete_Btn.AllowMouseEffects = True
+        Me.delete_Btn.AllowToggling = False
+        Me.delete_Btn.AnimationSpeed = 200
+        Me.delete_Btn.AutoGenerateColors = False
+        Me.delete_Btn.AutoRoundBorders = False
+        Me.delete_Btn.AutoSizeLeftIcon = True
+        Me.delete_Btn.AutoSizeRightIcon = True
+        Me.delete_Btn.BackColor = System.Drawing.Color.Transparent
+        Me.delete_Btn.BackColor1 = System.Drawing.Color.Red
+        Me.delete_Btn.BackgroundImage = CType(resources.GetObject("delete_Btn.BackgroundImage"), System.Drawing.Image)
+        Me.delete_Btn.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid
+        Me.delete_Btn.ButtonText = "Delete"
+        Me.delete_Btn.ButtonTextMarginLeft = 0
+        Me.delete_Btn.ColorContrastOnClick = 45
+        Me.delete_Btn.ColorContrastOnHover = 45
+        Me.delete_Btn.Cursor = System.Windows.Forms.Cursors.Default
+        BorderEdges1.BottomLeft = True
+        BorderEdges1.BottomRight = True
+        BorderEdges1.TopLeft = True
+        BorderEdges1.TopRight = True
+        Me.delete_Btn.CustomizableEdges = BorderEdges1
+        Me.delete_Btn.DialogResult = System.Windows.Forms.DialogResult.None
+        Me.delete_Btn.DisabledBorderColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.delete_Btn.DisabledFillColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.delete_Btn.DisabledForecolor = System.Drawing.Color.FromArgb(CType(CType(168, Byte), Integer), CType(CType(160, Byte), Integer), CType(CType(168, Byte), Integer))
+        Me.delete_Btn.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed
+        Me.delete_Btn.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.delete_Btn.ForeColor = System.Drawing.Color.White
+        Me.delete_Btn.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.delete_Btn.IconLeftCursor = System.Windows.Forms.Cursors.Default
+        Me.delete_Btn.IconLeftPadding = New System.Windows.Forms.Padding(11, 3, 3, 3)
+        Me.delete_Btn.IconMarginLeft = 11
+        Me.delete_Btn.IconPadding = 10
+        Me.delete_Btn.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.delete_Btn.IconRightCursor = System.Windows.Forms.Cursors.Default
+        Me.delete_Btn.IconRightPadding = New System.Windows.Forms.Padding(3, 3, 7, 3)
+        Me.delete_Btn.IconSize = 25
+        Me.delete_Btn.IdleBorderColor = System.Drawing.Color.Red
+        Me.delete_Btn.IdleBorderRadius = 1
+        Me.delete_Btn.IdleBorderThickness = 1
+        Me.delete_Btn.IdleFillColor = System.Drawing.Color.Red
+        Me.delete_Btn.IdleIconLeftImage = Nothing
+        Me.delete_Btn.IdleIconRightImage = Nothing
+        Me.delete_Btn.IndicateFocus = False
+        Me.delete_Btn.Location = New System.Drawing.Point(440, 477)
+        Me.delete_Btn.Name = "delete_Btn"
+        Me.delete_Btn.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.delete_Btn.OnDisabledState.BorderRadius = 1
+        Me.delete_Btn.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid
+        Me.delete_Btn.OnDisabledState.BorderThickness = 1
+        Me.delete_Btn.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.delete_Btn.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(168, Byte), Integer), CType(CType(160, Byte), Integer), CType(CType(168, Byte), Integer))
+        Me.delete_Btn.OnDisabledState.IconLeftImage = Nothing
+        Me.delete_Btn.OnDisabledState.IconRightImage = Nothing
+        Me.delete_Btn.onHoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.delete_Btn.onHoverState.BorderRadius = 1
+        Me.delete_Btn.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid
+        Me.delete_Btn.onHoverState.BorderThickness = 1
+        Me.delete_Btn.onHoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.delete_Btn.onHoverState.ForeColor = System.Drawing.Color.White
+        Me.delete_Btn.onHoverState.IconLeftImage = Nothing
+        Me.delete_Btn.onHoverState.IconRightImage = Nothing
+        Me.delete_Btn.OnIdleState.BorderColor = System.Drawing.Color.Red
+        Me.delete_Btn.OnIdleState.BorderRadius = 1
+        Me.delete_Btn.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid
+        Me.delete_Btn.OnIdleState.BorderThickness = 1
+        Me.delete_Btn.OnIdleState.FillColor = System.Drawing.Color.Red
+        Me.delete_Btn.OnIdleState.ForeColor = System.Drawing.Color.White
+        Me.delete_Btn.OnIdleState.IconLeftImage = Nothing
+        Me.delete_Btn.OnIdleState.IconRightImage = Nothing
+        Me.delete_Btn.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.delete_Btn.OnPressedState.BorderRadius = 1
+        Me.delete_Btn.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid
+        Me.delete_Btn.OnPressedState.BorderThickness = 1
+        Me.delete_Btn.OnPressedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.delete_Btn.OnPressedState.ForeColor = System.Drawing.Color.White
+        Me.delete_Btn.OnPressedState.IconLeftImage = Nothing
+        Me.delete_Btn.OnPressedState.IconRightImage = Nothing
+        Me.delete_Btn.Size = New System.Drawing.Size(118, 39)
+        Me.delete_Btn.TabIndex = 171
+        Me.delete_Btn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.delete_Btn.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center
+        Me.delete_Btn.TextMarginLeft = 0
+        Me.delete_Btn.TextPadding = New System.Windows.Forms.Padding(0)
+        Me.BunifuToolTip1.SetToolTip(Me.delete_Btn, "")
+        Me.BunifuToolTip1.SetToolTipIcon(Me.delete_Btn, Nothing)
+        Me.BunifuToolTip1.SetToolTipTitle(Me.delete_Btn, "")
+        Me.delete_Btn.UseDefaultRadiusAndThickness = True
+        '
+        'update_Btn
+        '
+        Me.update_Btn.AllowAnimations = True
+        Me.update_Btn.AllowMouseEffects = True
+        Me.update_Btn.AllowToggling = False
+        Me.update_Btn.AnimationSpeed = 200
+        Me.update_Btn.AutoGenerateColors = False
+        Me.update_Btn.AutoRoundBorders = False
+        Me.update_Btn.AutoSizeLeftIcon = True
+        Me.update_Btn.AutoSizeRightIcon = True
+        Me.update_Btn.BackColor = System.Drawing.Color.Transparent
+        Me.update_Btn.BackColor1 = System.Drawing.Color.PaleVioletRed
+        Me.update_Btn.BackgroundImage = CType(resources.GetObject("update_Btn.BackgroundImage"), System.Drawing.Image)
+        Me.update_Btn.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid
+        Me.update_Btn.ButtonText = "Update"
+        Me.update_Btn.ButtonTextMarginLeft = 0
+        Me.update_Btn.ColorContrastOnClick = 45
+        Me.update_Btn.ColorContrastOnHover = 45
+        Me.update_Btn.Cursor = System.Windows.Forms.Cursors.Default
+        BorderEdges2.BottomLeft = True
+        BorderEdges2.BottomRight = True
+        BorderEdges2.TopLeft = True
+        BorderEdges2.TopRight = True
+        Me.update_Btn.CustomizableEdges = BorderEdges2
+        Me.update_Btn.DialogResult = System.Windows.Forms.DialogResult.None
+        Me.update_Btn.DisabledBorderColor = System.Drawing.Color.PaleVioletRed
+        Me.update_Btn.DisabledFillColor = System.Drawing.Color.PaleVioletRed
+        Me.update_Btn.DisabledForecolor = System.Drawing.Color.FromArgb(CType(CType(168, Byte), Integer), CType(CType(160, Byte), Integer), CType(CType(168, Byte), Integer))
+        Me.update_Btn.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed
+        Me.update_Btn.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.update_Btn.ForeColor = System.Drawing.Color.White
+        Me.update_Btn.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.update_Btn.IconLeftCursor = System.Windows.Forms.Cursors.Default
+        Me.update_Btn.IconLeftPadding = New System.Windows.Forms.Padding(11, 3, 3, 3)
+        Me.update_Btn.IconMarginLeft = 11
+        Me.update_Btn.IconPadding = 10
+        Me.update_Btn.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.update_Btn.IconRightCursor = System.Windows.Forms.Cursors.Default
+        Me.update_Btn.IconRightPadding = New System.Windows.Forms.Padding(3, 3, 7, 3)
+        Me.update_Btn.IconSize = 25
+        Me.update_Btn.IdleBorderColor = System.Drawing.Color.PaleVioletRed
+        Me.update_Btn.IdleBorderRadius = 1
+        Me.update_Btn.IdleBorderThickness = 1
+        Me.update_Btn.IdleFillColor = System.Drawing.Color.PaleVioletRed
+        Me.update_Btn.IdleIconLeftImage = Nothing
+        Me.update_Btn.IdleIconRightImage = Nothing
+        Me.update_Btn.IndicateFocus = False
+        Me.update_Btn.Location = New System.Drawing.Point(564, 477)
+        Me.update_Btn.Name = "update_Btn"
+        Me.update_Btn.OnDisabledState.BorderColor = System.Drawing.Color.PaleVioletRed
+        Me.update_Btn.OnDisabledState.BorderRadius = 1
+        Me.update_Btn.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid
+        Me.update_Btn.OnDisabledState.BorderThickness = 1
+        Me.update_Btn.OnDisabledState.FillColor = System.Drawing.Color.PaleVioletRed
+        Me.update_Btn.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(168, Byte), Integer), CType(CType(160, Byte), Integer), CType(CType(168, Byte), Integer))
+        Me.update_Btn.OnDisabledState.IconLeftImage = Nothing
+        Me.update_Btn.OnDisabledState.IconRightImage = Nothing
+        Me.update_Btn.onHoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.update_Btn.onHoverState.BorderRadius = 1
+        Me.update_Btn.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid
+        Me.update_Btn.onHoverState.BorderThickness = 1
+        Me.update_Btn.onHoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.update_Btn.onHoverState.ForeColor = System.Drawing.Color.White
+        Me.update_Btn.onHoverState.IconLeftImage = Nothing
+        Me.update_Btn.onHoverState.IconRightImage = Nothing
+        Me.update_Btn.OnIdleState.BorderColor = System.Drawing.Color.PaleVioletRed
+        Me.update_Btn.OnIdleState.BorderRadius = 1
+        Me.update_Btn.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid
+        Me.update_Btn.OnIdleState.BorderThickness = 1
+        Me.update_Btn.OnIdleState.FillColor = System.Drawing.Color.PaleVioletRed
+        Me.update_Btn.OnIdleState.ForeColor = System.Drawing.Color.White
+        Me.update_Btn.OnIdleState.IconLeftImage = Nothing
+        Me.update_Btn.OnIdleState.IconRightImage = Nothing
+        Me.update_Btn.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.update_Btn.OnPressedState.BorderRadius = 1
+        Me.update_Btn.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid
+        Me.update_Btn.OnPressedState.BorderThickness = 1
+        Me.update_Btn.OnPressedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.update_Btn.OnPressedState.ForeColor = System.Drawing.Color.White
+        Me.update_Btn.OnPressedState.IconLeftImage = Nothing
+        Me.update_Btn.OnPressedState.IconRightImage = Nothing
+        Me.update_Btn.Size = New System.Drawing.Size(119, 39)
+        Me.update_Btn.TabIndex = 170
+        Me.update_Btn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.update_Btn.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center
+        Me.update_Btn.TextMarginLeft = 0
+        Me.update_Btn.TextPadding = New System.Windows.Forms.Padding(0)
+        Me.BunifuToolTip1.SetToolTip(Me.update_Btn, "")
+        Me.BunifuToolTip1.SetToolTipIcon(Me.update_Btn, Nothing)
+        Me.BunifuToolTip1.SetToolTipTitle(Me.update_Btn, "")
+        Me.update_Btn.UseDefaultRadiusAndThickness = True
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Century Gothic", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(58, 42)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(20, 16)
+        Me.Label2.TabIndex = 168
+        Me.Label2.Text = "ID"
+        Me.BunifuToolTip1.SetToolTip(Me.Label2, "")
+        Me.BunifuToolTip1.SetToolTipIcon(Me.Label2, Nothing)
+        Me.BunifuToolTip1.SetToolTipTitle(Me.Label2, "")
         '
         'Label29
         '
@@ -962,203 +1172,6 @@ Partial Class check_items_Frm
         Me.BunifuToolTip1.SetToolTipIcon(Me.Label7, Nothing)
         Me.BunifuToolTip1.SetToolTipTitle(Me.Label7, "")
         '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Century Gothic", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(58, 42)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(20, 16)
-        Me.Label2.TabIndex = 168
-        Me.Label2.Text = "ID"
-        Me.BunifuToolTip1.SetToolTip(Me.Label2, "")
-        Me.BunifuToolTip1.SetToolTipIcon(Me.Label2, Nothing)
-        Me.BunifuToolTip1.SetToolTipTitle(Me.Label2, "")
-        '
-        'delete_Btn
-        '
-        Me.delete_Btn.AllowAnimations = True
-        Me.delete_Btn.AllowMouseEffects = True
-        Me.delete_Btn.AllowToggling = False
-        Me.delete_Btn.AnimationSpeed = 200
-        Me.delete_Btn.AutoGenerateColors = False
-        Me.delete_Btn.AutoRoundBorders = False
-        Me.delete_Btn.AutoSizeLeftIcon = True
-        Me.delete_Btn.AutoSizeRightIcon = True
-        Me.delete_Btn.BackColor = System.Drawing.Color.Transparent
-        Me.delete_Btn.BackColor1 = System.Drawing.Color.Red
-        Me.delete_Btn.BackgroundImage = CType(resources.GetObject("delete_Btn.BackgroundImage"), System.Drawing.Image)
-        Me.delete_Btn.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid
-        Me.delete_Btn.ButtonText = "Delete"
-        Me.delete_Btn.ButtonTextMarginLeft = 0
-        Me.delete_Btn.ColorContrastOnClick = 45
-        Me.delete_Btn.ColorContrastOnHover = 45
-        Me.delete_Btn.Cursor = System.Windows.Forms.Cursors.Default
-        BorderEdges1.BottomLeft = True
-        BorderEdges1.BottomRight = True
-        BorderEdges1.TopLeft = True
-        BorderEdges1.TopRight = True
-        Me.delete_Btn.CustomizableEdges = BorderEdges1
-        Me.delete_Btn.DialogResult = System.Windows.Forms.DialogResult.None
-        Me.delete_Btn.DisabledBorderColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.delete_Btn.DisabledFillColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
-        Me.delete_Btn.DisabledForecolor = System.Drawing.Color.FromArgb(CType(CType(168, Byte), Integer), CType(CType(160, Byte), Integer), CType(CType(168, Byte), Integer))
-        Me.delete_Btn.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed
-        Me.delete_Btn.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.delete_Btn.ForeColor = System.Drawing.Color.White
-        Me.delete_Btn.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.delete_Btn.IconLeftCursor = System.Windows.Forms.Cursors.Default
-        Me.delete_Btn.IconLeftPadding = New System.Windows.Forms.Padding(11, 3, 3, 3)
-        Me.delete_Btn.IconMarginLeft = 11
-        Me.delete_Btn.IconPadding = 10
-        Me.delete_Btn.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.delete_Btn.IconRightCursor = System.Windows.Forms.Cursors.Default
-        Me.delete_Btn.IconRightPadding = New System.Windows.Forms.Padding(3, 3, 7, 3)
-        Me.delete_Btn.IconSize = 25
-        Me.delete_Btn.IdleBorderColor = System.Drawing.Color.Red
-        Me.delete_Btn.IdleBorderRadius = 1
-        Me.delete_Btn.IdleBorderThickness = 1
-        Me.delete_Btn.IdleFillColor = System.Drawing.Color.Red
-        Me.delete_Btn.IdleIconLeftImage = Nothing
-        Me.delete_Btn.IdleIconRightImage = Nothing
-        Me.delete_Btn.IndicateFocus = False
-        Me.delete_Btn.Location = New System.Drawing.Point(440, 477)
-        Me.delete_Btn.Name = "delete_Btn"
-        Me.delete_Btn.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.delete_Btn.OnDisabledState.BorderRadius = 1
-        Me.delete_Btn.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid
-        Me.delete_Btn.OnDisabledState.BorderThickness = 1
-        Me.delete_Btn.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
-        Me.delete_Btn.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(168, Byte), Integer), CType(CType(160, Byte), Integer), CType(CType(168, Byte), Integer))
-        Me.delete_Btn.OnDisabledState.IconLeftImage = Nothing
-        Me.delete_Btn.OnDisabledState.IconRightImage = Nothing
-        Me.delete_Btn.onHoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.delete_Btn.onHoverState.BorderRadius = 1
-        Me.delete_Btn.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid
-        Me.delete_Btn.onHoverState.BorderThickness = 1
-        Me.delete_Btn.onHoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.delete_Btn.onHoverState.ForeColor = System.Drawing.Color.White
-        Me.delete_Btn.onHoverState.IconLeftImage = Nothing
-        Me.delete_Btn.onHoverState.IconRightImage = Nothing
-        Me.delete_Btn.OnIdleState.BorderColor = System.Drawing.Color.Red
-        Me.delete_Btn.OnIdleState.BorderRadius = 1
-        Me.delete_Btn.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid
-        Me.delete_Btn.OnIdleState.BorderThickness = 1
-        Me.delete_Btn.OnIdleState.FillColor = System.Drawing.Color.Red
-        Me.delete_Btn.OnIdleState.ForeColor = System.Drawing.Color.White
-        Me.delete_Btn.OnIdleState.IconLeftImage = Nothing
-        Me.delete_Btn.OnIdleState.IconRightImage = Nothing
-        Me.delete_Btn.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.delete_Btn.OnPressedState.BorderRadius = 1
-        Me.delete_Btn.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid
-        Me.delete_Btn.OnPressedState.BorderThickness = 1
-        Me.delete_Btn.OnPressedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.delete_Btn.OnPressedState.ForeColor = System.Drawing.Color.White
-        Me.delete_Btn.OnPressedState.IconLeftImage = Nothing
-        Me.delete_Btn.OnPressedState.IconRightImage = Nothing
-        Me.delete_Btn.Size = New System.Drawing.Size(118, 39)
-        Me.delete_Btn.TabIndex = 171
-        Me.delete_Btn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.delete_Btn.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center
-        Me.delete_Btn.TextMarginLeft = 0
-        Me.delete_Btn.TextPadding = New System.Windows.Forms.Padding(0)
-        Me.BunifuToolTip1.SetToolTip(Me.delete_Btn, "")
-        Me.BunifuToolTip1.SetToolTipIcon(Me.delete_Btn, Nothing)
-        Me.BunifuToolTip1.SetToolTipTitle(Me.delete_Btn, "")
-        Me.delete_Btn.UseDefaultRadiusAndThickness = True
-        '
-        'update_Btn
-        '
-        Me.update_Btn.AllowAnimations = True
-        Me.update_Btn.AllowMouseEffects = True
-        Me.update_Btn.AllowToggling = False
-        Me.update_Btn.AnimationSpeed = 200
-        Me.update_Btn.AutoGenerateColors = False
-        Me.update_Btn.AutoRoundBorders = False
-        Me.update_Btn.AutoSizeLeftIcon = True
-        Me.update_Btn.AutoSizeRightIcon = True
-        Me.update_Btn.BackColor = System.Drawing.Color.Transparent
-        Me.update_Btn.BackColor1 = System.Drawing.Color.PaleVioletRed
-        Me.update_Btn.BackgroundImage = CType(resources.GetObject("update_Btn.BackgroundImage"), System.Drawing.Image)
-        Me.update_Btn.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid
-        Me.update_Btn.ButtonText = "Update"
-        Me.update_Btn.ButtonTextMarginLeft = 0
-        Me.update_Btn.ColorContrastOnClick = 45
-        Me.update_Btn.ColorContrastOnHover = 45
-        Me.update_Btn.Cursor = System.Windows.Forms.Cursors.Default
-        BorderEdges2.BottomLeft = True
-        BorderEdges2.BottomRight = True
-        BorderEdges2.TopLeft = True
-        BorderEdges2.TopRight = True
-        Me.update_Btn.CustomizableEdges = BorderEdges2
-        Me.update_Btn.DialogResult = System.Windows.Forms.DialogResult.None
-        Me.update_Btn.DisabledBorderColor = System.Drawing.Color.PaleVioletRed
-        Me.update_Btn.DisabledFillColor = System.Drawing.Color.PaleVioletRed
-        Me.update_Btn.DisabledForecolor = System.Drawing.Color.FromArgb(CType(CType(168, Byte), Integer), CType(CType(160, Byte), Integer), CType(CType(168, Byte), Integer))
-        Me.update_Btn.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed
-        Me.update_Btn.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.update_Btn.ForeColor = System.Drawing.Color.White
-        Me.update_Btn.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.update_Btn.IconLeftCursor = System.Windows.Forms.Cursors.Default
-        Me.update_Btn.IconLeftPadding = New System.Windows.Forms.Padding(11, 3, 3, 3)
-        Me.update_Btn.IconMarginLeft = 11
-        Me.update_Btn.IconPadding = 10
-        Me.update_Btn.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.update_Btn.IconRightCursor = System.Windows.Forms.Cursors.Default
-        Me.update_Btn.IconRightPadding = New System.Windows.Forms.Padding(3, 3, 7, 3)
-        Me.update_Btn.IconSize = 25
-        Me.update_Btn.IdleBorderColor = System.Drawing.Color.PaleVioletRed
-        Me.update_Btn.IdleBorderRadius = 1
-        Me.update_Btn.IdleBorderThickness = 1
-        Me.update_Btn.IdleFillColor = System.Drawing.Color.PaleVioletRed
-        Me.update_Btn.IdleIconLeftImage = Nothing
-        Me.update_Btn.IdleIconRightImage = Nothing
-        Me.update_Btn.IndicateFocus = False
-        Me.update_Btn.Location = New System.Drawing.Point(564, 477)
-        Me.update_Btn.Name = "update_Btn"
-        Me.update_Btn.OnDisabledState.BorderColor = System.Drawing.Color.PaleVioletRed
-        Me.update_Btn.OnDisabledState.BorderRadius = 1
-        Me.update_Btn.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid
-        Me.update_Btn.OnDisabledState.BorderThickness = 1
-        Me.update_Btn.OnDisabledState.FillColor = System.Drawing.Color.PaleVioletRed
-        Me.update_Btn.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(168, Byte), Integer), CType(CType(160, Byte), Integer), CType(CType(168, Byte), Integer))
-        Me.update_Btn.OnDisabledState.IconLeftImage = Nothing
-        Me.update_Btn.OnDisabledState.IconRightImage = Nothing
-        Me.update_Btn.onHoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.update_Btn.onHoverState.BorderRadius = 1
-        Me.update_Btn.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid
-        Me.update_Btn.onHoverState.BorderThickness = 1
-        Me.update_Btn.onHoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.update_Btn.onHoverState.ForeColor = System.Drawing.Color.White
-        Me.update_Btn.onHoverState.IconLeftImage = Nothing
-        Me.update_Btn.onHoverState.IconRightImage = Nothing
-        Me.update_Btn.OnIdleState.BorderColor = System.Drawing.Color.PaleVioletRed
-        Me.update_Btn.OnIdleState.BorderRadius = 1
-        Me.update_Btn.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid
-        Me.update_Btn.OnIdleState.BorderThickness = 1
-        Me.update_Btn.OnIdleState.FillColor = System.Drawing.Color.PaleVioletRed
-        Me.update_Btn.OnIdleState.ForeColor = System.Drawing.Color.White
-        Me.update_Btn.OnIdleState.IconLeftImage = Nothing
-        Me.update_Btn.OnIdleState.IconRightImage = Nothing
-        Me.update_Btn.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.update_Btn.OnPressedState.BorderRadius = 1
-        Me.update_Btn.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid
-        Me.update_Btn.OnPressedState.BorderThickness = 1
-        Me.update_Btn.OnPressedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.update_Btn.OnPressedState.ForeColor = System.Drawing.Color.White
-        Me.update_Btn.OnPressedState.IconLeftImage = Nothing
-        Me.update_Btn.OnPressedState.IconRightImage = Nothing
-        Me.update_Btn.Size = New System.Drawing.Size(119, 39)
-        Me.update_Btn.TabIndex = 170
-        Me.update_Btn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.update_Btn.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center
-        Me.update_Btn.TextMarginLeft = 0
-        Me.update_Btn.TextPadding = New System.Windows.Forms.Padding(0)
-        Me.BunifuToolTip1.SetToolTip(Me.update_Btn, "")
-        Me.BunifuToolTip1.SetToolTipIcon(Me.update_Btn, Nothing)
-        Me.BunifuToolTip1.SetToolTipTitle(Me.update_Btn, "")
-        Me.update_Btn.UseDefaultRadiusAndThickness = True
-        '
         'BunifuToolTip1
         '
         Me.BunifuToolTip1.Active = True
@@ -1193,19 +1206,6 @@ Partial Class check_items_Frm
         Me.BunifuToolTip1.TitleForeColor = System.Drawing.Color.Black
         Me.BunifuToolTip1.ToolTipPosition = New System.Drawing.Point(0, 0)
         Me.BunifuToolTip1.ToolTipTitle = ""
-        '
-        'welcomemsg
-        '
-        Me.welcomemsg.AutoSize = True
-        Me.welcomemsg.Font = New System.Drawing.Font("Arial Narrow", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.welcomemsg.ForeColor = System.Drawing.Color.White
-        Me.welcomemsg.Location = New System.Drawing.Point(38, 464)
-        Me.welcomemsg.Name = "welcomemsg"
-        Me.welcomemsg.Size = New System.Drawing.Size(0, 22)
-        Me.welcomemsg.TabIndex = 172
-        Me.BunifuToolTip1.SetToolTip(Me.welcomemsg, "")
-        Me.BunifuToolTip1.SetToolTipIcon(Me.welcomemsg, Nothing)
-        Me.BunifuToolTip1.SetToolTipTitle(Me.welcomemsg, "")
         '
         'check_items_Frm
         '
