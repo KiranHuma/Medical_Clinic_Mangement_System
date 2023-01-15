@@ -57,6 +57,16 @@ Represents the strongly named DataTable class.
 Represents the strongly named DataTable class.
 </summary>
 </member>
+<member name="T:Medical_Clinic_Mangement_System.mainClinicDbDataSet.sell_tblDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Medical_Clinic_Mangement_System.mainClinicDbDataSet.stock_tblDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
 <member name="T:Medical_Clinic_Mangement_System.mainClinicDbDataSet.add_invent_tblRow">
 <summary>
 Represents strongly named DataRow class.
@@ -68,6 +78,16 @@ Represents strongly named DataRow class.
 </summary>
 </member>
 <member name="T:Medical_Clinic_Mangement_System.mainClinicDbDataSet.UsersRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Medical_Clinic_Mangement_System.mainClinicDbDataSet.sell_tblRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Medical_Clinic_Mangement_System.mainClinicDbDataSet.stock_tblRow">
 <summary>
 Represents strongly named DataRow class.
 </summary>
@@ -87,59 +107,14 @@ Row event argument class
 Row event argument class
 </summary>
 </member>
-<member name="T:Medical_Clinic_Mangement_System.mainClinicDbDataSetTableAdapters.add_invent_tblTableAdapter">
+<member name="T:Medical_Clinic_Mangement_System.mainClinicDbDataSet.sell_tblRowChangeEvent">
 <summary>
-Represents the connection and commands used to retrieve and save data.
+Row event argument class
 </summary>
 </member>
-<member name="T:Medical_Clinic_Mangement_System.mainClinicDbDataSetTableAdapters.admin_tbTableAdapter">
+<member name="T:Medical_Clinic_Mangement_System.mainClinicDbDataSet.stock_tblRowChangeEvent">
 <summary>
-Represents the connection and commands used to retrieve and save data.
-</summary>
-</member>
-<member name="T:Medical_Clinic_Mangement_System.mainClinicDbDataSetTableAdapters.UsersTableAdapter">
-<summary>
-Represents the connection and commands used to retrieve and save data.
-</summary>
-</member>
-<member name="T:Medical_Clinic_Mangement_System.mainClinicDbDataSetTableAdapters.TableAdapterManager">
-<summary>
-TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
-</summary>
-</member>
-<member name="M:Medical_Clinic_Mangement_System.mainClinicDbDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(Medical_Clinic_Mangement_System.mainClinicDbDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
-<summary>
-Update rows in top-down order.
-</summary>
-</member>
-<member name="M:Medical_Clinic_Mangement_System.mainClinicDbDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(Medical_Clinic_Mangement_System.mainClinicDbDataSet,System.Collections.Generic.List{System.Data.DataRow})">
-<summary>
-Insert rows in top-down order.
-</summary>
-</member>
-<member name="M:Medical_Clinic_Mangement_System.mainClinicDbDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(Medical_Clinic_Mangement_System.mainClinicDbDataSet,System.Collections.Generic.List{System.Data.DataRow})">
-<summary>
-Delete rows in bottom-up order.
-</summary>
-</member>
-<member name="M:Medical_Clinic_Mangement_System.mainClinicDbDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
-<summary>
-Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
-</summary>
-</member>
-<member name="M:Medical_Clinic_Mangement_System.mainClinicDbDataSetTableAdapters.TableAdapterManager.UpdateAll(Medical_Clinic_Mangement_System.mainClinicDbDataSet)">
-<summary>
-Update all changes to the dataset.
-</summary>
-</member>
-<member name="T:Medical_Clinic_Mangement_System.mainClinicDbDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
-<summary>
-Update Order Option
-</summary>
-</member>
-<member name="T:Medical_Clinic_Mangement_System.mainClinicDbDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
-<summary>
-Used to sort self-referenced table's rows
+Row event argument class
 </summary>
 </member>
 </members>

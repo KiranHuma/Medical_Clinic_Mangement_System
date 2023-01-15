@@ -8,8 +8,8 @@ Imports System.IO
 Imports System.Reflection
 Imports System.Windows.Forms.VisualStyles.VisualStyleElement
 Imports HtmlRenderer
-Imports iTextSharp.text
-Imports iTextSharp.text.pdf
+Imports Microsoft.Reporting.WinForms
+
 Imports Org.BouncyCastle.Math.EC
 Imports TheArtOfDev.HtmlRenderer.Core
 Public Class dashboard_Frm
@@ -481,11 +481,15 @@ Public Class dashboard_Frm
                 total_Inventory()
 
                 If stock_get_label.Text > 0 Or qty_txt.Text < stock_get_label.Text Then
+                    If qty_txt.Text = 0 Or qty_txt.Text = "" Then
+                        MsgBox("Enter Quantity")
+                    Else
+                        original_price()
+                        Grand_Sell_bill()
+                        list_products()
+                        update_stock_after_sell()
+                    End If
 
-                    original_price()
-                    Grand_Sell_bill()
-                    list_products()
-                    update_stock_after_sell()
                 Else
                     MessageBox.Show("Out of Stock or less quantity")
                 End If
@@ -497,18 +501,21 @@ Public Class dashboard_Frm
     End Sub
     Private Sub grand_Single_Pc_MouseClick(sender As Object, e As MouseEventArgs) Handles grand_Single_Pc.MouseClick
         admit_cust_checkup()
-        '' clear()
+        clear()
+
     End Sub
     Public Sub get_Selling_Data()
         Try
             Dim con As New SqlConnection(cs)
             con.Open()
-            Dim da As New SqlDataAdapter("Select sell_Id as[ID],[sell_date] as [Date],[patient_Name] as [Patient Name],[product_list] as [Product List],[patient_Status] as [Patient Status],[price] as [Sell Price],[profit_price] as [Profit Price],[sell_total_quantity] as [Total Quantity],[sell_by] as [Sell By] from sell_tbl ORDER BY sell_Id DESC", con)
+            Dim da As New SqlDataAdapter("Select sell_Id as[ID],[sell_date] as [Date],[patient_Name] as [Patient Name],[product_list] as [Sell List],[patient_Status] as [Patient Status],[price] as [Sell Price],[profit_price] as [Profit Price],[sell_total_quantity] as [Total Products Sale],[sell_by] as [Sell By] from sell_tbl ORDER BY sell_Id DESC", con)
             Dim dt As New DataTable
             da.Fill(dt)
             source2.DataSource = dt
             sell_grid.DataSource = dt
             sell_grid.Refresh()
+
+
 
         Catch ex As Exception
             MessageBox.Show("Failed:Retrieving Data" & ex.Message)
@@ -596,6 +603,8 @@ Public Class dashboard_Frm
         get_Selling_Data()
         get_total_stock_Data()
         will_out_of_stock()
+
+
     End Sub
 
 
@@ -606,7 +615,7 @@ Public Class dashboard_Frm
 
 
                 connection1.Open()
-                Dim da2 As New SqlDataAdapter("Select sell_Id,sell_date,[patient_Name] as [Patient Name],[product_list] as [Product List],[patient_Status] as [Patient_Status],[price] as [Price],[profit_price] as [Profit],[sell_total_quantity] as [Total Medicine Sale],[sell_by] as [Sell By] from [sell_tbl] where sell_date BETWEEN '" & Format(admin_Sell_Date_Picker.Value, "yyyy-MM-dd") & "' AND   '" & Format(sell_datePicker_to_txt.Value, "yyyy-MM-dd") & "' ORDER BY [sell_Id] DESC", connection1)
+                Dim da2 As New SqlDataAdapter("Select sell_Id,sell_date,[patient_Name] as [Patient Name],[product_list] as [Sell List],[patient_Status] as [Patient_Status],[price] as [Price],[profit_price] as [Profit],[sell_total_quantity] as [Total Products Sale],[sell_by] as [Sell By] from [sell_tbl] where sell_date BETWEEN '" & Format(admin_Sell_Date_Picker.Value, "yyyy-MM-dd") & "' AND   '" & Format(sell_datePicker_to_txt.Value, "yyyy-MM-dd") & "' ORDER BY [sell_Id] DESC", connection1)
                 Dim dt2 As New DataTable
                 da2.Fill(dt2)
                 source2.DataSource = dt2
@@ -627,7 +636,7 @@ Public Class dashboard_Frm
         Try
             Dim conn As New System.Data.SqlClient.SqlConnection(cs)
             conn.Open()
-            str = "Select [sell_Id] as[ID],[sell_date],[patient_Name] as [Patient Name],[product_list] as [Product List],[patient_Status] as [Patient_Status],[price] as [Price],[profit_price] as [Profit],[sell_total_quantity] as [Total Medicine Sale],[sell_by] as [Sell By] from sell_tbl where patient_Name like '" & admin_search_product.Text & "%' 
+            str = "Select [sell_Id] as[ID],[sell_date],[patient_Name] as [Patient Name],[product_list] as [Sell List],[patient_Status] as [Patient_Status],[price] as [Price],[profit_price] as [Profit],[sell_total_quantity] as [Total Products Sale],[sell_by] as [Sell By] from sell_tbl where patient_Name like '" & admin_search_product.Text & "%' 
              OR product_list like '" & admin_search_product.Text & "%'  OR  patient_Status like '" & admin_search_product.Text & "%' ORDER BY sell_Id DESC"
 
             cmd = New SqlCommand(str, conn)
@@ -821,62 +830,20 @@ Public Class dashboard_Frm
 
     Private Sub BunifuButton2_Click(sender As Object, e As EventArgs) Handles BunifuButton2.Click
 
-        If sell_grid.Rows.Count > 0 Then
-            Dim save As SaveFileDialog = New SaveFileDialog()
-            save.Filter = "PDF (*.pdf)|*.pdf"
-            save.FileName = "Result.pdf"
-            Dim ErrorMessage As Boolean = False
 
-            If save.ShowDialog() = DialogResult.OK Then
+        Dim con As New SqlConnection(cs)
+        Dim com As New SqlCommand("Select sell_Id,sell_date,patient_Name,product_list,patient_Status,price,profit_price,sell_total_quantity,sell_by from sell_tbl where sell_date BETWEEN '" & Format(admin_Sell_Date_Picker.Value, "yyyy-MM-dd") & "' AND   '" & Format(sell_datePicker_to_txt.Value, "yyyy-MM-dd") & "'", con)
+        Dim sd As New SqlDataAdapter(com)
+        Dim dt As New DataTable
+        sd.Fill(dt)
 
-                If File.Exists(save.FileName) Then
-
-                    Try
-                        File.Delete(save.FileName)
-                    Catch ex As Exception
-                        ErrorMessage = True
-                        MessageBox.Show("Unable to wride data in disk" & ex.Message)
-                    End Try
-                End If
-
-                If Not ErrorMessage Then
-
-                    Try
-                        Dim pTable As PdfPTable = New PdfPTable(sell_grid.Columns.Count)
-                        pTable.DefaultCell.Padding = 2
-                        pTable.WidthPercentage = 100
-                        pTable.HorizontalAlignment = Element.ALIGN_LEFT
-
-                        For Each col As DataGridViewColumn In sell_grid.Columns
-                            Dim pCell As PdfPCell = New PdfPCell(New Phrase(col.HeaderText))
-                            pTable.AddCell(pCell)
-                        Next
-
-                        For Each viewRow As DataGridViewRow In sell_grid.Rows
-
-                            For Each dcell As DataGridViewCell In viewRow.Cells
-                                pTable.AddCell(dcell.Value.ToString())
-                            Next
-                        Next
-
-                        Using fileStream As FileStream = New FileStream(save.FileName, FileMode.Create)
-                            Dim document As Document = New Document(PageSize.A4, 8.0F, 16.0F, 16.0F, 8.0F)
-                            PdfWriter.GetInstance(document, fileStream)
-                            document.Open()
-                            document.Add(pTable)
-                            document.Close()
-                            fileStream.Close()
-                        End Using
-
-                        MessageBox.Show("Data Export Successfully", "info")
-                    Catch ex As Exception
-                        MessageBox.Show("Error while exporting Data" & ex.Message)
-                    End Try
-                End If
-            End If
-        Else
-            MessageBox.Show("No Record Found", "Info")
-        End If
+        With By_Date_Selling_ReportFrm.ReportViewer1.LocalReport
+            .DataSources.Clear()
+            .ReportPath = "sellingReport.rdlc"
+            .DataSources.Add(New ReportDataSource("sellrecorddataset", dt))
+        End With
+        By_Date_Selling_ReportFrm.ReportViewer1.RefreshReport()
+        By_Date_Selling_ReportFrm.Show()
     End Sub
 
     Private Sub PrintDocument1_PrintPage(sender As Object, e As PrintPageEventArgs) Handles PrintDocument1.PrintPage
@@ -896,24 +863,6 @@ Public Class dashboard_Frm
         End If
     End Sub
 
-    Private Sub billby_txt_TextChanged(sender As Object, e As EventArgs) Handles billby_txt.TextChanged
-
-    End Sub
-
-    Private Sub Button1_Click(sender As Object, e As EventArgs)
-
-
-
-
-    End Sub
-
-    Private Sub grand_Single_Pc_TextChanged(sender As Object, e As EventArgs) Handles grand_Single_Pc.TextChanged
-
-    End Sub
-
-
-
-
     Private Sub qty_txt_TextChanged(sender As Object, e As EventArgs) Handles qty_txt.TextChanged
 
 
@@ -932,5 +881,17 @@ Public Class dashboard_Frm
     Private Sub qty_txt_KeyPress(sender As Object, e As KeyPressEventArgs) Handles qty_txt.KeyPress
         If Not Char.IsNumber(e.KeyChar) AndAlso Not Char.IsControl(e.KeyChar) Then e.KeyChar = ""
     End Sub
+
+    'REPORT CODE BELOW'
+    Private Sub textbox_report()
+
+        sell_Report_Frm.Show()
+
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        textbox_report()
+    End Sub
+
 
 End Class

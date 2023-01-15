@@ -131,6 +131,7 @@ Partial Class dashboard_Frm
         Me.BunifuPages1 = New Bunifu.UI.WinForms.BunifuPages()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.BunifuPanel1 = New Bunifu.UI.WinForms.BunifuPanel()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.patient_over_all_status_lbl = New System.Windows.Forms.Label()
         Me.profit_Price_Txt = New Bunifu.UI.WinForms.BunifuTextBox()
@@ -1461,6 +1462,7 @@ Partial Class dashboard_Frm
         Me.BunifuPanel1.BorderColor = System.Drawing.Color.Transparent
         Me.BunifuPanel1.BorderRadius = 3
         Me.BunifuPanel1.BorderThickness = 1
+        Me.BunifuPanel1.Controls.Add(Me.Button1)
         Me.BunifuPanel1.Controls.Add(Me.Panel3)
         Me.BunifuPanel1.Controls.Add(Me.Panel1)
         Me.BunifuPanel1.Controls.Add(Me.cause_lbl)
@@ -1499,6 +1501,20 @@ Partial Class dashboard_Frm
         Me.BunifuToolTip1.SetToolTip(Me.BunifuPanel1, "")
         Me.BunifuToolTip1.SetToolTipIcon(Me.BunifuPanel1, Nothing)
         Me.BunifuToolTip1.SetToolTipTitle(Me.BunifuPanel1, "")
+        '
+        'Button1
+        '
+        Me.PanelAnimator.SetDecoration(Me.Button1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.logoAnimator.SetDecoration(Me.Button1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.Button1.Location = New System.Drawing.Point(620, 689)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 166
+        Me.Button1.Text = "Button1"
+        Me.BunifuToolTip1.SetToolTip(Me.Button1, "")
+        Me.BunifuToolTip1.SetToolTipIcon(Me.Button1, Nothing)
+        Me.BunifuToolTip1.SetToolTipTitle(Me.Button1, "")
+        Me.Button1.UseVisualStyleBackColor = True
         '
         'Panel3
         '
@@ -2531,7 +2547,7 @@ Partial Class dashboard_Frm
         Me.product_List_Txt.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.product_List_Txt.PlaceholderForeColor = System.Drawing.Color.Silver
         Me.product_List_Txt.PlaceholderText = "Enter Patient Items"
-        Me.product_List_Txt.ReadOnly = True
+        Me.product_List_Txt.ReadOnly = False
         Me.product_List_Txt.ScrollBars = System.Windows.Forms.ScrollBars.None
         Me.product_List_Txt.SelectedText = ""
         Me.product_List_Txt.SelectionLength = 0
@@ -4212,4 +4228,5 @@ Partial Class dashboard_Frm
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Panel3 As Panel
     Friend WithEvents patient_over_all_status_lbl As Label
+    Friend WithEvents Button1 As Button
 End Class
