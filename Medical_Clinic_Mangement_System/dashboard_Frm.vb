@@ -211,8 +211,6 @@ Public Class dashboard_Frm
             End Try
         End Using
 
-
-
     End Sub
 
     Private Sub total_Inventory()
@@ -603,7 +601,7 @@ Public Class dashboard_Frm
         get_Selling_Data()
         get_total_stock_Data()
         will_out_of_stock()
-
+        clinic_today_data()
 
     End Sub
 
@@ -889,9 +887,71 @@ Public Class dashboard_Frm
 
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub BunifuButton7_Click(sender As Object, e As EventArgs) Handles BunifuButton7.Click
         textbox_report()
     End Sub
 
+    '' clinic today
+    Private Sub clinic_today_data()
+        Using connection As New SqlConnection(cs)
+            Try
 
+                Dim command As New SqlCommand("SELECT SUM(price) as sellprice2 ,Sum(profit_price) AS sellprice1,
+                      Sum([sell_total_quantity]) as producttotal, Count(product_list) as productlist1 FROM sell_tbl where sell_date ='" & Format(DateTimePicker1.Value, "yyyy-MM-dd") & "' ", connection)
+                connection.Open()
+                cmd.Parameters.Clear()
+                Dim read As SqlDataReader = command.ExecuteReader()
+
+                Do While read.Read()
+                    medicine_qty_lbl.Text = (read("producttotal").ToString())
+                    total_patient_income_lbl.Text = (read("sellprice2").ToString())
+                    total_patient_lbl.Text = (read("productlist1").ToString())
+                    total_profit_lbl.Text = (read("sellprice1").ToString())
+                Loop
+                read.Close()
+
+            Catch ex As Exception
+
+                MessageBox.Show("Check_if_stock_exists", ex.Message)
+                Me.Dispose()
+            End Try
+        End Using
+
+    End Sub
+    Private Sub clinic_today_data_record()
+        Using connection As New SqlConnection(cs)
+            Try
+
+                Dim command As New SqlCommand("SELECT SUM(price) as sellprice2 ,Sum(profit_price) AS sellprice1,
+                      Sum([sell_total_quantity]) as producttotal, Count(product_list) as productlist1 FROM sell_tbl where  sell_date BETWEEN '" & Format(admin_Sell_Date_Picker.Value, "yyyy-MM-dd") & "' AND   '" & Format(sell_datePicker_to_txt.Value, "yyyy-MM-dd") & "", connection)
+                connection.Open()
+                cmd.Parameters.Clear()
+                Dim read As SqlDataReader = command.ExecuteReader()
+
+                Do While read.Read()
+                    medicine_qty_lbl.Text = (read("producttotal").ToString())
+                    total_patient_income_lbl.Text = (read("sellprice2").ToString())
+                    total_patient_lbl.Text = (read("productlist1").ToString())
+                    total_profit_lbl.Text = (read("sellprice1").ToString())
+                Loop
+                read.Close()
+
+            Catch ex As Exception
+
+                MessageBox.Show("Check_if_stock_exists", ex.Message)
+                Me.Dispose()
+            End Try
+        End Using
+
+    End Sub
+
+
+    Private Sub DateTimePicker1_ValueChanged(sender As Object, e As EventArgs) Handles DateTimePicker1.ValueChanged
+        clinic_today_data()
+    End Sub
+
+    Private Sub Label11_Click(sender As Object, e As EventArgs) Handles Label11.Click
+        clinic_today_data_record()
+        BunifuPages1.PageIndex = 1
+    End Sub
 End Class

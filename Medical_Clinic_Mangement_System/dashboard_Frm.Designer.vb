@@ -23,7 +23,6 @@ Partial Class dashboard_Frm
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim BorderEdges3 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges()
         Dim BorderEdges4 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges()
         Dim BorderEdges5 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges()
         Dim BorderEdges6 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges()
@@ -32,9 +31,11 @@ Partial Class dashboard_Frm
         Dim BorderEdges9 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges()
         Dim BorderEdges10 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges()
         Dim BorderEdges11 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges()
+        Dim BorderEdges12 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges()
         Dim Animation2 As Bunifu.UI.WinForms.BunifuAnimatorNS.Animation = New Bunifu.UI.WinForms.BunifuAnimatorNS.Animation()
         Dim Animation3 As Utilities.BunifuPages.BunifuAnimatorNS.Animation = New Utilities.BunifuPages.BunifuAnimatorNS.Animation()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(dashboard_Frm))
+        Dim BorderEdges1 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges()
         Dim StateProperties1 As Bunifu.UI.WinForms.BunifuTextBox.StateProperties = New Bunifu.UI.WinForms.BunifuTextBox.StateProperties()
         Dim StateProperties2 As Bunifu.UI.WinForms.BunifuTextBox.StateProperties = New Bunifu.UI.WinForms.BunifuTextBox.StateProperties()
         Dim StateProperties3 As Bunifu.UI.WinForms.BunifuTextBox.StateProperties = New Bunifu.UI.WinForms.BunifuTextBox.StateProperties()
@@ -63,7 +64,7 @@ Partial Class dashboard_Frm
         Dim StateProperties26 As Bunifu.UI.WinForms.BunifuTextBox.StateProperties = New Bunifu.UI.WinForms.BunifuTextBox.StateProperties()
         Dim StateProperties27 As Bunifu.UI.WinForms.BunifuTextBox.StateProperties = New Bunifu.UI.WinForms.BunifuTextBox.StateProperties()
         Dim StateProperties28 As Bunifu.UI.WinForms.BunifuTextBox.StateProperties = New Bunifu.UI.WinForms.BunifuTextBox.StateProperties()
-        Dim BorderEdges1 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges()
+        Dim BorderEdges2 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges()
         Dim StateProperties29 As Bunifu.UI.WinForms.BunifuTextBox.StateProperties = New Bunifu.UI.WinForms.BunifuTextBox.StateProperties()
         Dim StateProperties30 As Bunifu.UI.WinForms.BunifuTextBox.StateProperties = New Bunifu.UI.WinForms.BunifuTextBox.StateProperties()
         Dim StateProperties31 As Bunifu.UI.WinForms.BunifuTextBox.StateProperties = New Bunifu.UI.WinForms.BunifuTextBox.StateProperties()
@@ -91,7 +92,7 @@ Partial Class dashboard_Frm
         Dim StateProperties50 As Bunifu.UI.WinForms.BunifuTextBox.StateProperties = New Bunifu.UI.WinForms.BunifuTextBox.StateProperties()
         Dim StateProperties51 As Bunifu.UI.WinForms.BunifuTextBox.StateProperties = New Bunifu.UI.WinForms.BunifuTextBox.StateProperties()
         Dim StateProperties52 As Bunifu.UI.WinForms.BunifuTextBox.StateProperties = New Bunifu.UI.WinForms.BunifuTextBox.StateProperties()
-        Dim BorderEdges2 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges()
+        Dim BorderEdges3 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges()
         Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
@@ -131,7 +132,7 @@ Partial Class dashboard_Frm
         Me.BunifuPages1 = New Bunifu.UI.WinForms.BunifuPages()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.BunifuPanel1 = New Bunifu.UI.WinForms.BunifuPanel()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.BunifuButton7 = New Bunifu.UI.WinForms.BunifuButton.BunifuButton()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.patient_over_all_status_lbl = New System.Windows.Forms.Label()
         Me.profit_Price_Txt = New Bunifu.UI.WinForms.BunifuTextBox()
@@ -173,17 +174,17 @@ Partial Class dashboard_Frm
         Me.Label3 = New System.Windows.Forms.Label()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.BunifuPanel2 = New Bunifu.UI.WinForms.BunifuPanel()
+        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.BunifuCards4 = New Bunifu.Framework.UI.BunifuCards()
+        Me.total_profit_lbl = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
-        Me.BunifuCards3 = New Bunifu.Framework.UI.BunifuCards()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.BunifuCards2 = New Bunifu.Framework.UI.BunifuCards()
-        Me.Label15 = New System.Windows.Forms.Label()
-        Me.Label16 = New System.Windows.Forms.Label()
-        Me.Label10 = New System.Windows.Forms.Label()
         Me.BunifuCards1 = New Bunifu.Framework.UI.BunifuCards()
-        Me.Label14 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.total_patient_income_lbl = New System.Windows.Forms.Label()
+        Me.medicine_qty_lbl = New System.Windows.Forms.Label()
+        Me.total_patient_lbl = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
         Me.Label21 = New System.Windows.Forms.Label()
@@ -202,6 +203,7 @@ Partial Class dashboard_Frm
         Me.BunifuTextBox8 = New Bunifu.UI.WinForms.BunifuTextBox()
         Me.BunifuTextBox9 = New Bunifu.UI.WinForms.BunifuTextBox()
         Me.TabPage4 = New System.Windows.Forms.TabPage()
+        Me.Label11 = New System.Windows.Forms.Label()
         Me.BunifuButton2 = New Bunifu.UI.WinForms.BunifuButton.BunifuButton()
         Me.Label31 = New System.Windows.Forms.Label()
         Me.sell_grid = New System.Windows.Forms.DataGridView()
@@ -229,8 +231,6 @@ Partial Class dashboard_Frm
         Me.TabPage2.SuspendLayout()
         Me.BunifuPanel2.SuspendLayout()
         Me.BunifuCards4.SuspendLayout()
-        Me.BunifuCards3.SuspendLayout()
-        Me.BunifuCards2.SuspendLayout()
         Me.BunifuCards1.SuspendLayout()
         Me.TabPage3.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -286,13 +286,13 @@ Partial Class dashboard_Frm
         Me.BunifuButton1.ColorContrastOnClick = 45
         Me.BunifuButton1.ColorContrastOnHover = 45
         Me.BunifuButton1.Cursor = System.Windows.Forms.Cursors.Default
-        BorderEdges3.BottomLeft = True
-        BorderEdges3.BottomRight = True
-        BorderEdges3.TopLeft = True
-        BorderEdges3.TopRight = True
-        Me.BunifuButton1.CustomizableEdges = BorderEdges3
-        Me.logoAnimator.SetDecoration(Me.BunifuButton1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        BorderEdges4.BottomLeft = True
+        BorderEdges4.BottomRight = True
+        BorderEdges4.TopLeft = True
+        BorderEdges4.TopRight = True
+        Me.BunifuButton1.CustomizableEdges = BorderEdges4
         Me.PanelAnimator.SetDecoration(Me.BunifuButton1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.logoAnimator.SetDecoration(Me.BunifuButton1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.BunifuButton1.DialogResult = System.Windows.Forms.DialogResult.None
         Me.BunifuButton1.DisabledBorderColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(94, Byte), Integer))
         Me.BunifuButton1.DisabledFillColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(94, Byte), Integer))
@@ -380,13 +380,13 @@ Partial Class dashboard_Frm
         Me.usersRecords_Btn.ColorContrastOnClick = 45
         Me.usersRecords_Btn.ColorContrastOnHover = 45
         Me.usersRecords_Btn.Cursor = System.Windows.Forms.Cursors.Default
-        BorderEdges4.BottomLeft = True
-        BorderEdges4.BottomRight = True
-        BorderEdges4.TopLeft = True
-        BorderEdges4.TopRight = True
-        Me.usersRecords_Btn.CustomizableEdges = BorderEdges4
-        Me.logoAnimator.SetDecoration(Me.usersRecords_Btn, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        BorderEdges5.BottomLeft = True
+        BorderEdges5.BottomRight = True
+        BorderEdges5.TopLeft = True
+        BorderEdges5.TopRight = True
+        Me.usersRecords_Btn.CustomizableEdges = BorderEdges5
         Me.PanelAnimator.SetDecoration(Me.usersRecords_Btn, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.logoAnimator.SetDecoration(Me.usersRecords_Btn, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.usersRecords_Btn.DialogResult = System.Windows.Forms.DialogResult.None
         Me.usersRecords_Btn.DisabledBorderColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(94, Byte), Integer))
         Me.usersRecords_Btn.DisabledFillColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(94, Byte), Integer))
@@ -460,8 +460,8 @@ Partial Class dashboard_Frm
         '
         Me.logo1.AutoSize = True
         Me.logo1.BackColor = System.Drawing.Color.Transparent
-        Me.PanelAnimator.SetDecoration(Me.logo1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.logoAnimator.SetDecoration(Me.logo1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.PanelAnimator.SetDecoration(Me.logo1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.logo1.Font = New System.Drawing.Font("Sitka Text", 24.0!)
         Me.logo1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(230, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(195, Byte), Integer))
         Me.logo1.Location = New System.Drawing.Point(12, 87)
@@ -492,13 +492,13 @@ Partial Class dashboard_Frm
         Me.manInventory_btn.ColorContrastOnClick = 45
         Me.manInventory_btn.ColorContrastOnHover = 45
         Me.manInventory_btn.Cursor = System.Windows.Forms.Cursors.Default
-        BorderEdges5.BottomLeft = True
-        BorderEdges5.BottomRight = True
-        BorderEdges5.TopLeft = True
-        BorderEdges5.TopRight = True
-        Me.manInventory_btn.CustomizableEdges = BorderEdges5
-        Me.logoAnimator.SetDecoration(Me.manInventory_btn, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        BorderEdges6.BottomLeft = True
+        BorderEdges6.BottomRight = True
+        BorderEdges6.TopLeft = True
+        BorderEdges6.TopRight = True
+        Me.manInventory_btn.CustomizableEdges = BorderEdges6
         Me.PanelAnimator.SetDecoration(Me.manInventory_btn, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.logoAnimator.SetDecoration(Me.manInventory_btn, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.manInventory_btn.DialogResult = System.Windows.Forms.DialogResult.None
         Me.manInventory_btn.DisabledBorderColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(94, Byte), Integer))
         Me.manInventory_btn.DisabledFillColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(94, Byte), Integer))
@@ -586,13 +586,13 @@ Partial Class dashboard_Frm
         Me.addinventory_btn.ColorContrastOnClick = 45
         Me.addinventory_btn.ColorContrastOnHover = 45
         Me.addinventory_btn.Cursor = System.Windows.Forms.Cursors.Default
-        BorderEdges6.BottomLeft = True
-        BorderEdges6.BottomRight = True
-        BorderEdges6.TopLeft = True
-        BorderEdges6.TopRight = True
-        Me.addinventory_btn.CustomizableEdges = BorderEdges6
-        Me.logoAnimator.SetDecoration(Me.addinventory_btn, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        BorderEdges7.BottomLeft = True
+        BorderEdges7.BottomRight = True
+        BorderEdges7.TopLeft = True
+        BorderEdges7.TopRight = True
+        Me.addinventory_btn.CustomizableEdges = BorderEdges7
         Me.PanelAnimator.SetDecoration(Me.addinventory_btn, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.logoAnimator.SetDecoration(Me.addinventory_btn, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.addinventory_btn.DialogResult = System.Windows.Forms.DialogResult.None
         Me.addinventory_btn.DisabledBorderColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(94, Byte), Integer))
         Me.addinventory_btn.DisabledFillColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(94, Byte), Integer))
@@ -746,8 +746,8 @@ Partial Class dashboard_Frm
         'Label33
         '
         Me.Label33.AutoSize = True
-        Me.PanelAnimator.SetDecoration(Me.Label33, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.logoAnimator.SetDecoration(Me.Label33, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.PanelAnimator.SetDecoration(Me.Label33, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.Label33.Location = New System.Drawing.Point(1058, 53)
         Me.Label33.Name = "Label33"
         Me.Label33.Size = New System.Drawing.Size(0, 16)
@@ -760,8 +760,8 @@ Partial Class dashboard_Frm
         'Label35
         '
         Me.Label35.AutoSize = True
-        Me.PanelAnimator.SetDecoration(Me.Label35, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.logoAnimator.SetDecoration(Me.Label35, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.PanelAnimator.SetDecoration(Me.Label35, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.Label35.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label35.ForeColor = System.Drawing.Color.Red
         Me.Label35.Location = New System.Drawing.Point(661, 58)
@@ -778,8 +778,8 @@ Partial Class dashboard_Frm
         'threshold_msg_lbl
         '
         Me.threshold_msg_lbl.AutoSize = True
-        Me.PanelAnimator.SetDecoration(Me.threshold_msg_lbl, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.logoAnimator.SetDecoration(Me.threshold_msg_lbl, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.PanelAnimator.SetDecoration(Me.threshold_msg_lbl, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.threshold_msg_lbl.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.threshold_msg_lbl.ForeColor = System.Drawing.Color.Red
         Me.threshold_msg_lbl.Location = New System.Drawing.Point(626, 58)
@@ -812,13 +812,13 @@ Partial Class dashboard_Frm
         Me.BunifuButton4.ColorContrastOnClick = 45
         Me.BunifuButton4.ColorContrastOnHover = 45
         Me.BunifuButton4.Cursor = System.Windows.Forms.Cursors.Default
-        BorderEdges7.BottomLeft = True
-        BorderEdges7.BottomRight = True
-        BorderEdges7.TopLeft = True
-        BorderEdges7.TopRight = True
-        Me.BunifuButton4.CustomizableEdges = BorderEdges7
-        Me.logoAnimator.SetDecoration(Me.BunifuButton4, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        BorderEdges8.BottomLeft = True
+        BorderEdges8.BottomRight = True
+        BorderEdges8.TopLeft = True
+        BorderEdges8.TopRight = True
+        Me.BunifuButton4.CustomizableEdges = BorderEdges8
         Me.PanelAnimator.SetDecoration(Me.BunifuButton4, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.logoAnimator.SetDecoration(Me.BunifuButton4, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.BunifuButton4.DialogResult = System.Windows.Forms.DialogResult.None
         Me.BunifuButton4.DisabledBorderColor = System.Drawing.Color.FromArgb(CType(CType(191, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(191, Byte), Integer))
         Me.BunifuButton4.DisabledFillColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
@@ -890,8 +890,8 @@ Partial Class dashboard_Frm
         'Id_for_edit_lbl
         '
         Me.Id_for_edit_lbl.AutoSize = True
-        Me.PanelAnimator.SetDecoration(Me.Id_for_edit_lbl, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.logoAnimator.SetDecoration(Me.Id_for_edit_lbl, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.PanelAnimator.SetDecoration(Me.Id_for_edit_lbl, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.Id_for_edit_lbl.Font = New System.Drawing.Font("Century Gothic", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Id_for_edit_lbl.Location = New System.Drawing.Point(1159, 20)
         Me.Id_for_edit_lbl.Name = "Id_for_edit_lbl"
@@ -921,13 +921,13 @@ Partial Class dashboard_Frm
         Me.BunifuButton3.ColorContrastOnClick = 45
         Me.BunifuButton3.ColorContrastOnHover = 45
         Me.BunifuButton3.Cursor = System.Windows.Forms.Cursors.Default
-        BorderEdges8.BottomLeft = True
-        BorderEdges8.BottomRight = True
-        BorderEdges8.TopLeft = True
-        BorderEdges8.TopRight = True
-        Me.BunifuButton3.CustomizableEdges = BorderEdges8
-        Me.logoAnimator.SetDecoration(Me.BunifuButton3, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        BorderEdges9.BottomLeft = True
+        BorderEdges9.BottomRight = True
+        BorderEdges9.TopLeft = True
+        BorderEdges9.TopRight = True
+        Me.BunifuButton3.CustomizableEdges = BorderEdges9
         Me.PanelAnimator.SetDecoration(Me.BunifuButton3, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.logoAnimator.SetDecoration(Me.BunifuButton3, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.BunifuButton3.DialogResult = System.Windows.Forms.DialogResult.None
         Me.BunifuButton3.DisabledBorderColor = System.Drawing.Color.FromArgb(CType(CType(191, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(191, Byte), Integer))
         Me.BunifuButton3.DisabledFillColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
@@ -1015,13 +1015,13 @@ Partial Class dashboard_Frm
         Me.clinictodaybtn_dshbrd.ColorContrastOnClick = 45
         Me.clinictodaybtn_dshbrd.ColorContrastOnHover = 45
         Me.clinictodaybtn_dshbrd.Cursor = System.Windows.Forms.Cursors.Default
-        BorderEdges9.BottomLeft = True
-        BorderEdges9.BottomRight = True
-        BorderEdges9.TopLeft = True
-        BorderEdges9.TopRight = True
-        Me.clinictodaybtn_dshbrd.CustomizableEdges = BorderEdges9
-        Me.logoAnimator.SetDecoration(Me.clinictodaybtn_dshbrd, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        BorderEdges10.BottomLeft = True
+        BorderEdges10.BottomRight = True
+        BorderEdges10.TopLeft = True
+        BorderEdges10.TopRight = True
+        Me.clinictodaybtn_dshbrd.CustomizableEdges = BorderEdges10
         Me.PanelAnimator.SetDecoration(Me.clinictodaybtn_dshbrd, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.logoAnimator.SetDecoration(Me.clinictodaybtn_dshbrd, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.clinictodaybtn_dshbrd.DialogResult = System.Windows.Forms.DialogResult.None
         Me.clinictodaybtn_dshbrd.DisabledBorderColor = System.Drawing.Color.FromArgb(CType(CType(191, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(191, Byte), Integer))
         Me.clinictodaybtn_dshbrd.DisabledFillColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
@@ -1089,7 +1089,6 @@ Partial Class dashboard_Frm
         Me.BunifuToolTip1.SetToolTipIcon(Me.clinictodaybtn_dshbrd, Nothing)
         Me.BunifuToolTip1.SetToolTipTitle(Me.clinictodaybtn_dshbrd, "")
         Me.clinictodaybtn_dshbrd.UseDefaultRadiusAndThickness = True
-        Me.clinictodaybtn_dshbrd.Visible = False
         '
         'BunifuButton5
         '
@@ -1110,13 +1109,13 @@ Partial Class dashboard_Frm
         Me.BunifuButton5.ColorContrastOnClick = 45
         Me.BunifuButton5.ColorContrastOnHover = 45
         Me.BunifuButton5.Cursor = System.Windows.Forms.Cursors.Default
-        BorderEdges10.BottomLeft = True
-        BorderEdges10.BottomRight = True
-        BorderEdges10.TopLeft = True
-        BorderEdges10.TopRight = True
-        Me.BunifuButton5.CustomizableEdges = BorderEdges10
-        Me.logoAnimator.SetDecoration(Me.BunifuButton5, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        BorderEdges11.BottomLeft = True
+        BorderEdges11.BottomRight = True
+        BorderEdges11.TopLeft = True
+        BorderEdges11.TopRight = True
+        Me.BunifuButton5.CustomizableEdges = BorderEdges11
         Me.PanelAnimator.SetDecoration(Me.BunifuButton5, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.logoAnimator.SetDecoration(Me.BunifuButton5, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.BunifuButton5.DialogResult = System.Windows.Forms.DialogResult.None
         Me.BunifuButton5.DisabledBorderColor = System.Drawing.Color.FromArgb(CType(CType(191, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(191, Byte), Integer))
         Me.BunifuButton5.DisabledFillColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
@@ -1204,13 +1203,13 @@ Partial Class dashboard_Frm
         Me.BunifuButton6.ColorContrastOnClick = 45
         Me.BunifuButton6.ColorContrastOnHover = 45
         Me.BunifuButton6.Cursor = System.Windows.Forms.Cursors.Default
-        BorderEdges11.BottomLeft = True
-        BorderEdges11.BottomRight = True
-        BorderEdges11.TopLeft = True
-        BorderEdges11.TopRight = True
-        Me.BunifuButton6.CustomizableEdges = BorderEdges11
-        Me.logoAnimator.SetDecoration(Me.BunifuButton6, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        BorderEdges12.BottomLeft = True
+        BorderEdges12.BottomRight = True
+        BorderEdges12.TopLeft = True
+        BorderEdges12.TopRight = True
+        Me.BunifuButton6.CustomizableEdges = BorderEdges12
         Me.PanelAnimator.SetDecoration(Me.BunifuButton6, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.logoAnimator.SetDecoration(Me.BunifuButton6, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.BunifuButton6.DialogResult = System.Windows.Forms.DialogResult.None
         Me.BunifuButton6.DisabledBorderColor = System.Drawing.Color.FromArgb(CType(CType(191, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(191, Byte), Integer))
         Me.BunifuButton6.DisabledFillColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
@@ -1284,8 +1283,8 @@ Partial Class dashboard_Frm
         '
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.PanelAnimator.SetDecoration(Me.Label1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.logoAnimator.SetDecoration(Me.Label1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.PanelAnimator.SetDecoration(Me.Label1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.Label1.Font = New System.Drawing.Font("Sitka Text", 24.0!)
         Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(230, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(195, Byte), Integer))
         Me.Label1.Location = New System.Drawing.Point(3, 19)
@@ -1341,8 +1340,8 @@ Partial Class dashboard_Frm
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.PanelAnimator.SetDecoration(Me.Label5, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.logoAnimator.SetDecoration(Me.Label5, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.PanelAnimator.SetDecoration(Me.Label5, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.Label5.Font = New System.Drawing.Font("Century Gothic", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.Location = New System.Drawing.Point(878, 58)
         Me.Label5.Name = "Label5"
@@ -1410,10 +1409,10 @@ Partial Class dashboard_Frm
         Me.BunifuPages1.Location = New System.Drawing.Point(0, 0)
         Me.BunifuPages1.Multiline = True
         Me.BunifuPages1.Name = "BunifuPages1"
-        Me.BunifuPages1.Page = Me.TabPage1
-        Me.BunifuPages1.PageIndex = 0
-        Me.BunifuPages1.PageName = "TabPage1"
-        Me.BunifuPages1.PageTitle = "Sell"
+        Me.BunifuPages1.Page = Me.TabPage2
+        Me.BunifuPages1.PageIndex = 1
+        Me.BunifuPages1.PageName = "TabPage2"
+        Me.BunifuPages1.PageTitle = "Clinic Today"
         Me.BunifuPages1.SelectedIndex = 0
         Me.BunifuPages1.Size = New System.Drawing.Size(1029, 781)
         Me.BunifuPages1.TabIndex = 127
@@ -1462,7 +1461,7 @@ Partial Class dashboard_Frm
         Me.BunifuPanel1.BorderColor = System.Drawing.Color.Transparent
         Me.BunifuPanel1.BorderRadius = 3
         Me.BunifuPanel1.BorderThickness = 1
-        Me.BunifuPanel1.Controls.Add(Me.Button1)
+        Me.BunifuPanel1.Controls.Add(Me.BunifuButton7)
         Me.BunifuPanel1.Controls.Add(Me.Panel3)
         Me.BunifuPanel1.Controls.Add(Me.Panel1)
         Me.BunifuPanel1.Controls.Add(Me.cause_lbl)
@@ -1502,19 +1501,99 @@ Partial Class dashboard_Frm
         Me.BunifuToolTip1.SetToolTipIcon(Me.BunifuPanel1, Nothing)
         Me.BunifuToolTip1.SetToolTipTitle(Me.BunifuPanel1, "")
         '
-        'Button1
+        'BunifuButton7
         '
-        Me.PanelAnimator.SetDecoration(Me.Button1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.logoAnimator.SetDecoration(Me.Button1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.Button1.Location = New System.Drawing.Point(620, 689)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 166
-        Me.Button1.Text = "Button1"
-        Me.BunifuToolTip1.SetToolTip(Me.Button1, "")
-        Me.BunifuToolTip1.SetToolTipIcon(Me.Button1, Nothing)
-        Me.BunifuToolTip1.SetToolTipTitle(Me.Button1, "")
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.BunifuButton7.AllowAnimations = True
+        Me.BunifuButton7.AllowMouseEffects = True
+        Me.BunifuButton7.AllowToggling = False
+        Me.BunifuButton7.AnimationSpeed = 200
+        Me.BunifuButton7.AutoGenerateColors = False
+        Me.BunifuButton7.AutoRoundBorders = False
+        Me.BunifuButton7.AutoSizeLeftIcon = True
+        Me.BunifuButton7.AutoSizeRightIcon = True
+        Me.BunifuButton7.BackColor = System.Drawing.Color.Transparent
+        Me.BunifuButton7.BackColor1 = System.Drawing.Color.DodgerBlue
+        Me.BunifuButton7.BackgroundImage = CType(resources.GetObject("BunifuButton7.BackgroundImage"), System.Drawing.Image)
+        Me.BunifuButton7.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid
+        Me.BunifuButton7.ButtonText = "Print"
+        Me.BunifuButton7.ButtonTextMarginLeft = 0
+        Me.BunifuButton7.ColorContrastOnClick = 45
+        Me.BunifuButton7.ColorContrastOnHover = 45
+        Me.BunifuButton7.Cursor = System.Windows.Forms.Cursors.Default
+        BorderEdges1.BottomLeft = True
+        BorderEdges1.BottomRight = True
+        BorderEdges1.TopLeft = True
+        BorderEdges1.TopRight = True
+        Me.BunifuButton7.CustomizableEdges = BorderEdges1
+        Me.PanelAnimator.SetDecoration(Me.BunifuButton7, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.logoAnimator.SetDecoration(Me.BunifuButton7, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.BunifuButton7.DialogResult = System.Windows.Forms.DialogResult.None
+        Me.BunifuButton7.DisabledBorderColor = System.Drawing.Color.FromArgb(CType(CType(191, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(191, Byte), Integer))
+        Me.BunifuButton7.DisabledFillColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.BunifuButton7.DisabledForecolor = System.Drawing.Color.FromArgb(CType(CType(168, Byte), Integer), CType(CType(160, Byte), Integer), CType(CType(168, Byte), Integer))
+        Me.BunifuButton7.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed
+        Me.BunifuButton7.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.BunifuButton7.ForeColor = System.Drawing.Color.White
+        Me.BunifuButton7.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BunifuButton7.IconLeftCursor = System.Windows.Forms.Cursors.Default
+        Me.BunifuButton7.IconLeftPadding = New System.Windows.Forms.Padding(11, 3, 3, 3)
+        Me.BunifuButton7.IconMarginLeft = 11
+        Me.BunifuButton7.IconPadding = 10
+        Me.BunifuButton7.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.BunifuButton7.IconRightCursor = System.Windows.Forms.Cursors.Default
+        Me.BunifuButton7.IconRightPadding = New System.Windows.Forms.Padding(3, 3, 7, 3)
+        Me.BunifuButton7.IconSize = 25
+        Me.BunifuButton7.IdleBorderColor = System.Drawing.Color.DodgerBlue
+        Me.BunifuButton7.IdleBorderRadius = 1
+        Me.BunifuButton7.IdleBorderThickness = 1
+        Me.BunifuButton7.IdleFillColor = System.Drawing.Color.DodgerBlue
+        Me.BunifuButton7.IdleIconLeftImage = Nothing
+        Me.BunifuButton7.IdleIconRightImage = Nothing
+        Me.BunifuButton7.IndicateFocus = False
+        Me.BunifuButton7.Location = New System.Drawing.Point(838, 488)
+        Me.BunifuButton7.Name = "BunifuButton7"
+        Me.BunifuButton7.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(191, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(191, Byte), Integer))
+        Me.BunifuButton7.OnDisabledState.BorderRadius = 1
+        Me.BunifuButton7.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid
+        Me.BunifuButton7.OnDisabledState.BorderThickness = 1
+        Me.BunifuButton7.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.BunifuButton7.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(168, Byte), Integer), CType(CType(160, Byte), Integer), CType(CType(168, Byte), Integer))
+        Me.BunifuButton7.OnDisabledState.IconLeftImage = Nothing
+        Me.BunifuButton7.OnDisabledState.IconRightImage = Nothing
+        Me.BunifuButton7.onHoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(105, Byte), Integer), CType(CType(181, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.BunifuButton7.onHoverState.BorderRadius = 1
+        Me.BunifuButton7.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid
+        Me.BunifuButton7.onHoverState.BorderThickness = 1
+        Me.BunifuButton7.onHoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(105, Byte), Integer), CType(CType(181, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.BunifuButton7.onHoverState.ForeColor = System.Drawing.Color.White
+        Me.BunifuButton7.onHoverState.IconLeftImage = Nothing
+        Me.BunifuButton7.onHoverState.IconRightImage = Nothing
+        Me.BunifuButton7.OnIdleState.BorderColor = System.Drawing.Color.DodgerBlue
+        Me.BunifuButton7.OnIdleState.BorderRadius = 1
+        Me.BunifuButton7.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid
+        Me.BunifuButton7.OnIdleState.BorderThickness = 1
+        Me.BunifuButton7.OnIdleState.FillColor = System.Drawing.Color.DodgerBlue
+        Me.BunifuButton7.OnIdleState.ForeColor = System.Drawing.Color.White
+        Me.BunifuButton7.OnIdleState.IconLeftImage = Nothing
+        Me.BunifuButton7.OnIdleState.IconRightImage = Nothing
+        Me.BunifuButton7.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(144, Byte), Integer))
+        Me.BunifuButton7.OnPressedState.BorderRadius = 1
+        Me.BunifuButton7.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid
+        Me.BunifuButton7.OnPressedState.BorderThickness = 1
+        Me.BunifuButton7.OnPressedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(144, Byte), Integer))
+        Me.BunifuButton7.OnPressedState.ForeColor = System.Drawing.Color.White
+        Me.BunifuButton7.OnPressedState.IconLeftImage = Nothing
+        Me.BunifuButton7.OnPressedState.IconRightImage = Nothing
+        Me.BunifuButton7.Size = New System.Drawing.Size(116, 38)
+        Me.BunifuButton7.TabIndex = 167
+        Me.BunifuButton7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.BunifuButton7.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center
+        Me.BunifuButton7.TextMarginLeft = 0
+        Me.BunifuButton7.TextPadding = New System.Windows.Forms.Padding(0)
+        Me.BunifuToolTip1.SetToolTip(Me.BunifuButton7, "")
+        Me.BunifuToolTip1.SetToolTipIcon(Me.BunifuButton7, Nothing)
+        Me.BunifuToolTip1.SetToolTipTitle(Me.BunifuButton7, "")
+        Me.BunifuButton7.UseDefaultRadiusAndThickness = True
         '
         'Panel3
         '
@@ -1538,8 +1617,8 @@ Partial Class dashboard_Frm
         'patient_over_all_status_lbl
         '
         Me.patient_over_all_status_lbl.AutoSize = True
-        Me.PanelAnimator.SetDecoration(Me.patient_over_all_status_lbl, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.logoAnimator.SetDecoration(Me.patient_over_all_status_lbl, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.PanelAnimator.SetDecoration(Me.patient_over_all_status_lbl, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.patient_over_all_status_lbl.Font = New System.Drawing.Font("Century Gothic", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.patient_over_all_status_lbl.Location = New System.Drawing.Point(233, 32)
         Me.patient_over_all_status_lbl.Name = "patient_over_all_status_lbl"
@@ -1632,8 +1711,8 @@ Partial Class dashboard_Frm
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.PanelAnimator.SetDecoration(Me.Label4, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.logoAnimator.SetDecoration(Me.Label4, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.PanelAnimator.SetDecoration(Me.Label4, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.Label4.Font = New System.Drawing.Font("Century Gothic", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.Location = New System.Drawing.Point(8, 116)
         Me.Label4.Name = "Label4"
@@ -1648,8 +1727,8 @@ Partial Class dashboard_Frm
         'Label29
         '
         Me.Label29.AutoSize = True
-        Me.PanelAnimator.SetDecoration(Me.Label29, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.logoAnimator.SetDecoration(Me.Label29, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.PanelAnimator.SetDecoration(Me.Label29, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.Label29.Font = New System.Drawing.Font("Century Gothic", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label29.Location = New System.Drawing.Point(32, 202)
         Me.Label29.Name = "Label29"
@@ -1742,8 +1821,8 @@ Partial Class dashboard_Frm
         'stockcheck_lbl
         '
         Me.stockcheck_lbl.AutoSize = True
-        Me.PanelAnimator.SetDecoration(Me.stockcheck_lbl, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.logoAnimator.SetDecoration(Me.stockcheck_lbl, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.PanelAnimator.SetDecoration(Me.stockcheck_lbl, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.stockcheck_lbl.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.stockcheck_lbl.Location = New System.Drawing.Point(102, 12)
         Me.stockcheck_lbl.Name = "stockcheck_lbl"
@@ -1855,8 +1934,8 @@ Partial Class dashboard_Frm
         'Label19
         '
         Me.Label19.AutoSize = True
-        Me.PanelAnimator.SetDecoration(Me.Label19, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.logoAnimator.SetDecoration(Me.Label19, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.PanelAnimator.SetDecoration(Me.Label19, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.Label19.Font = New System.Drawing.Font("Century Gothic", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label19.Location = New System.Drawing.Point(11, 33)
         Me.Label19.Name = "Label19"
@@ -1949,8 +2028,8 @@ Partial Class dashboard_Frm
         'total_Quantity_Txt
         '
         Me.total_Quantity_Txt.AutoSize = True
-        Me.PanelAnimator.SetDecoration(Me.total_Quantity_Txt, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.logoAnimator.SetDecoration(Me.total_Quantity_Txt, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.PanelAnimator.SetDecoration(Me.total_Quantity_Txt, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.total_Quantity_Txt.Font = New System.Drawing.Font("Century Gothic", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.total_Quantity_Txt.Location = New System.Drawing.Point(11, 165)
         Me.total_Quantity_Txt.Name = "total_Quantity_Txt"
@@ -2043,8 +2122,8 @@ Partial Class dashboard_Frm
         'Label30
         '
         Me.Label30.AutoSize = True
-        Me.PanelAnimator.SetDecoration(Me.Label30, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.logoAnimator.SetDecoration(Me.Label30, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.PanelAnimator.SetDecoration(Me.Label30, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.Label30.Font = New System.Drawing.Font("Century Gothic", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label30.Location = New System.Drawing.Point(11, 101)
         Me.Label30.Name = "Label30"
@@ -2058,8 +2137,8 @@ Partial Class dashboard_Frm
         'cause_lbl
         '
         Me.cause_lbl.AutoSize = True
-        Me.PanelAnimator.SetDecoration(Me.cause_lbl, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.logoAnimator.SetDecoration(Me.cause_lbl, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.PanelAnimator.SetDecoration(Me.cause_lbl, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.cause_lbl.Font = New System.Drawing.Font("Century Gothic", 10.2!, System.Drawing.FontStyle.Bold)
         Me.cause_lbl.Location = New System.Drawing.Point(11, 276)
         Me.cause_lbl.Name = "cause_lbl"
@@ -2074,8 +2153,8 @@ Partial Class dashboard_Frm
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.PanelAnimator.SetDecoration(Me.Label6, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.logoAnimator.SetDecoration(Me.Label6, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.PanelAnimator.SetDecoration(Me.Label6, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.Label6.Font = New System.Drawing.Font("Century Gothic", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.Location = New System.Drawing.Point(573, 333)
         Me.Label6.Name = "Label6"
@@ -2089,8 +2168,8 @@ Partial Class dashboard_Frm
         'admit_tag_lbl
         '
         Me.admit_tag_lbl.AutoSize = True
-        Me.PanelAnimator.SetDecoration(Me.admit_tag_lbl, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.logoAnimator.SetDecoration(Me.admit_tag_lbl, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.PanelAnimator.SetDecoration(Me.admit_tag_lbl, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.admit_tag_lbl.Font = New System.Drawing.Font("Century Gothic", 10.2!, System.Drawing.FontStyle.Bold)
         Me.admit_tag_lbl.Location = New System.Drawing.Point(11, 383)
         Me.admit_tag_lbl.Name = "admit_tag_lbl"
@@ -2184,8 +2263,8 @@ Partial Class dashboard_Frm
         'service_tag_lbl
         '
         Me.service_tag_lbl.AutoSize = True
-        Me.PanelAnimator.SetDecoration(Me.service_tag_lbl, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.logoAnimator.SetDecoration(Me.service_tag_lbl, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.PanelAnimator.SetDecoration(Me.service_tag_lbl, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.service_tag_lbl.Font = New System.Drawing.Font("Century Gothic", 10.2!, System.Drawing.FontStyle.Bold)
         Me.service_tag_lbl.Location = New System.Drawing.Point(11, 276)
         Me.service_tag_lbl.Name = "service_tag_lbl"
@@ -2200,8 +2279,8 @@ Partial Class dashboard_Frm
         'serCharge_tag_lbl
         '
         Me.serCharge_tag_lbl.AutoSize = True
-        Me.PanelAnimator.SetDecoration(Me.serCharge_tag_lbl, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.logoAnimator.SetDecoration(Me.serCharge_tag_lbl, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.PanelAnimator.SetDecoration(Me.serCharge_tag_lbl, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.serCharge_tag_lbl.Font = New System.Drawing.Font("Century Gothic", 10.2!, System.Drawing.FontStyle.Bold)
         Me.serCharge_tag_lbl.Location = New System.Drawing.Point(11, 383)
         Me.serCharge_tag_lbl.Name = "serCharge_tag_lbl"
@@ -2295,8 +2374,8 @@ Partial Class dashboard_Frm
         'Label17
         '
         Me.Label17.AutoSize = True
-        Me.PanelAnimator.SetDecoration(Me.Label17, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.logoAnimator.SetDecoration(Me.Label17, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.PanelAnimator.SetDecoration(Me.Label17, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.Label17.Font = New System.Drawing.Font("Century Gothic", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label17.Location = New System.Drawing.Point(573, 385)
         Me.Label17.Name = "Label17"
@@ -2310,8 +2389,8 @@ Partial Class dashboard_Frm
         'sellPrice_tag_lbl
         '
         Me.sellPrice_tag_lbl.AutoSize = True
-        Me.PanelAnimator.SetDecoration(Me.sellPrice_tag_lbl, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.logoAnimator.SetDecoration(Me.sellPrice_tag_lbl, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.PanelAnimator.SetDecoration(Me.sellPrice_tag_lbl, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.sellPrice_tag_lbl.Font = New System.Drawing.Font("Century Gothic", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.sellPrice_tag_lbl.Location = New System.Drawing.Point(11, 383)
         Me.sellPrice_tag_lbl.Name = "sellPrice_tag_lbl"
@@ -2339,8 +2418,8 @@ Partial Class dashboard_Frm
         'stock_get_label
         '
         Me.stock_get_label.AutoSize = True
-        Me.PanelAnimator.SetDecoration(Me.stock_get_label, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.logoAnimator.SetDecoration(Me.stock_get_label, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.PanelAnimator.SetDecoration(Me.stock_get_label, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.stock_get_label.Font = New System.Drawing.Font("Century Gothic", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.stock_get_label.Location = New System.Drawing.Point(690, 543)
         Me.stock_get_label.Name = "stock_get_label"
@@ -2368,8 +2447,8 @@ Partial Class dashboard_Frm
         'welcomemsg
         '
         Me.welcomemsg.AutoSize = True
-        Me.PanelAnimator.SetDecoration(Me.welcomemsg, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.logoAnimator.SetDecoration(Me.welcomemsg, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.PanelAnimator.SetDecoration(Me.welcomemsg, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.welcomemsg.Font = New System.Drawing.Font("Century Gothic", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.welcomemsg.Location = New System.Drawing.Point(73, 701)
         Me.welcomemsg.Name = "welcomemsg"
@@ -2382,8 +2461,8 @@ Partial Class dashboard_Frm
         'Label20
         '
         Me.Label20.AutoSize = True
-        Me.PanelAnimator.SetDecoration(Me.Label20, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.logoAnimator.SetDecoration(Me.Label20, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.PanelAnimator.SetDecoration(Me.Label20, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.Label20.Font = New System.Drawing.Font("Century Gothic", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label20.Location = New System.Drawing.Point(11, 190)
         Me.Label20.Name = "Label20"
@@ -2413,13 +2492,13 @@ Partial Class dashboard_Frm
         Me.Check_Out_Btn.ColorContrastOnClick = 45
         Me.Check_Out_Btn.ColorContrastOnHover = 45
         Me.Check_Out_Btn.Cursor = System.Windows.Forms.Cursors.Default
-        BorderEdges1.BottomLeft = True
-        BorderEdges1.BottomRight = True
-        BorderEdges1.TopLeft = True
-        BorderEdges1.TopRight = True
-        Me.Check_Out_Btn.CustomizableEdges = BorderEdges1
-        Me.logoAnimator.SetDecoration(Me.Check_Out_Btn, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        BorderEdges2.BottomLeft = True
+        BorderEdges2.BottomRight = True
+        BorderEdges2.TopLeft = True
+        BorderEdges2.TopRight = True
+        Me.Check_Out_Btn.CustomizableEdges = BorderEdges2
         Me.PanelAnimator.SetDecoration(Me.Check_Out_Btn, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.logoAnimator.SetDecoration(Me.Check_Out_Btn, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.Check_Out_Btn.DialogResult = System.Windows.Forms.DialogResult.None
         Me.Check_Out_Btn.DisabledBorderColor = System.Drawing.Color.FromArgb(CType(CType(191, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(191, Byte), Integer))
         Me.Check_Out_Btn.DisabledFillColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
@@ -2649,8 +2728,8 @@ Partial Class dashboard_Frm
         'Label18
         '
         Me.Label18.AutoSize = True
-        Me.PanelAnimator.SetDecoration(Me.Label18, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.logoAnimator.SetDecoration(Me.Label18, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.PanelAnimator.SetDecoration(Me.Label18, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.Label18.Font = New System.Drawing.Font("Century Gothic", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label18.Location = New System.Drawing.Point(11, 233)
         Me.Label18.Name = "Label18"
@@ -2693,8 +2772,8 @@ Partial Class dashboard_Frm
         '
         Me.Label8.AutoSize = True
         Me.Label8.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(112, Byte), Integer))
-        Me.PanelAnimator.SetDecoration(Me.Label8, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.logoAnimator.SetDecoration(Me.Label8, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.PanelAnimator.SetDecoration(Me.Label8, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.Label8.Font = New System.Drawing.Font("Sitka Text", 24.0!)
         Me.Label8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(230, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(195, Byte), Integer))
         Me.Label8.Location = New System.Drawing.Point(366, 10)
@@ -2739,8 +2818,8 @@ Partial Class dashboard_Frm
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.PanelAnimator.SetDecoration(Me.Label7, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.logoAnimator.SetDecoration(Me.Label7, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.PanelAnimator.SetDecoration(Me.Label7, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.Label7.Font = New System.Drawing.Font("Century Gothic", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.Location = New System.Drawing.Point(11, 156)
         Me.Label7.Name = "Label7"
@@ -2754,8 +2833,8 @@ Partial Class dashboard_Frm
         'productName_tag_lbl
         '
         Me.productName_tag_lbl.AutoSize = True
-        Me.PanelAnimator.SetDecoration(Me.productName_tag_lbl, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.logoAnimator.SetDecoration(Me.productName_tag_lbl, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.PanelAnimator.SetDecoration(Me.productName_tag_lbl, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.productName_tag_lbl.Font = New System.Drawing.Font("Century Gothic", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.productName_tag_lbl.Location = New System.Drawing.Point(11, 276)
         Me.productName_tag_lbl.Name = "productName_tag_lbl"
@@ -2769,8 +2848,8 @@ Partial Class dashboard_Frm
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.PanelAnimator.SetDecoration(Me.Label3, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.logoAnimator.SetDecoration(Me.Label3, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.PanelAnimator.SetDecoration(Me.Label3, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.Label3.Font = New System.Drawing.Font("Century Gothic", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.Location = New System.Drawing.Point(11, 317)
         Me.Label3.Name = "Label3"
@@ -2805,9 +2884,8 @@ Partial Class dashboard_Frm
         Me.BunifuPanel2.BorderColor = System.Drawing.Color.Transparent
         Me.BunifuPanel2.BorderRadius = 3
         Me.BunifuPanel2.BorderThickness = 1
+        Me.BunifuPanel2.Controls.Add(Me.DateTimePicker1)
         Me.BunifuPanel2.Controls.Add(Me.BunifuCards4)
-        Me.BunifuPanel2.Controls.Add(Me.BunifuCards3)
-        Me.BunifuPanel2.Controls.Add(Me.BunifuCards2)
         Me.BunifuPanel2.Controls.Add(Me.BunifuCards1)
         Me.PanelAnimator.SetDecoration(Me.BunifuPanel2, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.logoAnimator.SetDecoration(Me.BunifuPanel2, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
@@ -2820,137 +2898,69 @@ Partial Class dashboard_Frm
         Me.BunifuToolTip1.SetToolTipIcon(Me.BunifuPanel2, Nothing)
         Me.BunifuToolTip1.SetToolTipTitle(Me.BunifuPanel2, "")
         '
+        'DateTimePicker1
+        '
+        Me.PanelAnimator.SetDecoration(Me.DateTimePicker1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.logoAnimator.SetDecoration(Me.DateTimePicker1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.DateTimePicker1.Location = New System.Drawing.Point(694, 46)
+        Me.DateTimePicker1.Name = "DateTimePicker1"
+        Me.DateTimePicker1.Size = New System.Drawing.Size(289, 22)
+        Me.DateTimePicker1.TabIndex = 5
+        Me.BunifuToolTip1.SetToolTip(Me.DateTimePicker1, "")
+        Me.BunifuToolTip1.SetToolTipIcon(Me.DateTimePicker1, Nothing)
+        Me.BunifuToolTip1.SetToolTipTitle(Me.DateTimePicker1, "")
+        '
         'BunifuCards4
         '
         Me.BunifuCards4.BackColor = System.Drawing.Color.White
         Me.BunifuCards4.BorderRadius = 5
         Me.BunifuCards4.BottomSahddow = False
         Me.BunifuCards4.color = System.Drawing.Color.LawnGreen
+        Me.BunifuCards4.Controls.Add(Me.total_profit_lbl)
         Me.BunifuCards4.Controls.Add(Me.Label12)
         Me.logoAnimator.SetDecoration(Me.BunifuCards4, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.PanelAnimator.SetDecoration(Me.BunifuCards4, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.BunifuCards4.LeftSahddow = False
-        Me.BunifuCards4.Location = New System.Drawing.Point(706, 192)
+        Me.BunifuCards4.Location = New System.Drawing.Point(694, 120)
         Me.BunifuCards4.Name = "BunifuCards4"
         Me.BunifuCards4.RightSahddow = False
         Me.BunifuCards4.ShadowDepth = 20
-        Me.BunifuCards4.Size = New System.Drawing.Size(289, 198)
+        Me.BunifuCards4.Size = New System.Drawing.Size(289, 358)
         Me.BunifuCards4.TabIndex = 4
         Me.BunifuToolTip1.SetToolTip(Me.BunifuCards4, "")
         Me.BunifuToolTip1.SetToolTipIcon(Me.BunifuCards4, Nothing)
         Me.BunifuToolTip1.SetToolTipTitle(Me.BunifuCards4, "")
         '
+        'total_profit_lbl
+        '
+        Me.total_profit_lbl.AutoSize = True
+        Me.logoAnimator.SetDecoration(Me.total_profit_lbl, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.PanelAnimator.SetDecoration(Me.total_profit_lbl, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.total_profit_lbl.Font = New System.Drawing.Font("Century Gothic", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.total_profit_lbl.ForeColor = System.Drawing.Color.Green
+        Me.total_profit_lbl.Location = New System.Drawing.Point(97, 118)
+        Me.total_profit_lbl.Name = "total_profit_lbl"
+        Me.total_profit_lbl.Size = New System.Drawing.Size(99, 27)
+        Me.total_profit_lbl.TabIndex = 5
+        Me.total_profit_lbl.Text = "Income"
+        Me.BunifuToolTip1.SetToolTip(Me.total_profit_lbl, "")
+        Me.BunifuToolTip1.SetToolTipIcon(Me.total_profit_lbl, Nothing)
+        Me.BunifuToolTip1.SetToolTipTitle(Me.total_profit_lbl, "")
+        '
         'Label12
         '
         Me.Label12.AutoSize = True
-        Me.PanelAnimator.SetDecoration(Me.Label12, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.logoAnimator.SetDecoration(Me.Label12, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.Label12.Location = New System.Drawing.Point(116, 20)
+        Me.PanelAnimator.SetDecoration(Me.Label12, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.Label12.Font = New System.Drawing.Font("Century Gothic", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.Location = New System.Drawing.Point(82, 20)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(74, 16)
+        Me.Label12.Size = New System.Drawing.Size(131, 27)
         Me.Label12.TabIndex = 3
         Me.Label12.Text = "Total  Profit"
         Me.BunifuToolTip1.SetToolTip(Me.Label12, "")
         Me.BunifuToolTip1.SetToolTipIcon(Me.Label12, Nothing)
         Me.BunifuToolTip1.SetToolTipTitle(Me.Label12, "")
-        '
-        'BunifuCards3
-        '
-        Me.BunifuCards3.BackColor = System.Drawing.Color.White
-        Me.BunifuCards3.BorderRadius = 5
-        Me.BunifuCards3.BottomSahddow = False
-        Me.BunifuCards3.color = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(112, Byte), Integer))
-        Me.BunifuCards3.Controls.Add(Me.Label11)
-        Me.logoAnimator.SetDecoration(Me.BunifuCards3, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.PanelAnimator.SetDecoration(Me.BunifuCards3, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.BunifuCards3.LeftSahddow = False
-        Me.BunifuCards3.Location = New System.Drawing.Point(706, 76)
-        Me.BunifuCards3.Name = "BunifuCards3"
-        Me.BunifuCards3.RightSahddow = False
-        Me.BunifuCards3.ShadowDepth = 20
-        Me.BunifuCards3.Size = New System.Drawing.Size(289, 98)
-        Me.BunifuCards3.TabIndex = 1
-        Me.BunifuToolTip1.SetToolTip(Me.BunifuCards3, "")
-        Me.BunifuToolTip1.SetToolTipIcon(Me.BunifuCards3, Nothing)
-        Me.BunifuToolTip1.SetToolTipTitle(Me.BunifuCards3, "")
-        '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.PanelAnimator.SetDecoration(Me.Label11, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.logoAnimator.SetDecoration(Me.Label11, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.Label11.Location = New System.Drawing.Point(116, 20)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(41, 16)
-        Me.Label11.TabIndex = 3
-        Me.Label11.Text = "Total "
-        Me.BunifuToolTip1.SetToolTip(Me.Label11, "")
-        Me.BunifuToolTip1.SetToolTipIcon(Me.Label11, Nothing)
-        Me.BunifuToolTip1.SetToolTipTitle(Me.Label11, "")
-        '
-        'BunifuCards2
-        '
-        Me.BunifuCards2.BackColor = System.Drawing.Color.White
-        Me.BunifuCards2.BorderRadius = 5
-        Me.BunifuCards2.BottomSahddow = False
-        Me.BunifuCards2.color = System.Drawing.Color.Navy
-        Me.BunifuCards2.Controls.Add(Me.Label15)
-        Me.BunifuCards2.Controls.Add(Me.Label16)
-        Me.BunifuCards2.Controls.Add(Me.Label10)
-        Me.logoAnimator.SetDecoration(Me.BunifuCards2, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.PanelAnimator.SetDecoration(Me.BunifuCards2, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.BunifuCards2.LeftSahddow = False
-        Me.BunifuCards2.Location = New System.Drawing.Point(361, 76)
-        Me.BunifuCards2.Name = "BunifuCards2"
-        Me.BunifuCards2.RightSahddow = False
-        Me.BunifuCards2.ShadowDepth = 20
-        Me.BunifuCards2.Size = New System.Drawing.Size(289, 314)
-        Me.BunifuCards2.TabIndex = 1
-        Me.BunifuToolTip1.SetToolTip(Me.BunifuCards2, "")
-        Me.BunifuToolTip1.SetToolTipIcon(Me.BunifuCards2, Nothing)
-        Me.BunifuToolTip1.SetToolTipTitle(Me.BunifuCards2, "")
-        '
-        'Label15
-        '
-        Me.Label15.AutoSize = True
-        Me.PanelAnimator.SetDecoration(Me.Label15, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.logoAnimator.SetDecoration(Me.Label15, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.Label15.Location = New System.Drawing.Point(111, 169)
-        Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(51, 16)
-        Me.Label15.TabIndex = 5
-        Me.Label15.Text = "Income"
-        Me.BunifuToolTip1.SetToolTip(Me.Label15, "")
-        Me.BunifuToolTip1.SetToolTipIcon(Me.Label15, Nothing)
-        Me.BunifuToolTip1.SetToolTipTitle(Me.Label15, "")
-        '
-        'Label16
-        '
-        Me.Label16.AutoSize = True
-        Me.PanelAnimator.SetDecoration(Me.Label16, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.logoAnimator.SetDecoration(Me.Label16, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.Label16.Location = New System.Drawing.Point(98, 82)
-        Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(85, 16)
-        Me.Label16.TabIndex = 4
-        Me.Label16.Text = "Medicine Qty"
-        Me.BunifuToolTip1.SetToolTip(Me.Label16, "")
-        Me.BunifuToolTip1.SetToolTipIcon(Me.Label16, Nothing)
-        Me.BunifuToolTip1.SetToolTipTitle(Me.Label16, "")
-        '
-        'Label10
-        '
-        Me.Label10.AutoSize = True
-        Me.PanelAnimator.SetDecoration(Me.Label10, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.logoAnimator.SetDecoration(Me.Label10, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.Label10.Location = New System.Drawing.Point(78, 23)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(131, 16)
-        Me.Label10.TabIndex = 2
-        Me.Label10.Text = "Medicine Sell Today"
-        Me.BunifuToolTip1.SetToolTip(Me.Label10, "")
-        Me.BunifuToolTip1.SetToolTipIcon(Me.Label10, Nothing)
-        Me.BunifuToolTip1.SetToolTipTitle(Me.Label10, "")
         '
         'BunifuCards1
         '
@@ -2958,60 +2968,131 @@ Partial Class dashboard_Frm
         Me.BunifuCards1.BorderRadius = 5
         Me.BunifuCards1.BottomSahddow = False
         Me.BunifuCards1.color = System.Drawing.Color.Tomato
-        Me.BunifuCards1.Controls.Add(Me.Label14)
         Me.BunifuCards1.Controls.Add(Me.Label13)
+        Me.BunifuCards1.Controls.Add(Me.Label10)
+        Me.BunifuCards1.Controls.Add(Me.Label2)
+        Me.BunifuCards1.Controls.Add(Me.total_patient_income_lbl)
+        Me.BunifuCards1.Controls.Add(Me.medicine_qty_lbl)
+        Me.BunifuCards1.Controls.Add(Me.total_patient_lbl)
         Me.BunifuCards1.Controls.Add(Me.Label9)
         Me.logoAnimator.SetDecoration(Me.BunifuCards1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.PanelAnimator.SetDecoration(Me.BunifuCards1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.BunifuCards1.LeftSahddow = False
-        Me.BunifuCards1.Location = New System.Drawing.Point(16, 76)
+        Me.BunifuCards1.Location = New System.Drawing.Point(91, 120)
         Me.BunifuCards1.Name = "BunifuCards1"
         Me.BunifuCards1.RightSahddow = False
         Me.BunifuCards1.ShadowDepth = 20
-        Me.BunifuCards1.Size = New System.Drawing.Size(289, 314)
+        Me.BunifuCards1.Size = New System.Drawing.Size(504, 358)
         Me.BunifuCards1.TabIndex = 0
         Me.BunifuToolTip1.SetToolTip(Me.BunifuCards1, "")
         Me.BunifuToolTip1.SetToolTipIcon(Me.BunifuCards1, Nothing)
         Me.BunifuToolTip1.SetToolTipTitle(Me.BunifuCards1, "")
         '
-        'Label14
-        '
-        Me.Label14.AutoSize = True
-        Me.PanelAnimator.SetDecoration(Me.Label14, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.logoAnimator.SetDecoration(Me.Label14, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.Label14.Location = New System.Drawing.Point(103, 169)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(51, 16)
-        Me.Label14.TabIndex = 3
-        Me.Label14.Text = "Income"
-        Me.BunifuToolTip1.SetToolTip(Me.Label14, "")
-        Me.BunifuToolTip1.SetToolTipIcon(Me.Label14, Nothing)
-        Me.BunifuToolTip1.SetToolTipTitle(Me.Label14, "")
-        '
         'Label13
         '
         Me.Label13.AutoSize = True
-        Me.PanelAnimator.SetDecoration(Me.Label13, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.logoAnimator.SetDecoration(Me.Label13, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.Label13.Location = New System.Drawing.Point(84, 82)
+        Me.PanelAnimator.SetDecoration(Me.Label13, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.Label13.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label13.Location = New System.Drawing.Point(179, 204)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(89, 16)
-        Me.Label13.TabIndex = 2
-        Me.Label13.Text = "Total Pateints"
+        Me.Label13.Size = New System.Drawing.Size(86, 23)
+        Me.Label13.TabIndex = 7
+        Me.Label13.Text = "Income"
         Me.BunifuToolTip1.SetToolTip(Me.Label13, "")
         Me.BunifuToolTip1.SetToolTipIcon(Me.Label13, Nothing)
         Me.BunifuToolTip1.SetToolTipTitle(Me.Label13, "")
         '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.logoAnimator.SetDecoration(Me.Label10, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.PanelAnimator.SetDecoration(Me.Label10, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.Label10.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.Location = New System.Drawing.Point(160, 132)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(136, 23)
+        Me.Label10.TabIndex = 6
+        Me.Label10.Text = "Total Pateints"
+        Me.BunifuToolTip1.SetToolTip(Me.Label10, "")
+        Me.BunifuToolTip1.SetToolTipIcon(Me.Label10, Nothing)
+        Me.BunifuToolTip1.SetToolTipTitle(Me.Label10, "")
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.logoAnimator.SetDecoration(Me.Label2, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.PanelAnimator.SetDecoration(Me.Label2, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.Label2.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(160, 60)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(143, 23)
+        Me.Label2.TabIndex = 5
+        Me.Label2.Text = "Medicine Qty"
+        Me.BunifuToolTip1.SetToolTip(Me.Label2, "")
+        Me.BunifuToolTip1.SetToolTipIcon(Me.Label2, Nothing)
+        Me.BunifuToolTip1.SetToolTipTitle(Me.Label2, "")
+        '
+        'total_patient_income_lbl
+        '
+        Me.total_patient_income_lbl.AutoSize = True
+        Me.logoAnimator.SetDecoration(Me.total_patient_income_lbl, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.PanelAnimator.SetDecoration(Me.total_patient_income_lbl, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.total_patient_income_lbl.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.total_patient_income_lbl.ForeColor = System.Drawing.Color.Green
+        Me.total_patient_income_lbl.Location = New System.Drawing.Point(211, 240)
+        Me.total_patient_income_lbl.Name = "total_patient_income_lbl"
+        Me.total_patient_income_lbl.Size = New System.Drawing.Size(85, 23)
+        Me.total_patient_income_lbl.TabIndex = 3
+        Me.total_patient_income_lbl.Text = "Income"
+        Me.total_patient_income_lbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.BunifuToolTip1.SetToolTip(Me.total_patient_income_lbl, "")
+        Me.BunifuToolTip1.SetToolTipIcon(Me.total_patient_income_lbl, Nothing)
+        Me.BunifuToolTip1.SetToolTipTitle(Me.total_patient_income_lbl, "")
+        '
+        'medicine_qty_lbl
+        '
+        Me.medicine_qty_lbl.AutoSize = True
+        Me.logoAnimator.SetDecoration(Me.medicine_qty_lbl, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.PanelAnimator.SetDecoration(Me.medicine_qty_lbl, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.medicine_qty_lbl.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.medicine_qty_lbl.Location = New System.Drawing.Point(211, 93)
+        Me.medicine_qty_lbl.Name = "medicine_qty_lbl"
+        Me.medicine_qty_lbl.Size = New System.Drawing.Size(139, 23)
+        Me.medicine_qty_lbl.TabIndex = 4
+        Me.medicine_qty_lbl.Text = "Medicine Qty"
+        Me.medicine_qty_lbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.BunifuToolTip1.SetToolTip(Me.medicine_qty_lbl, "")
+        Me.BunifuToolTip1.SetToolTipIcon(Me.medicine_qty_lbl, Nothing)
+        Me.BunifuToolTip1.SetToolTipTitle(Me.medicine_qty_lbl, "")
+        '
+        'total_patient_lbl
+        '
+        Me.total_patient_lbl.AutoSize = True
+        Me.logoAnimator.SetDecoration(Me.total_patient_lbl, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.PanelAnimator.SetDecoration(Me.total_patient_lbl, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.total_patient_lbl.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.total_patient_lbl.Location = New System.Drawing.Point(211, 168)
+        Me.total_patient_lbl.Name = "total_patient_lbl"
+        Me.total_patient_lbl.Size = New System.Drawing.Size(139, 23)
+        Me.total_patient_lbl.TabIndex = 2
+        Me.total_patient_lbl.Text = "Total Pateints"
+        Me.total_patient_lbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.BunifuToolTip1.SetToolTip(Me.total_patient_lbl, "")
+        Me.BunifuToolTip1.SetToolTipIcon(Me.total_patient_lbl, Nothing)
+        Me.BunifuToolTip1.SetToolTipTitle(Me.total_patient_lbl, "")
+        '
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.PanelAnimator.SetDecoration(Me.Label9, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.logoAnimator.SetDecoration(Me.Label9, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.Label9.Location = New System.Drawing.Point(55, 20)
+        Me.PanelAnimator.SetDecoration(Me.Label9, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.Label9.Font = New System.Drawing.Font("Century Gothic", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Location = New System.Drawing.Point(84, 11)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(163, 16)
+        Me.Label9.Size = New System.Drawing.Size(289, 37)
         Me.Label9.TabIndex = 1
-        Me.Label9.Text = "Number of Pateints Today"
+        Me.Label9.Text = "Number of Pateints"
         Me.BunifuToolTip1.SetToolTip(Me.Label9, "")
         Me.BunifuToolTip1.SetToolTipIcon(Me.Label9, Nothing)
         Me.BunifuToolTip1.SetToolTipTitle(Me.Label9, "")
@@ -3050,8 +3131,8 @@ Partial Class dashboard_Frm
         '
         Me.Label21.AutoSize = True
         Me.Label21.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(112, Byte), Integer))
-        Me.PanelAnimator.SetDecoration(Me.Label21, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.logoAnimator.SetDecoration(Me.Label21, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.PanelAnimator.SetDecoration(Me.Label21, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.Label21.Font = New System.Drawing.Font("Century Gothic", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label21.ForeColor = System.Drawing.Color.White
         Me.Label21.Location = New System.Drawing.Point(183, 62)
@@ -3112,8 +3193,8 @@ Partial Class dashboard_Frm
         '
         Me.Label22.AutoSize = True
         Me.Label22.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(112, Byte), Integer))
-        Me.PanelAnimator.SetDecoration(Me.Label22, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.logoAnimator.SetDecoration(Me.Label22, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.PanelAnimator.SetDecoration(Me.Label22, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.Label22.Font = New System.Drawing.Font("Century Gothic", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label22.ForeColor = System.Drawing.Color.White
         Me.Label22.Location = New System.Drawing.Point(850, 37)
@@ -3128,8 +3209,8 @@ Partial Class dashboard_Frm
         'Label23
         '
         Me.Label23.AutoSize = True
-        Me.PanelAnimator.SetDecoration(Me.Label23, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.logoAnimator.SetDecoration(Me.Label23, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.PanelAnimator.SetDecoration(Me.Label23, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.Label23.Font = New System.Drawing.Font("Century Gothic", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label23.Location = New System.Drawing.Point(12, 267)
         Me.Label23.Name = "Label23"
@@ -3157,8 +3238,8 @@ Partial Class dashboard_Frm
         'Label24
         '
         Me.Label24.AutoSize = True
-        Me.PanelAnimator.SetDecoration(Me.Label24, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.logoAnimator.SetDecoration(Me.Label24, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.PanelAnimator.SetDecoration(Me.Label24, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.Label24.Font = New System.Drawing.Font("Century Gothic", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label24.Location = New System.Drawing.Point(553, 142)
         Me.Label24.Name = "Label24"
@@ -3172,8 +3253,8 @@ Partial Class dashboard_Frm
         'Label25
         '
         Me.Label25.AutoSize = True
-        Me.PanelAnimator.SetDecoration(Me.Label25, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.logoAnimator.SetDecoration(Me.Label25, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.PanelAnimator.SetDecoration(Me.Label25, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.Label25.Font = New System.Drawing.Font("Century Gothic", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label25.Location = New System.Drawing.Point(553, 178)
         Me.Label25.Name = "Label25"
@@ -3187,8 +3268,8 @@ Partial Class dashboard_Frm
         'Label26
         '
         Me.Label26.AutoSize = True
-        Me.PanelAnimator.SetDecoration(Me.Label26, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.logoAnimator.SetDecoration(Me.Label26, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.PanelAnimator.SetDecoration(Me.Label26, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.Label26.Font = New System.Drawing.Font("Century Gothic", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label26.Location = New System.Drawing.Point(12, 210)
         Me.Label26.Name = "Label26"
@@ -3202,8 +3283,8 @@ Partial Class dashboard_Frm
         'Label27
         '
         Me.Label27.AutoSize = True
-        Me.PanelAnimator.SetDecoration(Me.Label27, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.logoAnimator.SetDecoration(Me.Label27, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.PanelAnimator.SetDecoration(Me.Label27, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.Label27.Font = New System.Drawing.Font("Century Gothic", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label27.Location = New System.Drawing.Point(12, 313)
         Me.Label27.Name = "Label27"
@@ -3217,8 +3298,8 @@ Partial Class dashboard_Frm
         'Label28
         '
         Me.Label28.AutoSize = True
-        Me.PanelAnimator.SetDecoration(Me.Label28, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.logoAnimator.SetDecoration(Me.Label28, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.PanelAnimator.SetDecoration(Me.Label28, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.Label28.Font = New System.Drawing.Font("Century Gothic", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label28.Location = New System.Drawing.Point(12, 155)
         Me.Label28.Name = "Label28"
@@ -3576,6 +3657,7 @@ Partial Class dashboard_Frm
         '
         'TabPage4
         '
+        Me.TabPage4.Controls.Add(Me.Label11)
         Me.TabPage4.Controls.Add(Me.BunifuButton2)
         Me.TabPage4.Controls.Add(Me.Label31)
         Me.TabPage4.Controls.Add(Me.sell_grid)
@@ -3595,6 +3677,23 @@ Partial Class dashboard_Frm
         Me.BunifuToolTip1.SetToolTipTitle(Me.TabPage4, "")
         Me.TabPage4.UseVisualStyleBackColor = True
         '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.BackColor = System.Drawing.Color.Transparent
+        Me.logoAnimator.SetDecoration(Me.Label11, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.PanelAnimator.SetDecoration(Me.Label11, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.Label11.Font = New System.Drawing.Font("Century Gothic", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.ForeColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(112, Byte), Integer))
+        Me.Label11.Location = New System.Drawing.Point(791, 142)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(190, 19)
+        Me.Label11.TabIndex = 164
+        Me.Label11.Text = "See the Clinic Income"
+        Me.BunifuToolTip1.SetToolTip(Me.Label11, "")
+        Me.BunifuToolTip1.SetToolTipIcon(Me.Label11, Nothing)
+        Me.BunifuToolTip1.SetToolTipTitle(Me.Label11, "")
+        '
         'BunifuButton2
         '
         Me.BunifuButton2.AllowAnimations = True
@@ -3609,18 +3708,18 @@ Partial Class dashboard_Frm
         Me.BunifuButton2.BackColor1 = System.Drawing.Color.DodgerBlue
         Me.BunifuButton2.BackgroundImage = CType(resources.GetObject("BunifuButton2.BackgroundImage"), System.Drawing.Image)
         Me.BunifuButton2.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid
-        Me.BunifuButton2.ButtonText = "BunifuButton2"
+        Me.BunifuButton2.ButtonText = "Print"
         Me.BunifuButton2.ButtonTextMarginLeft = 0
         Me.BunifuButton2.ColorContrastOnClick = 45
         Me.BunifuButton2.ColorContrastOnHover = 45
         Me.BunifuButton2.Cursor = System.Windows.Forms.Cursors.Default
-        BorderEdges2.BottomLeft = True
-        BorderEdges2.BottomRight = True
-        BorderEdges2.TopLeft = True
-        BorderEdges2.TopRight = True
-        Me.BunifuButton2.CustomizableEdges = BorderEdges2
-        Me.logoAnimator.SetDecoration(Me.BunifuButton2, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        BorderEdges3.BottomLeft = True
+        BorderEdges3.BottomRight = True
+        BorderEdges3.TopLeft = True
+        BorderEdges3.TopRight = True
+        Me.BunifuButton2.CustomizableEdges = BorderEdges3
         Me.PanelAnimator.SetDecoration(Me.BunifuButton2, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.logoAnimator.SetDecoration(Me.BunifuButton2, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.BunifuButton2.DialogResult = System.Windows.Forms.DialogResult.None
         Me.BunifuButton2.DisabledBorderColor = System.Drawing.Color.FromArgb(CType(CType(191, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(191, Byte), Integer))
         Me.BunifuButton2.DisabledFillColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
@@ -3644,7 +3743,7 @@ Partial Class dashboard_Frm
         Me.BunifuButton2.IdleIconLeftImage = Nothing
         Me.BunifuButton2.IdleIconRightImage = Nothing
         Me.BunifuButton2.IndicateFocus = False
-        Me.BunifuButton2.Location = New System.Drawing.Point(757, 33)
+        Me.BunifuButton2.Location = New System.Drawing.Point(822, 8)
         Me.BunifuButton2.Name = "BunifuButton2"
         Me.BunifuButton2.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(191, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(191, Byte), Integer))
         Me.BunifuButton2.OnDisabledState.BorderRadius = 1
@@ -3693,8 +3792,8 @@ Partial Class dashboard_Frm
         '
         Me.Label31.AutoSize = True
         Me.Label31.BackColor = System.Drawing.Color.Transparent
-        Me.PanelAnimator.SetDecoration(Me.Label31, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.logoAnimator.SetDecoration(Me.Label31, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.PanelAnimator.SetDecoration(Me.Label31, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.Label31.Font = New System.Drawing.Font("Century Gothic", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label31.ForeColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(112, Byte), Integer))
         Me.Label31.Location = New System.Drawing.Point(157, 83)
@@ -3837,7 +3936,7 @@ Partial Class dashboard_Frm
         Me.admin_search_product.IconRight = Nothing
         Me.admin_search_product.IconRightCursor = System.Windows.Forms.Cursors.IBeam
         Me.admin_search_product.Lines = New String(-1) {}
-        Me.admin_search_product.Location = New System.Drawing.Point(665, 105)
+        Me.admin_search_product.Location = New System.Drawing.Point(665, 88)
         Me.admin_search_product.MaxLength = 32767
         Me.admin_search_product.MinimumSize = New System.Drawing.Size(1, 1)
         Me.admin_search_product.Modified = False
@@ -3908,8 +4007,8 @@ Partial Class dashboard_Frm
         'RadioButton2
         '
         Me.RadioButton2.AutoSize = True
-        Me.PanelAnimator.SetDecoration(Me.RadioButton2, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.logoAnimator.SetDecoration(Me.RadioButton2, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.PanelAnimator.SetDecoration(Me.RadioButton2, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.RadioButton2.Location = New System.Drawing.Point(203, 51)
         Me.RadioButton2.Name = "RadioButton2"
         Me.RadioButton2.Size = New System.Drawing.Size(96, 20)
@@ -3924,8 +4023,8 @@ Partial Class dashboard_Frm
         'RadioButton1
         '
         Me.RadioButton1.AutoSize = True
-        Me.PanelAnimator.SetDecoration(Me.RadioButton1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.logoAnimator.SetDecoration(Me.RadioButton1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.PanelAnimator.SetDecoration(Me.RadioButton1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.RadioButton1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.RadioButton1.Location = New System.Drawing.Point(38, 51)
         Me.RadioButton1.Name = "RadioButton1"
@@ -3985,8 +4084,8 @@ Partial Class dashboard_Frm
         '
         'ContextMenuStrip1
         '
-        Me.PanelAnimator.SetDecoration(Me.ContextMenuStrip1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.logoAnimator.SetDecoration(Me.ContextMenuStrip1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.PanelAnimator.SetDecoration(Me.ContextMenuStrip1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.ContextMenuStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ManageListToolStripMenuItem})
         Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
@@ -4095,10 +4194,6 @@ Partial Class dashboard_Frm
         Me.BunifuPanel2.ResumeLayout(False)
         Me.BunifuCards4.ResumeLayout(False)
         Me.BunifuCards4.PerformLayout()
-        Me.BunifuCards3.ResumeLayout(False)
-        Me.BunifuCards3.PerformLayout()
-        Me.BunifuCards2.ResumeLayout(False)
-        Me.BunifuCards2.PerformLayout()
         Me.BunifuCards1.ResumeLayout(False)
         Me.BunifuCards1.PerformLayout()
         Me.TabPage3.ResumeLayout(False)
@@ -4140,17 +4235,12 @@ Partial Class dashboard_Frm
     Friend WithEvents BunifuPanel2 As Bunifu.UI.WinForms.BunifuPanel
     Friend WithEvents BunifuCards4 As Bunifu.Framework.UI.BunifuCards
     Friend WithEvents Label12 As Label
-    Friend WithEvents BunifuCards3 As Bunifu.Framework.UI.BunifuCards
-    Friend WithEvents Label11 As Label
-    Friend WithEvents BunifuCards2 As Bunifu.Framework.UI.BunifuCards
-    Friend WithEvents Label10 As Label
     Friend WithEvents BunifuCards1 As Bunifu.Framework.UI.BunifuCards
     Friend WithEvents Label9 As Label
     Friend WithEvents BunifuButton1 As Bunifu.UI.WinForms.BunifuButton.BunifuButton
-    Friend WithEvents Label15 As Label
-    Friend WithEvents Label16 As Label
-    Friend WithEvents Label14 As Label
-    Friend WithEvents Label13 As Label
+    Friend WithEvents medicine_qty_lbl As Label
+    Friend WithEvents total_patient_income_lbl As Label
+    Friend WithEvents total_patient_lbl As Label
     Friend WithEvents Label17 As Label
     Friend WithEvents Label18 As Label
     Friend WithEvents Label20 As Label
@@ -4228,5 +4318,11 @@ Partial Class dashboard_Frm
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Panel3 As Panel
     Friend WithEvents patient_over_all_status_lbl As Label
-    Friend WithEvents Button1 As Button
+    Friend WithEvents BunifuButton7 As Bunifu.UI.WinForms.BunifuButton.BunifuButton
+    Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents total_profit_lbl As Label
+    Friend WithEvents Label10 As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label13 As Label
+    Private WithEvents Label11 As Label
 End Class

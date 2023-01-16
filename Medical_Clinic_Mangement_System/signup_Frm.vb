@@ -109,10 +109,6 @@ Public Class signup_Frm
                 Next_btn.Text = "Finish"
                 If (Next_btn.Text = "Finish") Then
                     accountcreated()
-
-
-
-
                     Login_Frm.Show()
                     Me.Close()
 
@@ -208,6 +204,7 @@ Public Class signup_Frm
         End If
 
     End Sub
+
     Private Sub user_btxt_TextChanged(sender As Object, e As EventArgs) Handles user_btxt.TextChanged
         namecheck()
     End Sub
