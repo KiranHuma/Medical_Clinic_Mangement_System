@@ -161,7 +161,7 @@ Public Class signup_Frm
 
 
             command.ExecuteNonQuery()
-            msgBox_Frm.Show()
+            Label7.Text = "Account  Created Successfully"
         Catch ex As Exception
             Label7.Visible = True
             Label7.Text = "Account not Created Successfully"
@@ -173,13 +173,7 @@ Public Class signup_Frm
         Next_signup_function()
 
     End Sub
-    Private Sub BunifuButton1_Click(sender As Object, e As EventArgs)
-        msgBox_Frm.Show()
 
-
-
-
-    End Sub
 
     Private Sub signup_Frm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         dbaccessconnection()

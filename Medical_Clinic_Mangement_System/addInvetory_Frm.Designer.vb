@@ -2080,6 +2080,7 @@ Partial Class addInvetory_Frm
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.header)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "addInvetory_Frm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "addInvetory_Frm"

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+    <configSections>
+    </configSections>
+    <connectionStrings>
+        <add name="Medical_Clinic_Mangement_System.My.MySettings.mainClinicDbConnectionString" connectionString="Data Source=DESKTOP-SVPK7DP\SQLEXPRESS;Initial Catalog=mainClinicDb;Integrated Security=True;Pooling=False" providerName="System.Data.SqlClient"/>
+    </connectionStrings>
+    <startup>
+        <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.8"/>
+    </startup>
+	
+</configuration>

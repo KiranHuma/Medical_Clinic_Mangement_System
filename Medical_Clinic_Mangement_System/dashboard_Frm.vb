@@ -954,4 +954,8 @@ Public Class dashboard_Frm
         clinic_today_data_record()
         BunifuPages1.PageIndex = 1
     End Sub
+
+    Private Sub BunifuButton8_Click(sender As Object, e As EventArgs) Handles BunifuButton8.Click
+        resetFrm.ShowDialog()
+    End Sub
 End Class

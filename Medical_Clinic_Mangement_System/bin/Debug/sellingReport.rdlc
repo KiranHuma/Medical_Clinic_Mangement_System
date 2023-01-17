@@ -46,8 +46,11 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>sell Id</Value>
-                              <Style />
+                              <Value>ID</Value>
+                              <Style>
+                                <FontFamily>Century Gothic</FontFamily>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -76,8 +79,11 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>sell date</Value>
-                              <Style />
+                              <Value>Date</Value>
+                              <Style>
+                                <FontFamily>Century Gothic</FontFamily>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -106,8 +112,11 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>patient Name</Value>
-                              <Style />
+                              <Value>Patient Name</Value>
+                              <Style>
+                                <FontFamily>Century Gothic</FontFamily>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -136,8 +145,11 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>product list</Value>
-                              <Style />
+                              <Value>Product  List</Value>
+                              <Style>
+                                <FontFamily>Century Gothic</FontFamily>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -166,8 +178,11 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>patient Status</Value>
-                              <Style />
+                              <Value>Patient Status</Value>
+                              <Style>
+                                <FontFamily>Century Gothic</FontFamily>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -196,8 +211,11 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>price</Value>
-                              <Style />
+                              <Value>Price</Value>
+                              <Style>
+                                <FontFamily>Century Gothic</FontFamily>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -226,8 +244,11 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>profit price</Value>
-                              <Style />
+                              <Value>Profit</Value>
+                              <Style>
+                                <FontFamily>Century Gothic</FontFamily>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -256,8 +277,11 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>sell total quantity</Value>
-                              <Style />
+                              <Value>Sell Total quantity</Value>
+                              <Style>
+                                <FontFamily>Century Gothic</FontFamily>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -286,8 +310,11 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>sell by</Value>
-                              <Style />
+                              <Value>Sell by</Value>
+                              <Style>
+                                <FontFamily>Century Gothic</FontFamily>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -322,7 +349,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!sell_Id.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontFamily>Century Gothic</FontFamily>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -352,7 +381,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!sell_date.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontFamily>Century Gothic</FontFamily>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -382,7 +413,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!patient_Name.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontFamily>Century Gothic</FontFamily>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -412,7 +445,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!product_list.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontFamily>Century Gothic</FontFamily>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -442,7 +477,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!patient_Status.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontFamily>Century Gothic</FontFamily>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -472,7 +509,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!price.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontFamily>Century Gothic</FontFamily>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -502,7 +541,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!profit_price.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontFamily>Century Gothic</FontFamily>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -532,7 +573,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!sell_total_quantity.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontFamily>Century Gothic</FontFamily>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -562,7 +605,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!sell_by.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontFamily>Century Gothic</FontFamily>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -611,7 +656,7 @@
         </TablixRowHierarchy>
         <DataSetName>sellrecorddataset</DataSetName>
         <Top>1.2827cm</Top>
-        <Left>2.0447cm</Left>
+        <Left>1.52408cm</Left>
         <Height>1.2cm</Height>
         <Width>21.08183cm</Width>
         <Style>
@@ -626,6 +671,93 @@
   </Body>
   <Width>9.5in</Width>
   <Page>
+    <PageHeader>
+      <Height>2.54cm</Height>
+      <PrintOnFirstPage>true</PrintOnFirstPage>
+      <PrintOnLastPage>true</PrintOnLastPage>
+      <ReportItems>
+        <Textbox Name="Textbox2">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>Ata Poly Clinic</Value>
+                  <Style>
+                    <FontFamily>Century Gothic</FontFamily>
+                    <FontSize>30pt</FontSize>
+                    <FontWeight>ExtraBold</FontWeight>
+                    <Color>Turquoise</Color>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox1</rd:DefaultName>
+          <Top>0.23975cm</Top>
+          <Left>7.79875cm</Left>
+          <Height>2.0605cm</Height>
+          <Width>8.5325cm</Width>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+      </ReportItems>
+      <Style>
+        <Border>
+          <Style>None</Style>
+        </Border>
+      </Style>
+    </PageHeader>
+    <PageFooter>
+      <Height>2.54cm</Height>
+      <PrintOnFirstPage>true</PrintOnFirstPage>
+      <PrintOnLastPage>true</PrintOnLastPage>
+      <ReportItems>
+        <Textbox Name="ExecutionTime">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>=Globals!ExecutionTime</Value>
+                  <Style />
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>ExecutionTime</rd:DefaultName>
+          <Top>0.97cm</Top>
+          <Left>19.57675cm</Left>
+          <Height>0.6cm</Height>
+          <Width>3.02917cm</Width>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+      </ReportItems>
+      <Style>
+        <Border>
+          <Style>None</Style>
+        </Border>
+      </Style>
+    </PageFooter>
     <PageHeight>29.7cm</PageHeight>
     <PageWidth>21cm</PageWidth>
     <LeftMargin>2cm</LeftMargin>

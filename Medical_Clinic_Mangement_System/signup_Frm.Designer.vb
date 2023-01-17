@@ -1117,6 +1117,7 @@ Partial Class signup_Frm
         Me.Controls.Add(Me.phoneNumber_Line)
         Me.Controls.Add(Me.userNAme_Line)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "signup_Frm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "signup_Frm"

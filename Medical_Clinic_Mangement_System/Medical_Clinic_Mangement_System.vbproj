@@ -14,6 +14,8 @@
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -24,12 +26,17 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>0</ApplicationRevision>
+    <SupportUrl>https://www.facebook.com/techdisquss/</SupportUrl>
+    <ProductName>Ata Poly Clinic</ProductName>
+    <PublisherName>TechDisquss</PublisherName>
+    <SuiteName>Ata Poly Clinic</SuiteName>
+    <DisallowUrlActivation>true</DisallowUrlActivation>
+    <ApplicationRevision>7</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
-    <UseApplicationTrust>false</UseApplicationTrust>
+    <UseApplicationTrust>true</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -62,6 +69,24 @@
   </PropertyGroup>
   <PropertyGroup>
     <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>6F98EEEADF816754DA3C84D4353C23CE1D642AB3</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Medical_Clinic_Mangement_System_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Untitled-_440-×-440-px_-_1140-×-1140-px_.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="BouncyCastle.Crypto, Version=1.8.9.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
@@ -235,12 +260,6 @@
     <Compile Include="manage_Inventory_Frm.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="msgBox_Frm.Designer.vb">
-      <DependentUpon>msgBox_Frm.vb</DependentUpon>
-    </Compile>
-    <Compile Include="msgBox_Frm.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Login_Frm.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -264,10 +283,10 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="patients_Frm.Designer.vb">
-      <DependentUpon>patients_Frm.vb</DependentUpon>
+    <Compile Include="resetFrm.Designer.vb">
+      <DependentUpon>resetFrm.vb</DependentUpon>
     </Compile>
-    <Compile Include="patients_Frm.vb">
+    <Compile Include="resetFrm.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Reports\By_Date_Selling_ReportFrm.Designer.vb">
@@ -308,9 +327,6 @@
     <EmbeddedResource Include="manage_Inventory_Frm.resx">
       <DependentUpon>manage_Inventory_Frm.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="msgBox_Frm.resx">
-      <DependentUpon>msgBox_Frm.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Login_Frm.resx">
       <DependentUpon>Login_Frm.vb</DependentUpon>
     </EmbeddedResource>
@@ -321,8 +337,8 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="patients_Frm.resx">
-      <DependentUpon>patients_Frm.vb</DependentUpon>
+    <EmbeddedResource Include="resetFrm.resx">
+      <DependentUpon>resetFrm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="bin\Debug\clinicReport.rdlc" />
     <EmbeddedResource Include="Reports\By_Date_Selling_ReportFrm.resx">
@@ -351,6 +367,8 @@
     <None Include="mainClinicDbDataSet.xss">
       <DependentUpon>mainClinicDbDataSet.xsd</DependentUpon>
     </None>
+    <None Include="Medical_Clinic_Mangement_System_TemporaryKey.pfx" />
+    <None Include="My Project\app.manifest" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -378,10 +396,20 @@
       <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.8">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.8 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
     <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
       <Visible>False</Visible>
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.SqlServer.SqlLocalDB.15.0">
+      <Visible>False</Visible>
+      <ProductName>SQL Server 2019 Express LocalDB</ProductName>
+      <Install>true</Install>
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
@@ -402,6 +430,19 @@
     <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Untitled-_440-×-440-px_-_1140-×-1140-px_.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="Bunifu.Licensing">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

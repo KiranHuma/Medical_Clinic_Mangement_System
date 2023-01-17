@@ -464,6 +464,7 @@
                         <FontFamily>Century Gothic</FontFamily>
                         <FontSize>30pt</FontSize>
                         <FontWeight>ExtraBold</FontWeight>
+                        <Color>Turquoise</Color>
                       </Style>
                     </TextRun>
                   </TextRuns>

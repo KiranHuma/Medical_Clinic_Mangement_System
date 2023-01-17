@@ -1215,6 +1215,7 @@ Partial Class check_items_Frm
         Me.Controls.Add(Me.BunifuPanel1)
         Me.Controls.Add(Me.header)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "check_items_Frm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "check_items_Frm"

@@ -23,7 +23,6 @@ Partial Class dashboard_Frm
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim BorderEdges4 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges()
         Dim BorderEdges5 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges()
         Dim BorderEdges6 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges()
         Dim BorderEdges7 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges()
@@ -32,6 +31,7 @@ Partial Class dashboard_Frm
         Dim BorderEdges10 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges()
         Dim BorderEdges11 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges()
         Dim BorderEdges12 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges()
+        Dim BorderEdges13 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges()
         Dim Animation2 As Bunifu.UI.WinForms.BunifuAnimatorNS.Animation = New Bunifu.UI.WinForms.BunifuAnimatorNS.Animation()
         Dim Animation3 As Utilities.BunifuPages.BunifuAnimatorNS.Animation = New Utilities.BunifuPages.BunifuAnimatorNS.Animation()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(dashboard_Frm))
@@ -104,6 +104,7 @@ Partial Class dashboard_Frm
         Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim Animation1 As Bunifu.UI.WinForms.BunifuAnimatorNS.Animation = New Bunifu.UI.WinForms.BunifuAnimatorNS.Animation()
+        Dim BorderEdges4 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges()
         Me.BunifuElipse1 = New Bunifu.Framework.UI.BunifuElipse(Me.components)
         Me.sidemenu = New System.Windows.Forms.Panel()
         Me.BunifuButton1 = New Bunifu.UI.WinForms.BunifuButton.BunifuButton()
@@ -219,6 +220,7 @@ Partial Class dashboard_Frm
         Me.PanelAnimator = New Bunifu.UI.WinForms.BunifuTransition(Me.components)
         Me.BunifuToolTip1 = New Bunifu.UI.WinForms.BunifuToolTip(Me.components)
         Me.PrintDocument1 = New System.Drawing.Printing.PrintDocument()
+        Me.BunifuButton8 = New Bunifu.UI.WinForms.BunifuButton.BunifuButton()
         Me.sidemenu.SuspendLayout()
         CType(Me.logo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.header.SuspendLayout()
@@ -249,6 +251,7 @@ Partial Class dashboard_Frm
         'sidemenu
         '
         Me.sidemenu.BackColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(89, Byte), Integer))
+        Me.sidemenu.Controls.Add(Me.BunifuButton8)
         Me.sidemenu.Controls.Add(Me.BunifuButton1)
         Me.sidemenu.Controls.Add(Me.usersRecords_Btn)
         Me.sidemenu.Controls.Add(Me.logo1)
@@ -286,11 +289,11 @@ Partial Class dashboard_Frm
         Me.BunifuButton1.ColorContrastOnClick = 45
         Me.BunifuButton1.ColorContrastOnHover = 45
         Me.BunifuButton1.Cursor = System.Windows.Forms.Cursors.Default
-        BorderEdges4.BottomLeft = True
-        BorderEdges4.BottomRight = True
-        BorderEdges4.TopLeft = True
-        BorderEdges4.TopRight = True
-        Me.BunifuButton1.CustomizableEdges = BorderEdges4
+        BorderEdges5.BottomLeft = True
+        BorderEdges5.BottomRight = True
+        BorderEdges5.TopLeft = True
+        BorderEdges5.TopRight = True
+        Me.BunifuButton1.CustomizableEdges = BorderEdges5
         Me.PanelAnimator.SetDecoration(Me.BunifuButton1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.logoAnimator.SetDecoration(Me.BunifuButton1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.BunifuButton1.DialogResult = System.Windows.Forms.DialogResult.None
@@ -380,11 +383,11 @@ Partial Class dashboard_Frm
         Me.usersRecords_Btn.ColorContrastOnClick = 45
         Me.usersRecords_Btn.ColorContrastOnHover = 45
         Me.usersRecords_Btn.Cursor = System.Windows.Forms.Cursors.Default
-        BorderEdges5.BottomLeft = True
-        BorderEdges5.BottomRight = True
-        BorderEdges5.TopLeft = True
-        BorderEdges5.TopRight = True
-        Me.usersRecords_Btn.CustomizableEdges = BorderEdges5
+        BorderEdges6.BottomLeft = True
+        BorderEdges6.BottomRight = True
+        BorderEdges6.TopLeft = True
+        BorderEdges6.TopRight = True
+        Me.usersRecords_Btn.CustomizableEdges = BorderEdges6
         Me.PanelAnimator.SetDecoration(Me.usersRecords_Btn, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.logoAnimator.SetDecoration(Me.usersRecords_Btn, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.usersRecords_Btn.DialogResult = System.Windows.Forms.DialogResult.None
@@ -492,11 +495,11 @@ Partial Class dashboard_Frm
         Me.manInventory_btn.ColorContrastOnClick = 45
         Me.manInventory_btn.ColorContrastOnHover = 45
         Me.manInventory_btn.Cursor = System.Windows.Forms.Cursors.Default
-        BorderEdges6.BottomLeft = True
-        BorderEdges6.BottomRight = True
-        BorderEdges6.TopLeft = True
-        BorderEdges6.TopRight = True
-        Me.manInventory_btn.CustomizableEdges = BorderEdges6
+        BorderEdges7.BottomLeft = True
+        BorderEdges7.BottomRight = True
+        BorderEdges7.TopLeft = True
+        BorderEdges7.TopRight = True
+        Me.manInventory_btn.CustomizableEdges = BorderEdges7
         Me.PanelAnimator.SetDecoration(Me.manInventory_btn, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.logoAnimator.SetDecoration(Me.manInventory_btn, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.manInventory_btn.DialogResult = System.Windows.Forms.DialogResult.None
@@ -586,11 +589,11 @@ Partial Class dashboard_Frm
         Me.addinventory_btn.ColorContrastOnClick = 45
         Me.addinventory_btn.ColorContrastOnHover = 45
         Me.addinventory_btn.Cursor = System.Windows.Forms.Cursors.Default
-        BorderEdges7.BottomLeft = True
-        BorderEdges7.BottomRight = True
-        BorderEdges7.TopLeft = True
-        BorderEdges7.TopRight = True
-        Me.addinventory_btn.CustomizableEdges = BorderEdges7
+        BorderEdges8.BottomLeft = True
+        BorderEdges8.BottomRight = True
+        BorderEdges8.TopLeft = True
+        BorderEdges8.TopRight = True
+        Me.addinventory_btn.CustomizableEdges = BorderEdges8
         Me.PanelAnimator.SetDecoration(Me.addinventory_btn, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.logoAnimator.SetDecoration(Me.addinventory_btn, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.addinventory_btn.DialogResult = System.Windows.Forms.DialogResult.None
@@ -812,11 +815,11 @@ Partial Class dashboard_Frm
         Me.BunifuButton4.ColorContrastOnClick = 45
         Me.BunifuButton4.ColorContrastOnHover = 45
         Me.BunifuButton4.Cursor = System.Windows.Forms.Cursors.Default
-        BorderEdges8.BottomLeft = True
-        BorderEdges8.BottomRight = True
-        BorderEdges8.TopLeft = True
-        BorderEdges8.TopRight = True
-        Me.BunifuButton4.CustomizableEdges = BorderEdges8
+        BorderEdges9.BottomLeft = True
+        BorderEdges9.BottomRight = True
+        BorderEdges9.TopLeft = True
+        BorderEdges9.TopRight = True
+        Me.BunifuButton4.CustomizableEdges = BorderEdges9
         Me.PanelAnimator.SetDecoration(Me.BunifuButton4, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.logoAnimator.SetDecoration(Me.BunifuButton4, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.BunifuButton4.DialogResult = System.Windows.Forms.DialogResult.None
@@ -921,11 +924,11 @@ Partial Class dashboard_Frm
         Me.BunifuButton3.ColorContrastOnClick = 45
         Me.BunifuButton3.ColorContrastOnHover = 45
         Me.BunifuButton3.Cursor = System.Windows.Forms.Cursors.Default
-        BorderEdges9.BottomLeft = True
-        BorderEdges9.BottomRight = True
-        BorderEdges9.TopLeft = True
-        BorderEdges9.TopRight = True
-        Me.BunifuButton3.CustomizableEdges = BorderEdges9
+        BorderEdges10.BottomLeft = True
+        BorderEdges10.BottomRight = True
+        BorderEdges10.TopLeft = True
+        BorderEdges10.TopRight = True
+        Me.BunifuButton3.CustomizableEdges = BorderEdges10
         Me.PanelAnimator.SetDecoration(Me.BunifuButton3, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.logoAnimator.SetDecoration(Me.BunifuButton3, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.BunifuButton3.DialogResult = System.Windows.Forms.DialogResult.None
@@ -1015,11 +1018,11 @@ Partial Class dashboard_Frm
         Me.clinictodaybtn_dshbrd.ColorContrastOnClick = 45
         Me.clinictodaybtn_dshbrd.ColorContrastOnHover = 45
         Me.clinictodaybtn_dshbrd.Cursor = System.Windows.Forms.Cursors.Default
-        BorderEdges10.BottomLeft = True
-        BorderEdges10.BottomRight = True
-        BorderEdges10.TopLeft = True
-        BorderEdges10.TopRight = True
-        Me.clinictodaybtn_dshbrd.CustomizableEdges = BorderEdges10
+        BorderEdges11.BottomLeft = True
+        BorderEdges11.BottomRight = True
+        BorderEdges11.TopLeft = True
+        BorderEdges11.TopRight = True
+        Me.clinictodaybtn_dshbrd.CustomizableEdges = BorderEdges11
         Me.PanelAnimator.SetDecoration(Me.clinictodaybtn_dshbrd, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.logoAnimator.SetDecoration(Me.clinictodaybtn_dshbrd, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.clinictodaybtn_dshbrd.DialogResult = System.Windows.Forms.DialogResult.None
@@ -1109,11 +1112,11 @@ Partial Class dashboard_Frm
         Me.BunifuButton5.ColorContrastOnClick = 45
         Me.BunifuButton5.ColorContrastOnHover = 45
         Me.BunifuButton5.Cursor = System.Windows.Forms.Cursors.Default
-        BorderEdges11.BottomLeft = True
-        BorderEdges11.BottomRight = True
-        BorderEdges11.TopLeft = True
-        BorderEdges11.TopRight = True
-        Me.BunifuButton5.CustomizableEdges = BorderEdges11
+        BorderEdges12.BottomLeft = True
+        BorderEdges12.BottomRight = True
+        BorderEdges12.TopLeft = True
+        BorderEdges12.TopRight = True
+        Me.BunifuButton5.CustomizableEdges = BorderEdges12
         Me.PanelAnimator.SetDecoration(Me.BunifuButton5, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.logoAnimator.SetDecoration(Me.BunifuButton5, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.BunifuButton5.DialogResult = System.Windows.Forms.DialogResult.None
@@ -1203,11 +1206,11 @@ Partial Class dashboard_Frm
         Me.BunifuButton6.ColorContrastOnClick = 45
         Me.BunifuButton6.ColorContrastOnHover = 45
         Me.BunifuButton6.Cursor = System.Windows.Forms.Cursors.Default
-        BorderEdges12.BottomLeft = True
-        BorderEdges12.BottomRight = True
-        BorderEdges12.TopLeft = True
-        BorderEdges12.TopRight = True
-        Me.BunifuButton6.CustomizableEdges = BorderEdges12
+        BorderEdges13.BottomLeft = True
+        BorderEdges13.BottomRight = True
+        BorderEdges13.TopLeft = True
+        BorderEdges13.TopRight = True
+        Me.BunifuButton6.CustomizableEdges = BorderEdges13
         Me.PanelAnimator.SetDecoration(Me.BunifuButton6, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.logoAnimator.SetDecoration(Me.BunifuButton6, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.BunifuButton6.DialogResult = System.Windows.Forms.DialogResult.None
@@ -2900,8 +2903,8 @@ Partial Class dashboard_Frm
         '
         'DateTimePicker1
         '
-        Me.PanelAnimator.SetDecoration(Me.DateTimePicker1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.logoAnimator.SetDecoration(Me.DateTimePicker1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.PanelAnimator.SetDecoration(Me.DateTimePicker1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.DateTimePicker1.Location = New System.Drawing.Point(694, 46)
         Me.DateTimePicker1.Name = "DateTimePicker1"
         Me.DateTimePicker1.Size = New System.Drawing.Size(289, 22)
@@ -4084,8 +4087,8 @@ Partial Class dashboard_Frm
         '
         'ContextMenuStrip1
         '
-        Me.logoAnimator.SetDecoration(Me.ContextMenuStrip1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.PanelAnimator.SetDecoration(Me.ContextMenuStrip1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.logoAnimator.SetDecoration(Me.ContextMenuStrip1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.ContextMenuStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ManageListToolStripMenuItem})
         Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
@@ -4161,6 +4164,101 @@ Partial Class dashboard_Frm
         'PrintDocument1
         '
         '
+        'BunifuButton8
+        '
+        Me.BunifuButton8.AllowAnimations = True
+        Me.BunifuButton8.AllowMouseEffects = True
+        Me.BunifuButton8.AllowToggling = False
+        Me.BunifuButton8.AnimationSpeed = 200
+        Me.BunifuButton8.AutoGenerateColors = False
+        Me.BunifuButton8.AutoRoundBorders = False
+        Me.BunifuButton8.AutoSizeLeftIcon = True
+        Me.BunifuButton8.AutoSizeRightIcon = True
+        Me.BunifuButton8.BackColor = System.Drawing.Color.Transparent
+        Me.BunifuButton8.BackColor1 = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(89, Byte), Integer))
+        Me.BunifuButton8.BackgroundImage = CType(resources.GetObject("BunifuButton8.BackgroundImage"), System.Drawing.Image)
+        Me.BunifuButton8.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid
+        Me.BunifuButton8.ButtonText = "Reset"
+        Me.BunifuButton8.ButtonTextMarginLeft = 0
+        Me.BunifuButton8.ColorContrastOnClick = 45
+        Me.BunifuButton8.ColorContrastOnHover = 45
+        Me.BunifuButton8.Cursor = System.Windows.Forms.Cursors.Default
+        BorderEdges4.BottomLeft = True
+        BorderEdges4.BottomRight = True
+        BorderEdges4.TopLeft = True
+        BorderEdges4.TopRight = True
+        Me.BunifuButton8.CustomizableEdges = BorderEdges4
+        Me.PanelAnimator.SetDecoration(Me.BunifuButton8, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.logoAnimator.SetDecoration(Me.BunifuButton8, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.BunifuButton8.DialogResult = System.Windows.Forms.DialogResult.None
+        Me.BunifuButton8.DisabledBorderColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(94, Byte), Integer))
+        Me.BunifuButton8.DisabledFillColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(94, Byte), Integer))
+        Me.BunifuButton8.DisabledForecolor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(112, Byte), Integer))
+        Me.BunifuButton8.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed
+        Me.BunifuButton8.Font = New System.Drawing.Font("Sitka Banner", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BunifuButton8.ForeColor = System.Drawing.Color.White
+        Me.BunifuButton8.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BunifuButton8.IconLeftCursor = System.Windows.Forms.Cursors.Default
+        Me.BunifuButton8.IconLeftPadding = New System.Windows.Forms.Padding(19, 3, 3, 3)
+        Me.BunifuButton8.IconMarginLeft = 11
+        Me.BunifuButton8.IconPadding = -7
+        Me.BunifuButton8.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.BunifuButton8.IconRightCursor = System.Windows.Forms.Cursors.Default
+        Me.BunifuButton8.IconRightPadding = New System.Windows.Forms.Padding(3, 3, 7, 3)
+        Me.BunifuButton8.IconSize = 60
+        Me.BunifuButton8.IdleBorderColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(89, Byte), Integer))
+        Me.BunifuButton8.IdleBorderRadius = 1
+        Me.BunifuButton8.IdleBorderThickness = 1
+        Me.BunifuButton8.IdleFillColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(89, Byte), Integer))
+        Me.BunifuButton8.IdleIconLeftImage = Global.Medical_Clinic_Mangement_System.My.Resources.Resources._error
+        Me.BunifuButton8.IdleIconRightImage = Nothing
+        Me.BunifuButton8.IndicateFocus = False
+        Me.BunifuButton8.Location = New System.Drawing.Point(-7, 351)
+        Me.BunifuButton8.Name = "BunifuButton8"
+        Me.BunifuButton8.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(94, Byte), Integer))
+        Me.BunifuButton8.OnDisabledState.BorderRadius = 1
+        Me.BunifuButton8.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid
+        Me.BunifuButton8.OnDisabledState.BorderThickness = 1
+        Me.BunifuButton8.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(94, Byte), Integer))
+        Me.BunifuButton8.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(112, Byte), Integer))
+        Me.BunifuButton8.OnDisabledState.IconLeftImage = Nothing
+        Me.BunifuButton8.OnDisabledState.IconRightImage = Nothing
+        Me.BunifuButton8.onHoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.BunifuButton8.onHoverState.BorderRadius = 1
+        Me.BunifuButton8.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid
+        Me.BunifuButton8.onHoverState.BorderThickness = 1
+        Me.BunifuButton8.onHoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.BunifuButton8.onHoverState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(112, Byte), Integer))
+        Me.BunifuButton8.onHoverState.IconLeftImage = Nothing
+        Me.BunifuButton8.onHoverState.IconRightImage = Nothing
+        Me.BunifuButton8.OnIdleState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(89, Byte), Integer))
+        Me.BunifuButton8.OnIdleState.BorderRadius = 1
+        Me.BunifuButton8.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid
+        Me.BunifuButton8.OnIdleState.BorderThickness = 1
+        Me.BunifuButton8.OnIdleState.FillColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(89, Byte), Integer))
+        Me.BunifuButton8.OnIdleState.ForeColor = System.Drawing.Color.White
+        Me.BunifuButton8.OnIdleState.IconLeftImage = Global.Medical_Clinic_Mangement_System.My.Resources.Resources._error
+        Me.BunifuButton8.OnIdleState.IconRightImage = Nothing
+        Me.BunifuButton8.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(94, Byte), Integer))
+        Me.BunifuButton8.OnPressedState.BorderRadius = 1
+        Me.BunifuButton8.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid
+        Me.BunifuButton8.OnPressedState.BorderThickness = 1
+        Me.BunifuButton8.OnPressedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(94, Byte), Integer))
+        Me.BunifuButton8.OnPressedState.ForeColor = System.Drawing.Color.White
+        Me.BunifuButton8.OnPressedState.IconLeftImage = Nothing
+        Me.BunifuButton8.OnPressedState.IconRightImage = Nothing
+        Me.BunifuButton8.Size = New System.Drawing.Size(365, 39)
+        Me.BunifuButton8.TabIndex = 53
+        Me.BunifuButton8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.BunifuButton8.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center
+        Me.BunifuButton8.TextMarginLeft = 0
+        Me.BunifuButton8.TextPadding = New System.Windows.Forms.Padding(-23, 2, 0, 0)
+        Me.BunifuToolTip1.SetToolTip(Me.BunifuButton8, "")
+        Me.BunifuToolTip1.SetToolTipIcon(Me.BunifuButton8, Nothing)
+        Me.BunifuToolTip1.SetToolTipTitle(Me.BunifuButton8, "")
+        Me.BunifuButton8.UseDefaultRadiusAndThickness = True
+        Me.BunifuButton8.Visible = False
+        '
         'dashboard_Frm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -4173,6 +4271,7 @@ Partial Class dashboard_Frm
         Me.PanelAnimator.SetDecoration(Me, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.logoAnimator.SetDecoration(Me, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "dashboard_Frm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "dashboard_Frm"
@@ -4325,4 +4424,5 @@ Partial Class dashboard_Frm
     Friend WithEvents Label2 As Label
     Friend WithEvents Label13 As Label
     Private WithEvents Label11 As Label
+    Friend WithEvents BunifuButton8 As Bunifu.UI.WinForms.BunifuButton.BunifuButton
 End Class
