@@ -20,7 +20,7 @@ Public Class user_Records_Frm
     Dim con As New SqlClient.SqlConnection
     Dim cmd As New SqlClient.SqlCommand
     Dim dt As New DataTable
-    Dim cs As String = "Data Source=.\SQLEXPRESS;Initial Catalog=mainClinicDb;Integrated Security=True; Pooling=False"
+    Dim cs As String = "Data Source=DESKTOP-52B846I;Initial Catalog=mainClinicDb;Integrated Security=True"
     Private Sub BunifuImageButton2_Click(sender As Object, e As EventArgs)
         Me.Close()
     End Sub

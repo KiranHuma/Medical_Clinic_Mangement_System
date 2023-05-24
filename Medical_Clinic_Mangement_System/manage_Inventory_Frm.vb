@@ -14,7 +14,7 @@ Public Class manage_Inventory_Frm
     Dim con As New SqlClient.SqlConnection
     Dim cmd As New SqlClient.SqlCommand
     Dim dt As New DataTable
-    Dim cs As String = "Data Source=.\SQLEXPRESS;Initial Catalog=mainClinicDb;Integrated Security=True; Pooling=False"
+    Dim cs As String = "Data Source=DESKTOP-52B846I;Initial Catalog=mainClinicDb;Integrated Security=True"
     Public Sub dbaccessconnection()
         Try
             Dim connection As New SqlConnection(cs)

@@ -5,20 +5,16 @@ VisualStudioVersion = 17.4.33122.133
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Medical_Clinic_Mangement_System", "Medical_Clinic_Mangement_System\Medical_Clinic_Mangement_System.vbproj", "{9FC4D487-DD10-4CBC-9301-02E3858D68ED}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup", "Setup\Setup.vdproj", "{11CE58C2-4D08-48B9-9EC5-94466D013839}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{9FC4D487-DD10-4CBC-9301-02E3858D68ED}.Debug|Any CPU.ActiveCfg = Release|Any CPU
-		{9FC4D487-DD10-4CBC-9301-02E3858D68ED}.Debug|Any CPU.Build.0 = Release|Any CPU
+		{9FC4D487-DD10-4CBC-9301-02E3858D68ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9FC4D487-DD10-4CBC-9301-02E3858D68ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9FC4D487-DD10-4CBC-9301-02E3858D68ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9FC4D487-DD10-4CBC-9301-02E3858D68ED}.Release|Any CPU.Build.0 = Release|Any CPU
-		{11CE58C2-4D08-48B9-9EC5-94466D013839}.Debug|Any CPU.ActiveCfg = Debug
-		{11CE58C2-4D08-48B9-9EC5-94466D013839}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

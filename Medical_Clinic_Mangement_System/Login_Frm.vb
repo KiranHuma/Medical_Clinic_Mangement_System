@@ -10,7 +10,7 @@ Public Class Login_Frm
     Private con As New SqlConnection()
 
     'Dim cs As String = " Data Source=.\Database\medicalClinicdb.mdf;Integrated Security=True"
-    Dim cs As String = "Data Source=.\SQLEXPRESS;Initial Catalog=mainClinicDb;Integrated Security=True; Pooling=False"
+    Dim cs As String = "Data Source=DESKTOP-52B846I;Initial Catalog=mainClinicDb;Integrated Security=True"
     '' Dim cs As String = "Data Source=.\SQLEXPRESS;Initial Catalog=medicalClinicdb;Integrated Security=True;Pooling=False"  'connection string to connect with sql server
     Public Sub dbaccessconnection()
         Try
